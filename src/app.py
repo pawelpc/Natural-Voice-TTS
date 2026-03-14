@@ -298,9 +298,17 @@ def _build_menu() -> pystray.Menu:
             )
         )
 
+    # Keyboard shortcuts submenu (display-only)
+    shortcut_items = [
+        pystray.MenuItem('Ctrl+Shift+Win+R — Read Selected Text', None, enabled=False),
+        pystray.MenuItem('Ctrl+Shift+Win+S — Stop', None, enabled=False),
+        pystray.MenuItem('Ctrl+Shift+Win+P — Pause / Resume', None, enabled=False),
+    ]
+
     return pystray.Menu(
         pystray.MenuItem('Voice', pystray.Menu(*voice_items)),
         pystray.MenuItem('Speed', pystray.Menu(*speed_items)),
+        pystray.MenuItem('Keyboard Shortcuts', pystray.Menu(*shortcut_items)),
         pystray.Menu.SEPARATOR,
         pystray.MenuItem('Read Clipboard', _on_menu_read),
         pystray.MenuItem('Stop', _on_menu_stop),
