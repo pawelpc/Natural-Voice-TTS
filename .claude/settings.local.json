@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python generate_icon.py)",
+      "Bash(git config:*)"
+    ]
+  }
+}

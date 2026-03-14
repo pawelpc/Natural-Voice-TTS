@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Project
+test_output.wav
+*.wav
+
+# Internal docs (not part of the app)
+_team-lead-brief.md
+_team-lead-instructions.md
+_context/
