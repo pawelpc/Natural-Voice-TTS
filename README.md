@@ -50,13 +50,13 @@ python src/main.py
 
 | Hotkey | Action |
 |--------|--------|
-| `Ctrl+Shift+Win+R` | Read selected text |
-| `Ctrl+Shift+Win+S` | Stop reading |
-| `Ctrl+Shift+Win+P` | Pause / Resume |
+| `Ctrl+Win+R` | Read selected text |
+| `Ctrl+Win+S` | Stop reading |
+| `Ctrl+Win+P` | Pause / Resume |
 
 1. Select text in any application (browser, editor, PDF viewer, etc.)
-2. Press `Ctrl+Shift+Win+R` — the text is copied and read aloud
-3. Press `Ctrl+Shift+Win+S` to stop or `Ctrl+Shift+Win+P` to pause/resume
+2. Press `Ctrl+Win+R` — the text is copied and read aloud
+3. Press `Ctrl+Win+S` to stop or `Ctrl+Win+P` to pause/resume
 
 ## Troubleshooting
 
@@ -70,6 +70,33 @@ set PHONEMIZER_ESPEAK_PATH=C:\Program Files\eSpeak NG\espeak-ng.exe
 
 **"keyboard" requires admin** — If global hotkeys don't work, try running the terminal as Administrator.
 
+## Building the Installer
+
+To package Natural Voice TTS as a standalone Windows installer:
+
+### Prerequisites
+
+1. All source prerequisites above (Python, CUDA, espeak-ng)
+2. **PyInstaller**: `pip install pyinstaller`
+3. **Inno Setup 6** (optional, for creating the installer .exe): [download](https://jrsoftware.org/isdl.php)
+4. Run the app at least once from source so the Kokoro model is cached
+
+### Build
+
+```bash
+build.bat
+```
+
+This will:
+1. Run PyInstaller to create `dist\NaturalVoiceTTS\` with the bundled app
+2. Copy espeak-ng binaries into the dist folder
+3. Copy Kokoro model files from the HuggingFace cache
+4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.0.0.exe` (if Inno Setup is installed)
+
+The installer installs to `C:\Program Files\NaturalVoiceTTS\` with Start Menu and optional desktop shortcuts. The uninstaller appears in "Add or Remove Programs".
+
+**Expected size**: ~2-3 GB (PyTorch with CUDA is the largest component).
+
 ## Project Structure
 
 ```
@@ -81,6 +108,15 @@ src/
   audio_player.py   — Audio playback with stop/pause/resume
   hotkeys.py        — Global hotkey listener and clipboard grab
   config.py         — Persistent JSON settings
+  dialogs.py        — Help and About tkinter dialogs
 assets/
   icon.ico          — System tray icon
+installer/
+  setup.iss         — Inno Setup installer script
 ```
+
+## License
+
+Licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+This software includes [Kokoro TTS](https://github.com/hexgrad/kokoro) by Hexgrad, licensed under the Apache License 2.0. See [NOTICE](NOTICE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for full attribution.

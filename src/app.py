@@ -24,6 +24,7 @@ from audio_player import (
 )
 import pyperclip
 from hotkeys import grab_selected_text, register_hotkeys, unregister_hotkeys
+from dialogs import show_help, show_about
 
 logger = logging.getLogger(__name__)
 
@@ -242,6 +243,14 @@ def _toggle_autostart(icon, item):
             logger.exception("Failed to create startup shortcut")
 
 
+def _on_menu_help(icon, item):
+    show_help()
+
+
+def _on_menu_about(icon, item):
+    show_about()
+
+
 def _make_voice_callback(voice_id: str):
     def callback(icon, item):
         config.set('voice', voice_id)
@@ -300,9 +309,9 @@ def _build_menu() -> pystray.Menu:
 
     # Keyboard shortcuts submenu (display-only)
     shortcut_items = [
-        pystray.MenuItem('Ctrl+Shift+Win+R — Read Selected Text', None, enabled=False),
-        pystray.MenuItem('Ctrl+Shift+Win+S — Stop', None, enabled=False),
-        pystray.MenuItem('Ctrl+Shift+Win+P — Pause / Resume', None, enabled=False),
+        pystray.MenuItem('Ctrl+Win+R — Read Selected Text', None, enabled=False),
+        pystray.MenuItem('Ctrl+Win+S — Stop', None, enabled=False),
+        pystray.MenuItem('Ctrl+Win+P — Pause / Resume', None, enabled=False),
     ]
 
     return pystray.Menu(
@@ -319,6 +328,8 @@ def _build_menu() -> pystray.Menu:
             _toggle_autostart,
             checked=lambda item: _is_autostart_enabled(),
         ),
+        pystray.MenuItem('Help', _on_menu_help),
+        pystray.MenuItem('About', _on_menu_about),
         pystray.MenuItem('Quit', _on_menu_quit),
     )
 
@@ -353,17 +364,33 @@ def _on_setup(icon: pystray.Icon) -> None:
     worker.start()
 
     # Register hotkeys
-    register_hotkeys(_on_read, _on_stop, _on_pause)
+    try:
+        register_hotkeys(_on_read, _on_stop, _on_pause)
+    except Exception:
+        logger.exception("Failed to register hotkeys")
 
-    logger.info("Ready! Ctrl+Shift+Win+R = Read | Ctrl+Shift+Win+S = Stop | Ctrl+Shift+Win+P = Pause")
+    logger.info("Ready! Ctrl+Win+R = Read | Ctrl+Win+S = Stop | Ctrl+Win+P = Pause")
+    logger.info("Setup complete, returning to message loop")
 
 
 def main() -> None:
     """Launch the system tray application."""
+    # In frozen mode, also log to a file for debugging
+    handlers = [logging.StreamHandler()]
+    if getattr(sys, 'frozen', False):
+        log_dir = os.path.join(
+            os.environ.get('APPDATA', os.path.expanduser('~')),
+            'NaturalVoiceTTS',
+        )
+        os.makedirs(log_dir, exist_ok=True)
+        log_path = os.path.join(log_dir, 'app.log')
+        handlers.append(logging.FileHandler(log_path, encoding='utf-8'))
+
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s %(levelname)s [%(name)s] %(message)s',
         datefmt='%H:%M:%S',
+        handlers=handlers,
     )
 
     logger.info("=== Natural Voice TTS (Phase 2 — System Tray) ===")
@@ -371,8 +398,13 @@ def main() -> None:
     # Load config
     config.load()
 
-    # Load icon
-    icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'icon.ico')
+    # Load icon (resolve path for both frozen and source installs)
+    if getattr(sys, 'frozen', False):
+        # PyInstaller one-folder mode puts datas under _internal/
+        base_dir = os.path.join(os.path.dirname(sys.executable), '_internal')
+    else:
+        base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+    icon_path = os.path.join(base_dir, 'assets', 'icon.ico')
     if os.path.exists(icon_path):
         image = Image.open(icon_path)
     else:
@@ -389,10 +421,26 @@ def main() -> None:
     )
 
     # run() blocks the main thread; setup runs in a separate thread
-    _icon.run(setup=_on_setup)
+    try:
+        _icon.run(setup=_on_setup)
+    except Exception:
+        logger.exception("Icon main loop crashed")
 
     logger.info("Goodbye!")
 
 
+def _check_single_instance():
+    """Ensure only one instance of the app runs at a time using a named mutex."""
+    import ctypes
+    mutex = ctypes.windll.kernel32.CreateMutexW(None, True, "NaturalVoiceTTS_SingleInstance")
+    if ctypes.windll.kernel32.GetLastError() == 183:  # ERROR_ALREADY_EXISTS
+        ctypes.windll.kernel32.CloseHandle(mutex)
+        return None
+    return mutex
+
+
 if __name__ == '__main__':
+    _mutex = _check_single_instance()
+    if _mutex is None:
+        sys.exit(0)
     main()

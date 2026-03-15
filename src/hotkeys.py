@@ -12,10 +12,14 @@ import pyperclip
 
 logger = logging.getLogger(__name__)
 
-# Default hotkey bindings (Ctrl+Shift+Win avoids conflicts with browsers/editors)
-HOTKEY_READ = 'ctrl+shift+windows+r'
-HOTKEY_STOP = 'ctrl+shift+windows+s'
-HOTKEY_PAUSE = 'ctrl+shift+windows+p'
+# Default hotkey bindings
+# Uses Ctrl+Win (without Shift) to avoid browser conflicts:
+#   Ctrl+Shift+R = hard refresh in Chrome/Edge/Firefox
+#   Ctrl+Shift+S = save-as in some browsers
+#   Ctrl+Shift+P = private/incognito or command palette
+HOTKEY_READ = 'ctrl+windows+r'
+HOTKEY_STOP = 'ctrl+windows+s'
+HOTKEY_PAUSE = 'ctrl+windows+p'
 
 # --- Win32 SendInput structures (correct for 64-bit Windows) ---
 
@@ -165,7 +169,14 @@ def register_hotkeys(
 
 def unregister_hotkeys() -> None:
     """Remove all registered hotkeys."""
-    keyboard.unhook_all_hotkeys()
+    try:
+        keyboard.unhook_all_hotkeys()
+    except (AttributeError, Exception) as e:
+        logger.debug("unhook_all_hotkeys failed (%s), trying unhook_all", e)
+        try:
+            keyboard.unhook_all()
+        except Exception:
+            pass
     logger.info("Hotkeys unregistered")
 
 

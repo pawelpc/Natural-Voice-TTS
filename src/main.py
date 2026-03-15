@@ -157,8 +157,8 @@ def main() -> None:
     # Register hotkeys
     register_hotkeys(_on_read, _on_stop, _on_pause)
 
-    logger.info("Ready! Select text in any window and press Ctrl+Shift+Win+R to read.")
-    logger.info("Ctrl+Shift+Win+S = Stop | Ctrl+Shift+Win+P = Pause/Resume")
+    logger.info("Ready! Select text in any window and press Ctrl+Win+R to read.")
+    logger.info("Ctrl+Win+S = Stop | Ctrl+Win+P = Pause/Resume")
     logger.info("Press Ctrl+C in this terminal to quit.")
 
     try:

@@ -1,0 +1,13 @@
+Natural Voice TTS
+Copyright 2025 Paul Pawelski
+
+This product includes Kokoro TTS, a neural text-to-speech engine.
+  Copyright (c) 2024 Hexgrad
+  Licensed under the Apache License, Version 2.0
+  https://github.com/hexgrad/kokoro
+
+This product uses espeak-ng for phoneme generation.
+  Copyright (c) various contributors
+  Licensed under the GNU General Public License v3.0
+  https://github.com/espeak-ng/espeak-ng
+  (Bundled as a separate binary, invoked via subprocess)

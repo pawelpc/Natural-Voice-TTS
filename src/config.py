@@ -2,12 +2,19 @@
 
 import json
 import os
+import sys
 import logging
 import threading
 
 logger = logging.getLogger(__name__)
 
-# Config file location
+# Application base directory (frozen exe or source tree)
+if getattr(sys, 'frozen', False):
+    APP_DIR = os.path.dirname(sys.executable)
+else:
+    APP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+
+# Config file location (always in user APPDATA, not the install dir)
 CONFIG_DIR = os.path.join(os.environ.get('APPDATA', os.path.expanduser('~')), 'NaturalVoiceTTS')
 CONFIG_PATH = os.path.join(CONFIG_DIR, 'config.json')
 

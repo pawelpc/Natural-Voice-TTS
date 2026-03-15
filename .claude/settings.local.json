@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(python generate_icon.py)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(gh --version)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(python -c \"from huggingface_hub import hf_hub_download; help\\(hf_hub_download\\)\")",
+      "Read(//c/Program Files/NaturalVoiceTTS/**)",
+      "Bash(python -c \"from PIL import Image; img = Image.open\\(''C:/Users/paulp/Documents/Claude_Projects/Natural_Voice_TTS/assets/icon.ico''\\); print\\(f''Size: {img.size}, Mode: {img.mode}, Format: {img.format}''\\)\")",
+      "Bash(python -c \"import os; from PIL import Image; p=''C:/Users/paulp/Documents/Claude_Projects/Natural_Voice_TTS/assets/icon.ico''; img=Image.open\\(p\\); print\\(f''File size: {os.path.getsize\\(p\\)} bytes''\\); print\\(f''Main size: {img.size}''\\); print\\(f''ICO sizes: {img.info.get\\(\"\"sizes\"\", \"\"unknown\"\"\\)}''\\)\")"
     ]
   }
 }
