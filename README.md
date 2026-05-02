@@ -2,6 +2,31 @@
 
 System-wide text-to-speech for Windows using [Kokoro TTS](https://github.com/hexgrad/kokoro) (82M parameter neural engine). Select text in any application, press a hotkey, and hear it read aloud in a natural voice.
 
+## Download & Install
+
+**No programming required.** Just download and run the installer:
+
+**[Download Natural Voice TTS v1.1.0](https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.1.0.exe)** (~1.8 GB)
+
+1. Click the link above to download the installer
+2. Run `NaturalVoiceTTS_Setup_1.1.0.exe` — if Windows SmartScreen appears, click **More info** → **Run anyway** (the app is unsigned open-source software)
+3. Follow the installer prompts (defaults are fine)
+4. Launch **Natural Voice TTS** from the Start Menu
+
+The app runs in your system tray (bottom-right of the taskbar). To use it: select any text, press **Ctrl+Win+T**, and listen.
+
+| Hotkey | Action |
+|--------|--------|
+| `Ctrl+Win+T` | Read selected text |
+| `Ctrl+Win+X` | Stop reading |
+| `Ctrl+Win+Z` | Pause / Resume |
+
+**Requirements:** Windows 10 or 11. An NVIDIA GPU (GTX 1650 or better) is recommended for fast synthesis; CPU mode works but is slower.
+
+---
+
+*The sections below are for developers who want to run from source or build the installer themselves.*
+
 ## Prerequisites
 
 - **Python 3.11+**
@@ -91,7 +116,7 @@ This will:
 1. Run PyInstaller to create `dist\NaturalVoiceTTS\` with the bundled app
 2. Copy espeak-ng binaries into the dist folder
 3. Copy Kokoro model files from the HuggingFace cache
-4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.0.0.exe` (if Inno Setup is installed)
+4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.1.0.exe` (if Inno Setup is installed)
 
 The installer installs to `C:\Program Files\NaturalVoiceTTS\` with Start Menu and optional desktop shortcuts. The uninstaller appears in "Add or Remove Programs".
 

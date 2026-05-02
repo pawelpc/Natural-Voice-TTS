@@ -24,6 +24,7 @@ test_output.wav
 *.wav
 
 # Internal docs (not part of the app)
-_team-lead-brief.md
-_team-lead-instructions.md
+_team-lead-brief*.md
+_team-lead-instructions*.md
 _context/
+_project-briefs-staging/
