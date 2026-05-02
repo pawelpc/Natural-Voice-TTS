@@ -45,6 +45,53 @@ Voice and speed changes take effect on the next read. Settings are saved \
 automatically to %APPDATA%\\NaturalVoiceTTS\\config.json.
 
 
+CLAUDE DESKTOP INTEGRATION (MCP)
+=================================
+
+Natural Voice TTS can be controlled by Claude Desktop, letting Claude \
+speak its responses aloud automatically.
+
+Prerequisites
+-------------
+  - Python 3.11+ on your PATH
+  - The 'mcp' package: pip install mcp
+  - The 'pywin32' package: pip install pywin32
+
+Setup (automatic)
+-----------------
+Run the config helper from the install directory:
+
+  python mcp_server\\install_config.py
+
+This does three things:
+  1. Adds the MCP server entry to Claude Desktop's config
+  2. Installs a voice-activation skill so Claude knows how to
+     load and use the TTS tools when you say "voice on"
+  3. Prints a summary of what was configured
+
+To undo: python mcp_server\\install_config.py --remove
+
+Setup (manual)
+--------------
+1. Open %APPDATA%\\Claude\\claude_desktop_config.json
+2. Add this inside "mcpServers":
+     "natural-voice-tts": {
+       "command": "C:\\Windows\\System32\\cmd.exe",
+       "args": ["/c", "<install path>\\mcp_server\\run_server.bat"]
+     }
+3. Copy mcp_server\\skill\\SKILL.md to:
+     %APPDATA%\\Claude\\skills\\natural-voice-tts\\SKILL.md
+4. Restart Claude Desktop
+
+Using Voice with Claude
+-----------------------
+  1. Start the Natural Voice TTS tray app
+  2. Open Claude Desktop
+  3. Say "voice on" or "speak your responses"
+  4. Claude will speak each reply aloud automatically
+  5. Say "voice off" or "stop speaking" to deactivate
+
+
 TROUBLESHOOTING
 ===============
 
@@ -73,6 +120,16 @@ Hotkeys Not Working
   - The 'keyboard' library may require Administrator privileges
   - Try running the app as Administrator
   - Check that no other app is using the same hotkey combination
+
+Claude Desktop Can't Speak
+--------------------------
+  - Make sure the TTS tray app is running (start it first)
+  - Check Claude Desktop Settings > Developer > MCP Servers
+    to verify 'natural-voice-tts' is listed and connected
+  - If missing, run: python mcp_server\\install_config.py
+  - If "voice on" doesn't work, the skill may not be installed;
+    re-run install_config.py to install it
+  - Restart Claude Desktop after any config changes
 
 
 SYSTEM REQUIREMENTS
