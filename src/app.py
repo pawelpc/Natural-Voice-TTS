@@ -25,6 +25,7 @@ from audio_player import (
 import pyperclip
 from hotkeys import grab_selected_text, register_hotkeys, unregister_hotkeys
 from dialogs import show_help, show_about
+import pipe_listener
 
 logger = logging.getLogger(__name__)
 
@@ -43,6 +44,7 @@ _status = 'Idle'
 _status_lock = threading.Lock()
 _text_queue: queue.Queue[str | None] = queue.Queue()
 _icon: pystray.Icon | None = None
+_pipe_stop_event = threading.Event()
 
 
 def _set_status(status: str) -> None:
@@ -199,6 +201,7 @@ def _on_menu_pause(icon, item):
 
 def _on_menu_quit(icon, item):
     logger.info("Quit requested")
+    _pipe_stop_event.set()  # Signal pipe listener to stop
     audio_stop()
     unregister_hotkeys()
     _text_queue.put(None)
@@ -309,9 +312,9 @@ def _build_menu() -> pystray.Menu:
 
     # Keyboard shortcuts submenu (display-only)
     shortcut_items = [
-        pystray.MenuItem('Ctrl+Win+R — Read Selected Text', None, enabled=False),
-        pystray.MenuItem('Ctrl+Win+S — Stop', None, enabled=False),
-        pystray.MenuItem('Ctrl+Win+P — Pause / Resume', None, enabled=False),
+        pystray.MenuItem('Ctrl+Win+T — Read Selected Text', None, enabled=False),
+        pystray.MenuItem('Ctrl+Win+X — Stop', None, enabled=False),
+        pystray.MenuItem('Ctrl+Win+Z — Pause / Resume', None, enabled=False),
     ]
 
     return pystray.Menu(
@@ -369,7 +372,11 @@ def _on_setup(icon: pystray.Icon) -> None:
     except Exception:
         logger.exception("Failed to register hotkeys")
 
-    logger.info("Ready! Ctrl+Win+R = Read | Ctrl+Win+S = Stop | Ctrl+Win+P = Pause")
+    # Start named pipe listener (allows MCP server to send text)
+    _pipe_stop_event.clear()
+    pipe_listener.start_pipe_listener(_text_queue, _pipe_stop_event, on_stop=_on_stop)
+
+    logger.info("Ready! Ctrl+Win+T = Read | Ctrl+Win+X = Stop | Ctrl+Win+Z = Pause")
     logger.info("Setup complete, returning to message loop")
 
 
