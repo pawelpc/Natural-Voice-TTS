@@ -14,9 +14,12 @@ The MCP server is a ~100-line text relay. It has no model loading, no torch, and
 
 ## Prerequisites
 
-1. **Natural Voice TTS tray app must be running.** Start it before opening Claude Desktop. The pipe `\\.\pipe\NaturalVoiceTTS` only exists while the tray app is active.
-2. **Python 3.11+** on your PATH (the same Python you use for the main project works fine).
-3. **pywin32** — comes with the main project; if you need it standalone: `pip install pywin32>=306`.
+1. **Python 3.11+** on your PATH.
+2. **`mcp` package** — install via `pip install -r requirements.txt` (or `pip install mcp`).
+3. **`pywin32`** — install via `pip install pywin32>=306`.
+4. **Natural Voice TTS tray app must be running.** Start it before opening Claude Desktop. The pipe `\\.\pipe\NaturalVoiceTTS` only exists while the tray app is active.
+
+> **Note on Microsoft Store Python:** If you installed Python from the Microsoft Store, MCP servers must be launched via `cmd.exe /c run_server.bat` rather than calling `python` directly. The `install_config.py` helper handles this automatically.
 
 ---
 
@@ -29,21 +32,45 @@ pip install -r requirements.txt
 
 ---
 
-## Claude Desktop configuration
+## Automatic configuration (recommended)
 
-Open (or create) `%APPDATA%\Claude\claude_desktop_config.json` and add the `natural-voice-tts` entry inside `mcpServers`:
+Run the included config helper to patch Claude Desktop's config automatically:
+
+```
+python install_config.py
+```
+
+This will:
+- Locate `%APPDATA%\Claude\claude_desktop_config.json`
+- Add (or update) the `natural-voice-tts` MCP server entry
+- Use the correct path to `server.py` based on where the script is installed
+
+To remove the entry later:
+
+```
+python install_config.py --remove
+```
+
+If you installed via the Windows installer and checked "Configure Claude Desktop" during setup, this step was already done for you.
+
+---
+
+## Manual Claude Desktop configuration
+
+If you prefer to configure manually, open (or create) `%APPDATA%\Claude\claude_desktop_config.json` and add the `natural-voice-tts` entry inside `mcpServers`:
 
 ```json
 {
   "mcpServers": {
     "natural-voice-tts": {
-      "command": "python",
-      "args": ["C:\\Users\\paulp\\Documents\\Claude_Projects\\Natural_Voice_TTS\\mcp_tts_server\\server.py"],
-      "env": {}
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/c", "C:\\Program Files\\NaturalVoiceTTS\\mcp_server\\run_server.bat"]
     }
   }
 }
 ```
+
+> **Note:** The path above assumes the default install location. If you installed to a different directory, adjust the path to `run_server.bat` accordingly.
 
 Restart Claude Desktop after saving. If it was already running, quit and relaunch — it loads MCP servers at startup.
 
@@ -116,7 +143,7 @@ It will block waiting for MCP messages on stdio — that is normal. Press Ctrl+C
 
 **5. Configure Claude Desktop and restart it**
 
-Add the JSON block from the [Claude Desktop configuration](#claude-desktop-configuration) section above, then quit and relaunch Claude Desktop.
+Run `python mcp_tts_server/install_config.py` or add the JSON block from the [Manual Claude Desktop configuration](#manual-claude-desktop-configuration) section above, then quit and relaunch Claude Desktop.
 
 **6. Tell Claude to speak**
 
@@ -133,7 +160,8 @@ Then send a follow-up message. Claude should reply in text and simultaneously ca
 | Symptom | Likely cause | Fix |
 |---------|-------------|-----|
 | `Error: Named pipe not found` | TTS tray app is not running | Start `src/app.py` first |
-| MCP server not listed in Claude Desktop | Config JSON has a path typo | Double-check the path in `claude_desktop_config.json` |
+| MCP server not listed in Claude Desktop | Config JSON has a path typo | Double-check the path in `claude_desktop_config.json`, or re-run `install_config.py` |
 | `ModuleNotFoundError: mcp` | Dependencies not installed | Run `pip install -r mcp_tts_server/requirements.txt` |
+| `ModuleNotFoundError: win32file` | pywin32 not installed | Run `pip install pywin32>=306` |
 | Audio plays but cuts off mid-sentence | Another speak call arrived | Normal — each `speak` call replaces the queue |
 | Ctrl+Win+X doesn't stop pipe audio | Already fixed by design | Both hotkeys and pipe feed `_text_queue`; stop works on both |

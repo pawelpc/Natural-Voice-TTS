@@ -10,13 +10,13 @@ if "%BUILD_LOGGED%"=="" (
 )
 
 echo ============================================================
-echo   Natural Voice TTS - Build Script
+echo   Natural Voice TTS 1.1.0 - Build Script
 echo ============================================================
 echo   Started: %DATE% %TIME%
 echo.
 
 :: --- Step 0: Check prerequisites ---
-echo [1/6] Checking prerequisites...
+echo [1/7] Checking prerequisites...
 
 :: Check Python
 python --version >nul 2>&1
@@ -68,7 +68,7 @@ echo   - espeak-ng: OK (!ESPEAK_DIR!)
 echo.
 
 :: --- Step 1: Download all Kokoro voice files ---
-echo [2/6] Downloading all Kokoro voice files (if not cached)...
+echo [2/7] Downloading all Kokoro voice files (if not cached)...
 python -c "from huggingface_hub import hf_hub_download; voices=['af_alloy','af_aoede','af_bella','af_heart','af_jessica','af_kore','af_nicole','af_nova','af_river','af_sarah','af_sky','am_adam','am_echo','am_eric','am_fenrir','am_liam','am_michael','am_onyx','am_puck','bf_alice','bf_emma','bf_isabella','bf_lily','bm_daniel','bm_fable','bm_george','bm_lewis']; [print(f'  Downloaded: {v}') or hf_hub_download('hexgrad/Kokoro-82M', f'voices/{v}.pt') for v in voices]; print(f'  All {len(voices)} voices ready')"
 if errorlevel 1 (
     echo WARNING: Could not download all voice files. Some voices may not work offline.
@@ -76,7 +76,7 @@ if errorlevel 1 (
 echo.
 
 :: --- Step 2: Run PyInstaller ---
-echo [3/6] Running PyInstaller (this may take several minutes)...
+echo [3/7] Running PyInstaller (this may take several minutes)...
 python -m PyInstaller naturalvoicetts.spec --noconfirm
 if errorlevel 1 (
     echo ERROR: PyInstaller failed. Check build.log for details.
@@ -86,7 +86,7 @@ echo   - PyInstaller: OK
 echo.
 
 :: --- Step 3: Copy espeak-ng into dist ---
-echo [4/6] Copying espeak-ng files...
+echo [4/7] Copying espeak-ng files...
 set "DIST_DIR=dist\NaturalVoiceTTS"
 set "ESPEAK_DEST=%DIST_DIR%\espeak-ng"
 
@@ -100,7 +100,7 @@ echo   - espeak-ng copied to %ESPEAK_DEST%
 echo.
 
 :: --- Step 4: Copy Kokoro model files ---
-echo [5/6] Copying Kokoro model files...
+echo [5/7] Copying Kokoro model files...
 
 :: Find the kokoro model directory in HuggingFace cache
 set "HF_CACHE=%USERPROFILE%\.cache\huggingface\hub"
@@ -149,9 +149,21 @@ if "!KOKORO_MODEL_DIR!"=="" (
 )
 echo.
 
-:: --- Step 5: Build installer (if Inno Setup is available) ---
+:: --- Step 5: Copy MCP server files into dist ---
+echo [6/7] Copying MCP server files...
+set "MCP_DEST=%DIST_DIR%\mcp_server"
+if not exist "%MCP_DEST%" mkdir "%MCP_DEST%"
+xcopy /E /I /Y "mcp_tts_server" "%MCP_DEST%" >nul
+if errorlevel 1 (
+    echo ERROR: Failed to copy MCP server files.
+    goto :error
+)
+echo   - MCP server files copied to %MCP_DEST%
+echo.
+
+:: --- Step 6: Build installer (if Inno Setup is available) ---
 if not "!ISCC!"=="" (
-    echo [6/6] Building installer with Inno Setup...
+    echo [7/7] Building installer with Inno Setup...
     "!ISCC!" installer\setup.iss
     if errorlevel 1 (
         echo ERROR: Inno Setup compiler failed. Check build.log for details.
@@ -159,7 +171,7 @@ if not "!ISCC!"=="" (
     )
     echo   - Installer created successfully
 ) else (
-    echo [6/6] Skipping installer (Inno Setup not found^)
+    echo [7/7] Skipping installer (Inno Setup not found^)
 )
 echo.
 
@@ -172,7 +184,7 @@ echo   App folder:  %CD%\dist\NaturalVoiceTTS\
 echo   Executable:  %CD%\dist\NaturalVoiceTTS\NaturalVoiceTTS.exe
 
 if not "!ISCC!"=="" (
-    echo   Installer:   %CD%\dist\NaturalVoiceTTS_Setup_1.0.0.exe
+    echo   Installer:   %CD%\dist\NaturalVoiceTTS_Setup_1.1.0.exe
 )
 
 echo   Build log:   %BUILD_LOG%

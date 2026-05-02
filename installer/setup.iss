@@ -5,7 +5,7 @@
 ; Expects PyInstaller output in dist\NaturalVoiceTTS\
 
 #define MyAppName "Natural Voice TTS"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "Paul Pawelski"
 #define MyAppExeName "NaturalVoiceTTS.exe"
 
@@ -35,10 +35,13 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "claudeconfig"; Description: "Configure Claude Desktop for voice output (requires Claude Desktop and Python installed)"; GroupDescription: "Claude Desktop Integration"; Flags: unchecked
 
 [Files]
 ; Install everything from the PyInstaller dist folder
 Source: "..\dist\NaturalVoiceTTS\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+; MCP Server files
+Source: "..\dist\NaturalVoiceTTS\mcp_server\*"; DestDir: "{app}\mcp_server"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -47,10 +50,15 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "python"; Parameters: """{app}\mcp_server\install_config.py"""; StatusMsg: "Configuring Claude Desktop..."; Tasks: claudeconfig; Flags: nowait postinstall skipifsilent runhidden
+
+[UninstallRun]
+Filename: "python"; Parameters: """{app}\mcp_server\install_config.py"" --remove"; Flags: runhidden; RunOnceId: "RemoveMCPConfig"
 
 [UninstallDelete]
 ; Clean up any runtime-generated files in the install directory
 Type: filesandordirs; Name: "{app}\__pycache__"
+Type: filesandordirs; Name: "{app}\mcp_server\__pycache__"
 
 [Code]
 procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
