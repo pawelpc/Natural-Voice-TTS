@@ -32,6 +32,15 @@ _ko_datas, _ko_binaries, _ko_hiddenimports = collect_all('kokoro')
 # misaki: G2P module used by kokoro, needs data/*.json files
 _mi_datas, _mi_binaries, _mi_hiddenimports = collect_all('misaki')
 
+# torch: CRITICAL - collect all torch including CUDA DLLs
+_torch_datas, _torch_binaries, _torch_hiddenimports = collect_all('torch')
+
+# torchaudio: audio processing
+_ta_datas, _ta_binaries, _ta_hiddenimports = collect_all('torchaudio')
+
+# torchvision: image processing
+_tv_datas, _tv_binaries, _tv_hiddenimports = collect_all('torchvision')
+
 datas = [
     # Application assets
     ('assets/icon.ico', 'assets'),
@@ -39,10 +48,10 @@ datas = [
     ('LICENSE', '.'),
     ('NOTICE', '.'),
     ('THIRD_PARTY_NOTICES.md', '.'),
-] + _sm_datas + _lt_datas + _el_datas + _ko_datas + _mi_datas
+] + _sm_datas + _lt_datas + _el_datas + _ko_datas + _mi_datas + _torch_datas + _ta_datas + _tv_datas
 
-extra_binaries = _sm_binaries + _el_binaries + _ko_binaries + _mi_binaries
-extra_hiddenimports = _sm_hiddenimports + _el_hiddenimports + _ko_hiddenimports + _mi_hiddenimports
+extra_binaries = _sm_binaries + _el_binaries + _ko_binaries + _mi_binaries + _torch_binaries + _ta_binaries + _tv_binaries
+extra_hiddenimports = _sm_hiddenimports + _el_hiddenimports + _ko_hiddenimports + _mi_hiddenimports + _torch_hiddenimports + _ta_hiddenimports + _tv_hiddenimports
 
 a = Analysis(
     ['src/app.py'],
@@ -92,6 +101,7 @@ a = Analysis(
         # Reduce bundle size: exclude unused modules
         'matplotlib',
         'tkinter.test',
+        # NOTE: do NOT exclude 'tkinter' — dialogs.py uses it for file dialogs
         # NOTE: do NOT exclude 'unittest', 'pydoc', or 'xmlrpc'
         # — torch and scipy require them at runtime
     ],

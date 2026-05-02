@@ -15,15 +15,15 @@ USAGE
 
 Hotkeys
 -------
-  Ctrl+Win+R   Read selected text aloud
-  Ctrl+Win+S   Stop reading
-  Ctrl+Win+P   Pause / Resume
+  Ctrl+Win+T   Read selected text aloud
+  Ctrl+Win+X   Stop reading
+  Ctrl+Win+Z   Pause / Resume
 
 How to Use
 ----------
 1. Select text in any application (browser, editor, PDF viewer, etc.)
-2. Press Ctrl+Win+R to read it aloud
-3. Press Ctrl+Win+S to stop, or Ctrl+Win+P to pause/resume
+2. Press Ctrl+Win+T to read it aloud
+3. Press Ctrl+Win+X to stop, or Ctrl+Win+Z to pause/resume
 
 You can also right-click the tray icon and choose "Read Clipboard" to \
 read whatever is currently on your clipboard.

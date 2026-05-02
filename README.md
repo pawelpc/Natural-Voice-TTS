@@ -50,13 +50,13 @@ python src/main.py
 
 | Hotkey | Action |
 |--------|--------|
-| `Ctrl+Win+R` | Read selected text |
-| `Ctrl+Win+S` | Stop reading |
-| `Ctrl+Win+P` | Pause / Resume |
+| `Ctrl+Win+T` | Read selected text |
+| `Ctrl+Win+X` | Stop reading |
+| `Ctrl+Win+Z` | Pause / Resume |
 
 1. Select text in any application (browser, editor, PDF viewer, etc.)
-2. Press `Ctrl+Win+R` — the text is copied and read aloud
-3. Press `Ctrl+Win+S` to stop or `Ctrl+Win+P` to pause/resume
+2. Press `Ctrl+Win+T` — the text is copied and read aloud
+3. Press `Ctrl+Win+X` to stop or `Ctrl+Win+Z` to pause/resume
 
 ## Troubleshooting
 
