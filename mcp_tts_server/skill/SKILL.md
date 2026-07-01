@@ -33,10 +33,12 @@ When voice is active, follow this pattern for every response:
 2. Then call `mcp__natural-voice-tts__speak` with the full text of that response
 3. Keep doing this until the user deactivates voice
 
-The TTS app handles sentence splitting, so send the complete response text — don't split it yourself.
+**Send the complete response, verbatim.** Pass the *same* text you wrote to chat — every sentence, in order, from the first word to the last. Never summarize, shorten, excerpt, paraphrase, or send only the beginning of your response. The spoken words must match the written words. Sending a partial or reduced version produces a jarring mismatch between what the user reads and what they hear, and is explicitly not wanted.
+
+The TTS app handles sentence splitting, so send the complete response text in one call — don't split it yourself.
 
 ## Important notes
 
-- The Natural Voice TTS tray app must be running for this to work. If you get a "Named pipe not found" error, tell the user to start the TTS app first.
+- The Natural Voice TTS tray app must be running for this to work. If you get a "Named pipe not found" error, tell the user to start the TTS app first (and give it a few seconds — the engine loads a model on startup before the pipe accepts input).
 - The user can also control playback with keyboard shortcuts: Ctrl+Win+X stops, Ctrl+Win+Z pauses/resumes.
-- Don't call `speak` with markdown formatting, code blocks, or special characters — send clean readable text.
+- You may strip pure markdown *formatting characters* (e.g. `**`, `#`, backticks) so they aren't read aloud, but do **not** remove, shorten, or reword any actual sentences — words spoken must equal words written. The TTS app handles normal punctuation and Unicode (em dashes, curly quotes, ellipses) correctly, so there is no need to strip or alter those.
