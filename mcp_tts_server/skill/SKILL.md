@@ -35,6 +35,10 @@ When voice is active, follow this pattern for every response:
 
 **Send the complete response, verbatim.** Pass the *same* text you wrote to chat — every sentence, in order, from the first word to the last. Never summarize, shorten, excerpt, paraphrase, or send only the beginning of your response. The spoken words must match the written words. Sending a partial or reduced version produces a jarring mismatch between what the user reads and what they hear, and is explicitly not wanted.
 
+**Never maintain two versions — this applies in *both* directions.** Do not write a short or condensed chat reply and speak a longer one, and do not speak a short version of a longer written reply. Produce exactly one response and use that identical string for both the screen and `speak()`.
+
+**Voice ON overrides any brevity preference.** If you have a standing instruction or preference to keep chat replies short, concise, or direct, it still governs *how long that single response is* — but it must never cause the visible text and the spoken text to differ. Decide the length once, based on what the user actually asked for, then send that exact text to both channels. If the user asks for a long, detailed, or "page-length" answer, the chat text is that full length too — do not condense the on-screen copy. When in doubt, both channels get the fuller text; matching the two channels always takes priority over brevity while voice is on.
+
 The TTS app handles sentence splitting, so send the complete response text in one call — don't split it yourself.
 
 ## Important notes
