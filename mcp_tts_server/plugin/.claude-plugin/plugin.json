@@ -1,0 +1,8 @@
+{
+  "name": "natural-voice-tts",
+  "version": "1.0.0",
+  "description": "Speak Claude's responses aloud, verbatim, through the Natural Voice TTS system-tray app. Activates when the user says 'voice on' / 'read aloud' and speaks each full response word-for-word until 'voice off'.",
+  "author": {
+    "name": "pawelpc"
+  }
+}

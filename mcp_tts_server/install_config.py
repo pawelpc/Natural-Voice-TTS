@@ -44,9 +44,22 @@ def _run_server_bat_path() -> str:
 
 
 def _skill_source_dir() -> str:
-    """Return the path to the bundled skill directory next to this script."""
+    """Return the path to the bundled skill directory next to this script.
+
+    The skill now lives inside the plugin package (plugin/skills/<name>) so the
+    same source can be imported into Cowork as a plugin. NOTE: the loose
+    %APPDATA%\\Claude\\skills copy this script writes is only read by some
+    surfaces — Cowork does NOT index it, so Cowork users must import the plugin
+    (see the printed guidance in add_entry and the closeout notes).
+    """
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    return os.path.join(script_dir, 'skill')
+    return os.path.join(script_dir, 'plugin', 'skills', 'natural-voice-tts')
+
+
+def _plugin_dir() -> str:
+    """Return the path to the installable plugin package next to this script."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(script_dir, 'plugin')
 
 
 def _load_config() -> dict:
@@ -110,9 +123,17 @@ def add_entry() -> None:
     print(f"  Server path : {server_py}")
     print(f"  Launch via  : cmd.exe /c {run_bat}")
     print(f"  Skill       : {skill_status}")
+    print(f"  Plugin      : {_plugin_dir()}")
     print()
     print("  IMPORTANT: Restart Claude Desktop for changes to take effect.")
     print("             (Quit from tray icon, then relaunch.)")
+    print()
+    print("  COWORK USERS: the loose skill copy above is NOT indexed by Cowork.")
+    print("  To make voice work in a Cowork session, import the plugin as a skill:")
+    print("    1. Open a Cowork session")
+    print("    2. Run /skill-creator  (or /create-cowork-plugin)")
+    print("    3. Point it at this SKILL.md:")
+    print(f"       {os.path.join(_plugin_dir(), 'skills', 'natural-voice-tts', 'SKILL.md')}")
     print()
 
 
@@ -123,21 +144,17 @@ def _install_skill() -> str:
         A status message describing what was done.
     """
     source = _skill_source_dir()
-    if not os.path.isdir(source):
-        return "skill source not found (skipped)"
-
     skill_md = os.path.join(source, 'SKILL.md')
     if not os.path.exists(skill_md):
         return "SKILL.md not found in source (skipped)"
 
-    # Don't overwrite if already installed
-    dest_skill_md = os.path.join(SKILL_DIR, 'SKILL.md')
-    if os.path.exists(dest_skill_md):
-        return f"already installed at {SKILL_DIR}"
-
+    # Always overwrite so skill edits actually propagate on reinstall.
+    # (The previous version skipped when a copy already existed, which silently
+    # left stale skill text in place.)
     os.makedirs(SKILL_DIR, exist_ok=True)
+    dest_skill_md = os.path.join(SKILL_DIR, 'SKILL.md')
     shutil.copy2(skill_md, dest_skill_md)
-    return f"installed to {SKILL_DIR}"
+    return f"installed/updated at {SKILL_DIR}"
 
 
 def _remove_skill() -> None:
