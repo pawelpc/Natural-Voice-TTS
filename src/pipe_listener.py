@@ -9,7 +9,8 @@ Protocol (client → server):
   - N bytes: UTF-8 encoded text
 
 Protocol (server → client):
-  - 2 bytes: b'OK' acknowledgment
+  - 2 bytes: b'OK' acknowledgment on success
+  - 2 bytes: b'ER' if the message was rejected (too large or invalid UTF-8)
 
 Special sentinel:
   - '__STOP__' payload triggers the on_stop callback instead of enqueueing.
@@ -26,6 +27,47 @@ logger = logging.getLogger(__name__)
 PIPE_NAME = r'\\.\pipe\NaturalVoiceTTS'
 BUFFER_SIZE = 65536  # 64 KB — sufficient for any typical response
 STOP_SENTINEL = '__STOP__'
+
+# 2-byte responses sent back to the client (must stay 2 bytes: the client
+# reads exactly 2 bytes for its acknowledgment).
+ACK_OK = b'OK'
+ACK_ERROR = b'ER'
+
+
+def _read_exactly(pipe, n: int, win32file) -> bytes:
+    """Read exactly ``n`` bytes from a byte-mode named pipe.
+
+    Windows byte-mode pipes (``PIPE_TYPE_BYTE``) do not guarantee that a single
+    ``ReadFile`` returns all requested bytes, even when the peer wrote them in a
+    single ``WriteFile`` — the data can arrive in fragments. A naive single-read
+    therefore silently truncates the payload (dropping tail sentences) or slices
+    through a multi-byte UTF-8 sequence (making ``decode`` raise and dropping the
+    whole message). This loops until ``n`` bytes have accumulated, which is the
+    correct framing behavior for length-prefixed messages.
+
+    Args:
+        pipe: The connected pipe handle.
+        n: Exact number of bytes to read.
+        win32file: The imported ``win32file`` module (passed in to avoid a
+            top-level import that fails on non-Windows dev machines).
+
+    Returns:
+        Exactly ``n`` bytes.
+
+    Raises:
+        IOError: If the pipe reaches end-of-stream before ``n`` bytes arrive.
+    """
+    chunks: list[bytes] = []
+    remaining = n
+    while remaining > 0:
+        hr, data = win32file.ReadFile(pipe, remaining)
+        if not data:
+            raise IOError(
+                f"Pipe closed mid-read: expected {n} bytes, got {n - remaining}"
+            )
+        chunks.append(bytes(data))
+        remaining -= len(data)
+    return b''.join(chunks)
 
 
 def _pipe_loop(
@@ -109,33 +151,68 @@ def _handle_client(
     """
     while not stop_event.is_set():
         try:
-            # Read 4-byte length header
-            hr, header = win32file.ReadFile(pipe, 4)
-            if not header or len(header) < 4:
-                logger.debug("Client sent empty header, disconnecting")
+            # Read 4-byte length header (accumulating short reads). A clean
+            # disconnect between messages surfaces as an IOError/broken pipe
+            # here, which is the normal way this loop ends.
+            try:
+                header = _read_exactly(pipe, 4, win32file)
+            except IOError:
+                logger.debug("Client closed before a full header arrived, disconnecting")
                 break
 
             length = struct.unpack('<I', header)[0]
             if length == 0:
                 logger.debug("Zero-length message, skipping")
-                win32file.WriteFile(pipe, b'OK')
+                win32file.WriteFile(pipe, ACK_OK)
                 continue
 
             if length > BUFFER_SIZE:
-                logger.warning("Message length %d exceeds buffer %d, dropping", length, BUFFER_SIZE)
+                # D3: don't silently drop — tell the client the message was
+                # rejected so the MCP server can surface an error to the agent.
+                logger.warning(
+                    "Message length %d exceeds buffer %d, rejecting", length, BUFFER_SIZE
+                )
+                try:
+                    win32file.WriteFile(pipe, ACK_ERROR)
+                except Exception:
+                    pass  # client may already be blocked writing; disconnect cleans up
                 break
 
-            # Read payload
-            hr, data = win32file.ReadFile(pipe, length)
-            if not data:
-                logger.debug("Empty payload, disconnecting")
+            # Read the full payload, looping until all `length` bytes arrive
+            # (D1: this is where single-ReadFile short reads dropped sentences).
+            data = _read_exactly(pipe, length, win32file)
+
+            # Diagnostic: header-promised length vs. bytes actually accumulated.
+            # With _read_exactly these always match; logging both proves the
+            # pipe delivered the complete payload.
+            logger.info(
+                "Pipe payload: header=%d bytes, received=%d bytes", length, len(data)
+            )
+
+            try:
+                text = data.decode('utf-8')
+            except UnicodeDecodeError as e:
+                # Should no longer happen now that reads are complete, but if a
+                # genuinely malformed payload arrives, signal the client rather
+                # than swallowing the whole message.
+                logger.error(
+                    "Payload is not valid UTF-8 (%d bytes): %s", len(data), e
+                )
+                try:
+                    win32file.WriteFile(pipe, ACK_ERROR)
+                except Exception:
+                    pass
                 break
 
-            text = data.decode('utf-8')
-            logger.debug("Received message (%d chars): %.80s...", len(text), text)
+            logger.info("Received message: %d chars decoded", len(text))
+            if len(text) > 200:
+                logger.debug("Message head: %.100s", text)
+                logger.debug("Message tail: %.100s", text[-100:])
+            else:
+                logger.debug("Message text: %s", text)
 
             # Acknowledge receipt before processing (so client doesn't block)
-            win32file.WriteFile(pipe, b'OK')
+            win32file.WriteFile(pipe, ACK_OK)
 
             # Dispatch
             if text == STOP_SENTINEL:
@@ -153,6 +230,11 @@ def _handle_client(
                 logger.debug("Client disconnected (error %d)", e.args[0])
             else:
                 logger.error("Pipe read error: %s", e)
+            break
+        except IOError as e:
+            # Raised by _read_exactly when the pipe closes partway through a
+            # payload — the message was incomplete, so drop the connection.
+            logger.warning("Incomplete message, disconnecting: %s", e)
             break
         except Exception as e:
             logger.error("Unexpected error handling pipe client: %s", e, exc_info=True)

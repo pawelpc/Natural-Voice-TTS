@@ -108,6 +108,13 @@ async def speak(text: str) -> str:
         )
         if response == 'OK':
             return "Speaking."
+        elif response == 'ER':
+            # The TTS app rejected the message (exceeds its 64 KB pipe buffer or
+            # was not valid UTF-8). Surface it instead of failing silently.
+            return (
+                "Error: The TTS app rejected the text (too long — over 64 KB — "
+                "or not valid UTF-8). Try sending it in smaller chunks."
+            )
         else:
             return f"Unexpected response from TTS app: {response!r}"
     except FileNotFoundError as exc:

@@ -77,6 +77,13 @@ def _worker() -> None:
             break
 
         logger.info("Processing text (%d chars)", len(text))
+        # Diagnostic: head/tail of the received text so a dropped tail sentence
+        # is visible in the log (compare against what was sent via speak()).
+        if len(text) > 200:
+            logger.debug("Text head: %.100s", text)
+            logger.debug("Text tail: %.100s", text[-100:])
+        else:
+            logger.debug("Text: %s", text)
         audio_reset()
         _set_status('Reading...')
 
@@ -86,6 +93,8 @@ def _worker() -> None:
             continue
 
         logger.info("Reading %d sentences", len(sentences))
+
+        skipped = 0
 
         # Read voice/speed from config at start of each read
         voice = config.get('voice')
@@ -108,6 +117,14 @@ def _worker() -> None:
                 current_label = sentence
 
             if current_audio is None:
+                # D2: a sentence produced no audio (synthesis failed or returned
+                # empty). Previously this was skipped with no trace. Log it and
+                # remember to notify Paul at the end of the read.
+                skipped += 1
+                logger.warning(
+                    "Skipped sentence [%d/%d] (no audio produced): %.80s",
+                    i + 1, len(sentences), current_label,
+                )
                 continue
 
             # Lookahead
@@ -122,7 +139,16 @@ def _worker() -> None:
                 break
 
         _set_status('Idle')
-        logger.info("Finished reading")
+        if skipped:
+            logger.warning(
+                "Finished reading — %d of %d sentence(s) skipped", skipped, len(sentences)
+            )
+            _notify(
+                'Natural Voice TTS',
+                f'{skipped} sentence(s) could not be spoken and were skipped.',
+            )
+        else:
+            logger.info("Finished reading")
 
 
 def _synthesize_sentence(tts_engine, sentence: str, voice: str, speed: float):
@@ -132,6 +158,9 @@ def _synthesize_sentence(tts_engine, sentence: str, voice: str, speed: float):
         chunks = list(tts_engine.synthesize(sentence, voice=voice, speed=speed))
         if chunks:
             return np.concatenate([audio for _, audio in chunks])
+        # No exception, but the engine produced no audio — previously a silent
+        # drop. Surface it so the caller's skip is explainable in the log.
+        logger.warning("Synthesis produced no audio for: %.80s", sentence)
     except Exception:
         logger.exception("Failed to synthesize: %.60s...", sentence)
     return None
