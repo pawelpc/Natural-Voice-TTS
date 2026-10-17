@@ -41,7 +41,7 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
             synth_s = time.perf_counter() - t0
             segments = []
             for rec in recorder.records:
-                seg = {k: rec[k] for k in ('graphemes', 'phonemes', 'samples')}
+                seg = {k: rec[k] for k in ('graphemes', 'phonemes', 'silent_words', 'samples')}
                 if rec['audio'] is not None and len(rec['audio']):
                     lead, trail = harness.edge_silence_ms(rec['audio'])
                     seg.update(ms=round(rec['samples'] / harness.SAMPLE_RATE * 1000, 1),
@@ -58,8 +58,9 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
 
         full = np.concatenate(audios) if audios else np.zeros(1, dtype=np.float32)
         sha = harness.write_wav(out_dir / 'wav' / f"{entry['id']}.wav", full)
+        silent = [w for s in sentences for g in s['kokoro_segments'] for w in g['silent_words']]
         meta = {'id': entry['id'], 'category': entry['category'], 'origin': entry['origin'],
-                'chunks': len(chunks), 'skipped': skipped,
+                'chunks': len(chunks), 'skipped': skipped, 'silent_words': silent,
                 'kokoro_segments': sum(len(s['kokoro_segments']) for s in sentences),
                 'duration_s': round(len(full) / harness.SAMPLE_RATE, 2),
                 'synth_s': round(sum(s['synth_s'] for s in sentences), 2),
@@ -69,7 +70,7 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
             json.dumps(meta, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
         summary['passages'].append({k: v for k, v in meta.items() if k != 'sentences'})
         print(f"{entry['id']}: {len(chunks)} chunks, {meta['kokoro_segments']} kokoro segments, "
-              f"{meta['duration_s']} s audio, {skipped} skipped")
+              f"{meta['duration_s']} s audio, {skipped} skipped, silent words: {silent}")
 
     (out_dir / 'render_summary.json').write_text(
         json.dumps(summary, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')

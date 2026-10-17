@@ -1,0 +1,148 @@
+{
+ "id": "23_paths_urls_paths_and_links",
+ "category": "paths_urls",
+ "origin": "synthetic",
+ "chunks": 2,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 2,
+ "duration_s": 30.12,
+ "synth_s": 1.3,
+ "wav_sha256": "bfc5a0edf46820322dd6ec6a23367d92be4335b5f70e91f535583960c1f50746",
+ "sentences": [
+  {
+   "text": "Open src/app.py and C:\\Users\\paul\\Documents\\notes.txt, then visit https://github.com/pawelpc/Natural-Voice-TTS/releases or www.example.com/docs?page=2.",
+   "synth_s": 0.859,
+   "ms": 20225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Open src/app.py and C:\\Users\\paul\\Documents\\notes.txt, then visit https://github.com/pawelpc/Natural-Voice-TTS/releases or www.example.com/docs?page=2.",
+     "phonemes": "ˈOpᵊn ˌɛsˌɑɹsˈi slˈæʃ ˈæp.pˈI ænd sˈi:bˈækslæʃ jˈuzəɹz bˈækslæʃ pˈɔl bˈækslæʃ dˈɑkjumənts bˈækslæʃ nˈOts.tˌiˌɛkstˈi, ðˈɛn vˈɪzət ˌAʧtˌitˈipˌiˈɛs:slˈæʃslæʃ ɡˈɪthʌb.kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs slˈæʃ ɹᵻlˈisᵻz ɔɹ dˌʌbᵊljˌudˌʌbᵊljˌudˈʌbᵊljˌu.ɛɡzˈæmpᵊl.kˈɑm slˈæʃ dˈɑks?pˈAʤ ˈikwᵊlz tˈu.",
+     "silent_words": [],
+     "samples": 485400,
+     "ms": 20225.0,
+     "lead_ms": 340.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1830,
+       "ms": 70
+      },
+      {
+       "at_ms": 1910,
+       "ms": 250
+      },
+      {
+       "at_ms": 2900,
+       "ms": 410
+      },
+      {
+       "at_ms": 4170,
+       "ms": 60
+      },
+      {
+       "at_ms": 4710,
+       "ms": 60
+      },
+      {
+       "at_ms": 6060,
+       "ms": 70
+      },
+      {
+       "at_ms": 6800,
+       "ms": 90
+      },
+      {
+       "at_ms": 6990,
+       "ms": 550
+      },
+      {
+       "at_ms": 8160,
+       "ms": 230
+      },
+      {
+       "at_ms": 9920,
+       "ms": 140
+      },
+      {
+       "at_ms": 11110,
+       "ms": 450
+      },
+      {
+       "at_ms": 12220,
+       "ms": 60
+      },
+      {
+       "at_ms": 12490,
+       "ms": 90
+      },
+      {
+       "at_ms": 15150,
+       "ms": 80
+      },
+      {
+       "at_ms": 16450,
+       "ms": 110
+      },
+      {
+       "at_ms": 17110,
+       "ms": 300
+      },
+      {
+       "at_ms": 18060,
+       "ms": 60
+      },
+      {
+       "at_ms": 18500,
+       "ms": 220
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Email me at paul@example.com if the link at http://localhost:8080/api/v1 fails.",
+   "synth_s": 0.439,
+   "ms": 9900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Email me at paul@example.com if the link at http://localhost:8080/api/v1 fails.",
+     "phonemes": "ˈimˌAl mˌi æt pˈɔl æt ɛɡzˈæmpᵊl.kˈɑm ɪf ðə lˈɪŋk æt ˌAʧtˌitˌipˈi:slˈæʃslæʃ lˈOkəlhˌOst:ˈAt θˈWzənd ˈATi slˈæʃ ˌApˌiˈI slˈæʃ vˈi wˈʌn fˈAlz.",
+     "silent_words": [],
+     "samples": 237600,
+     "ms": 9900.0,
+     "lead_ms": 340.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 890,
+       "ms": 70
+      },
+      {
+       "at_ms": 1820,
+       "ms": 480
+      },
+      {
+       "at_ms": 4060,
+       "ms": 340
+      },
+      {
+       "at_ms": 5730,
+       "ms": 330
+      },
+      {
+       "at_ms": 6210,
+       "ms": 110
+      },
+      {
+       "at_ms": 8960,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

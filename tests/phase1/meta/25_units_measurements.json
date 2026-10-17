@@ -1,0 +1,208 @@
+{
+ "id": "25_units_measurements",
+ "category": "units",
+ "origin": "synthetic",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 27.88,
+ "synth_s": 1.39,
+ "wav_sha256": "cdf9741fc143162c8708a6c5ac2103ec85db9691e46fbdfc49c630cac55ff693",
+ "sentences": [
+  {
+   "text": "The bracket is 25 mm thick and weighs 1.2 kg.",
+   "synth_s": 0.212,
+   "ms": 4325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The bracket is 25 mm thick and weighs 1.2 kg.",
+     "phonemes": "ðə bɹˈækət ɪz twˈɛnti fˈIv m θˈɪk ænd wˈAz wˈʌn pYnt tˈu kˌAʤˈi.",
+     "silent_words": [],
+     "samples": 103800,
+     "ms": 4325.0,
+     "lead_ms": 300.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 60
+      },
+      {
+       "at_ms": 1630,
+       "ms": 90
+      },
+      {
+       "at_ms": 1850,
+       "ms": 80
+      },
+      {
+       "at_ms": 1940,
+       "ms": 340
+      },
+      {
+       "at_ms": 3080,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Torque it to 12 N·m at 20 °C.",
+   "synth_s": 0.171,
+   "ms": 3100.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Torque it to 12 N·m at 20 °C.",
+     "phonemes": "tˈɔɹk ɪt tə twˈɛlv ˈɛn ˈɛm æt twˈɛnti dᵻɡɹˈiz sˈi.",
+     "silent_words": [],
+     "samples": 74400,
+     "ms": 3100.0,
+     "lead_ms": 320.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 1150,
+       "ms": 70
+      },
+      {
+       "at_ms": 1690,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The drive holds 2 TB, the GPU has 4 GB, and the CPU runs at 3.5 GHz.",
+   "synth_s": 0.333,
+   "ms": 7225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The drive holds 2 TB, the GPU has 4 GB, and the CPU runs at 3.5 GHz.",
+     "phonemes": "ðə dɹˈIv hˈOldz tˈu tˌibˈi, ðə ʤˌipˌijˈu hæz fˈɔɹ ʤˌibˈi, ænd ðə sˌipˌijˈu ɹˈʌnz æt θɹˈi pYnt fˈIv ɡˈɪɡəhˌɜɹts.",
+     "silent_words": [],
+     "samples": 173400,
+     "ms": 7225.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1710,
+       "ms": 380
+      },
+      {
+       "at_ms": 2980,
+       "ms": 80
+      },
+      {
+       "at_ms": 3660,
+       "ms": 370
+      },
+      {
+       "at_ms": 5210,
+       "ms": 130
+      },
+      {
+       "at_ms": 6120,
+       "ms": 60
+      },
+      {
+       "at_ms": 6530,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Drive at 60 km/h, or about 37 mph.",
+   "synth_s": 0.231,
+   "ms": 4675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Drive at 60 km/h, or about 37 mph.",
+     "phonemes": "dɹˈIv æt sˈɪksti kˌAˈɛm slˈæʃ ˈAʧ, ɔɹ əbˈWt θˈɜɹTi sˈɛvən ˌɛmpˌiˈAʧ.",
+     "silent_words": [],
+     "samples": 112200,
+     "ms": 4675.0,
+     "lead_ms": 320.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 2060,
+       "ms": 350
+      },
+      {
+       "at_ms": 2710,
+       "ms": 150
+      },
+      {
+       "at_ms": 4030,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A 5 V, 2 A supply delivers 10 W.",
+   "synth_s": 0.188,
+   "ms": 3600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A 5 V, 2 A supply delivers 10 W.",
+     "phonemes": "ɐ fˈIv vˈi, tˈu ɐ səplˈI dəlˈɪvəɹz tˈɛn dˈʌbᵊlju",
+     "silent_words": [],
+     "samples": 86400,
+     "ms": 3600.0,
+     "lead_ms": 300.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1000,
+       "ms": 260
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The file is 327 MB and loads in 4.6 s.",
+   "synth_s": 0.253,
+   "ms": 4950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The file is 327 MB and loads in 4.6 s.",
+     "phonemes": "ðə fˈIl ɪz θɹˈi hˈʌndɹəd twˈɛnti sˈɛvən ˌɛmbˈi ænd lˈOdz ɪn fˈɔɹ pYnt sˈɪks ˈɛs",
+     "silent_words": [],
+     "samples": 118800,
+     "ms": 4950.0,
+     "lead_ms": 300.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 910,
+       "ms": 80
+      },
+      {
+       "at_ms": 2370,
+       "ms": 390
+      },
+      {
+       "at_ms": 3460,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

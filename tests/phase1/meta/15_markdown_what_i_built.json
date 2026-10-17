@@ -1,0 +1,456 @@
+{
+ "id": "15_markdown_what_i_built",
+ "category": "markdown",
+ "origin": "real",
+ "chunks": 9,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 9,
+ "duration_s": 95.08,
+ "synth_s": 4.2,
+ "wav_sha256": "f2a846cb0771ca88d5e87aaffa385aa07be9de6e1fecaa13015fff0b42c0f891",
+ "sentences": [
+  {
+   "text": "Done.",
+   "synth_s": 0.098,
+   "ms": 1275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Done.",
+     "phonemes": "dˈʌn.",
+     "silent_words": [],
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 390.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Here's the wrap-up.",
+   "synth_s": 0.114,
+   "ms": 1700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here's the wrap-up.",
+     "phonemes": "hˈɪɹz ðə ɹˈæpəp.",
+     "silent_words": [],
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 350.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 930,
+       "ms": 60
+      },
+      {
+       "at_ms": 1130,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "## What I built (committed locally as `0018ba1`)",
+   "synth_s": 0.204,
+   "ms": 3925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## What I built (committed locally as `0018ba1`)",
+     "phonemes": "hˈæʃ wˌʌt ˌI bˈɪlt (kəmˈɪTᵻd lˈOkəli æz “ˌAtˈin bˈɑ wˈʌn”)",
+     "silent_words": [],
+     "samples": 94200,
+     "ms": 3925.0,
+     "lead_ms": 330.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 60
+      },
+      {
+       "at_ms": 1220,
+       "ms": 220
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Plugin package** at [`mcp_tts_server/plugin/`](mcp_tts_server/plugin) — `.claude-plugin/plugin.json` + `skills/natural-voice-tts/SKILL.md`.",
+   "synth_s": 0.521,
+   "ms": 12075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Plugin package** at `mcp_tts_server/plugin/` — `.claude-plugin/plugin.json` + `skills/natural-voice-tts/SKILL.md`.",
+     "phonemes": "— plˈʌɡɪn pˈækɪʤ æt “ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ plˈʌɡɪn slˈæʃ” — “.klˈɔdplˈʌɡɪn slˈæʃ plˈʌɡɪn.ʤˈAsˈɑn” plˈʌs “skˈɪlz slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs slˈæʃ skˈɪl.ˌɛmdˈi“.",
+     "silent_words": [],
+     "samples": 289800,
+     "ms": 12075.0,
+     "lead_ms": 300.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 3420,
+       "ms": 60
+      },
+      {
+       "at_ms": 4280,
+       "ms": 500
+      },
+      {
+       "at_ms": 6240,
+       "ms": 410
+      },
+      {
+       "at_ms": 7290,
+       "ms": 100
+      },
+      {
+       "at_ms": 7650,
+       "ms": 80
+      },
+      {
+       "at_ms": 10560,
+       "ms": 490
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "This is now the single source of truth; the old `mcp_tts_server/skill/` folder is removed.",
+   "synth_s": 0.351,
+   "ms": 7750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This is now the single source of truth; the old `mcp_tts_server/skill/` folder is removed.",
+     "phonemes": "ðˌɪs ɪz nˈW ðə sˈɪŋɡᵊl sˈɔɹs ʌv tɹˈuθ; ði ˈOld “ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ skˈɪl slˈæʃ fˈOldəɹ ɪz ɹəmˈuvd.",
+     "silent_words": [],
+     "samples": 186000,
+     "ms": 7750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1980,
+       "ms": 550
+      },
+      {
+       "at_ms": 3000,
+       "ms": 110
+      },
+      {
+       "at_ms": 4430,
+       "ms": 250
+      },
+      {
+       "at_ms": 6220,
+       "ms": 70
+      },
+      {
+       "at_ms": 7170,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Finalized `SKILL.md`** with your **court-reporter rule** spelled out explicitly: speak the written words verbatim; numerals-as-numbers (\"Louis XVI\" → \"the sixteenth\") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.",
+   "synth_s": 0.998,
+   "ms": 23850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Finalized `SKILL.md`** with your **court-reporter rule** spelled out explicitly: speak the written words verbatim; numerals-as-numbers (\"Louis XVI\" → \"the sixteenth\") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.",
+     "phonemes": "— ˈæstəɹɹˌɪsk fˈInᵊlˌIzd “skˈɪl.ˌɛmdˈi“ wɪð jʊɹ ˈæstəɹɹˌɪskəstəɹɹˌɪsk kˈɔɹtɹᵻpˈɔɹTəɹ ɹˈul spˈɛld ˈWt ɪksplˈɪsətli: spˈik ðə ɹˈɪtn wˈɜɹdz vəɹbˈATəm; nˈuməɹəlzæznˈʌmbəɹz (“lˈui ˌɛksvˌiˈI” ɹˈIt ˈæɹO “ðə sˌɪkstˈinθ“) ɪz fˈIn; nˈʌθɪŋ ˈædᵻd, dɹˈɑpt, ɹiwˈɜɹdᵻd, ɔɹ sˈʌməɹˌIzd; wˈʌn ɹəspˈɑns tə bˈOθ ʧˈænᵊlz; spˈik ˈɛvəɹi tˈɜɹn ˌʌntˈɪl vˈYs ˈɔf; bɹˈɛvəTi pɹˈɛfəɹəns nˈɛvəɹ kˈɔzᵻz dəvˈɜɹʤəns.",
+     "silent_words": [],
+     "samples": 572400,
+     "ms": 23850.0,
+     "lead_ms": 360.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 860,
+       "ms": 70
+      },
+      {
+       "at_ms": 2010,
+       "ms": 420
+      },
+      {
+       "at_ms": 4190,
+       "ms": 80
+      },
+      {
+       "at_ms": 5880,
+       "ms": 60
+      },
+      {
+       "at_ms": 6400,
+       "ms": 530
+      },
+      {
+       "at_ms": 8430,
+       "ms": 390
+      },
+      {
+       "at_ms": 10000,
+       "ms": 130
+      },
+      {
+       "at_ms": 12350,
+       "ms": 220
+      },
+      {
+       "at_ms": 12730,
+       "ms": 60
+      },
+      {
+       "at_ms": 13080,
+       "ms": 410
+      },
+      {
+       "at_ms": 13660,
+       "ms": 70
+      },
+      {
+       "at_ms": 14280,
+       "ms": 60
+      },
+      {
+       "at_ms": 14760,
+       "ms": 80
+      },
+      {
+       "at_ms": 16300,
+       "ms": 370
+      },
+      {
+       "at_ms": 18320,
+       "ms": 470
+      },
+      {
+       "at_ms": 18880,
+       "ms": 60
+      },
+      {
+       "at_ms": 19120,
+       "ms": 60
+      },
+      {
+       "at_ms": 20660,
+       "ms": 470
+      },
+      {
+       "at_ms": 23200,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **`install_config.py` fixed** — points at the plugin skill, **overwrites** on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.",
+   "synth_s": 0.685,
+   "ms": 16025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **`install_config.py` fixed** — points at the plugin skill, **overwrites** on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.",
+     "phonemes": "— ˈæstəɹɹˌɪsk“ɪnstˈɔl kənfˈɪɡ.pˈI“ fˈɪkst — pˈYnts æt ðə plˈʌɡɪn skˈɪl, ˈæstəɹɹˌɪskəstəɹɹˌɪsk ˌOvəɹɹˈIts ˌɔn ɹˌiənstˈɔl (ɪt pɹˈiviəsli skˈɪpt wˌɛn ɐ kˈɑpi ɪɡzˈɪstᵻd, wˌɪʧ ɪz wˌI stˈAl skˈɪl tˈɛkst lˈɪŋɡəɹd), ænd nˈW pɹˈɪnts kˈWɜɹk ˈɪmpˌɔɹt ɪnstɹˈʌkʃənz.",
+     "silent_words": [],
+     "samples": 384600,
+     "ms": 16025.0,
+     "lead_ms": 330.0,
+     "trail_ms": 484.9999999999982,
+     "pauses": [
+      {
+       "at_ms": 1000,
+       "ms": 60
+      },
+      {
+       "at_ms": 2080,
+       "ms": 530
+      },
+      {
+       "at_ms": 3000,
+       "ms": 240
+      },
+      {
+       "at_ms": 3350,
+       "ms": 60
+      },
+      {
+       "at_ms": 3590,
+       "ms": 130
+      },
+      {
+       "at_ms": 5020,
+       "ms": 390
+      },
+      {
+       "at_ms": 7750,
+       "ms": 340
+      },
+      {
+       "at_ms": 8160,
+       "ms": 80
+      },
+      {
+       "at_ms": 9080,
+       "ms": 60
+      },
+      {
+       "at_ms": 9610,
+       "ms": 60
+      },
+      {
+       "at_ms": 10370,
+       "ms": 420
+      },
+      {
+       "at_ms": 12890,
+       "ms": 400
+      },
+      {
+       "at_ms": 13620,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Closeout doc** [`_voice-skill-registration-findings.md`](_voice-skill-registration-findings.md) — written to the manager agent, covering what we found (the two-skill-systems discovery, the `/`-list verification, the corrected understanding vs. the old PHASE6 claim) and the recommended registration plan.",
+   "synth_s": 0.774,
+   "ms": 18200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Closeout doc** `_voice-skill-registration-findings.md` — written to the manager agent, covering what we found (the two-skill-systems discovery, the `/`-list verification, the corrected understanding vs. the old PHASE6 claim) and the recommended registration plan.",
+     "phonemes": "— klˈOzˌWt dˈɑkˈæstəɹɹˌɪsk “vˈYsskˈɪlɹˌɛʤɪstɹˈAʃənfˈIndɪŋz.ˌɛmdˈi“ — ɹˈɪtn tə ðə mˈænɪʤəɹ ˈAʤᵊnt, kˈʌvəɹɪŋ wˌʌt wi fˈWnd (ðə tˌuskˈɪlsˈɪstəmz dəskˈʌvəɹi, ðə “slˈæʃlˈɪst vˌɛɹəfəkˈAʃən, ðə kəɹˈɛktᵻd ˌʌndəɹstˈændɪŋ vˈɜɹsəs ði ˈOld fˈAz sˈɪks klˈAm) ænd ðə ɹˌɛkəmˈɛndᵻd ɹˌɛʤəstɹˈAʃən plˈæn.",
+     "silent_words": [],
+     "samples": 436800,
+     "ms": 18200.0,
+     "lead_ms": 310.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 1740,
+       "ms": 140
+      },
+      {
+       "at_ms": 3140,
+       "ms": 60
+      },
+      {
+       "at_ms": 3690,
+       "ms": 540
+      },
+      {
+       "at_ms": 4710,
+       "ms": 340
+      },
+      {
+       "at_ms": 6520,
+       "ms": 420
+      },
+      {
+       "at_ms": 7990,
+       "ms": 90
+      },
+      {
+       "at_ms": 9790,
+       "ms": 400
+      },
+      {
+       "at_ms": 11020,
+       "ms": 60
+      },
+      {
+       "at_ms": 11880,
+       "ms": 360
+      },
+      {
+       "at_ms": 12590,
+       "ms": 90
+      },
+      {
+       "at_ms": 14000,
+       "ms": 60
+      },
+      {
+       "at_ms": 14430,
+       "ms": 70
+      },
+      {
+       "at_ms": 15530,
+       "ms": 350
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- Also refreshed the installed loose copy at `%APPDATA%\\Claude\\skills\\...` so it's current for any surface that does read it.",
+   "synth_s": 0.456,
+   "ms": 10275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- Also refreshed the installed loose copy at `%APPDATA%\\Claude\\skills\\...` so it's current for any surface that does read it.",
+     "phonemes": "— ˈɔlsO ɹəfɹˈɛʃt ði ɪnstˈɔld lˈus kˈɑpi æt “pəɹsˈɛnt ˈæpdATə pəɹsˈɛntbəkslˌæʃ klˈɔd bˈækslæʃ skˈɪlz bˈækslæʃ...” sˌO ɪts kˈɜɹənt fɔɹ ˈɛni sˈɜɹfəs ðæt dˈʌz ɹˈid ɪt.",
+     "silent_words": [],
+     "samples": 246600,
+     "ms": 10275.0,
+     "lead_ms": 350.0,
+     "trail_ms": 575.0,
+     "pauses": [
+      {
+       "at_ms": 2430,
+       "ms": 60
+      },
+      {
+       "at_ms": 2650,
+       "ms": 210
+      },
+      {
+       "at_ms": 3380,
+       "ms": 60
+      },
+      {
+       "at_ms": 3580,
+       "ms": 80
+      },
+      {
+       "at_ms": 4780,
+       "ms": 70
+      },
+      {
+       "at_ms": 6090,
+       "ms": 60
+      },
+      {
+       "at_ms": 6760,
+       "ms": 570
+      },
+      {
+       "at_ms": 8680,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,363 @@
+{
+ "id": "11_numbers_versions_commit_status",
+ "category": "numbers_versions",
+ "origin": "real",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 61.52,
+ "synth_s": 2.89,
+ "wav_sha256": "09acba9df0c001d6f202c34310cdc18cbf0cd0f2b649479d65df3f308b39ce75",
+ "sentences": [
+  {
+   "text": "Committed and **pushed to `master`** (`e3f15ec..bba2200`).",
+   "synth_s": 0.347,
+   "ms": 7475.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Committed and **pushed to `master`** (`e3f15ec..bba2200`).",
+     "phonemes": "kəmˈɪTᵻd ænd pˈʊʃt tə “mˈæstəɹ”ˈæstəɹɹˌɪskəstəɹɹˌɪsk (“ˈi θɹˈi ˈɛf fˈɪftin ˈɛk..bˌibˌiˈA tˈu θˈWzənd tˈuhˈʌndɹɪd”).",
+     "silent_words": [],
+     "samples": 179400,
+     "ms": 7475.0,
+     "lead_ms": 290.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 70
+      },
+      {
+       "at_ms": 1840,
+       "ms": 60
+      },
+      {
+       "at_ms": 2930,
+       "ms": 350
+      },
+      {
+       "at_ms": 3430,
+       "ms": 80
+      },
+      {
+       "at_ms": 4000,
+       "ms": 60
+      },
+      {
+       "at_ms": 4600,
+       "ms": 80
+      },
+      {
+       "at_ms": 4700,
+       "ms": 440
+      },
+      {
+       "at_ms": 5910,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.",
+   "synth_s": 0.314,
+   "ms": 6675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.",
+     "phonemes": "ɡˌɪthˈʌb nˈW hæz ðə dˈi wˈʌn dˈi tˈu dˈi θɹˈi fˈɪks, sˌO ˈɛni fjˈuʧəɹ bˈɪld fɹʌm ɐ klˈin klˈOn ɪnklˈudz ɪt.",
+     "silent_words": [],
+     "samples": 160200,
+     "ms": 6675.0,
+     "lead_ms": 320.0,
+     "trail_ms": 575.0,
+     "pauses": [
+      {
+       "at_ms": 2500,
+       "ms": 60
+      },
+      {
+       "at_ms": 2950,
+       "ms": 90
+      },
+      {
+       "at_ms": 3180,
+       "ms": 360
+      },
+      {
+       "at_ms": 3720,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Status so far:",
+   "synth_s": 0.109,
+   "ms": 1750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Status so far:",
+     "phonemes": "stˈATəs sˌO fˈɑɹ:",
+     "silent_words": [],
+     "samples": 42000,
+     "ms": 1750.0,
+     "lead_ms": 350.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "- ✅ Installer rebuilt: `dist\\NaturalVoiceTTS_Setup_1.1.0.exe` (1798 MB, 4:46 PM today)",
+   "synth_s": 0.532,
+   "ms": 12325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- ✅ Installer rebuilt: `dist\\NaturalVoiceTTS_Setup_1.1.0.exe` (1798 MB, 4:46 PM today)",
+     "phonemes": "wˈIt hˈɛvi ʧˈɛk mˈɑɹk ɪnstˈɔləɹ ɹibˈɪlt: “dˈɪst bˈækslæʃ nˈæʧəɹɹᵊl vˈYs tˌitˌiˈɛs sˈɛTʌp wˈʌn.wˈʌn.zˈiəɹO.ˌiˌɛksˈi” (sˌɛvəntˈin nˈIndi ˈAt ˌɛmbˈi, fˈɔɹ:fˈɔɹTi sˈɪks pˌiˈɛm tədˈA)",
+     "silent_words": [],
+     "samples": 295800,
+     "ms": 12325.0,
+     "lead_ms": 320.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 2390,
+       "ms": 60
+      },
+      {
+       "at_ms": 2490,
+       "ms": 520
+      },
+      {
+       "at_ms": 5500,
+       "ms": 60
+      },
+      {
+       "at_ms": 5920,
+       "ms": 260
+      },
+      {
+       "at_ms": 7040,
+       "ms": 250
+      },
+      {
+       "at_ms": 7840,
+       "ms": 460
+      },
+      {
+       "at_ms": 9840,
+       "ms": 210
+      },
+      {
+       "at_ms": 10320,
+       "ms": 150
+      },
+      {
+       "at_ms": 11010,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- ✅ Fix verified present in bundled files",
+   "synth_s": 0.218,
+   "ms": 4350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- ✅ Fix verified present in bundled files",
+     "phonemes": "— wˈIt hˈɛvi ʧˈɛk mˈɑɹk fˈɪks vˈɛɹᵻfˌId pɹˈɛzᵊnt ɪn bˈʌndᵊld fˈIlz",
+     "silent_words": [],
+     "samples": 104400,
+     "ms": 4350.0,
+     "lead_ms": 330.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1090,
+       "ms": 60
+      },
+      {
+       "at_ms": 2270,
+       "ms": 70
+      },
+      {
+       "at_ms": 2680,
+       "ms": 140
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- ✅ Source fixes committed + pushed",
+   "synth_s": 0.194,
+   "ms": 3675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- ✅ Source fixes committed + pushed",
+     "phonemes": "wˈIt hˈɛvi ʧˈɛk mˈɑɹk sˈɔɹs fˈɪksᵻz kəmˈɪTᵻd plˈʌs pˈʊʃt",
+     "silent_words": [],
+     "samples": 88200,
+     "ms": 3675.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1020,
+       "ms": 80
+      },
+      {
+       "at_ms": 2020,
+       "ms": 190
+      },
+      {
+       "at_ms": 2810,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- ⏳ Runtime smoke test — the last gate before your manual retest",
+   "synth_s": 0.257,
+   "ms": 5550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- ⏳ Runtime smoke test — the last gate before your manual retest",
+     "phonemes": "ˈWəɹɡlˌæs nˈɑt dˈʌn ɹˈʌntIm smˈOk tˈɛst — ðə lˈæst ɡˈAt bəfˈɔɹ jʊɹ mˈænjəwəl ɹitˈɛst",
+     "silent_words": [],
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 330.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 2150,
+       "ms": 90
+      },
+      {
+       "at_ms": 2610,
+       "ms": 430
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass).",
+   "synth_s": 0.567,
+   "ms": 13125.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass).",
+     "phonemes": "ðə smˈOk tˈɛst nˈidz jʊɹ kˈɜɹəntliɹˌʌnɪŋ ˈæp (pˈɪd fˌɔɹtˈin θˈWzᵊnd sˈɪks hˈʌndɹəd fˈɪfti tˈu) stˈɑpt, bəkˈʌz ɪts sˌɪŋɡᵊlˈɪnstᵊns mjˈuTɛks wɪl mˌAk mI fɹˈɛʃlibˌɪlt ˌiˌɛksˈi ˈɛɡzət ˈɪnstəntli (ɐ fˈɔls pˈæs).",
+     "silent_words": [],
+     "samples": 315000,
+     "ms": 13125.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1680,
+       "ms": 60
+      },
+      {
+       "at_ms": 2670,
+       "ms": 80
+      },
+      {
+       "at_ms": 2760,
+       "ms": 430
+      },
+      {
+       "at_ms": 4840,
+       "ms": 60
+      },
+      {
+       "at_ms": 5360,
+       "ms": 360
+      },
+      {
+       "at_ms": 6200,
+       "ms": 430
+      },
+      {
+       "at_ms": 9520,
+       "ms": 80
+      },
+      {
+       "at_ms": 11210,
+       "ms": 500
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Since your next step is to uninstall it anyway, stopping it now is harmless.",
+   "synth_s": 0.23,
+   "ms": 4750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Since your next step is to uninstall it anyway, stopping it now is harmless.",
+     "phonemes": "sˈɪns jʊɹ nˈɛkst stˈɛp ɪz tʊ ˌʌnənstˈɔl ɪt ˈɛniwˌA, stˈɑpɪŋ ɪt nˈW ɪz hˈɑɹmləs.",
+     "silent_words": [],
+     "samples": 114000,
+     "ms": 4750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1070,
+       "ms": 60
+      },
+      {
+       "at_ms": 2430,
+       "ms": 350
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "How do you want to handle it?",
+   "synth_s": 0.122,
+   "ms": 1850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "How do you want to handle it?",
+     "phonemes": "hˌW dˈu ju wˈɑnt tə hˈændəl ɪt?",
+     "silent_words": [],
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 300.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 1300,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

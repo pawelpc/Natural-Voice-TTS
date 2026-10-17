@@ -1,0 +1,197 @@
+{
+ "id": "32_rhythm_long_sentences",
+ "category": "rhythm",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 30.77,
+ "synth_s": 1.45,
+ "wav_sha256": "128bd6cdba51e4f37d921c851ad7640584fda2a1aff515cfc778e5be0e1f2924",
+ "sentences": [
+  {
+   "text": "When the engine reads a long sentence, with several clauses separated by commas, semicolons and dashes, it should keep a steady rhythm; it should pause briefly at each comma, a little longer at the semicolon, and it should not run out of breath before the end.",
+   "synth_s": 0.698,
+   "ms": 16250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "When the engine reads a long sentence, with several clauses separated by commas, semicolons and dashes, it should keep a steady rhythm; it should pause briefly at each comma, a little longer at the semicolon, and it should not run out of breath before the end.",
+     "phonemes": "wˌɛn ði ˈɛnʤən ɹˈidz ɐ lˈɔŋ sˈɛntᵊns, wɪð sˈɛvəɹəl klˈɔzᵻz sˈɛpəɹˌATᵻd bI kˈɑməz, sˈɛmikˌOlənz ænd dˈæʃᵻz, ɪt ʃˌʊd kˈip ɐ stˈɛdi ɹˈɪðəm; ɪt ʃˌʊd pˈɔz bɹˈifli æt ˈiʧ kˈɑmə, ɐ lˈɪTᵊl lˈɔŋɡəɹ æt ðə sˈɛmikˌOlən, ænd ɪt ʃˌʊd nˌɑt ɹˈʌn ˈWt ʌv bɹˈɛθ bəfˈɔɹ ði ˈɛnd.",
+     "silent_words": [],
+     "samples": 390000,
+     "ms": 16250.0,
+     "lead_ms": 310.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 2310,
+       "ms": 350
+      },
+      {
+       "at_ms": 5110,
+       "ms": 220
+      },
+      {
+       "at_ms": 6870,
+       "ms": 470
+      },
+      {
+       "at_ms": 7840,
+       "ms": 60
+      },
+      {
+       "at_ms": 8790,
+       "ms": 590
+      },
+      {
+       "at_ms": 10030,
+       "ms": 70
+      },
+      {
+       "at_ms": 11270,
+       "ms": 320
+      },
+      {
+       "at_ms": 12380,
+       "ms": 60
+      },
+      {
+       "at_ms": 13230,
+       "ms": 330
+      },
+      {
+       "at_ms": 14550,
+       "ms": 100
+      },
+      {
+       "at_ms": 14860,
+       "ms": 70
+      },
+      {
+       "at_ms": 14940,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Parenthetical remarks (like this one) should sound like asides.",
+   "synth_s": 0.204,
+   "ms": 4075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Parenthetical remarks (like this one) should sound like asides.",
+     "phonemes": "pˌɛɹənθˈɛTəkᵊl ɹəmˈɑɹks (lˈIk ðɪs wˈʌn) ʃˌʊd sˈWnd lˈIk əsˈIdz.",
+     "silent_words": [],
+     "samples": 97800,
+     "ms": 4075.0,
+     "lead_ms": 300.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 1340,
+       "ms": 70
+      },
+      {
+       "at_ms": 1680,
+       "ms": 90
+      },
+      {
+       "at_ms": 2160,
+       "ms": 180
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A colon introduces something: a list, an example, or an explanation.",
+   "synth_s": 0.249,
+   "ms": 5200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A colon introduces something: a list, an example, or an explanation.",
+     "phonemes": "ɐ kˈOlən ˌɪntɹədˈusᵻz sˈʌmθˌɪŋ: ɐ lˈɪst, ɐn ɪɡzˈæmpəl, ɔɹ ɐn ˌɛksplənˈAʃən.",
+     "silent_words": [],
+     "samples": 124800,
+     "ms": 5200.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 350,
+       "ms": 60
+      },
+      {
+       "at_ms": 1820,
+       "ms": 440
+      },
+      {
+       "at_ms": 2750,
+       "ms": 140
+      },
+      {
+       "at_ms": 3620,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A new paragraph should feel like a new thought.",
+   "synth_s": 0.158,
+   "ms": 2800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A new paragraph should feel like a new thought.",
+     "phonemes": "ɐ nˈu pˈɛɹəɡɹˌæf ʃˌʊd fˈil lˈIk ɐ nˈu θˈɔt.",
+     "silent_words": [],
+     "samples": 67200,
+     "ms": 2800.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1960,
+       "ms": 70
+      },
+      {
+       "at_ms": 2230,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It should start after a clear pause.",
+   "synth_s": 0.146,
+   "ms": 2450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It should start after a clear pause.",
+     "phonemes": "ˌɪt ʃˌʊd stˈɑɹt ˈæftəɹ ɐ klˈɪɹ pˈɔz.",
+     "silent_words": [],
+     "samples": 58800,
+     "ms": 2450.0,
+     "lead_ms": 310.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 880,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

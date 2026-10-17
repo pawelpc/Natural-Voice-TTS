@@ -1,0 +1,313 @@
+{
+ "01_markdown_what_i_did": [
+  "## What I did",
+  "Followed the diagnose-then-fix workflow from the brief.",
+  "**Root cause confirmed as D1** (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox.",
+  "### Root cause",
+  "The pipe path is the only one that reassembles text from bytes.",
+  "In [`pipe_listener.py`](src/pipe_listener.py) the payload was read with a **single** `ReadFile(pipe, length)`.",
+  "Windows `PIPE_TYPE_BYTE` pipes don't guarantee one `ReadFile` returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a **truncated prefix** (tail sentences vanish), or a cut mid-UTF-8-sequence made `decode()` raise and the broad `except` dropped the **whole** message.",
+  "The hotkey path never touches the pipe, which is exactly why it never dropped anything.",
+  "My simulation with a ≤5-byte-per-call fake `ReadFile`: old single read returned 5 of 102 bytes; new `_read_exactly` returns all 102, and mid-stream EOF raises a clean `IOError`."
+ ],
+ "02_tables_install_table": [
+  "## 1. Are the changed files part of the install? — Yes, all three.",
+  "| File I changed | How it's packaged |",
+  "| `src/app.py` | PyInstaller **entry point** (`naturalvoicetts.spec` line 57) → compiled into `NaturalVoiceTTS.exe` |",
+  "| `src/pipe_listener.py` | Imported by `app.py`, so PyInstaller bundles it into the same frozen exe |",
+  "| `mcp_tts_server/server.py` | `build.bat` step 5 copies the whole `mcp_tts_server/` folder into `dist\\NaturalVoiceTTS\\mcp_server\\`, which Inno Setup then packs into the installer |",
+  "So every edit lands in the installer when you run `build.bat`."
+ ],
+ "03_paths_urls_source_vs_frozen": [
+  "The edits are written to disk (real file changes, not a runtime patch), so they persist across any app or computer restart.",
+  "The catch is **which copy of the code you actually run**:",
+  "- **If you tested by running from source** (`python src/app.py`, with the MCP server pointed at `mcp_tts_server/server.py`) — you're already running the fixed code, and every restart re-reads those `.py` files.",
+  "✅ Fully persistent, nothing more to do.",
+  "Given your test passed, this is almost certainly what you did — the frozen exe couldn't have contained the fix.",
+  "- **If/when you run the installed/frozen app** (`NaturalVoiceTTS.exe` from `dist\\` or Program Files) — that build was compiled **before** these edits, so it still contains the *old, buggy* code.",
+  "A restart just re-runs the stale exe. ⚠️",
+  "**Bottom line:** your current (source) run is fixed and stays fixed.",
+  "But the existing `dist\\NaturalVoiceTTS\\` build and any installed `.exe` are now **stale** — if you ever launch or reinstall from those, the bug comes back until you run `build.bat` to rebuild.",
+  "If this machine is meant to run the installed app long-term, rebuild + reinstall once so the fix is baked in."
+ ],
+ "04_rhythm_solid_confirmation": [
+  "That's a solid confirmation — the fix survived a full reinstall, a Claude Desktop restart, and a brand-new session, and the pipe delivered correctly once it settled.",
+  "That also definitively answers your earlier \"will it persist after restart\" question: yes.",
+  "The two initial failures are worth pinning down, though, because the **signature matters**.",
+  "The dropped-sentence bug we fixed was *silent partial loss* — you'd hear most of a response with a few sentences missing.",
+  "Two attempts failing outright and then working is a different shape, and almost certainly a **startup/timing** issue, not a regression.",
+  "The most likely causes, in order:",
+  "1. **App still warming up.**",
+  "After install/reboot, the tray app takes ~6–9 s to load the Kokoro model (your log showed `17:06:27 → 17:06:36`).",
+  "Any `speak()` before it finishes returns `Error: Named pipe … not found` — because the pipe listener starts only *after* the engine is ready.",
+  "2. **Pipe reconnect race.**",
+  "The listener holds a *single* pipe instance.",
+  "Between one client disconnecting and the loop recreating the pipe, there's a millisecond gap where a fast follow-up `speak()` can get \"pipe not found\" / \"all instances busy.\"",
+  "Two rapid early calls could hit this."
+ ],
+ "05_times_dates_build_progress": [
+  "Yes — it's still running and progressing normally.",
+  "Here's exactly where it is:",
+  "- **PyInstaller finished** — the fresh exe was written at 4:23:38 PM (rebuilt).",
+  "- **Now in the Inno Setup step** (`ISCC` pid 12024, ~12 min of CPU so far), compressing the torch/CUDA DLLs into the ~1.8 GB installer.",
+  "This compression phase is the slowest part of the whole build and produces no incremental Claude activity.",
+  "That's also why your **usage page shows no change**: this is a local build process on your machine — it burns CPU/disk, not Claude tokens.",
+  "I'm just idling in the background waiting for it to finish, so there's nothing for the usage page to reflect until I act again.",
+  "Packing a 1.8 GB installer typically takes several more minutes.",
+  "I'll be notified automatically the moment `build.bat` exits, then I'll run the static verification, commit + push, and set up the runtime smoke test.",
+  "No action needed from you right now."
+ ],
+ "06_units_toolchain": [
+  "Toolchain is all present (PyInstaller 6.19, Inno Setup 6, espeak-ng, Kokoro model cached).",
+  "Two things to note:",
+  "- The installer is **~1.8 GB** — confirms it must stay a local artifact, not a git commit.",
+  "- Your current app is **running** (pid 14652, the installed copy).",
+  "Building won't touch it, but the strongest pre-flight test — actually launching the freshly-built exe — is blocked by the app's single-instance mutex while that instance runs.",
+  "I'll handle that at the end."
+ ],
+ "07_tables_log_table": [
+  "The log is conclusive — and it's a clean bill of health for the code.",
+  "Every message that reached the pipe came through **100% intact**:",
+  "| Time | Header bytes | Received | Sentences | All played? |",
+  "| 17:18:56 | 111 | 111 | 3 | ✅ [1–3/3] |",
+  "| 17:19:55 | 57 | 57 | 1 | ✅ |",
+  "| 17:21:15 | 36 | 36 | 1 | ✅ |",
+  "| 17:22:19 | 113 | 113 | 5 | ✅ [1–5/5] |",
+  "| 17:23:19 | 392 | 392 | 6 | ✅ [1–6/6] |",
+  "| 17:24:45 | 376 | 376 | 4 | ✅ [1–4/4] |",
+  "| **17:26:52** | **3091** | **3091** | **20** | ✅ [1–20/20] |",
+  "`header == received` on all seven, including the **3091-byte / 20-sentence** em-dash-heavy essay that played completely [1/20]…[20/20].",
+  "That's exactly the size and content profile that used to drop tail sentences.",
+  "**The D1 fix holds under real load.**"
+ ],
+ "08_code_blocks_skill_dirs": [
+  "This is very revealing.",
+  "The **working Cowork skills** (docx, pdf, xlsx, pptx, schedule, etc.) all live under one managed directory:",
+  "```\n...\\Claude\\local-agent-mode-sessions\\skills-plugin\\e23a197c-…\\23c2ac3c-…(your account)\\skills\\<name>\\SKILL.md\n```",
+  "But `natural-voice-tts` was installed to a **completely different** place:",
+  "```\n...\\Claude\\skills\\natural-voice-tts\\SKILL.md\n```",
+  "That's almost certainly why Cowork never sees it — `install_config.py` drops it in `%APPDATA%\\Claude\\skills\\`, which isn't the directory Cowork (local-agent-mode) indexes.",
+  "Let me confirm the mechanism — whether that managed dir has a manifest/registry, and how custom skills are meant to register — before I prescribe a fix."
+ ],
+ "09_lists_results": [
+  "## Results",
+  "**1. Installer rebuilt** ✅",
+  "`dist\\NaturalVoiceTTS_Setup_1.1.0.exe` — 1798 MB, built today 4:46 PM, exit code 0.",
+  "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).",
+  "**2. Committed + pushed** ✅",
+  "Commit `bba2200` on `master`, pushed to `github.com/pawelpc/Natural-Voice-TTS` — the three fix files with a D1/D2/D3 message.",
+  "(The installer `.exe` itself is gitignored and stays local, as it should — it's 1.8 GB.)",
+  "**3. Pre-manual-test gate — all green** ✅",
+  "- **Build-fix propagation:** D3 change confirmed inside the *bundled* `mcp_server\\server.py` — rules out stale-file builds.",
+  "- **Runtime launch (packaging check):** freshly-built exe reached `TTS engine ready` → `Ready!` with no traceback — catches the PyInstaller hidden-import breakage you've hit before.",
+  "- **End-to-end pipe test (the actual bug):** pushed messages through the named pipe exactly like the MCP server does.",
+  "The D1 fix is proven live:",
+  "| Test | Header | Received | Result |",
+  "| 420-byte ASCII | 420 | **420** | full payload, 0 dropped |",
+  "| 112-byte multibyte (em dash, curly quotes, ellipsis) | 112 | **112** | decoded to 104 chars, played \"First sentence — with an em dash…\" |",
+  "`header == received` on both, and the multibyte message decoded and spoke cleanly — the exact case (`—` `\"` `…`) that used to truncate or throw.",
+  "`__STOP__` also worked both times.",
+  "Test exe was shut down; **no `NaturalVoiceTTS` process is running** now."
+ ],
+ "10_splitting_blockquote": [
+  "Read it — and I can already see the likely culprit.",
+  "The skill's ongoing-mode instructions do say \"full response text\" (lines 22, 33–36), but **line 42** undercuts them:",
+  "> \"Don't call `speak` with markdown formatting, code blocks, or special characters — send clean readable text.\"",
+  "That's vague enough to license exactly what you saw: a model can read \"send clean readable text\" as \"send a trimmed/cleaned subset,\" and there's **no explicit rule forbidding partial sends**.",
+  "Combined, it invites the divergence R1 was meant to prevent — full text to chat, a reduced version to `speak()`.",
+  "So the durable fix is a SKILL.md revision that makes it unambiguous: send the **entire** response verbatim — every sentence, no summarizing, no excerpting, no omissions — and reframe the formatting note so it can't be read as permission to change the words."
+ ],
+ "11_numbers_versions_commit_status": [
+  "Committed and **pushed to `master`** (`e3f15ec..bba2200`).",
+  "GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.",
+  "Status so far:",
+  "- ✅ Installer rebuilt: `dist\\NaturalVoiceTTS_Setup_1.1.0.exe` (1798 MB, 4:46 PM today)",
+  "- ✅ Fix verified present in bundled files",
+  "- ✅ Source fixes committed + pushed",
+  "- ⏳ Runtime smoke test — the last gate before your manual retest",
+  "The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass).",
+  "Since your next step is to uninstall it anyway, stopping it now is harmless.",
+  "How do you want to handle it?"
+ ],
+ "12_symbols_skill_fix_strike": [
+  "The skill wording is what let the agent under-send.",
+  "Proposed changes to `SKILL.md`:",
+  "**Add an explicit completeness rule (Step 3):**",
+  "> Send the **complete response, verbatim** — the same text you wrote to chat, every sentence, in order.",
+  "Never summarize, shorten, excerpt, or send only the first part.",
+  "The spoken words must match the written words.",
+  "**Replace the problematic line 42:**",
+  "> ~~\"Don't call `speak` with markdown formatting… send clean readable text.\"~~",
+  "> → \"You may strip pure markdown *formatting characters* (`**`, `#`, backticks) so they aren't read aloud, but do not remove, shorten, or reword any sentences.",
+  "The TTS app handles normal punctuation and Unicode (em dashes, curly quotes, ellipses) correctly — it read a 20-sentence em-dash essay with zero problems — so there's no need to strip those.\"",
+  "This keeps R1 intact (identical content to both channels) while still giving clean audio."
+ ],
+ "13_rhythm_honest_caveat": [
+  "## An honest caveat",
+  "This is now about as explicit as a skill instruction can get — it names the exact move the agent made (short chat + long speech) and states that matching the two channels beats brevity while voice is on.",
+  "But it's still an **instruction**, not a hard guarantee: it's steering an LLM that's also holding a competing \"keep chat concise\" preference.",
+  "It should hold, but I can't promise a model will never rationalize around it again.",
+  "Two things worth knowing:",
+  "- **Where the competing preference lives matters.**",
+  "The agent cited a *\"standing preference for concise, direct text responses.\"*",
+  "If that's set in that session's memory/custom instructions, softening or scoping it (\"concise unless voice is on\") would remove the tug-of-war at the source.",
+  "I can't see or edit that from here, but you can.",
+  "- **The bulletproof fix is structural, not prompt-based.**",
+  "If it recurs and you want a hard guarantee, the real fix is to stop relying on the agent to send text twice — e.g., have the integration speak the actual chat message rather than a separately-supplied argument, so the two *can't* differ.",
+  "That's a design change to the MCP/skill flow, not a one-liner, but I can scope it if the instruction approach proves unreliable.",
+  "Give it a run after the restart and tell me how it behaves.",
+  "If it diverges again, that's our signal to go structural rather than keep tightening wording."
+ ],
+ "14_abbreviations_plugin_plan": [
+  "Here's what I recommend, split by who does what:",
+  "- **Me (now, in the repo):** finalize the `SKILL.md` with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (`.claude-plugin/plugin.json` + `skills/natural-voice-tts/`), and fix `install_config.py` so it stops installing to the dead location.",
+  "- **You (in Cowork):** run **`/skill-creator`** (or `/create-cowork-plugin`) and point it at that prepared `SKILL.md` so it registers into the manifest system Cowork actually reads.",
+  "I'll guide the exact steps.",
+  "One honesty note: I've confirmed *where* Cowork reads skills, but the precise hand-off to register a **custom** skill into that manifest (vs. the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product `skill-creator`/`create-cowork-plugin` tool is safer than me hand-editing the managed `manifest.json` (which looks like it re-syncs and would wipe a manual entry)."
+ ],
+ "15_markdown_what_i_built": [
+  "Done.",
+  "Here's the wrap-up.",
+  "## What I built (committed locally as `0018ba1`)",
+  "- **Plugin package** at [`mcp_tts_server/plugin/`](mcp_tts_server/plugin) — `.claude-plugin/plugin.json` + `skills/natural-voice-tts/SKILL.md`.",
+  "This is now the single source of truth; the old `mcp_tts_server/skill/` folder is removed.",
+  "- **Finalized `SKILL.md`** with your **court-reporter rule** spelled out explicitly: speak the written words verbatim; numerals-as-numbers (\"Louis XVI\" → \"the sixteenth\") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.",
+  "- **`install_config.py` fixed** — points at the plugin skill, **overwrites** on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.",
+  "- **Closeout doc** [`_voice-skill-registration-findings.md`](_voice-skill-registration-findings.md) — written to the manager agent, covering what we found (the two-skill-systems discovery, the `/`-list verification, the corrected understanding vs. the old PHASE6 claim) and the recommended registration plan.",
+  "- Also refreshed the installed loose copy at `%APPDATA%\\Claude\\skills\\...` so it's current for any surface that does read it."
+ ],
+ "16_rhythm_speak_call": [
+  "Got it.",
+  "I'll speak my full responses for the rest of this session, and I'll keep them in clean prose so they sound natural out loud.",
+  "What would you like to do next?",
+  "We can attempt the remote control connection from your phone using slash r c, run another brain dump on a different topic, or wrap up the session and prep your git commit."
+ ],
+ "17_splitting_july_regression": [
+  "Sentence one is short.",
+  "Sentence two runs a little longer — with an em dash — to add bytes.",
+  "Here is a third sentence with \"curly quotes\" and an ellipsis…",
+  "Sentence four asks a question?",
+  "Sentence five!",
+  "Number six keeps the payload growing so the pipe fragments.",
+  "Seven, eight, and nine follow in quick succession.",
+  "Ten is here.",
+  "Eleven is the second-to-last.",
+  "This twelfth and final sentence is the tail that used to disappear."
+ ],
+ "18_abbreviations_titles_places": [
+  "Dr. Smith met Mr. and Mrs. Jones at 5 p.m. on Main St. near the U.S. Army base.",
+  "They covered several topics, e.g. budgets, i.e. the real costs, etc.",
+  "Then they left."
+ ],
+ "19_abbreviations_academic": [
+  "Prof. Lee, Ph.D., works at St. Mary's Hospital vs. Johns Hopkins.",
+  "Fig. 3 shows approx. 40 samples; see No. 7, Vol. 2, pp. 14–18.",
+  "The results, cf. Table 2, were sig. at the 5% level."
+ ],
+ "20_splitting_initials": [
+  "J. R. R. Tolkien wrote the book.",
+  "George W. Bush gave the speech.",
+  "The U.K. and the E.U. agreed on a deal.",
+  "A.I. tools are everywhere now.",
+  "Contact J. Smith for details."
+ ],
+ "21_numbers_versions_decimals_versions": [
+  "Pi is about 3.14159.",
+  "Upgrade from v1.1.0 to v1.2.0 today.",
+  "Python 3.11 and torch 2.6.0+cu124 are required.",
+  "The ratio was 0.5, not .75.",
+  "Kokoro 0.9.4 ships with misaki 0.9.4."
+ ],
+ "22_splitting_ellipses_quotes": [
+  "He paused... then said, \"Are you sure?\"",
+  "She replied, \"Yes.\"",
+  "Wait… what?",
+  "\"Go!\" he shouted.",
+  "It's done — finally.",
+  "Was it worth it?!",
+  "Absolutely."
+ ],
+ "23_paths_urls_paths_and_links": [
+  "Open src/app.py and C:\\Users\\paul\\Documents\\notes.txt, then visit https://github.com/pawelpc/Natural-Voice-TTS/releases or www.example.com/docs?page=2.",
+  "Email me at paul@example.com if the link at http://localhost:8080/api/v1 fails."
+ ],
+ "24_paths_urls_identifiers": [
+  "Call split_sentences() in text_processor.py, then set SPLIT_PATTERN and HF_HUB_OFFLINE=1.",
+  "The KPipeline class wraps KModel, so use tts_engine.init() once.",
+  "Check config.get('voice') and the --noconfirm flag in naturalvoicetts.spec."
+ ],
+ "25_units_measurements": [
+  "The bracket is 25 mm thick and weighs 1.2 kg.",
+  "Torque it to 12 N·m at 20 °C.",
+  "The drive holds 2 TB, the GPU has 4 GB, and the CPU runs at 3.5 GHz.",
+  "Drive at 60 km/h, or about 37 mph.",
+  "A 5 V, 2 A supply delivers 10 W.",
+  "The file is 327 MB and loads in 4.6 s."
+ ],
+ "26_times_dates_schedule": [
+  "The meeting is on 2026-10-17 at 14:30.",
+  "It moved from Oct 3, 2026 to 10/24/2026 at 9:00 a.m.",
+  "The log shows 17:06:27 → 17:06:36, about 9 s.",
+  "I'll be back by 3pm on Mon., Jan. 5th.",
+  "The 1990s were different from the 2020s."
+ ],
+ "27_numbers_versions_numbers_mixed": [
+  "We sold 1,234,567 units, a 12.5% rise.",
+  "Costs were $4.99, €20 and £3.50.",
+  "They ranked 1st, 2nd, 3rd and 21st.",
+  "Louis XVI and Henry VIII ruled long ago.",
+  "Call 555-0142.",
+  "The score was 3-2 and the screen is 16:9.",
+  "Roughly 1/3 of the 2,000 tests passed."
+ ],
+ "28_markdown_formatting_mix": [
+  "# Release Notes",
+  "## What changed",
+  "The **splitter** now handles *abbreviations* and `v1.2.0` versions.",
+  "See [the README](https://github.com/pawelpc/Natural-Voice-TTS#readme) for details.",
+  "### Known issues",
+  "> Note: __bold underscores__ and ~~old text~~ are still read literally."
+ ],
+ "29_lists_bullets_no_punct": [
+  "Before you start, check these:",
+  "- Python 3.11 installed",
+  "- espeak-ng in Program Files",
+  "- CUDA drivers up to date",
+  "- at least 4 GB of VRAM",
+  "- driver 550 or newer",
+  "Then follow the steps:",
+  "1. Clone the repo",
+  "2. Run pip install -r requirements.txt",
+  "3. Start the app"
+ ],
+ "30_code_blocks_fenced_mix": [
+  "To test it, run this:",
+  "```powershell\ncd C:\\Projects\\Natural_Voice_TTS\npython src/app.py\n```",
+  "The splitter looks like this:",
+  "```python\ndef split_sentences(text: str) -> list[str]:\n parts = re.split(r'(?<=[.!?])\\s+', text)\n return [p for p in parts if p]\n```",
+  "After that, the app should start normally."
+ ],
+ "31_symbols_symbol_soup": [
+  "Use A & B, not A + B.",
+  "Temperatures ≥ 30° are bad; ~50% of units fail.",
+  "Cost × 2 = total.",
+  "Press Ctrl+Win+T → the app reads the text.",
+  "It's our #1 priority @ 100%.",
+  "In code, x != y and a <= b.",
+  "Copyright © 2026.",
+  "Item A/B testing is done."
+ ],
+ "32_rhythm_long_sentences": [
+  "When the engine reads a long sentence, with several clauses separated by commas, semicolons and dashes, it should keep a steady rhythm; it should pause briefly at each comma, a little longer at the semicolon, and it should not run out of breath before the end.",
+  "Parenthetical remarks (like this one) should sound like asides.",
+  "A colon introduces something: a list, an example, or an explanation.",
+  "A new paragraph should feel like a new thought.",
+  "It should start after a clear pause."
+ ],
+ "33_splitting_hard_wrapped": [
+  "This paragraph was copied from a PDF, so every line ends with a hard line break even though the sentence keeps going.",
+  "A reader should not pause at the end of each line, only at the real sentence ends.",
+  "The same thing happens with plain-text email, which is often wrapped at about seventy characters per line.",
+  "A second paragraph follows the blank line."
+ ]
+}

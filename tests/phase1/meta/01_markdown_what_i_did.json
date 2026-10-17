@@ -1,0 +1,452 @@
+{
+ "id": "01_markdown_what_i_did",
+ "category": "markdown",
+ "origin": "real",
+ "chunks": 9,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 9,
+ "duration_s": 79.03,
+ "synth_s": 3.56,
+ "wav_sha256": "7e1aeb6b0a9f9fbdbce6c90b2729bcf887a98c7a0f80059ccce03e4a8bc49312",
+ "sentences": [
+  {
+   "text": "## What I did",
+   "synth_s": 0.142,
+   "ms": 1675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## What I did",
+     "phonemes": "hˈæʃ wˌʌt ˌI dˈɪd",
+     "silent_words": [],
+     "samples": 40200,
+     "ms": 1675.0,
+     "lead_ms": 360.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Followed the diagnose-then-fix workflow from the brief.",
+   "synth_s": 0.185,
+   "ms": 3425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Followed the diagnose-then-fix workflow from the brief.",
+     "phonemes": "fˈɑlOd ðə dˌIəɡnˈOsðˌɛnfˈɪks wˈɜɹkflˌO fɹʌm ðə bɹˈif.",
+     "silent_words": [],
+     "samples": 82200,
+     "ms": 3425.0,
+     "lead_ms": 340.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1580,
+       "ms": 60
+      },
+      {
+       "at_ms": 2020,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**Root cause confirmed as D1** (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox.",
+   "synth_s": 0.581,
+   "ms": 13625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**Root cause confirmed as D1** (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox.",
+     "phonemes": "ɹˈut kˈɔz kənfˈɜɹmd æz dˈi wˈʌn ˈæstəɹɹˌɪskəstəɹɹˌɪsk (ʃˈɔɹtɹˌid ˌɔn ðə bˌItmˈOd nˈAmd pˈIp) — vˈIə kˈOd ənˈæləsɪs plˈʌs ɐ dətˌɜɹmənˈɪstɪk sˌɪmjəlˈAʃən, sˈɪns ˌI kˈænt ɹˈʌn ðə lˈIv pˈIp fɹʌm ðə sˈændbˌɑks.",
+     "silent_words": [],
+     "samples": 327000,
+     "ms": 13625.0,
+     "lead_ms": 330.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 540,
+       "ms": 90
+      },
+      {
+       "at_ms": 1900,
+       "ms": 70
+      },
+      {
+       "at_ms": 2490,
+       "ms": 60
+      },
+      {
+       "at_ms": 3710,
+       "ms": 390
+      },
+      {
+       "at_ms": 5760,
+       "ms": 60
+      },
+      {
+       "at_ms": 6040,
+       "ms": 60
+      },
+      {
+       "at_ms": 6110,
+       "ms": 640
+      },
+      {
+       "at_ms": 8100,
+       "ms": 280
+      },
+      {
+       "at_ms": 8720,
+       "ms": 70
+      },
+      {
+       "at_ms": 10200,
+       "ms": 390
+      },
+      {
+       "at_ms": 11940,
+       "ms": 70
+      },
+      {
+       "at_ms": 12200,
+       "ms": 100
+      },
+      {
+       "at_ms": 12940,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "### Root cause",
+   "synth_s": 0.127,
+   "ms": 1950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "### Root cause",
+     "phonemes": "hˈæʃhæʃ ɹˈut kˈɔz",
+     "silent_words": [],
+     "samples": 46800,
+     "ms": 1950.0,
+     "lead_ms": 350.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 960,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The pipe path is the only one that reassembles text from bytes.",
+   "synth_s": 0.212,
+   "ms": 4200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The pipe path is the only one that reassembles text from bytes.",
+     "phonemes": "ðə pˈIp pˈæθ ɪz ði ˈOnli wˈʌn ðæt ɹˌiəsˈɛmbᵊlz tˈɛkst fɹʌm bˈIts.",
+     "silent_words": [],
+     "samples": 100800,
+     "ms": 4200.0,
+     "lead_ms": 300.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 590,
+       "ms": 80
+      },
+      {
+       "at_ms": 920,
+       "ms": 200
+      },
+      {
+       "at_ms": 1970,
+       "ms": 130
+      },
+      {
+       "at_ms": 3570,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "In [`pipe_listener.py`](src/pipe_listener.py) the payload was read with a **single** `ReadFile(pipe, length)`.",
+   "synth_s": 0.369,
+   "ms": 8300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "In `pipe_listener.py` the payload was read with a **single** `ReadFile(pipe, length)`.",
+     "phonemes": "ɪn “pˈIp lˈɪsənəɹ.pˈI” ðə pˈAlˌOd wʌz ɹˈɛd wɪð ɐ ˈæstəɹɹˌɪskəstəɹɹˌɪsk sˈɪŋɡᵊl ˈæstəɹɹˌɪskəstəɹɹˌɪsk “ɹˈid fˈIl(pˈIp, lˈɛŋθ)”.",
+     "silent_words": [],
+     "samples": 199200,
+     "ms": 8300.0,
+     "lead_ms": 320.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 1170,
+       "ms": 340
+      },
+      {
+       "at_ms": 1860,
+       "ms": 380
+      },
+      {
+       "at_ms": 5860,
+       "ms": 170
+      },
+      {
+       "at_ms": 6740,
+       "ms": 250
+      },
+      {
+       "at_ms": 7210,
+       "ms": 70
+      },
+      {
+       "at_ms": 7290,
+       "ms": 200
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Windows `PIPE_TYPE_BYTE` pipes don't guarantee one `ReadFile` returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a **truncated prefix** (tail sentences vanish), or a cut mid-UTF-8-sequence made `decode()` raise and the broad `except` dropped the **whole** message.",
+   "synth_s": 1.012,
+   "ms": 24475.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Windows `PIPE_TYPE_BYTE` pipes don't guarantee one `ReadFile` returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a **truncated prefix** (tail sentences vanish), or a cut mid-UTF-8-sequence made `decode()` raise and the broad `except` dropped the **whole** message.",
+     "phonemes": "wˈɪndOz “pˌIptˈIpbˈIt” pˈIps dˈOnt ɡˌɛɹəntˈi wˈʌn “ɹˌidfˈIl” ɹətˈɜɹnz ˈɔl ɹəkwˈɛstᵻd bˈIts — fɔɹ lˈɔŋɡəɹ ˈAʤᵊnt ɹəspˈɑnsᵻz ðə pˈAlˌOd əɹˈIvz fɹˈæɡmˌɛntᵻd, sˌO ðə sˈɪŋɡᵊl ɹˈid ɹətˈɜɹnd ɐ ˈæstəɹɹˌɪskəstəɹɹˌɪsk tɹˈʌŋkATᵻd pɹˈifˌɪks (tˈAl sˈɛntᵊnsᵻz vˈænɪʃ), ɔɹ ɐ kˈʌt mˈɪd jˌutˌiˈɛf ˈAt sˈikwəns mˌAd “dˌikˈOd()“ ɹˈAz ænd ðə bɹˈɔd “ɪksˈɛpt“ dɹˈɑpt ðə ˈæstəɹɹˌɪskəstəɹɹˌɪsk hˈOl ˈæstəɹɹˌɪskəstəɹɹˌɪsk mˈɛsɪʤ.",
+     "silent_words": [],
+     "samples": 587400,
+     "ms": 24475.0,
+     "lead_ms": 330.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 780,
+       "ms": 70
+      },
+      {
+       "at_ms": 1260,
+       "ms": 90
+      },
+      {
+       "at_ms": 1530,
+       "ms": 270
+      },
+      {
+       "at_ms": 4470,
+       "ms": 60
+      },
+      {
+       "at_ms": 5510,
+       "ms": 80
+      },
+      {
+       "at_ms": 5710,
+       "ms": 560
+      },
+      {
+       "at_ms": 9240,
+       "ms": 470
+      },
+      {
+       "at_ms": 11070,
+       "ms": 60
+      },
+      {
+       "at_ms": 11960,
+       "ms": 90
+      },
+      {
+       "at_ms": 12510,
+       "ms": 60
+      },
+      {
+       "at_ms": 12730,
+       "ms": 70
+      },
+      {
+       "at_ms": 12880,
+       "ms": 60
+      },
+      {
+       "at_ms": 13050,
+       "ms": 330
+      },
+      {
+       "at_ms": 14740,
+       "ms": 570
+      },
+      {
+       "at_ms": 15470,
+       "ms": 60
+      },
+      {
+       "at_ms": 18020,
+       "ms": 580
+      },
+      {
+       "at_ms": 19670,
+       "ms": 200
+      },
+      {
+       "at_ms": 20330,
+       "ms": 400
+      },
+      {
+       "at_ms": 20950,
+       "ms": 60
+      },
+      {
+       "at_ms": 22240,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The hotkey path never touches the pipe, which is exactly why it never dropped anything.",
+   "synth_s": 0.264,
+   "ms": 5550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The hotkey path never touches the pipe, which is exactly why it never dropped anything.",
+     "phonemes": "ðə hˈɑtki pˈæθ nˈɛvəɹ tˈʌʧᵻz ðə pˈIp, wˌɪʧ ɪz ɪɡzˈæktli wˌI ɪt nˈɛvəɹ dɹˈɑpt ˈɛniθˌɪŋ.",
+     "silent_words": [],
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 590,
+       "ms": 60
+      },
+      {
+       "at_ms": 1070,
+       "ms": 130
+      },
+      {
+       "at_ms": 2300,
+       "ms": 490
+      },
+      {
+       "at_ms": 3450,
+       "ms": 60
+      },
+      {
+       "at_ms": 4480,
+       "ms": 70
+      },
+      {
+       "at_ms": 4800,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "My simulation with a ≤5-byte-per-call fake `ReadFile`: old single read returned 5 of 102 bytes; new `_read_exactly` returns all 102, and mid-stream EOF raises a clean `IOError`.",
+   "synth_s": 0.664,
+   "ms": 15825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "My simulation with a ≤5-byte-per-call fake `ReadFile`: old single read returned 5 of 102 bytes; new `_read_exactly` returns all 102, and mid-stream EOF raises a clean `IOError`.",
+     "phonemes": "mˌI sˌɪmjəlˈAʃən wɪð ɐ lˈɛs ɔɹ ˈikwᵊl tə fˈIvbˈItpɜɹkˈɔl fˈAk “ɹˌidfˈIl”: ˈOld sˈɪŋɡᵊl ɹˈid ɹətˈɜɹnd fˈIv ʌv wˈʌn hˈʌndɹəd tˈu bˈIts; nˈu “ɹˌidɪɡzˈæktli“ ɹətˈɜɹnz ˈɔl wˈʌn hˈʌndɹəd tˈu, ænd mˌɪdstɹˈim ˌiˌOˈɛf ɹˈAzᵻz ɐ klˈin “ˌIˈO ˈɛɹəɹ”.",
+     "silent_words": [],
+     "samples": 379800,
+     "ms": 15825.0,
+     "lead_ms": 320.0,
+     "trail_ms": 545.0,
+     "pauses": [
+      {
+       "at_ms": 1840,
+       "ms": 60
+      },
+      {
+       "at_ms": 2000,
+       "ms": 60
+      },
+      {
+       "at_ms": 2690,
+       "ms": 60
+      },
+      {
+       "at_ms": 2890,
+       "ms": 70
+      },
+      {
+       "at_ms": 3560,
+       "ms": 70
+      },
+      {
+       "at_ms": 3660,
+       "ms": 190
+      },
+      {
+       "at_ms": 4410,
+       "ms": 650
+      },
+      {
+       "at_ms": 7680,
+       "ms": 80
+      },
+      {
+       "at_ms": 7900,
+       "ms": 520
+      },
+      {
+       "at_ms": 8810,
+       "ms": 140
+      },
+      {
+       "at_ms": 9470,
+       "ms": 70
+      },
+      {
+       "at_ms": 9760,
+       "ms": 310
+      },
+      {
+       "at_ms": 11660,
+       "ms": 370
+      },
+      {
+       "at_ms": 12710,
+       "ms": 60
+      },
+      {
+       "at_ms": 14300,
+       "ms": 190
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

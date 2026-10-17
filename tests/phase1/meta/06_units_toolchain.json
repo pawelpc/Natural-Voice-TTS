@@ -1,0 +1,238 @@
+{
+ "id": "06_units_toolchain",
+ "category": "units",
+ "origin": "real",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 37.85,
+ "synth_s": 1.77,
+ "wav_sha256": "4e9a5104538564b748bddedabbbc6125eecfbaa2dc1888a3b0113ffebdc94ef3",
+ "sentences": [
+  {
+   "text": "Toolchain is all present (PyInstaller 6.19, Inno Setup 6, espeak-ng, Kokoro model cached).",
+   "synth_s": 0.368,
+   "ms": 8125.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Toolchain is all present (PyInstaller 6.19, Inno Setup 6, espeak-ng, Kokoro model cached).",
+     "phonemes": "tˈulʧAn ɪz ˈɔl pɹˈɛzᵊnt (pˈI ɪnstˈɔləɹ sˈɪks pYnt wˈʌn nˈIn, ɪnnˈO sˈɛTˌʌp sˈɪks, ˈispikˌɛnʤˈi, kəkˈɔɹO mˈɑdᵊl kˈæʃt).",
+     "silent_words": [],
+     "samples": 195000,
+     "ms": 8125.0,
+     "lead_ms": 310.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1210,
+       "ms": 60
+      },
+      {
+       "at_ms": 1600,
+       "ms": 390
+      },
+      {
+       "at_ms": 3770,
+       "ms": 330
+      },
+      {
+       "at_ms": 4780,
+       "ms": 70
+      },
+      {
+       "at_ms": 5100,
+       "ms": 70
+      },
+      {
+       "at_ms": 5310,
+       "ms": 220
+      },
+      {
+       "at_ms": 6350,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two things to note:",
+   "synth_s": 0.114,
+   "ms": 1750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two things to note:",
+     "phonemes": "tˈu θˈɪŋz tə nˈOt:",
+     "silent_words": [],
+     "samples": 42000,
+     "ms": 1750.0,
+     "lead_ms": 350.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "- The installer is **~1.8 GB** — confirms it must stay a local artifact, not a git commit.",
+   "synth_s": 0.334,
+   "ms": 7350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- The installer is **~1.8 GB** — confirms it must stay a local artifact, not a git commit.",
+     "phonemes": "— ði ɪnstˈɔləɹ ɪz ˈæstəɹɹˌɪskəstəɹɹˌɪsk. ʤˌibˈi — kənfˈɜɹmz ɪt mˈʌst stˈA ɐ lˈOkəl ˈɑɹTəfˌækt, nˌɑt ɐ ɡˈɪt kəmˈɪt.",
+     "silent_words": [],
+     "samples": 176400,
+     "ms": 7350.0,
+     "lead_ms": 310.0,
+     "trail_ms": 580.0,
+     "pauses": [
+      {
+       "at_ms": 1360,
+       "ms": 70
+      },
+      {
+       "at_ms": 2480,
+       "ms": 450
+      },
+      {
+       "at_ms": 3470,
+       "ms": 60
+      },
+      {
+       "at_ms": 5430,
+       "ms": 70
+      },
+      {
+       "at_ms": 5660,
+       "ms": 90
+      },
+      {
+       "at_ms": 5770,
+       "ms": 280
+      },
+      {
+       "at_ms": 6400,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- Your current app is **running** (pid 14652, the installed copy).",
+   "synth_s": 0.346,
+   "ms": 7500.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- Your current app is **running** (pid 14652, the installed copy).",
+     "phonemes": "— jˌʊɹ kˈɜɹənt ˈæp ɪz ˈæstəɹɹˌɪskəstəɹɹˌɪsk ɹˈʌnɪŋ (pˈɪd fˌɔɹtˈin θˈWzᵊnd sˈɪks hˈʌndɹəd fˈɪfti tˈu, ði ɪnstˈɔld kˈɑpi).",
+     "silent_words": [],
+     "samples": 180000,
+     "ms": 7500.0,
+     "lead_ms": 320.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 1090,
+       "ms": 60
+      },
+      {
+       "at_ms": 1170,
+       "ms": 70
+      },
+      {
+       "at_ms": 1390,
+       "ms": 60
+      },
+      {
+       "at_ms": 2870,
+       "ms": 440
+      },
+      {
+       "at_ms": 5040,
+       "ms": 60
+      },
+      {
+       "at_ms": 5550,
+       "ms": 330
+      },
+      {
+       "at_ms": 6730,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Building won't touch it, but the strongest pre-flight test — actually launching the freshly-built exe — is blocked by the app's single-instance mutex while that instance runs.",
+   "synth_s": 0.485,
+   "ms": 11050.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Building won't touch it, but the strongest pre-flight test — actually launching the freshly-built exe — is blocked by the app's single-instance mutex while that instance runs.",
+     "phonemes": "bˈɪldɪŋ wOnt tˈʌʧ ɪt, bˌʌt ðə stɹˈɔŋɡᵻst pɹˌiflˈIt tˈɛst — ˈækʧəwəli lˈɑnʧɪŋ ðə fɹˈɛʃlibˌɪlt ˌiˌɛksˈi — ɪz blˈɑkt bI ði ˈæps sˌɪŋɡᵊlˈɪnstᵊns mjˈuTɛks wˌIl ðˈæt ˈɪnstᵊns ɹˈʌnz.",
+     "silent_words": [],
+     "samples": 265200,
+     "ms": 11050.0,
+     "lead_ms": 330.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1280,
+       "ms": 330
+      },
+      {
+       "at_ms": 2420,
+       "ms": 70
+      },
+      {
+       "at_ms": 3360,
+       "ms": 500
+      },
+      {
+       "at_ms": 5400,
+       "ms": 60
+      },
+      {
+       "at_ms": 6140,
+       "ms": 420
+      },
+      {
+       "at_ms": 7660,
+       "ms": 70
+      },
+      {
+       "at_ms": 9090,
+       "ms": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll handle that at the end.",
+   "synth_s": 0.127,
+   "ms": 2075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll handle that at the end.",
+     "phonemes": "ˌIl hˈændəl ðˈæt æt ði ˈɛnd.",
+     "silent_words": [],
+     "samples": 49800,
+     "ms": 2075.0,
+     "lead_ms": 320.0,
+     "trail_ms": 475.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

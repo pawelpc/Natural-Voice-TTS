@@ -1,0 +1,157 @@
+{
+ "id": "28_markdown_formatting_mix",
+ "category": "markdown",
+ "origin": "synthetic",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [
+  "_",
+  "_",
+  "_"
+ ],
+ "kokoro_segments": 6,
+ "duration_s": 20.52,
+ "synth_s": 1.08,
+ "wav_sha256": "4a542a44f77c15f562b8e7080cdc3f3fe0cfada9965a27af1f99dda03fd9cd55",
+ "sentences": [
+  {
+   "text": "# Release Notes",
+   "synth_s": 0.108,
+   "ms": 1750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "# Release Notes",
+     "phonemes": "hˈæʃ ɹəlˈis nˈOts",
+     "silent_words": [],
+     "samples": 42000,
+     "ms": 1750.0,
+     "lead_ms": 350.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 1190,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "## What changed",
+   "synth_s": 0.108,
+   "ms": 1700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## What changed",
+     "phonemes": "hˈæʃ wˌʌt ʧˈAnʤd",
+     "silent_words": [],
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 360.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The **splitter** now handles *abbreviations* and `v1.2.0` versions.",
+   "synth_s": 0.329,
+   "ms": 7175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The **splitter** now handles *abbreviations* and `v1.2.0` versions.",
+     "phonemes": "ðə ˈæstəɹɹˌɪsk splˈɪTəɹɹ ˈæstəɹɹˌɪskəstəɹɹˌɪsk nˈW hˈændəlz əbɹˌiviˈAʃənz ænd “vˈi wˈʌn tˈu zˈɪɹO” vˈɜɹʒənz.",
+     "silent_words": [],
+     "samples": 172200,
+     "ms": 7175.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1070,
+       "ms": 60
+      },
+      {
+       "at_ms": 2530,
+       "ms": 240
+      },
+      {
+       "at_ms": 4400,
+       "ms": 440
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "See [the README](https://github.com/pawelpc/Natural-Voice-TTS#readme) for details.",
+   "synth_s": 0.154,
+   "ms": 2625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "See the README for details.",
+     "phonemes": "sˈi ði ˌɑɹˌiˌAdˌiˌɛmˈi fɔɹ dətˈAlz.",
+     "silent_words": [],
+     "samples": 63000,
+     "ms": 2625.0,
+     "lead_ms": 300.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "### Known issues",
+   "synth_s": 0.125,
+   "ms": 1925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "### Known issues",
+     "phonemes": "hˈæʃhæʃ nˈOn ˈɪʃjuz",
+     "silent_words": [],
+     "samples": 46200,
+     "ms": 1925.0,
+     "lead_ms": 350.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "> Note: __bold underscores__ and ~~old text~~ are still read literally.",
+   "synth_s": 0.258,
+   "ms": 5350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "> Note: __bold underscores__ and ~~old text~~ are still read literally.",
+     "phonemes": ") nˈOt: bˈOld ˈʌndəɹskˌɔɹz ænd ˈOld tˈɛkst tˈɪldətˌɪldə ɑɹ stˈɪl ɹˈɛd lˈɪTəɹəli.",
+     "silent_words": [
+      "_",
+      "_",
+      "_"
+     ],
+     "samples": 128400,
+     "ms": 5350.0,
+     "lead_ms": 320.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 720,
+       "ms": 290
+      },
+      {
+       "at_ms": 3380,
+       "ms": 330
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

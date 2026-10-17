@@ -10,6 +10,8 @@ Kokoro model from `dist/NaturalVoiceTTS/kokoro_model` (or `NVTTS_MODEL_DIR`).
 | `measure_ttfa.py` | Runs the real `app._worker` (player replaced by a sleep), measures time to first audio and gaps between chunks | `<out>/ttfa.json` |
 | `measure_device.py` | Plays silence through the real `play_audio()` to measure the sound device's added delay | `<out>/device_overhead.json` |
 | `probe_hypotheses.py` | Phase 0 evidence for H1–H4 | `<out>/hypotheses.json`, `<out>/probe/*.wav` |
+| `compare_ttfa.py` | R3 check: TTFA of two checkouts in alternating rounds | `--out` JSON with pass/fail |
+| `test_*.py` | Unit tests: `python -m pytest tests -q` | |
 
 Passages live in `passages/` (one category each, provenance in `manifest.json`).
 

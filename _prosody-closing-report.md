@@ -1,12 +1,12 @@
 # Closing Report (DRAFT): Natural Voice TTS — Speaking Flow and Text Handling
 
 **Model:** Opus 5.5 (`claude-opus-5-5`) · **Started:** 2026-10-17
-**Status:** Phase 0 gate passed. Phase 1 next.
+**Status:** Phase 1 gate passed. Phase 2 next.
 
 | Phase | Gate | Status | Evidence |
 |---|---|---|---|
 | 0 Environment and baseline | source synthesis runs; 30 baseline WAVs; H1–H4 decided | **Passed** | §Phase 0 below |
-| 1 Splitting | unit tests, zero wrong splits | not started | |
+| 1 Splitting | unit tests, zero wrong splits | **Passed** | §Phase 1 below |
 | 2 Normalization | expected-output files match; R4, R5 hold | not started | |
 | 3 Pauses | measured gaps within ±50 ms of targets | not started | |
 | 4 Paul's listening check | Paul passes it | not started | |
@@ -157,3 +157,59 @@ python tests/measure_ttfa.py --out tests/baseline/ttfa.json
 python tests/measure_device.py --out tests/baseline/device_overhead.json
 python tests/probe_hypotheses.py --baseline tests/baseline
 ```
+
+---
+
+## Phase 1 — Splitting
+
+### What changed
+- **`src/text_processor.py`**: new splitter. `split_sentences()` keeps its signature (the app calls it
+  unchanged); it now wraps `split_chunks()`, which also returns each chunk's block kind for Phase 3.
+  1. **Blocks first.** Fenced code (kept whole), headings and bold-only lines, table rows, list
+     items, quotes (a bare `>` breaks the quote's paragraph) and paragraphs. Hard-wrapped lines are
+     joined. Blocks with no words (`---`, `|---|---|`, bare `>`) are dropped, so the worker never gets
+     a chunk that makes no audio. Before, `---` triggered the July "sentence skipped" warning.
+  2. **Sentences inside prose blocks.** A boundary is end punctuation + optional closing
+     quote/bracket/emphasis + whitespace, and it's rejected when: the next word is lowercase;
+     the word is a title or Latin abbreviation (`Dr. Mr. Mrs. Prof. St. e.g. i.e. vs. cf. approx.` …);
+     a number follows `No. Vol. pp. Fig. Jan.` …; it's a list enumerator (`**1.`); or it's
+     `etc. Inc. Jr.`, a dotted acronym (`U.S.`, `p.m.`) or an initial (`J.`) and the next word isn't a
+     typical sentence opener (`The`, `Then`, `It`, …). A letter after an operator (`A + B.`) is a
+     variable, not an initial. A wordless piece (`⚠️`) joins the sentence before it.
+  3. When it's ambiguous, it keeps text together. Kokoro reads an inner period correctly; a wrong split
+     costs a full 0.8 s pause and sentence-final intonation.
+- **`src/tts_engine.py`**: `SPLIT_PATTERN = r'\n+'` (Kokoro's own default). Kokoro now gets
+  whole sentences with their end punctuation, and nothing splits inside "3.5", "v1.1.0" or "app.py".
+
+### Gate evidence
+- **Unit tests: 101 passed** (`python -m pytest tests -q`, `tests/test_splitting.py`):
+  32 hand-written cases (including the 7 Phase 0 H1 cases and boundary cases such as
+  `'We met at 5 p.m. Then we left.'` → 2 chunks); all 33 passages match the reviewed split in
+  `tests/passages/expected_splits.json`; for all 33 passages every word of the input is in the chunks,
+  in order (R4 at the split step); no wordless chunks; block kinds; `SPLIT_PATTERN` keeps `? ! .`
+  and doesn't cut `3.5`, `v1.1.0`, `app.py`.
+- **Zero wrong splits** on the passage set. I reviewed every chunk of all 33 passages by hand.
+  The first pass found 5 wrong splits (`**1.` enumerator, bold-only pseudo-heading run into the next
+  sentence, blockquote `>` break, lone `⚠️` chunk, `A + B. Temperatures` not split). All 5 were fixed;
+  the re-review diff showed only those changes.
+- **Render** (`tests/phase1/`, same scripts): 33 WAVs, 0 skipped chunks (baseline 1).
+  Kokoro segments 415 → 256 (fewer mid-sentence cuts); total audio 1673.7 s → 1572.4 s
+  (about 100 s less padding).
+- **R3** (`tests/phase1/r3.json`, `compare_ttfa.py`, Phase 0 commit vs Phase 1, 3 alternating rounds ×
+  5 runs): passage 17 0.551 → 0.536 s (−2.8%), passage 16 0.705 → 0.673 s (−4.5%),
+  passage 01 0.510 → 0.460 s (−9.9%). **Pass.** A single non-interleaved run had shown +12% on
+  passage 16, but that passage's own Phase 0 median moves about 10% between sessions, so only the A/B
+  is used for R3.
+- **R2:** no commit touches `src/pipe_listener.py` or `mcp_tts_server/`
+  (`git log 0018ba1..HEAD -- src/pipe_listener.py mcp_tts_server` is empty). `app.py` is unchanged.
+
+### R4 at the audio step: words that reach Kokoro but aren't spoken
+The recorder now lists tokens that Kokoro received but gave no phonemes (`silent_words` in
+`tests/phase1/meta/*.json`). Across 33 passages there are two real words:
+- `12` in "(`ISCC` pid 12024, ~12 min of CPU so far)" (passage 05),
+- `Don't` in `> ~~"Don't call…` (passage 12).
+Both were **already silent before Phase 1** (same misaki result on the Phase 0 segment text),
+and both depend on context: "about ~12 min" on its own is spoken. These go to Phase 2
+(normalize `~` and strikethrough before misaki), and "no silent words" becomes part of the Phase 2 gate.
+(The `_` entries in the phase1 meta for passages 09 and 28 are markdown underscores; the word regex
+was tightened afterwards to letters and digits.)

@@ -1,0 +1,236 @@
+{
+ "id": "31_symbols_symbol_soup",
+ "category": "symbols",
+ "origin": "synthetic",
+ "chunks": 8,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 8,
+ "duration_s": 27.1,
+ "synth_s": 1.44,
+ "wav_sha256": "1e8eb6715b28dd4b1f3755a7170a08e2ab40ea74ffcc1ee6622d5132e88e4dc1",
+ "sentences": [
+  {
+   "text": "Use A & B, not A + B.",
+   "synth_s": 0.143,
+   "ms": 2525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Use A & B, not A + B.",
+     "phonemes": "jˈuz ˈA ænd bˈi, nˌɑt ɐ plˈʌs bˈi",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 330.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 170
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Temperatures ≥ 30° are bad; ~50% of units fail.",
+   "synth_s": 0.291,
+   "ms": 6200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Temperatures ≥ 30° are bad; ~50% of units fail.",
+     "phonemes": "tˈɛmpɹəʧəɹz ɡɹˈATəɹɹ ɔɹ ˈikwᵊl tʊ θˈɜɹTi dᵻɡɹˈiz ɑɹ bˈæd; tˈɪldə fˈɪfti pəɹsˈɛnt ʌv jˈunəts fˈAl.",
+     "silent_words": [],
+     "samples": 148800,
+     "ms": 6200.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1420,
+       "ms": 70
+      },
+      {
+       "at_ms": 1610,
+       "ms": 60
+      },
+      {
+       "at_ms": 1770,
+       "ms": 60
+      },
+      {
+       "at_ms": 2170,
+       "ms": 110
+      },
+      {
+       "at_ms": 3510,
+       "ms": 490
+      },
+      {
+       "at_ms": 5380,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Cost × 2 = total.",
+   "synth_s": 0.141,
+   "ms": 2325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Cost × 2 = total.",
+     "phonemes": "kˈɔst tˈImz tˈu ˈikwᵊlz tˈOTᵊl.",
+     "silent_words": [],
+     "samples": 55800,
+     "ms": 2325.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Press Ctrl+Win+T → the app reads the text.",
+   "synth_s": 0.22,
+   "ms": 4375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Press Ctrl+Win+T → the app reads the text.",
+     "phonemes": "pɹˈɛs kəntɹˈOl plˈʌs wˈɪn plˈʌs tˈi ɹˈIt ˈæɹO ði ˈæp ɹˈidz ðə tˈɛkst.",
+     "silent_words": [],
+     "samples": 105000,
+     "ms": 4375.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 2460,
+       "ms": 290
+      },
+      {
+       "at_ms": 3030,
+       "ms": 60
+      },
+      {
+       "at_ms": 3650,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It's our #1 priority @ 100%.",
+   "synth_s": 0.163,
+   "ms": 2925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It's our #1 priority @ 100%.",
+     "phonemes": "ˌɪts ˌWəɹ wˈʌn pɹIˈɔɹəTi æt wˈʌn hˈʌndɹəd pəɹsˈɛnt.",
+     "silent_words": [],
+     "samples": 70200,
+     "ms": 2925.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1440,
+       "ms": 100
+      },
+      {
+       "at_ms": 2350,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "In code, x != y and a <= b.",
+   "synth_s": 0.182,
+   "ms": 3550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "In code, x != y and a <= b.",
+     "phonemes": "ɪn kˈOd, ˈɛks !ˈikwᵊlz wˈI ænd ɐ lˈɛsɔɹˌikwᵊl bˈi",
+     "silent_words": [],
+     "samples": 85200,
+     "ms": 3550.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 820,
+       "ms": 210
+      },
+      {
+       "at_ms": 2000,
+       "ms": 80
+      },
+      {
+       "at_ms": 2600,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Copyright © 2026.",
+   "synth_s": 0.16,
+   "ms": 2825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Copyright © 2026.",
+     "phonemes": "kˈɑpiɹˌIt kˈɑpɪɹˌIt twˈɛnti twˈɛnti sˈɪks.",
+     "silent_words": [],
+     "samples": 67800,
+     "ms": 2825.0,
+     "lead_ms": 300.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 740,
+       "ms": 60
+      },
+      {
+       "at_ms": 1250,
+       "ms": 130
+      },
+      {
+       "at_ms": 2170,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Item A/B testing is done.",
+   "synth_s": 0.14,
+   "ms": 2375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Item A/B testing is done.",
+     "phonemes": "ˈITəm ˈA bˈi tˈɛstɪŋ ɪz dˈʌn.",
+     "silent_words": [],
+     "samples": 57000,
+     "ms": 2375.0,
+     "lead_ms": 340.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

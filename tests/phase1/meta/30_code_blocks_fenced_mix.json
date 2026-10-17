@@ -1,0 +1,241 @@
+{
+ "id": "30_code_blocks_fenced_mix",
+ "category": "code_blocks",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 12,
+ "duration_s": 30.05,
+ "synth_s": 1.76,
+ "wav_sha256": "2c4973574808086a0b1e69f787744d952fe86ddcf70eeca27b1ed3405ad51611",
+ "sentences": [
+  {
+   "text": "To test it, run this:",
+   "synth_s": 0.113,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "To test it, run this:",
+     "phonemes": "tə tˈɛst ɪt, ɹˈʌn ðˈɪs:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 300.0,
+     "trail_ms": 415.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "```powershell\ncd C:\\Projects\\Natural_Voice_TTS\npython src/app.py\n```",
+   "synth_s": 0.573,
+   "ms": 9575.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "```powershell",
+     "phonemes": "“““pˈWəɹʃˌɛl",
+     "silent_words": [],
+     "samples": 32400,
+     "ms": 1350.0,
+     "lead_ms": 360.0,
+     "trail_ms": 410.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "cd C:\\Projects\\Natural_Voice_TTS",
+     "phonemes": "sˌidˈi sˈi:bˈækslæʃ pɹˈɑʤɛkts bˈækslæʃ nˈæʧəɹɹᵊl vˈYs tˌitˌiˈɛs",
+     "silent_words": [],
+     "samples": 112800,
+     "ms": 4700.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1050,
+       "ms": 360
+      },
+      {
+       "at_ms": 1890,
+       "ms": 60
+      },
+      {
+       "at_ms": 2340,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "python src/app.py",
+     "phonemes": "pˈIθˌɑn ˌɛsˌɑɹsˈi slˈæʃ ˈæp.pˈI",
+     "silent_words": [],
+     "samples": 66600,
+     "ms": 2775.0,
+     "lead_ms": 320.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 1670,
+       "ms": 290
+      }
+     ]
+    },
+    {
+     "graphemes": "```",
+     "phonemes": "“““",
+     "silent_words": [],
+     "samples": 18000,
+     "ms": 750.0,
+     "lead_ms": 370.0,
+     "trail_ms": 20.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The splitter looks like this:",
+   "synth_s": 0.118,
+   "ms": 2000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The splitter looks like this:",
+     "phonemes": "ðə splˈɪTəɹ lˈʊks lˈIk ðˈɪs:",
+     "silent_words": [],
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 320.0,
+     "trail_ms": 420.0,
+     "pauses": [
+      {
+       "at_ms": 1250,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "```python\ndef split_sentences(text: str) -> list[str]:\n parts = re.split(r'(?<=[.!?])\\s+', text)\n return [p for p in parts if p]\n```",
+   "synth_s": 0.803,
+   "ms": 13875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "```python",
+     "phonemes": "“““pˈIθˌɑn",
+     "silent_words": [],
+     "samples": 35400,
+     "ms": 1475.0,
+     "lead_ms": 380.0,
+     "trail_ms": 475.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "def split_sentences(text: str) -> list[str]:",
+     "phonemes": "dˈɛf splˈɪt sˈɛntənsᵻz(tˈɛkst: ˌɛstˌiˈɑɹ)  lˈɪst[ˌɛstˌiˈɑɹ):",
+     "silent_words": [],
+     "samples": 99600,
+     "ms": 4150.0,
+     "lead_ms": 300.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 1460,
+       "ms": 90
+      },
+      {
+       "at_ms": 1740,
+       "ms": 60
+      },
+      {
+       "at_ms": 1950,
+       "ms": 270
+      }
+     ]
+    },
+    {
+     "graphemes": "parts = re.split(r(?<=[.!?])\\s+', text)",
+     "phonemes": "pˈɑɹts ˈikwᵊlz ɹˌi.splˈɪt(ˈɑɹ(?lˈɛsɔɹˌikwᵊl[.!?])bˈækslæʃ ˈɛs plˈʌs”, tˈɛkst)",
+     "silent_words": [],
+     "samples": 115200,
+     "ms": 4800.0,
+     "lead_ms": 300.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1420,
+       "ms": 90
+      },
+      {
+       "at_ms": 2410,
+       "ms": 400
+      },
+      {
+       "at_ms": 3460,
+       "ms": 60
+      },
+      {
+       "at_ms": 3850,
+       "ms": 70
+      },
+      {
+       "at_ms": 4110,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "return [p for p in parts if p]",
+     "phonemes": "ɹətˈɜɹn [pˈi fɔɹ pˈi ɪn pˈɑɹts ɪf pˈi)",
+     "silent_words": [],
+     "samples": 64800,
+     "ms": 2700.0,
+     "lead_ms": 320.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 1870,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "```",
+     "phonemes": "“““",
+     "silent_words": [],
+     "samples": 18000,
+     "ms": 750.0,
+     "lead_ms": 380.0,
+     "trail_ms": 140.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "After that, the app should start normally.",
+   "synth_s": 0.155,
+   "ms": 2725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "After that, the app should start normally.",
+     "phonemes": "ˈæftəɹ ðˈæt, ði ˈæp ʃˌʊd stˈɑɹt nˈɔɹməli.",
+     "silent_words": [],
+     "samples": 65400,
+     "ms": 2725.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 830,
+       "ms": 140
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

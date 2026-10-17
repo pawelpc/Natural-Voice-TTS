@@ -1,0 +1,773 @@
+{
+ "id": "09_lists_results",
+ "category": "lists",
+ "origin": "real",
+ "chunks": 18,
+ "skipped": 0,
+ "silent_words": [
+  "_",
+  "_",
+  "_",
+  "_"
+ ],
+ "kokoro_segments": 18,
+ "duration_s": 130.75,
+ "synth_s": 5.99,
+ "wav_sha256": "2fac5dcf5c7ba6f1c6eaed81456571a1f61ee1848bbdbed86464b279cfae59d2",
+ "sentences": [
+  {
+   "text": "## Results",
+   "synth_s": 0.111,
+   "ms": 1625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## Results",
+     "phonemes": "hˈæʃ ɹəzˈʌlts",
+     "silent_words": [],
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 370.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 990,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**1. Installer rebuilt** ✅",
+   "synth_s": 0.226,
+   "ms": 4750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**1. Installer rebuilt** ✅",
+     "phonemes": "ˈæstəɹɹˌɪsk wˈʌn. ɪnstˈɔləɹ ɹibˈɪltˈæstəɹɹˌɪsk wˈIt hˈɛvi ʧˈɛk mˈɑɹk",
+     "silent_words": [],
+     "samples": 114000,
+     "ms": 4750.0,
+     "lead_ms": 320.0,
+     "trail_ms": 430.0,
+     "pauses": [
+      {
+       "at_ms": 1160,
+       "ms": 410
+      },
+      {
+       "at_ms": 3940,
+       "ms": 90
+      },
+      {
+       "at_ms": 4220,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "`dist\\NaturalVoiceTTS_Setup_1.1.0.exe` — 1798 MB, built today 4:46 PM, exit code 0.",
+   "synth_s": 0.483,
+   "ms": 11150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "`dist\\NaturalVoiceTTS_Setup_1.1.0.exe` — 1798 MB, built today 4:46 PM, exit code 0.",
+     "phonemes": "“dˈɪst bˈækslæʃ nˈæʧəɹɹᵊl vˈYs tˌitˌiˈɛs sˈɛTʌp wˈʌn.wˈʌn.zˈiəɹO.ˌiˌɛksˈi” — sˌɛvəntˈin nˈIndi ˈAt ˌɛmbˈi, bˈɪlt tədˈA fˈɔɹ:fˈɔɹTi sˈɪks pˌiˈɛm, ˈɛɡzət kˈOd zˈɪɹO.",
+     "silent_words": [],
+     "samples": 267600,
+     "ms": 11150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 2850,
+       "ms": 70
+      },
+      {
+       "at_ms": 3280,
+       "ms": 180
+      },
+      {
+       "at_ms": 4160,
+       "ms": 330
+      },
+      {
+       "at_ms": 5020,
+       "ms": 590
+      },
+      {
+       "at_ms": 7220,
+       "ms": 130
+      },
+      {
+       "at_ms": 7520,
+       "ms": 60
+      },
+      {
+       "at_ms": 7960,
+       "ms": 70
+      },
+      {
+       "at_ms": 8250,
+       "ms": 230
+      },
+      {
+       "at_ms": 9090,
+       "ms": 60
+      },
+      {
+       "at_ms": 9640,
+       "ms": 90
+      },
+      {
+       "at_ms": 9980,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).",
+   "synth_s": 0.351,
+   "ms": 7675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).",
+     "phonemes": "ˈɔl pˈAlˌOd vˈɛɹᵻfˌId pɹˈɛzᵊnt (tˈɔɹʧ sˌijˌudˌiˈA, kəkˈɔɹO mˈɑdᵊl plˈʌs twˈɛnti sˈɛvən vˈYsᵻz, ˈispikˌɛnʤˈi, ˈIkˌɑn).",
+     "silent_words": [],
+     "samples": 184200,
+     "ms": 7675.0,
+     "lead_ms": 330.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1460,
+       "ms": 80
+      },
+      {
+       "at_ms": 1880,
+       "ms": 300
+      },
+      {
+       "at_ms": 3090,
+       "ms": 350
+      },
+      {
+       "at_ms": 5560,
+       "ms": 140
+      },
+      {
+       "at_ms": 6530,
+       "ms": 120
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**2. Committed + pushed** ✅",
+   "synth_s": 0.231,
+   "ms": 4600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**2. Committed + pushed** ✅",
+     "phonemes": "ˈæstəɹɹˌɪsk tˈu. kəmˈɪTᵻd plˈʌs pˈʊʃtˈæstəɹɹˌɪsk wˈIt hˈɛvi ʧˈɛk mˈɑɹk",
+     "silent_words": [],
+     "samples": 110400,
+     "ms": 4600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 430.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 100
+      },
+      {
+       "at_ms": 1190,
+       "ms": 420
+      },
+      {
+       "at_ms": 2190,
+       "ms": 60
+      },
+      {
+       "at_ms": 3790,
+       "ms": 90
+      },
+      {
+       "at_ms": 4080,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Commit `bba2200` on `master`, pushed to `github.com/pawelpc/Natural-Voice-TTS` — the three fix files with a D1/D2/D3 message.",
+   "synth_s": 0.525,
+   "ms": 12125.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Commit `bba2200` on `master`, pushed to `github.com/pawelpc/Natural-Voice-TTS` — the three fix files with a D1/D2/D3 message.",
+     "phonemes": "kəmˈɪt “bˌibˌiˈA tˈu θˈWzənd tˈuhˈʌndɹɪd“ ˌɔn “mˈæstəɹ”, pˈʊʃt tə “ɡˈɪthʌb.kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs” — ðə θɹˈi fˈɪks fˈIlz wɪð ɐ dˈi wˈʌn dˈi tˈu dˈi θɹˈi mˈɛsɪʤ.",
+     "silent_words": [],
+     "samples": 291000,
+     "ms": 12125.0,
+     "lead_ms": 280.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 1390,
+       "ms": 60
+      },
+      {
+       "at_ms": 2430,
+       "ms": 80
+      },
+      {
+       "at_ms": 3150,
+       "ms": 350
+      },
+      {
+       "at_ms": 3720,
+       "ms": 70
+      },
+      {
+       "at_ms": 3930,
+       "ms": 60
+      },
+      {
+       "at_ms": 4400,
+       "ms": 480
+      },
+      {
+       "at_ms": 5590,
+       "ms": 70
+      },
+      {
+       "at_ms": 5840,
+       "ms": 90
+      },
+      {
+       "at_ms": 7790,
+       "ms": 540
+      },
+      {
+       "at_ms": 8450,
+       "ms": 60
+      },
+      {
+       "at_ms": 9030,
+       "ms": 80
+      },
+      {
+       "at_ms": 10950,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "(The installer `.exe` itself is gitignored and stays local, as it should — it's 1.8 GB.)",
+   "synth_s": 0.316,
+   "ms": 6850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "(The installer `.exe` itself is gitignored and stays local, as it should — it's 1.8 GB.)",
+     "phonemes": "(ði ɪnstˈɔləɹ “.ˌiˌɛksˈi” ɪtsˈɛlf ɪz ɡˈɪTɪɡnəɹd ænd stˈAz lˈOkəl, æz ɪt ʃˌʊd — ɪts wˈʌn pYnt ˈAt ʤˌibˈi.)",
+     "silent_words": [],
+     "samples": 164400,
+     "ms": 6850.0,
+     "lead_ms": 330.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1020,
+       "ms": 290
+      },
+      {
+       "at_ms": 1930,
+       "ms": 160
+      },
+      {
+       "at_ms": 2710,
+       "ms": 60
+      },
+      {
+       "at_ms": 4090,
+       "ms": 390
+      },
+      {
+       "at_ms": 5870,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**3. Pre-manual-test gate — all green** ✅",
+   "synth_s": 0.305,
+   "ms": 6450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**3. Pre-manual-test gate — all green** ✅",
+     "phonemes": "ˈæstəɹɹˌɪsk θɹˈi. pɹˌimˈænjəwəltˈɛst ɡˈAt — ˈɔl ɡɹˈin ˈæstəɹɹˌɪskəstəɹɹˌɪsk wˈIt hˈɛvi ʧˈɛk mˈɑɹk",
+     "silent_words": [],
+     "samples": 154800,
+     "ms": 6450.0,
+     "lead_ms": 320.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 850,
+       "ms": 70
+      },
+      {
+       "at_ms": 1220,
+       "ms": 400
+      },
+      {
+       "at_ms": 2810,
+       "ms": 380
+      },
+      {
+       "at_ms": 5900,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Build-fix propagation:** D3 change confirmed inside the *bundled* `mcp_server\\server.py` — rules out stale-file builds.",
+   "synth_s": 0.512,
+   "ms": 11875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Build-fix propagation:** D3 change confirmed inside the *bundled* `mcp_server\\server.py` — rules out stale-file builds.",
+     "phonemes": "— bˌɪldfˈɪks pɹˌɑpəɡˈAʃən:ˈæstəɹɹˌɪsk dˈi θɹˈi ʧˈAnʤ kənfˈɜɹmd ɪnsˈId ðə ˈæstəɹɹˌɪsk bˈʌndᵊld ˈæstəɹɹˌɪsk “ˌɛmsˌipˈi sˈɜɹvəɹ bˈækslæʃ sˈɜɹvəɹ.pˈI” — ɹˈulz ˈWt stˈAlfˌIl bˈɪldz.",
+     "silent_words": [],
+     "samples": 285000,
+     "ms": 11875.0,
+     "lead_ms": 330.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 760,
+       "ms": 60
+      },
+      {
+       "at_ms": 1540,
+       "ms": 300
+      },
+      {
+       "at_ms": 2370,
+       "ms": 70
+      },
+      {
+       "at_ms": 2620,
+       "ms": 60
+      },
+      {
+       "at_ms": 3350,
+       "ms": 160
+      },
+      {
+       "at_ms": 5180,
+       "ms": 70
+      },
+      {
+       "at_ms": 6320,
+       "ms": 400
+      },
+      {
+       "at_ms": 8690,
+       "ms": 380
+      },
+      {
+       "at_ms": 9380,
+       "ms": 360
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Runtime launch (packaging check):** freshly-built exe reached `TTS engine ready` → `Ready!` with no traceback — catches the PyInstaller hidden-import breakage you've hit before.",
+   "synth_s": 0.516,
+   "ms": 11925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Runtime launch (packaging check):** freshly-built exe reached `TTS engine ready` → `Ready!` with no traceback — catches the PyInstaller hidden-import breakage you've hit before.",
+     "phonemes": "— ɹˈʌntIm lˈɔnʧ (pˈækəʤɪŋ ʧˈɛk: fɹˈɛʃlibˌɪlt ˌiˌɛksˈi ɹˈiʧt “tˌitˌiˈɛs ˈɛnʤən ɹˈɛdi” “ “ɹˈɛdi!” wɪð nˈO tɹˈAsbæk — kˈɛʧᵻz ði pˈI ɪnstˈɔləɹ hˌɪdᵊnˈɪmpˌɔɹt bɹˈAkɪʤ juv hˈɪt bəfˈɔɹ.",
+     "silent_words": [],
+     "samples": 286200,
+     "ms": 11925.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1170,
+       "ms": 80
+      },
+      {
+       "at_ms": 1950,
+       "ms": 80
+      },
+      {
+       "at_ms": 2060,
+       "ms": 420
+      },
+      {
+       "at_ms": 3050,
+       "ms": 70
+      },
+      {
+       "at_ms": 4060,
+       "ms": 80
+      },
+      {
+       "at_ms": 5500,
+       "ms": 300
+      },
+      {
+       "at_ms": 6210,
+       "ms": 460
+      },
+      {
+       "at_ms": 7530,
+       "ms": 60
+      },
+      {
+       "at_ms": 7610,
+       "ms": 360
+      },
+      {
+       "at_ms": 8490,
+       "ms": 60
+      },
+      {
+       "at_ms": 10880,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **End-to-end pipe test (the actual bug):** pushed messages through the named pipe exactly like the MCP server does.",
+   "synth_s": 0.361,
+   "ms": 8000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **End-to-end pipe test (the actual bug):** pushed messages through the named pipe exactly like the MCP server does.",
+     "phonemes": "— ˈɛndtʊˈɛnd pˈIp tˈɛst (ði ˈækʧəwəl bˈʌɡ: pˈʊʃt mˈɛsɪʤᵻz θɹu ðə nˈAmd pˈIp ɪɡzˈæktli lˈIk ði ˌɛmsˌipˈi sˈɜɹvəɹ dˈʌz.",
+     "silent_words": [],
+     "samples": 192000,
+     "ms": 8000.0,
+     "lead_ms": 320.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 100
+      },
+      {
+       "at_ms": 1620,
+       "ms": 260
+      },
+      {
+       "at_ms": 2670,
+       "ms": 550
+      },
+      {
+       "at_ms": 4740,
+       "ms": 60
+      },
+      {
+       "at_ms": 5010,
+       "ms": 70
+      },
+      {
+       "at_ms": 5090,
+       "ms": 90
+      },
+      {
+       "at_ms": 5550,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The D1 fix is proven live:",
+   "synth_s": 0.143,
+   "ms": 2425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The D1 fix is proven live:",
+     "phonemes": "ðə dˈi wˈʌn fˈɪks ɪz pɹˈuvən lˈIv:",
+     "silent_words": [],
+     "samples": 58200,
+     "ms": 2425.0,
+     "lead_ms": 320.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1210,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "| Test | Header | Received | Result |",
+   "synth_s": 0.138,
+   "ms": 2275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "| Test | Header | Received | Result |",
+     "phonemes": "tˈɛst  hˈɛdəɹ  ɹəsˈivd  ɹəzˈʌlt",
+     "silent_words": [],
+     "samples": 54600,
+     "ms": 2275.0,
+     "lead_ms": 300.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 1750,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "| 420-byte ASCII | 420 | **420** | full payload, 0 dropped |",
+   "synth_s": 0.331,
+   "ms": 7200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "| 420-byte ASCII | 420 | **420** | full payload, 0 dropped |",
+     "phonemes": "fˈɔɹ hˈʌndɹəd twˈɛnti bˈIt ˈæski  fˈɔɹ hˈʌndɹəd twˈɛnti  ˈæstəɹɹˌɪsk fˈɔɹhˈʌndɹɪd twˈɛnti  fˈʊl pˈAlˌOd, zˈɪɹO dɹˈɑpt",
+     "silent_words": [],
+     "samples": 172800,
+     "ms": 7200.0,
+     "lead_ms": 330.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 1830,
+       "ms": 250
+      },
+      {
+       "at_ms": 2920,
+       "ms": 180
+      },
+      {
+       "at_ms": 3630,
+       "ms": 60
+      },
+      {
+       "at_ms": 4540,
+       "ms": 360
+      },
+      {
+       "at_ms": 5650,
+       "ms": 280
+      },
+      {
+       "at_ms": 6610,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "| 112-byte multibyte (em dash, curly quotes, ellipsis) | 112 | **112** | decoded to 104 chars, played \"First sentence — with an em dash…\" |",
+   "synth_s": 0.587,
+   "ms": 13600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "| 112-byte multibyte (em dash, curly quotes, ellipsis) | 112 | **112** | decoded to 104 chars, played \"First sentence — with an em dash…\" |",
+     "phonemes": "wˈʌn hˈʌndɹəd twˈɛlv bˈIt mˌʌltɪbˈIt (ˈɛm dˈæʃ, kˈɜɹli kwˈOts, əlˈɪpsɪs)  wˈʌn hˈʌndɹəd twˈɛlv  ˈæstəɹɹˌɪsk wˈʌnhˈʌndɹɪd twˈɛlvˈæstəɹɹˌɪsk  dˌikˈOdᵻd tə wˈʌn hˈʌndɹəd fˈɔɹ ʧˈɑɹz, plˈAd “fˈɜɹst sˈɛntᵊns — wɪð ɐn ˈɛm dˈæʃ…”",
+     "silent_words": [],
+     "samples": 326400,
+     "ms": 13600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1120,
+       "ms": 60
+      },
+      {
+       "at_ms": 1950,
+       "ms": 120
+      },
+      {
+       "at_ms": 2770,
+       "ms": 230
+      },
+      {
+       "at_ms": 3580,
+       "ms": 60
+      },
+      {
+       "at_ms": 3750,
+       "ms": 280
+      },
+      {
+       "at_ms": 4680,
+       "ms": 580
+      },
+      {
+       "at_ms": 8330,
+       "ms": 290
+      },
+      {
+       "at_ms": 9760,
+       "ms": 70
+      },
+      {
+       "at_ms": 10530,
+       "ms": 310
+      },
+      {
+       "at_ms": 11180,
+       "ms": 60
+      },
+      {
+       "at_ms": 12020,
+       "ms": 140
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "`header == received` on both, and the multibyte message decoded and spoke cleanly — the exact case (`—` `\"` `…`) that used to truncate or throw.",
+   "synth_s": 0.45,
+   "ms": 10175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "`header == received` on both, and the multibyte message decoded and spoke cleanly — the exact case (`—` `\"` `…`) that used to truncate or throw.",
+     "phonemes": "“hˈɛdəɹ ˈikwᵊlzˌikwᵊlz ɹəsˈivd” ˌɔn bˈOθ, ænd ðə mˌʌltɪbˈIt mˈɛsɪʤ dˌikˈOdᵻd ænd spˈOk klˈinli — ði ɪɡzˈækt kˈAs (“—“ “““ “…”) ðæt jˈust tə tɹˈʌŋkˌAt ɔɹ θɹˈO.",
+     "silent_words": [],
+     "samples": 244200,
+     "ms": 10175.0,
+     "lead_ms": 300.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 2350,
+       "ms": 430
+      },
+      {
+       "at_ms": 3970,
+       "ms": 70
+      },
+      {
+       "at_ms": 4970,
+       "ms": 120
+      },
+      {
+       "at_ms": 5560,
+       "ms": 320
+      },
+      {
+       "at_ms": 6870,
+       "ms": 410
+      },
+      {
+       "at_ms": 7620,
+       "ms": 250
+      },
+      {
+       "at_ms": 9070,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "`__STOP__` also worked both times.",
+   "synth_s": 0.14,
+   "ms": 2375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "`__STOP__` also worked both times.",
+     "phonemes": "“stˈɑp” ˈɔlsO wˈɜɹkt bˈOθ tˈImz.",
+     "silent_words": [
+      "_",
+      "_",
+      "_",
+      "_"
+     ],
+     "samples": 57000,
+     "ms": 2375.0,
+     "lead_ms": 290.0,
+     "trail_ms": 445.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Test exe was shut down; **no `NaturalVoiceTTS` process is running** now.",
+   "synth_s": 0.268,
+   "ms": 5675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Test exe was shut down; **no `NaturalVoiceTTS` process is running** now.",
+     "phonemes": "tˈɛst ˌiˌɛksˈi wʌz ʃˈʌt dˌWn; nˈO “nˈæʧəɹᵊlvˌYstˌitˌiˈɛs” pɹˈɑsˌɛs ɪz ɹˈʌnɪŋ nˈW.",
+     "silent_words": [],
+     "samples": 136200,
+     "ms": 5675.0,
+     "lead_ms": 310.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1470,
+       "ms": 90
+      },
+      {
+       "at_ms": 1860,
+       "ms": 410
+      },
+      {
+       "at_ms": 3850,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

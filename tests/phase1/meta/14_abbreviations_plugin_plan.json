@@ -1,0 +1,317 @@
+{
+ "id": "14_abbreviations_plugin_plan",
+ "category": "abbreviations",
+ "origin": "real",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 71.3,
+ "synth_s": 3.09,
+ "wav_sha256": "63de774cf90476c7ba89d4f1cc7d7db81c803ef2b4a02646b2e728126a9523ec",
+ "sentences": [
+  {
+   "text": "Here's what I recommend, split by who does what:",
+   "synth_s": 0.171,
+   "ms": 3175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here's what I recommend, split by who does what:",
+     "phonemes": "hˈɪɹz wˌʌt ˌI ɹˌɛkəmˈɛnd, splˈɪt bI hˌu dˈʌz wˌʌt:",
+     "silent_words": [],
+     "samples": 76200,
+     "ms": 3175.0,
+     "lead_ms": 310.0,
+     "trail_ms": 545.0,
+     "pauses": [
+      {
+       "at_ms": 1330,
+       "ms": 220
+      },
+      {
+       "at_ms": 1650,
+       "ms": 60
+      },
+      {
+       "at_ms": 1860,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Me (now, in the repo):** finalize the `SKILL.md` with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (`.claude-plugin/plugin.json` + `skills/natural-voice-tts/`), and fix `install_config.py` so it stops installing to the dead location.",
+   "synth_s": 1.02,
+   "ms": 24400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Me (now, in the repo):** finalize the `SKILL.md` with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (`.claude-plugin/plugin.json` + `skills/natural-voice-tts/`), and fix `install_config.py` so it stops installing to the dead location.",
+     "phonemes": "— mˌi (nˈW, ɪn ðə ɹˈipˌO: fˈInᵊlˌIz ðə “skˈɪl.ˌɛmdˈi“ wɪð jʊɹ kˌɔɹtɹəpˈɔɹTəɹ ɹˈulz (vəɹbˈATəm wˈɜɹdz, nˈuməɹəlzæznˈʌmbəɹz ˌOkˈA, nˈʌθɪŋ ˈædᵻddɹˈɑpt ʧˈAnʤd, spˈik ˈɛvəɹi tˈɜɹn ˌʌntˈɪl vˈYs ˈɔf), lˈA ɪt ˈWt æz ɐ pɹˈɑpəɹ plˈʌɡɪn pˈækɪʤ (“.klˈɔdplˈʌɡɪn slˈæʃ plˈʌɡɪn.ʤˈAsˈɑn” plˈʌs “skˈɪlz slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs slˈæʃ”), ænd fˈɪks “ɪnstˈɔl kənfˈɪɡ.pˈI” sˌO ɪt stˈɑps ɪnstˈɔlɪŋ tə ðə dˈɛd lOkˈAʃən.",
+     "silent_words": [],
+     "samples": 585600,
+     "ms": 24400.0,
+     "lead_ms": 340.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1470,
+       "ms": 320
+      },
+      {
+       "at_ms": 2870,
+       "ms": 350
+      },
+      {
+       "at_ms": 5740,
+       "ms": 330
+      },
+      {
+       "at_ms": 7390,
+       "ms": 140
+      },
+      {
+       "at_ms": 7660,
+       "ms": 60
+      },
+      {
+       "at_ms": 8370,
+       "ms": 120
+      },
+      {
+       "at_ms": 10660,
+       "ms": 380
+      },
+      {
+       "at_ms": 12130,
+       "ms": 60
+      },
+      {
+       "at_ms": 12200,
+       "ms": 60
+      },
+      {
+       "at_ms": 12730,
+       "ms": 60
+      },
+      {
+       "at_ms": 13070,
+       "ms": 400
+      },
+      {
+       "at_ms": 14950,
+       "ms": 380
+      },
+      {
+       "at_ms": 18720,
+       "ms": 330
+      },
+      {
+       "at_ms": 19350,
+       "ms": 70
+      },
+      {
+       "at_ms": 20310,
+       "ms": 70
+      },
+      {
+       "at_ms": 20580,
+       "ms": 520
+      },
+      {
+       "at_ms": 21420,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **You (in Cowork):** run **`/skill-creator`** (or `/create-cowork-plugin`) and point it at that prepared `SKILL.md` so it registers into the manifest system Cowork actually reads.",
+   "synth_s": 0.607,
+   "ms": 14175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **You (in Cowork):** run **`/skill-creator`** (or `/create-cowork-plugin`) and point it at that prepared `SKILL.md` so it registers into the manifest system Cowork actually reads.",
+     "phonemes": "— jˌu (ɪn kˈWɜɹk:ˈæstəɹɹˌɪsk ɹˈʌn ˈæstəɹɹˌɪskəstəɹɹˌɪsk“skˈɪl kɹiˈATəɹ” (ɔɹ “slˈæʃ kɹiˈAtkˈWɜɹkplˈʌɡɪn”) ænd pˈYnt ɪt æt ðˈæt pɹipˈɛɹd “skˈɪl.ˌɛmdˈi” sˌO ɪt ɹˈɛʤəstəɹz ˈɪntu ðə mˈænəfˌɛst sˈɪstəm kˈWɜɹk ˈækʧəwəli ɹˈidz.",
+     "silent_words": [],
+     "samples": 340200,
+     "ms": 14175.0,
+     "lead_ms": 330.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1190,
+       "ms": 70
+      },
+      {
+       "at_ms": 1280,
+       "ms": 280
+      },
+      {
+       "at_ms": 3610,
+       "ms": 200
+      },
+      {
+       "at_ms": 4600,
+       "ms": 430
+      },
+      {
+       "at_ms": 6540,
+       "ms": 70
+      },
+      {
+       "at_ms": 7010,
+       "ms": 470
+      },
+      {
+       "at_ms": 8000,
+       "ms": 60
+      },
+      {
+       "at_ms": 8220,
+       "ms": 60
+      },
+      {
+       "at_ms": 9220,
+       "ms": 490
+      },
+      {
+       "at_ms": 10270,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll guide the exact steps.",
+   "synth_s": 0.129,
+   "ms": 2125.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll guide the exact steps.",
+     "phonemes": "ˌIl ɡˈId ði ɪɡzˈækt stˈɛps.",
+     "silent_words": [],
+     "samples": 51000,
+     "ms": 2125.0,
+     "lead_ms": 310.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1480,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One honesty note: I've confirmed *where* Cowork reads skills, but the precise hand-off to register a **custom** skill into that manifest (vs. the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product `skill-creator`/`create-cowork-plugin` tool is safer than me hand-editing the managed `manifest.json` (which looks like it re-syncs and would wipe a manual entry).",
+   "synth_s": 1.159,
+   "ms": 27425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One honesty note: I've confirmed *where* Cowork reads skills, but the precise hand-off to register a **custom** skill into that manifest (vs. the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product `skill-creator`/`create-cowork-plugin` tool is safer than me hand-editing the managed `manifest.json` (which looks like it re-syncs and would wipe a manual entry).",
+     "phonemes": "wˈʌn ˈɑnəsti nˈOt: ˌIv kənfˈɜɹmd ˈæstəɹɹˌɪsk wˈɛɹ kˈWɜɹk ɹˈidz skˈɪlz, bˌʌt ðə pɹisˈIs hˈændˌɔf tə ɹˈɛʤəstəɹ ɐ ˈæstəɹɹˌɪskəstəɹɹˌɪsk kˈʌstəm ˈæstəɹɹˌɪskəstəɹɹˌɪsk skˈɪl ˈɪntu ðˈæt mˈænəfˌɛst (vˈɜɹsəs ði ænθɹˈɑpɪkmˌænɪʤd wˈʌnz) ɪz ðə pˈɑɹt ˌI kˈænt fˈʊli tˈɛst fɹʌm hˈɪɹ — ðˈæts wˌI ɹˈWTɪŋ ɪt θɹu ði ɪnpɹˈɑdˌʌkt “skˈɪlkɹiˈATəɹ slˈæʃ kɹiˈAtkˈWɜɹkplˈʌɡɪn” tˈul ɪz sˈAfəɹ ðən mˌi hˌændˈɛdəTɪŋ ðə mˈænɪʤd “mˈænɪfˌɛst.ʤˈAsˈɑn” (wˌɪʧ lˈʊks lˈIk ɪt ɹˌisˈɪŋks ænd wʊd wˈIp ɐ mˈænjəwəl ˈɛntɹi).",
+     "silent_words": [],
+     "samples": 658200,
+     "ms": 27425.0,
+     "lead_ms": 350.0,
+     "trail_ms": 605.0,
+     "pauses": [
+      {
+       "at_ms": 1230,
+       "ms": 510
+      },
+      {
+       "at_ms": 3540,
+       "ms": 60
+      },
+      {
+       "at_ms": 4430,
+       "ms": 410
+      },
+      {
+       "at_ms": 6590,
+       "ms": 70
+      },
+      {
+       "at_ms": 7510,
+       "ms": 90
+      },
+      {
+       "at_ms": 9950,
+       "ms": 70
+      },
+      {
+       "at_ms": 10310,
+       "ms": 420
+      },
+      {
+       "at_ms": 11150,
+       "ms": 60
+      },
+      {
+       "at_ms": 11730,
+       "ms": 60
+      },
+      {
+       "at_ms": 12440,
+       "ms": 320
+      },
+      {
+       "at_ms": 13560,
+       "ms": 160
+      },
+      {
+       "at_ms": 14610,
+       "ms": 380
+      },
+      {
+       "at_ms": 15830,
+       "ms": 90
+      },
+      {
+       "at_ms": 16680,
+       "ms": 90
+      },
+      {
+       "at_ms": 16800,
+       "ms": 160
+      },
+      {
+       "at_ms": 18690,
+       "ms": 70
+      },
+      {
+       "at_ms": 19150,
+       "ms": 350
+      },
+      {
+       "at_ms": 22120,
+       "ms": 80
+      },
+      {
+       "at_ms": 22490,
+       "ms": 560
+      },
+      {
+       "at_ms": 23600,
+       "ms": 370
+      },
+      {
+       "at_ms": 25280,
+       "ms": 160
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "id": "24_paths_urls_identifiers",
+ "category": "paths_urls",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 18.1,
+ "synth_s": 0.85,
+ "wav_sha256": "b720ec9087dbca5c26a644a06c38a12aa4d51b320c032844784a2fe42a384e6c",
+ "sentences": [
+  {
+   "text": "Call split_sentences() in text_processor.py, then set SPLIT_PATTERN and HF_HUB_OFFLINE=1.",
+   "synth_s": 0.341,
+   "ms": 7425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Call split_sentences() in text_processor.py, then set SPLIT_PATTERN and HF_HUB_OFFLINE=1.",
+     "phonemes": "kˈɔl splˌɪtsˈɛntᵊnsᵻz() ˈɪn tˈɛkst pɹˈɑsɛsəɹ.pˈI, ðˈɛn sˈɛt splˌɪtpˈæTəɹn ænd ˌAʧˈɛf hˈʌb ˈɔflIn ˈikwᵊlz wˈʌn.",
+     "silent_words": [],
+     "samples": 178200,
+     "ms": 7425.0,
+     "lead_ms": 290.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1460,
+       "ms": 320
+      },
+      {
+       "at_ms": 2790,
+       "ms": 450
+      },
+      {
+       "at_ms": 3650,
+       "ms": 70
+      },
+      {
+       "at_ms": 5040,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The KPipeline class wraps KModel, so use tts_engine.init() once.",
+   "synth_s": 0.254,
+   "ms": 5125.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The KPipeline class wraps KModel, so use tts_engine.init() once.",
+     "phonemes": "ðə kˈApˌIplIn klˈæs ɹˈæps kˈAmˌɑdᵊl, sˌO jˈuz tˌitˌiˈɛs ˈɛnʤɪn.ɪnɪt() wˈʌns.",
+     "silent_words": [],
+     "samples": 123000,
+     "ms": 5125.0,
+     "lead_ms": 290.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 2090,
+       "ms": 170
+      },
+      {
+       "at_ms": 3590,
+       "ms": 70
+      },
+      {
+       "at_ms": 3890,
+       "ms": 410
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Check config.get('voice') and the --noconfirm flag in naturalvoicetts.spec.",
+   "synth_s": 0.259,
+   "ms": 5550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Check config.get(voice') and the --noconfirm flag in naturalvoicetts.spec.",
+     "phonemes": "ʧˈɛk kənfˈɪɡ.ɡˈɛt(vˈYs”) ænd ðə nˈɑkənfˌɜɹm flˈæɡ ɪn nˈæʧəɹɹˌælvYsəts.spˈɛk.",
+     "silent_words": [],
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 450,
+       "ms": 100
+      },
+      {
+       "at_ms": 1040,
+       "ms": 130
+      },
+      {
+       "at_ms": 1850,
+       "ms": 330
+      },
+      {
+       "at_ms": 4480,
+       "ms": 180
+      },
+      {
+       "at_ms": 4950,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

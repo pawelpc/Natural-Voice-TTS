@@ -1,0 +1,123 @@
+{
+ "id": "19_abbreviations_academic",
+ "category": "abbreviations",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 16.8,
+ "synth_s": 0.82,
+ "wav_sha256": "b80e5e85e1854f7bd0c676a7b260b339f65b7f5b13cd7efd18ea59765fe90e48",
+ "sentences": [
+  {
+   "text": "Prof. Lee, Ph.D., works at St. Mary's Hospital vs. Johns Hopkins.",
+   "synth_s": 0.27,
+   "ms": 5450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Prof. Lee, Ph.D., works at St. Mary's Hospital vs. Johns Hopkins.",
+     "phonemes": "pɹˈɑf lˈi, pˌiˌAʧdˈi, wˈɜɹks æt sənt. mˈɛɹiz hˈɑspˌɪTᵊl vˈɜɹsəs ʤˈɑnz hˈɑpkɪnz.",
+     "silent_words": [],
+     "samples": 130800,
+     "ms": 5450.0,
+     "lead_ms": 300.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 870,
+       "ms": 130
+      },
+      {
+       "at_ms": 1710,
+       "ms": 390
+      },
+      {
+       "at_ms": 4040,
+       "ms": 60
+      },
+      {
+       "at_ms": 4530,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Fig. 3 shows approx. 40 samples; see No. 7, Vol. 2, pp. 14–18.",
+   "synth_s": 0.308,
+   "ms": 6475.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Fig. 3 shows approx. 40 samples; see No. 7, Vol. 2, pp. 14–18.",
+     "phonemes": "fˈɪɡ. θɹˈi ʃˈOz əpɹˈɑks. fˈɔɹTi sˈæmpᵊlz; sˈi nˈʌmbəɹ sˈɛvən, vˈɑl. tˈu, pˌipˈi. fˈɔɹtin ˈAtin.",
+     "silent_words": [],
+     "samples": 155400,
+     "ms": 6475.0,
+     "lead_ms": 360.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 610,
+       "ms": 80
+      },
+      {
+       "at_ms": 1480,
+       "ms": 70
+      },
+      {
+       "at_ms": 1690,
+       "ms": 390
+      },
+      {
+       "at_ms": 2860,
+       "ms": 90
+      },
+      {
+       "at_ms": 3960,
+       "ms": 70
+      },
+      {
+       "at_ms": 4770,
+       "ms": 440
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The results, cf. Table 2, were sig. at the 5% level.",
+   "synth_s": 0.244,
+   "ms": 4875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The results, cf. Table 2, were sig. at the 5% level.",
+     "phonemes": "ðə ɹəzˈʌlts, sˌiˈɛf. tˈAbᵊl tˈu, wɜɹ sˈɪɡ. æt ðə fˈIv pəɹsˈɛnt lˈɛvᵊl.",
+     "silent_words": [],
+     "samples": 117000,
+     "ms": 4875.0,
+     "lead_ms": 320.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1330,
+       "ms": 380
+      },
+      {
+       "at_ms": 2850,
+       "ms": 330
+      },
+      {
+       "at_ms": 3690,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

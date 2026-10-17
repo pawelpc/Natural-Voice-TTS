@@ -62,7 +62,10 @@ SAMPLE_RATE = 24000
 DEFAULT_VOICE = 'af_heart'
 DEFAULT_SPEED = 1.0
 DEFAULT_LANG = 'a'  # American English
-SPLIT_PATTERN = r'[.!?\n]+'
+# Text arrives already split into sentences (text_processor.split_chunks), so only
+# split on newlines. Splitting on [.!?] cut "3.5" and "v1.1.0" apart and removed
+# the end punctuation Kokoro reads for intonation (Phase 0, H2).
+SPLIT_PATTERN = r'\n+'
 
 # Module-level pipeline (initialized lazily)
 _pipeline: KPipeline | None = None

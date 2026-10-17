@@ -9,6 +9,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -27,6 +28,7 @@ FRAME_MS = 10           # analysis frame for silence detection
 SILENCE_DBFS = -45.0    # frame RMS below this counts as silence
 MIN_PAUSE_MS = 60       # shortest internal silent run reported as a pause
 WARMUP_TEXT = 'Warming up the engine.'
+WORD_RE = re.compile(r'[^\W_]')  # a letter or digit; "_" alone is markdown, not a word
 
 
 def setup_logging(level: int = logging.WARNING) -> None:
@@ -59,6 +61,9 @@ class RecordingPipeline:
             self.records.append({
                 'graphemes': result.graphemes,
                 'phonemes': result.phonemes,
+                # Words that reached Kokoro but got no phonemes are silently not spoken (R4).
+                'silent_words': [t.text for t in (result.tokens or [])
+                                 if WORD_RE.search(t.text) and not t.phonemes],
                 'samples': 0 if audio is None else int(len(audio)),
                 'audio': None if audio is None else np.asarray(audio, dtype=np.float32),
             })

@@ -1,0 +1,157 @@
+{
+ "id": "21_numbers_versions_decimals_versions",
+ "category": "numbers_versions",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 22.15,
+ "synth_s": 1.13,
+ "wav_sha256": "96057aaa152e444f9495955b6635487ca492ace772e2b19dbed935866d87bb3f",
+ "sentences": [
+  {
+   "text": "Pi is about 3.14159.",
+   "synth_s": 0.194,
+   "ms": 3375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Pi is about 3.14159.",
+     "phonemes": "pˈI ɪz əbˈWt θɹˈi pYnt wˈʌn fˈɔɹ wˈʌn fˈIv nˈIn.",
+     "silent_words": [],
+     "samples": 81000,
+     "ms": 3375.0,
+     "lead_ms": 320.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1010,
+       "ms": 120
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Upgrade from v1.1.0 to v1.2.0 today.",
+   "synth_s": 0.21,
+   "ms": 4125.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Upgrade from v1.1.0 to v1.2.0 today.",
+     "phonemes": "ˈʌpɡɹˌAd fɹʌm vˈi wˈʌn wˈʌn zˈɪɹO tə vˈi wˈʌn tˈu zˈɪɹO tədˈA.",
+     "silent_words": [],
+     "samples": 99000,
+     "ms": 4125.0,
+     "lead_ms": 310.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1950,
+       "ms": 320
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Python 3.11 and torch 2.6.0+cu124 are required.",
+   "synth_s": 0.319,
+   "ms": 6800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Python 3.11 and torch 2.6.0+cu124 are required.",
+     "phonemes": "pˈIθˌɑn θɹˈi pYnt wˈʌn wˈʌn ænd tˈɔɹʧ tˈu.sˈɪks.zˈiəɹO plˈʌs kˈu wˈʌnhˈʌndɹɪd twˈɛnti fˈɔɹ ɑɹ ɹəkwˈIəɹd.",
+     "silent_words": [],
+     "samples": 163200,
+     "ms": 6800.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1700,
+       "ms": 180
+      },
+      {
+       "at_ms": 2620,
+       "ms": 200
+      },
+      {
+       "at_ms": 3040,
+       "ms": 80
+      },
+      {
+       "at_ms": 3270,
+       "ms": 400
+      },
+      {
+       "at_ms": 4380,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The ratio was 0.5, not .75.",
+   "synth_s": 0.193,
+   "ms": 3850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The ratio was 0.5, not .75.",
+     "phonemes": "ðə ɹˈAʃiO wʌz zˈɪɹO pYnt fˈIv, nˌɑt pYnt sˈɛvən fˈIv.",
+     "silent_words": [],
+     "samples": 92400,
+     "ms": 3850.0,
+     "lead_ms": 320.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1520,
+       "ms": 80
+      },
+      {
+       "at_ms": 1890,
+       "ms": 330
+      },
+      {
+       "at_ms": 2360,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Kokoro 0.9.4 ships with misaki 0.9.4.",
+   "synth_s": 0.211,
+   "ms": 4000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Kokoro 0.9.4 ships with misaki 0.9.4.",
+     "phonemes": "kəkˈɔɹO zˈɪɹO nˈIn fˈɔɹ ʃˈɪps wɪð mɪsəki zˈɪɹO nˈIn fˈɔɹ.",
+     "silent_words": [],
+     "samples": 96000,
+     "ms": 4000.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1260,
+       "ms": 80
+      },
+      {
+       "at_ms": 2340,
+       "ms": 290
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

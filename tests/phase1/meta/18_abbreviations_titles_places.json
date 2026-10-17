@@ -1,0 +1,126 @@
+{
+ "id": "18_abbreviations_titles_places",
+ "category": "abbreviations",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 13.4,
+ "synth_s": 0.68,
+ "wav_sha256": "c1c27fab2b3cbc6098cd3e22bf2b805d66a746ed6c99d113c2ef9cc0e69de423",
+ "sentences": [
+  {
+   "text": "Dr. Smith met Mr. and Mrs. Jones at 5 p.m. on Main St. near the U.S. Army base.",
+   "synth_s": 0.315,
+   "ms": 6700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Dr. Smith met Mr. and Mrs. Jones at 5 p.m. on Main St. near the U.S. Army base.",
+     "phonemes": "dˈɑktəɹ smˈɪθ mˈɛt mˈɪstəɹ ænd mˈɪsɪz ʤˈOnz æt fˈIv pˌiˈɛm ˌɔn mˈAn sənt. nˌɪɹ ðə jˌuˈɛs ˈɑɹmi bˈAs.",
+     "silent_words": [],
+     "samples": 160800,
+     "ms": 6700.0,
+     "lead_ms": 330.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 480,
+       "ms": 80
+      },
+      {
+       "at_ms": 960,
+       "ms": 130
+      },
+      {
+       "at_ms": 2580,
+       "ms": 60
+      },
+      {
+       "at_ms": 2710,
+       "ms": 60
+      },
+      {
+       "at_ms": 2780,
+       "ms": 90
+      },
+      {
+       "at_ms": 3100,
+       "ms": 90
+      },
+      {
+       "at_ms": 4200,
+       "ms": 60
+      },
+      {
+       "at_ms": 4290,
+       "ms": 530
+      },
+      {
+       "at_ms": 5520,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "They covered several topics, e.g. budgets, i.e. the real costs, etc.",
+   "synth_s": 0.258,
+   "ms": 5050.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "They covered several topics, e.g. budgets, i.e. the real costs, etc.",
+     "phonemes": "ðˌA kˈʌvəɹd sˈɛvəɹəl tˈɑpɪks, ˌiʤˈi bˈʌʤəts, ˌIˈi ðə ɹˈiᵊl kˈɔsts, ɛtsˈɛTəɹə",
+     "silent_words": [],
+     "samples": 121200,
+     "ms": 5050.0,
+     "lead_ms": 320.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 1280,
+       "ms": 60
+      },
+      {
+       "at_ms": 1440,
+       "ms": 60
+      },
+      {
+       "at_ms": 1630,
+       "ms": 200
+      },
+      {
+       "at_ms": 2570,
+       "ms": 190
+      },
+      {
+       "at_ms": 3800,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then they left.",
+   "synth_s": 0.109,
+   "ms": 1650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then they left.",
+     "phonemes": "ðˈɛn ðA lˈɛft.",
+     "silent_words": [],
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 380.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}
