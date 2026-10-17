@@ -1,0 +1,9 @@
+What I did.
+Followed the diagnose-then-fix workflow from the brief.
+Root cause confirmed as D1 (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox.
+Root cause.
+The pipe path is the only one that reassembles text from bytes.
+In pipe listener dot py the payload was read with a single ReadFile(pipe, length).
+Windows PIPE TYPE BYTE pipes don't guarantee one ReadFile returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a truncated prefix (tail sentences vanish), or a cut mid-UTF-8-sequence made decode raise and the broad except dropped the whole message.
+The hotkey path never touches the pipe, which is exactly why it never dropped anything.
+My simulation with a less than or equal to 5-byte-per-call fake ReadFile: old single read returned 5 of 102 bytes; new read exactly returns all 102, and mid-stream EOF raises a clean IOError.

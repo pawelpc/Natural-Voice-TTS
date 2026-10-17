@@ -1,0 +1,407 @@
+{
+ "id": "05_times_dates_build_progress",
+ "category": "times_dates",
+ "origin": "real",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 68.17,
+ "synth_s": 3.48,
+ "wav_sha256": "64eb3d454832d807415a6d6dd44b9acedc2cfe855ba3a1933bd6bd58b37418e8",
+ "sentences": [
+  {
+   "text": "Yes — it's still running and progressing normally.",
+   "synth_s": 0.193,
+   "ms": 3350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Yes — it's still running and progressing normally.",
+     "phonemes": "jˈɛs — ɪts stˈɪl ɹˈʌnɪŋ ænd pɹəɡɹˈɛsɪŋ nˈɔɹməli.",
+     "silent_words": [],
+     "samples": 80400,
+     "ms": 3350.0,
+     "lead_ms": 340.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 740,
+       "ms": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Here's exactly where it is:",
+   "synth_s": 0.138,
+   "ms": 2175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here's exactly where it is:",
+     "phonemes": "hˈɪɹz ɪɡzˈæktli wˌɛɹ ɪt ɪz:",
+     "silent_words": [],
+     "samples": 52200,
+     "ms": 2175.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 950,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "PyInstaller finished — the fresh exe was written at four twenty three thirty eight P M (rebuilt).",
+   "synth_s": 0.348,
+   "ms": 6775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "PyInstaller finished — the fresh exe was written at four twenty three thirty eight P M (rebuilt).",
+     "phonemes": "pˈI ɪnstˈɔləɹ fˈɪnəʃt — ðə fɹˈɛʃ ˌiˌɛksˈi wʌz ɹˈɪtn æt fˈɔɹ twˈɛnti θɹˈi θˈɜɹTi ˈAt pˈi ˈɛm (ɹibˈɪlt).",
+     "silent_words": [],
+     "samples": 162600,
+     "ms": 6775.0,
+     "lead_ms": 290.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1560,
+       "ms": 430
+      },
+      {
+       "at_ms": 3480,
+       "ms": 70
+      },
+      {
+       "at_ms": 4350,
+       "ms": 100
+      },
+      {
+       "at_ms": 4890,
+       "ms": 110
+      },
+      {
+       "at_ms": 5580,
+       "ms": 210
+      },
+      {
+       "at_ms": 6150,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Now in the Inno Setup step (ISCC pid 12024, about 12 minutes of CPU so far), compressing the torch/CUDA DLLs into the about 1.8 gigabyte installer.",
+   "synth_s": 0.663,
+   "ms": 13850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Now in the Inno Setup step (ISCC pid 12024, about 12 minutes of CPU so far), compressing the torch/CUDA DLLs into the about 1.8 gigabyte installer.",
+     "phonemes": "nˈW ɪn ði ɪnnˈO sˈɛTˌʌp stˈɛp (ˌIˌɛssˌisˈi pˈɪd twˈɛlv θˈWzᵊnd twˈɛnti fˈɔɹ, əbˈWt twˈɛlv mˈɪnəts ʌv sˌipˌijˈu sˌO fˈɑɹ), kəmpɹˈɛsɪŋ ðə tˈɔɹʧ sˌijˌudˌiˈA dˌiˌɛlˈɛlz ˈɪntu ði əbˈWt wˈʌn pYnt ˈAt ɡˈɪɡəbˌIt ɪnstˈɔləɹ.",
+     "silent_words": [],
+     "samples": 332400,
+     "ms": 13850.0,
+     "lead_ms": 330.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 60
+      },
+      {
+       "at_ms": 1970,
+       "ms": 80
+      },
+      {
+       "at_ms": 2060,
+       "ms": 440
+      },
+      {
+       "at_ms": 3290,
+       "ms": 70
+      },
+      {
+       "at_ms": 3940,
+       "ms": 60
+      },
+      {
+       "at_ms": 4660,
+       "ms": 60
+      },
+      {
+       "at_ms": 4980,
+       "ms": 420
+      },
+      {
+       "at_ms": 5630,
+       "ms": 60
+      },
+      {
+       "at_ms": 7670,
+       "ms": 530
+      },
+      {
+       "at_ms": 10710,
+       "ms": 270
+      },
+      {
+       "at_ms": 12250,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "This compression phase is the slowest part of the whole build and produces no incremental Claude activity.",
+   "synth_s": 0.35,
+   "ms": 6925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This compression phase is the slowest part of the whole build and produces no incremental Claude activity.",
+     "phonemes": "ðˌɪs kəmpɹˈɛʃən fˈAz ɪz ðə slˈOᵻst pˈɑɹt ʌv ðə hˈOl bˈɪld ænd pɹədˈusᵻz nˈO ˌɪnkɹəmˈɛntᵊl klˈɔd æktˈɪvəTi.",
+     "silent_words": [],
+     "samples": 166200,
+     "ms": 6925.0,
+     "lead_ms": 310.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1080,
+       "ms": 70
+      },
+      {
+       "at_ms": 1540,
+       "ms": 190
+      },
+      {
+       "at_ms": 3490,
+       "ms": 440
+      },
+      {
+       "at_ms": 4910,
+       "ms": 60
+      },
+      {
+       "at_ms": 5950,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "That's also why your usage page shows no change: this is a local build process on your machine — it burns CPU/disk, not Claude tokens.",
+   "synth_s": 0.459,
+   "ms": 9375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's also why your usage page shows no change: this is a local build process on your machine — it burns CPU/disk, not Claude tokens.",
+     "phonemes": "ðˈæts ˈɔlsO wˌI jʊɹ jˈusɪʤ pˈAʤ ʃˈOz nˈO ʧˈAnʤ: ðɪs ɪz ɐ lˈOkəl bˈɪld pɹˈɑsˌɛs ˌɔn jʊɹ məʃˈin — ɪt bˈɜɹnz sˌipˌijˈu dˈɪsk, nˌɑt klˈɔd tˈOkᵊnz.",
+     "silent_words": [],
+     "samples": 225000,
+     "ms": 9375.0,
+     "lead_ms": 330.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 2970,
+       "ms": 550
+      },
+      {
+       "at_ms": 4510,
+       "ms": 60
+      },
+      {
+       "at_ms": 5710,
+       "ms": 420
+      },
+      {
+       "at_ms": 6240,
+       "ms": 60
+      },
+      {
+       "at_ms": 7660,
+       "ms": 210
+      },
+      {
+       "at_ms": 8020,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'm just idling in the background waiting for it to finish, so there's nothing for the usage page to reflect until I act again.",
+   "synth_s": 0.401,
+   "ms": 7850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'm just idling in the background waiting for it to finish, so there's nothing for the usage page to reflect until I act again.",
+     "phonemes": "ˌIm ʤˈʌst ˈIdlɪŋ ɪn ðə bˈækɡɹˌWnd wˈATɪŋ fɔɹ ɪt tə fˈɪnəʃ, sˌO ðɛɹz nˈʌθɪŋ fɔɹ ðə jˈusɪʤ pˈAʤ tə ɹəflˈɛkt ˌʌntˈɪl ˌI ˈækt əɡˈɛn.",
+     "silent_words": [],
+     "samples": 188400,
+     "ms": 7850.0,
+     "lead_ms": 330.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 710,
+       "ms": 80
+      },
+      {
+       "at_ms": 1630,
+       "ms": 90
+      },
+      {
+       "at_ms": 3270,
+       "ms": 450
+      },
+      {
+       "at_ms": 4300,
+       "ms": 80
+      },
+      {
+       "at_ms": 6070,
+       "ms": 100
+      },
+      {
+       "at_ms": 6190,
+       "ms": 160
+      },
+      {
+       "at_ms": 6900,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Packing a 1.8 gigabyte installer typically takes several more minutes.",
+   "synth_s": 0.269,
+   "ms": 4950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Packing a 1.8 gigabyte installer typically takes several more minutes.",
+     "phonemes": "pˈækɪŋ ɐ wˈʌn pYnt ˈAt ɡˈɪɡəbˌIt ɪnstˈɔləɹ tˈɪpəkᵊli tˈAks sˈɛvəɹəl mˈɔɹ mˈɪnəts.",
+     "silent_words": [],
+     "samples": 118800,
+     "ms": 4950.0,
+     "lead_ms": 300.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1400,
+       "ms": 130
+      },
+      {
+       "at_ms": 2480,
+       "ms": 330
+      },
+      {
+       "at_ms": 4280,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll be notified automatically the moment build dot bat exits, then I'll run the static verification, commit + push, and set up the runtime smoke test.",
+   "synth_s": 0.506,
+   "ms": 10400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll be notified automatically the moment build dot bat exits, then I'll run the static verification, commit + push, and set up the runtime smoke test.",
+     "phonemes": "ˌIl bi nˈOTᵻfˌId ˌɔTəmˈæTəkᵊli ðə mˈOmᵊnt bˈɪld dˈɑt bˈæt ˈɛɡzəts, ðˈɛn ˌIl ɹˈʌn ðə stˈæTɪk vˌɛɹəfəkˈAʃən, kəmˈɪt plˈʌs pˈʊʃ, ænd sˈɛt ˌʌp ðə ɹˈʌntIm smˈOk tˈɛst.",
+     "silent_words": [],
+     "samples": 249600,
+     "ms": 10400.0,
+     "lead_ms": 320.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1090,
+       "ms": 60
+      },
+      {
+       "at_ms": 1640,
+       "ms": 60
+      },
+      {
+       "at_ms": 1950,
+       "ms": 220
+      },
+      {
+       "at_ms": 2830,
+       "ms": 60
+      },
+      {
+       "at_ms": 3720,
+       "ms": 70
+      },
+      {
+       "at_ms": 3910,
+       "ms": 470
+      },
+      {
+       "at_ms": 6260,
+       "ms": 300
+      },
+      {
+       "at_ms": 6810,
+       "ms": 100
+      },
+      {
+       "at_ms": 7140,
+       "ms": 60
+      },
+      {
+       "at_ms": 7580,
+       "ms": 370
+      },
+      {
+       "at_ms": 8350,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "No action needed from you right now.",
+   "synth_s": 0.155,
+   "ms": 2525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "No action needed from you right now.",
+     "phonemes": "nˈO ˈækʃən nˈidᵻd fɹʌm ju ɹˈIt nˈW.",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 330.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

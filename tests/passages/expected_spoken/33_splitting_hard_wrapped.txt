@@ -1,0 +1,4 @@
+This paragraph was copied from a PDF, so every line ends with a hard line break even though the sentence keeps going.
+A reader should not pause at the end of each line, only at the real sentence ends.
+The same thing happens with plain-text email, which is often wrapped at about seventy characters per line.
+A second paragraph follows the blank line.

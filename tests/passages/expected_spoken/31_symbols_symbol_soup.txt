@@ -1,0 +1,8 @@
+Use A & B, not A + B.
+Temperatures greater than or equal to 30 degrees are bad; about 50% of units fail.
+Cost times 2 equals total.
+Press Control Windows T to the app reads the text.
+It's our number 1 priority @ 100%.
+In code, x not equal to y and a less than or equal to b.
+Copyright 2026.
+Item A/B testing is done.

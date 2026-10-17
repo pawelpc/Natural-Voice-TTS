@@ -1,0 +1,5 @@
+Pi is about 3.14159.
+Upgrade from version 1 point 1 point 0 to version 1 point 2 point 0 today.
+Python 3 point 11 and torch 2 point 6 point 0 plus c u 124 are required.
+The ratio was 0.5, not .75.
+Kokoro 0 point 9 point 4 ships with misaki 0 point 9 point 4.

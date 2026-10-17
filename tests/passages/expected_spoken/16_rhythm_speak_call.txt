@@ -1,0 +1,4 @@
+Got it.
+I'll speak my full responses for the rest of this session, and I'll keep them in clean prose so they sound natural out loud.
+What would you like to do next?
+We can attempt the remote control connection from your phone using slash r c, run another brain dump on a different topic, or wrap up the session and prep your git commit.

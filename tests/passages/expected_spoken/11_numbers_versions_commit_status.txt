@@ -1,0 +1,10 @@
+Committed and pushed to master (e 3 f 1 5 e c to b b a 2 2 0 0).
+GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.
+Status so far:
+check mark Installer rebuilt: dist, NaturalVoiceTTS Setup 1 dot 1 dot 0 dot exe (1798 megabytes, four forty six P M today).
+check mark Fix verified present in bundled files.
+check mark Source fixes committed + pushed.
+hourglass Runtime smoke test — the last gate before your manual retest.
+The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass).
+Since your next step is to uninstall it anyway, stopping it now is harmless.
+How do you want to handle it?

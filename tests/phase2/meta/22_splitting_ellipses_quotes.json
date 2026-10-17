@@ -1,0 +1,155 @@
+{
+ "id": "22_splitting_ellipses_quotes",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 7,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 7,
+ "duration_s": 13.45,
+ "synth_s": 0.86,
+ "wav_sha256": "9b3b1d14163020b2afebf51ed8a1c611192133100612f36bdfe5c8c7422bece6",
+ "sentences": [
+  {
+   "text": "He paused... then said, \"Are you sure?\"",
+   "synth_s": 0.161,
+   "ms": 2775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "He paused... then said, \"Are you sure?\"",
+     "phonemes": "hˌi pˈɔzd... ðˈɛn sˈɛd, “ˌɑɹ ju ʃˈʊɹ?”",
+     "silent_words": [],
+     "samples": 66600,
+     "ms": 2775.0,
+     "lead_ms": 330.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 940,
+       "ms": 200
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "She replied, \"Yes.\"",
+   "synth_s": 0.13,
+   "ms": 2050.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "She replied, \"Yes.\"",
+     "phonemes": "ʃˌi ɹᵻplˈId, “jˈɛs.”",
+     "silent_words": [],
+     "samples": 49200,
+     "ms": 2050.0,
+     "lead_ms": 330.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1020,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Wait… what?",
+   "synth_s": 0.112,
+   "ms": 1625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Wait… what?",
+     "phonemes": "wˈAt… wˌʌt?",
+     "silent_words": [],
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 390.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "\"Go!\" he shouted.",
+   "synth_s": 0.126,
+   "ms": 1950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "\"Go!\" he shouted.",
+     "phonemes": "“ɡˌO!” hi ʃˈWTᵻd.",
+     "silent_words": [],
+     "samples": 46800,
+     "ms": 1950.0,
+     "lead_ms": 360.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 190
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It's done — finally.",
+   "synth_s": 0.116,
+   "ms": 1825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It's done — finally.",
+     "phonemes": "ˌɪts dˈʌn — fˈInᵊli.",
+     "silent_words": [],
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 330.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Was it worth it?!",
+   "synth_s": 0.106,
+   "ms": 1575.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Was it worth it?!",
+     "phonemes": "wˌʌz ɪt wˈɜɹθ ɪt?!",
+     "silent_words": [],
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 340.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Absolutely.",
+   "synth_s": 0.111,
+   "ms": 1650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Absolutely.",
+     "phonemes": "ˈæbsəlˌutli.",
+     "silent_words": [],
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 390.0,
+     "trail_ms": 520.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

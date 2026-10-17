@@ -1,6 +1,7 @@
 """Render every passage in tests/passages/ the way the tray app speaks it.
 
-For each passage: split_sentences() -> app._synthesize_sentence() per chunk,
+For each passage: the chunks the app's worker would speak (app.speech_chunks,
+falling back to split_sentences() for older checkouts) -> app._synthesize_sentence() per chunk,
 audio joined back to back (device gaps between chunks are measured separately
 by measure_ttfa.py). Writes one WAV and one JSON per passage, plus a summary.
 
@@ -25,6 +26,7 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
     recorder = harness.install_recorder(tts_engine)
     import app
     from text_processor import split_sentences
+    chunker = getattr(app, 'speech_chunks', split_sentences)
 
     voice, speed = tts_engine.DEFAULT_VOICE, tts_engine.DEFAULT_SPEED
     summary = {'env': harness.env_info(), 'voice': voice, 'speed': speed, 'passages': []}
@@ -32,7 +34,7 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
     for entry in harness.load_manifest():
         if only and entry['id'] not in only:
             continue
-        chunks = split_sentences(entry['text'])
+        chunks = chunker(entry['text'])
         sentences, audios, skipped = [], [], 0
         for chunk in chunks:
             recorder.records.clear()

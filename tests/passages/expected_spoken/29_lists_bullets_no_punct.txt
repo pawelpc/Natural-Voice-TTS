@@ -1,0 +1,10 @@
+Before you start, check these:
+Python 3 point 11 installed.
+espeak-ng in Program Files.
+CUDA drivers up to date.
+at least 4 gigabytes of VRAM.
+driver 550 or newer.
+Then follow the steps:
+One. Clone the repo.
+Two. Run pip install dash r requirements dot txt.
+Three. Start the app.

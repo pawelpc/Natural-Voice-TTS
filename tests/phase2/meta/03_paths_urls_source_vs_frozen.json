@@ -1,0 +1,443 @@
+{
+ "id": "03_paths_urls_source_vs_frozen",
+ "category": "paths_urls",
+ "origin": "real",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 79.25,
+ "synth_s": 3.97,
+ "wav_sha256": "2eb3bfb8a37811ce7be427412fc53161ed17d12dbcec65b44aa8adc6d3077178",
+ "sentences": [
+  {
+   "text": "The edits are written to disk (real file changes, not a runtime patch), so they persist across any app or computer restart.",
+   "synth_s": 0.408,
+   "ms": 8150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The edits are written to disk (real file changes, not a runtime patch), so they persist across any app or computer restart.",
+     "phonemes": "ði ˈɛdəts ɑɹ ɹˈɪtn tə dˈɪsk (ɹˈiᵊl fˈIl ʧˈAnʤᵻz, nˌɑt ɐ ɹˈʌntIm pˈæʧ), sˌO ðA pəɹsˈɪst əkɹˈɔs ˈɛni ˈæp ɔɹ kəmpjˈuTəɹ ɹˈistˌɑɹt.",
+     "silent_words": [],
+     "samples": 195600,
+     "ms": 8150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 1710,
+       "ms": 210
+      },
+      {
+       "at_ms": 3100,
+       "ms": 340
+      },
+      {
+       "at_ms": 4400,
+       "ms": 80
+      },
+      {
+       "at_ms": 4610,
+       "ms": 410
+      },
+      {
+       "at_ms": 6540,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The catch is which copy of the code you actually run:",
+   "synth_s": 0.187,
+   "ms": 3200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The catch is which copy of the code you actually run:",
+     "phonemes": "ðə kˈɛʧ ɪz wˌɪʧ kˈɑpi ʌv ðə kˈOd ju ˈækʧəwəli ɹˈʌn:",
+     "silent_words": [],
+     "samples": 76800,
+     "ms": 3200.0,
+     "lead_ms": 300.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "If you tested by running from source (python src slash app dot py, with the MCP server pointed at mcp tts server slash server dot py) — you're already running the fixed code, and every restart re-reads those dot py files.",
+   "synth_s": 0.754,
+   "ms": 16150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "If you tested by running from source (python src slash app dot py, with the MCP server pointed at mcp tts server slash server dot py) — you're already running the fixed code, and every restart re-reads those dot py files.",
+     "phonemes": "ˌɪf ju tˈɛstᵻd bI ɹˈʌnɪŋ fɹʌm sˈɔɹs (pˈIθˌɑn ˌɛsˌɑɹsˈi slˈæʃ ˈæp dˈɑt pˈI, wɪð ði ˌɛmsˌipˈi sˈɜɹvəɹ pˈYntᵻd æt ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ sˈɜɹvəɹ dˈɑt pˈI) — jʊɹ ˌɔlɹˈɛdi ɹˈʌnɪŋ ðə fˈɪkst kˈOd, ænd ˈɛvəɹi ɹˈistˌɑɹt ɹˌiɹˈidz ðOz dˈɑt pˈI fˈIlz.",
+     "silent_words": [],
+     "samples": 387600,
+     "ms": 16150.0,
+     "lead_ms": 320.0,
+     "trail_ms": 489.9999999999982,
+     "pauses": [
+      {
+       "at_ms": 2190,
+       "ms": 250
+      },
+      {
+       "at_ms": 2640,
+       "ms": 60
+      },
+      {
+       "at_ms": 4050,
+       "ms": 60
+      },
+      {
+       "at_ms": 4320,
+       "ms": 80
+      },
+      {
+       "at_ms": 4680,
+       "ms": 490
+      },
+      {
+       "at_ms": 6530,
+       "ms": 80
+      },
+      {
+       "at_ms": 6620,
+       "ms": 60
+      },
+      {
+       "at_ms": 7090,
+       "ms": 110
+      },
+      {
+       "at_ms": 7860,
+       "ms": 60
+      },
+      {
+       "at_ms": 9880,
+       "ms": 70
+      },
+      {
+       "at_ms": 10260,
+       "ms": 610
+      },
+      {
+       "at_ms": 11780,
+       "ms": 80
+      },
+      {
+       "at_ms": 12490,
+       "ms": 420
+      },
+      {
+       "at_ms": 14860,
+       "ms": 70
+      },
+      {
+       "at_ms": 15160,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "check mark Fully persistent, nothing more to do.",
+   "synth_s": 0.205,
+   "ms": 3450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "check mark Fully persistent, nothing more to do.",
+     "phonemes": "ʧˈɛk mˈɑɹk fˈʊli pəɹsˈɪstənt, nˈʌθɪŋ mˈɔɹ tə dˈu.",
+     "silent_words": [],
+     "samples": 82800,
+     "ms": 3450.0,
+     "lead_ms": 310.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1720,
+       "ms": 240
+      },
+      {
+       "at_ms": 2160,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Given your test passed, this is almost certainly what you did — the frozen exe couldn't have contained the fix.",
+   "synth_s": 0.36,
+   "ms": 6925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Given your test passed, this is almost certainly what you did — the frozen exe couldn't have contained the fix.",
+     "phonemes": "ɡˈɪvən jʊɹ tˈɛst pˈæst, ðɪs ɪz ˈɔlmOst sˈɜɹtnli wˌʌt ju dˈɪd — ðə fɹˈOzən ˌiˌɛksˈi kˌʊdᵊnt hæv kəntˈAnd ðə fˈɪks.",
+     "silent_words": [],
+     "samples": 166200,
+     "ms": 6925.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1460,
+       "ms": 310
+      },
+      {
+       "at_ms": 3680,
+       "ms": 400
+      },
+      {
+       "at_ms": 6060,
+       "ms": 60
+      },
+      {
+       "at_ms": 6230,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "If/when you run the installed/frozen app (NaturalVoiceTTS dot exe from dist or Program Files) — that build was compiled before these edits, so it still contains the old, buggy code.",
+   "synth_s": 0.601,
+   "ms": 12675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "If/when you run the installed/frozen app (NaturalVoiceTTS dot exe from dist or Program Files) — that build was compiled before these edits, so it still contains the old, buggy code.",
+     "phonemes": "ˌɪf wˌɛn ju ɹˈʌn ði ɪnstˈɔld fɹˈOzən ˈæp (nˈæʧəɹᵊlvˌYstˌitˌiˈɛs dˈɑt ˌiˌɛksˈi fɹʌm dˈɪst ɔɹ pɹˈOɡɹˌæm fˈIlz) — ðæt bˈɪld wʌz kəmpˈIld bəfˈɔɹ ðiz ˈɛdəts, sˌO ɪt stˈɪl kəntˈAnz ði ˈOld, bˈʌɡi kˈOd.",
+     "silent_words": [],
+     "samples": 304200,
+     "ms": 12675.0,
+     "lead_ms": 310.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 2410,
+       "ms": 70
+      },
+      {
+       "at_ms": 2490,
+       "ms": 350
+      },
+      {
+       "at_ms": 4320,
+       "ms": 100
+      },
+      {
+       "at_ms": 5600,
+       "ms": 70
+      },
+      {
+       "at_ms": 5780,
+       "ms": 60
+      },
+      {
+       "at_ms": 6270,
+       "ms": 70
+      },
+      {
+       "at_ms": 6740,
+       "ms": 610
+      },
+      {
+       "at_ms": 8490,
+       "ms": 60
+      },
+      {
+       "at_ms": 9320,
+       "ms": 80
+      },
+      {
+       "at_ms": 9500,
+       "ms": 300
+      },
+      {
+       "at_ms": 10990,
+       "ms": 60
+      },
+      {
+       "at_ms": 11430,
+       "ms": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A restart just re-runs the stale exe. warning.",
+   "synth_s": 0.222,
+   "ms": 4000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A restart just re-runs the stale exe. warning.",
+     "phonemes": "ɐ ɹˈistˌɑɹt ʤˈʌst ɹˌiɹˈʌnz ðə stˈAl ˌiˌɛksˈi. wˈɔɹnɪŋ.",
+     "silent_words": [],
+     "samples": 96000,
+     "ms": 4000.0,
+     "lead_ms": 300.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 2610,
+       "ms": 450
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Bottom line: your current (source) run is fixed and stays fixed.",
+   "synth_s": 0.236,
+   "ms": 4325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Bottom line: your current (source) run is fixed and stays fixed.",
+     "phonemes": "bˈɑTəm lˈIn: jʊɹ kˈɜɹənt (sˈɔɹs) ɹˈʌn ɪz fˈɪkst ænd stˈAz fˈɪkst.",
+     "silent_words": [],
+     "samples": 103800,
+     "ms": 4325.0,
+     "lead_ms": 340.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1010,
+       "ms": 300
+      },
+      {
+       "at_ms": 2600,
+       "ms": 60
+      },
+      {
+       "at_ms": 3430,
+       "ms": 90
+      },
+      {
+       "at_ms": 3630,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "But the existing dist, NaturalVoiceTTS build and any installed dot exe are now stale — if you ever launch or reinstall from those, the bug comes back until you run build dot bat to rebuild.",
+   "synth_s": 0.627,
+   "ms": 13025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "But the existing dist, NaturalVoiceTTS build and any installed dot exe are now stale — if you ever launch or reinstall from those, the bug comes back until you run build dot bat to rebuild.",
+     "phonemes": "bˌʌt ði ɪɡzˈɪstɪŋ dˈɪst, nˈæʧəɹᵊlvˌYstˌitˌiˈɛs bˈɪld ænd ˈɛni ɪnstˈɔld dˈɑt ˌiˌɛksˈi ɑɹ nˈW stˈAl — ɪf ju ˈɛvəɹ lˈɔnʧ ɔɹ ɹˌiənstˈɔl fɹʌm ðˈOz, ðə bˈʌɡ kˈʌmz bˈæk ˌʌntˈɪl ju ɹˈʌn bˈɪld dˈɑt bˈæt tə ɹibˈɪld.",
+     "silent_words": [],
+     "samples": 312600,
+     "ms": 13025.0,
+     "lead_ms": 290.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1440,
+       "ms": 220
+      },
+      {
+       "at_ms": 2890,
+       "ms": 60
+      },
+      {
+       "at_ms": 3220,
+       "ms": 330
+      },
+      {
+       "at_ms": 3670,
+       "ms": 60
+      },
+      {
+       "at_ms": 4840,
+       "ms": 80
+      },
+      {
+       "at_ms": 6290,
+       "ms": 590
+      },
+      {
+       "at_ms": 9170,
+       "ms": 400
+      },
+      {
+       "at_ms": 10110,
+       "ms": 60
+      },
+      {
+       "at_ms": 10400,
+       "ms": 60
+      },
+      {
+       "at_ms": 11350,
+       "ms": 60
+      },
+      {
+       "at_ms": 11590,
+       "ms": 110
+      },
+      {
+       "at_ms": 11850,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "If this machine is meant to run the installed app long-term, rebuild + reinstall once so the fix is baked in.",
+   "synth_s": 0.372,
+   "ms": 7350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "If this machine is meant to run the installed app long-term, rebuild + reinstall once so the fix is baked in.",
+     "phonemes": "ˌɪf ðɪs məʃˈin ɪz mˈɛnt tə ɹˈʌn ði ɪnstˈɔld ˈæp lˈɔŋtˌɜɹm, ɹibˈɪld  ɹˌiənstˈɔl wˈʌns sˌO ðə fˈɪks ɪz bˈAkt ˈɪn.",
+     "silent_words": [],
+     "samples": 176400,
+     "ms": 7350.0,
+     "lead_ms": 310.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 2820,
+       "ms": 60
+      },
+      {
+       "at_ms": 3460,
+       "ms": 460
+      },
+      {
+       "at_ms": 5500,
+       "ms": 150
+      },
+      {
+       "at_ms": 6310,
+       "ms": 70
+      },
+      {
+       "at_ms": 6500,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

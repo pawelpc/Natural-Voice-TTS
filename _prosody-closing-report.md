@@ -1,13 +1,13 @@
 # Closing Report (DRAFT): Natural Voice TTS — Speaking Flow and Text Handling
 
 **Model:** Opus 5.5 (`claude-opus-5-5`) · **Started:** 2026-10-17
-**Status:** Phase 1 gate passed. Phase 2 next.
+**Status:** Phase 2 gate passed. R3 is open (+12% on one passage, came in Phase 1). Phase 3 next.
 
 | Phase | Gate | Status | Evidence |
 |---|---|---|---|
 | 0 Environment and baseline | source synthesis runs; 30 baseline WAVs; H1–H4 decided | **Passed** | §Phase 0 below |
-| 1 Splitting | unit tests, zero wrong splits | **Passed** | §Phase 1 below |
-| 2 Normalization | expected-output files match; R4, R5 hold | not started | |
+| 1 Splitting | unit tests, zero wrong splits | **Passed** (R3 later found failing on passage 16) | §Phase 1 below |
+| 2 Normalization | expected-output files match; R4, R5 hold | **Passed**; R3 open | §Phase 2 below |
 | 3 Pauses | measured gaps within ±50 ms of targets | not started | |
 | 4 Paul's listening check | Paul passes it | not started | |
 | 5 Release | only after Phase 4 | not started | |
@@ -145,10 +145,8 @@ no silence). Measured (`H4`, all 33 baseline renders):
    stuck mid-read.
 2. Source mode logs Kokoro's "Defaulting repo_id" warning (harmless; `KPipeline` isn't given `repo_id`).
 
-### R6 questions for Paul (collected so far)
-- `St.` — misaki reads it as "Saint" ("Main St." → "Main Saint"). Street, Saint, or decide by context?
-- `Dr.` — misaki reads "Doctor". Keep it, or decide by context (before a name → Doctor, after a
-  street name → Drive)?
+### R6 questions for Paul
+Asked and answered on 2026-10-17. See "R6 decisions" under Phase 2.
 
 ### Reproduce
 ```bash
@@ -195,11 +193,11 @@ python tests/probe_hypotheses.py --baseline tests/baseline
 - **Render** (`tests/phase1/`, same scripts): 33 WAVs, 0 skipped chunks (baseline 1).
   Kokoro segments 415 → 256 (fewer mid-sentence cuts); total audio 1673.7 s → 1572.4 s
   (about 100 s less padding).
-- **R3** (`tests/phase1/r3.json`, `compare_ttfa.py`, Phase 0 commit vs Phase 1, 3 alternating rounds ×
-  5 runs): passage 17 0.551 → 0.536 s (−2.8%), passage 16 0.705 → 0.673 s (−4.5%),
-  passage 01 0.510 → 0.460 s (−9.9%). **Pass.** A single non-interleaved run had shown +12% on
-  passage 16, but that passage's own Phase 0 median moves about 10% between sessions, so only the A/B
-  is used for R3.
+- **R3 — CORRECTED, see Phase 2.** At the time I recorded a pass (`tests/phase1/r3.json`: 3 rounds ×
+  5 runs, passage 16 −4.5%). That measurement was too weak: 15 samples per side, and "before" always
+  ran first in each round. The stronger Phase 2 measurements show passage 16 is about **+12% slower since
+  Phase 1** (Phase 1 vs Phase 2 is −0.5%, so the change came in Phase 1). Phase 1 did not pass R3
+  on that passage.
 - **R2:** no commit touches `src/pipe_listener.py` or `mcp_tts_server/`
   (`git log 0018ba1..HEAD -- src/pipe_listener.py mcp_tts_server` is empty). `app.py` is unchanged.
 
@@ -213,3 +211,90 @@ and both depend on context: "about ~12 min" on its own is spoken. These go to Ph
 (normalize `~` and strikethrough before misaki), and "no silent words" becomes part of the Phase 2 gate.
 (The `_` entries in the phase1 meta for passages 09 and 28 are markdown underscores; the word regex
 was tightened afterwards to letters and digits.)
+
+---
+
+## Phase 2 — Normalization
+
+### R6 decisions (asked and answered by Paul, 2026-10-17)
+| Question | Paul's answer | How it's implemented |
+|---|---|---|
+| `St.` / `Dr.` | By context | Before a name: Saint / Doctor; after a capitalized word: Street / Drive |
+| Tables | Under 10 data rows: "Table", header row, then "Row N" + cells with a short pause. Larger: "Table", header row, then the row count | `TABLE_MAX_READ_ROWS = 9`; cells joined with commas; "N rows." |
+| Emoji | Name them | Short names for common ones (✅ "check mark", ⚠️ "warning", ⏳ "hourglass"…), else the Unicode name |
+| Strikethrough | "begin strike", the text, "end strike" | `STRIKE_OPEN` / `STRIKE_CLOSE` |
+| URLs and paths | Full, natural | `https://` dropped; "github dot com slash pawelpc slash Natural Voice TTS"; "C drive, Users, paul, notes dot txt"; `%APPDATA%` → "App Data" |
+| Dates | "October 17th, 2026" | ISO, US M/D/YYYY and "Oct 3, 2026" all read this way |
+| Times | As written | 14:30 "fourteen thirty", 17:06:27 "seventeen oh six twenty seven", 9:00 a.m. "nine A M", 14:00 "fourteen hundred" |
+| Versions | "version one point two point zero" | `v1.2.0`; 3-part numbers; 2-part after a known product name ("Python 3 point 11"); `+cu124` → "plus c u 124" |
+| Commit hashes | Character by character | 7–40 hex chars with a letter and a digit; `a..b` → "to" |
+| Arrow → | "to" | Everywhere (also ⇒) |
+| Key combos, operators | Spoken names | Ctrl+Win+T "Control Windows T"; `!=` "not equal to"; `<=`; `×` "times"; `~50%` "about 50%" |
+| Code blocks | (brief) a short note | "Code block skipped." |
+
+**Choices I made without asking** (they're standard readings, not two equally plausible ones; all can
+be changed after Phase 4): `e.g.` "for example", `i.e.` "that is", `vs.` "versus", `approx.`
+"approximately", `cf.` "compare", `No. 7` "number 7", `p./pp.` "page/pages", `Fig.` "figure", `#1`
+"number 1"; units spelled out (singular when used as an adjective: "a 1.8 gigabyte installer");
+`14–18` "14 to 18"; `[1–20/20]` "1 to 20 of 20"; `1/3` "one third"; phone numbers digit by digit;
+Roman numerals after a name "Louis the Sixteenth" (Paul's earlier court-reporter note), but
+cardinal after War/Part/Phase/…; list numbers "One. Clone the repo" (misaki ran "1. Clone" together
+with no pause); `snake_case` → spaces; `()` dropped; `--flag` "dash dash flag".
+Left to misaki on purpose: currency, ordinals, years, `%`, camelCase, `Mr.`, `Mrs.`, `Ph.D.`, `U.S.`,
+`a.m.`, `etc.`.
+
+### What changed
+- **`src/normalizer.py`** (new): `prepare_speech(text)` → `split_chunks()` (Phase 1), then block
+  handling (headings get a final period, bullets dropped, list and heading numbers spoken, quotes
+  unwrapped, tables per Paul's rule, code blocks → "Code block skipped.") and `normalize_inline()`
+  for each chunk. Each `Spoken` keeps its screen `source`. Code spans are protected while
+  markdown emphasis is removed, so `**` or `_read_exactly` inside backticks isn't treated as markup.
+- **`src/app.py`**: new `speech_chunks(text)`, which `_worker` now calls in place of
+  `split_sentences(text)`. The render harness calls the same function, so the WAVs match the app.
+  Nothing else in the worker changed (the D2 skip logic is intact).
+
+### Gate evidence
+- **Unit tests: 242 passed** (`python -m pytest tests -q`). `tests/test_normalizer.py` adds:
+  36 hand-written inline cases (every R6 decision, markdown/code, numbers, units, abbreviations, and
+  things deliberately left to misaki) and 8 block cases (headings, lists, quotes, code, small and
+  large tables). These hand-written cases caught two real bugs, which are now fixed: `+cu124.` swallowed the
+  sentence dot, and `World War II.` before a period wasn't recognized.
+- **Expected outputs:** each passage's spoken text matches `tests/passages/expected_spoken/<id>.txt`
+  (one chunk per line). I reviewed all 278 chunks by hand. The first review found 6 wrong outputs
+  (`not.75`, "Copyright copyright", "5 volts, 2 amps supply", "October 3" vs ordinal, numbered
+  headings run together, lowercase "figure" at a sentence start), and the re-review diff showed only
+  those fixes.
+- **R4:** `test_every_word_gets_phonemes` runs misaki exactly as Kokoro does on every spoken chunk
+  of all 33 passages: no word is left without phonemes. The Kokoro-level render (`tests/phase2/meta`,
+  `silent_words`) also shows **0 silent words in 33 passages** (Phase 1 had 2: "12" and "Don't").
+  The only words deliberately not spoken are code-block contents and rows of tables with 10 or more
+  data rows (both Paul's/brief's rules).
+- **R5:** `test_screen_text_unchanged`: `prepare_speech()` never modifies its input, and every
+  spoken chunk's `source` is found verbatim in the screen text. The app has no display of its own;
+  the normalized copy only goes to Kokoro.
+- **Render** (`tests/phase2/`): 33 WAVs, 0 skipped, total audio 1461.9 s (Phase 1: 1572.4 s;
+  code blocks are now a one-line note).
+
+### R3 at the Phase 2 checkpoint — OPEN (fails on one passage)
+R3 is a before/after rule for the finished work, but I measured it at each checkpoint:
+- `tests/phase2/r3.json` (Phase 0 vs Phase 2, 6 alternating rounds × 5 runs = 30 samples a side,
+  bootstrap 95% CI): passage 17 0.520 → 0.535 s, **+2.9%** (CI −3.7% to +11.6%); passage 16
+  0.652 → 0.731 s, **+12.1%** (CI +4.8% to +14.9%); passage 01 0.520 → 0.291 s, **−43.9%**
+  (its first chunks are now a short heading and sentence). **Fails R3 on passage 16.**
+- Where it comes from: Phase 1 vs Phase 2 on passage 16 (ABBA order, 8 rounds, 40 samples a
+  side, `tests/phase2/r3_phase1_vs_phase2_p16.json`): **−0.5%** (CI −1.7% to +0.8%). So Phase 2
+  adds nothing; the change came in Phase 1.
+- What it isn't: the normalizer takes 0.7 ms on this passage. With a warm GPU, Kokoro synthesizes
+  passage 16's two first chunks within 0.5% of each other with and without the end punctuation
+  (88 vs 91 ms and 342 vs 344 ms, 3 rounds × 10). The cause is **not identified**.
+- Method fix: `compare_ttfa.py` now alternates which side runs first (ABBA) and reports a
+  bootstrap confidence interval.
+- Plan: Phase 3 changes the worker so the first sentence plays without waiting for the second one
+  to be synthesized. That is the step this TTFA depends on. The final R3 check (Phase 0 vs Phase 3, ABBA)
+  decides it. If it still fails there, I stop and report to Paul.
+
+### Things to listen for in Phase 4 (faithful to the rules, but maybe not ideal)
+- A leading `→` reads "to" ("to "You may strip…"", passage 12) because "to" applies everywhere.
+- "Louis XVI" is converted even where the sentence is *about* the notation (passage 15).
+- A version inside a file name reads with "dot" ("Setup 1 dot 1 dot 0 dot exe").
+- "the about 1.8 gigabyte installer" (`~` is always "about").

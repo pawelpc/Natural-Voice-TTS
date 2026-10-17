@@ -1,0 +1,3 @@
+Call split sentences in text processor dot py, then set SPLIT PATTERN and HF HUB OFFLINE equals 1.
+The KPipeline class wraps KModel, so use tts engine dot init once.
+Check config dot get('voice') and the dash dash noconfirm flag in naturalvoicetts dot spec.

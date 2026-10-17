@@ -1,0 +1,5 @@
+Here's what I recommend, split by who does what:
+Me (now, in the repo): finalize the SKILL dot md with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (dot claude plugin slash plugin dot json + skills slash natural voice tts), and fix install config dot py so it stops installing to the dead location.
+You (in Cowork): run slash skill creator (or slash create cowork plugin) and point it at that prepared SKILL dot md so it registers into the manifest system Cowork actually reads.
+I'll guide the exact steps.
+One honesty note: I've confirmed where Cowork reads skills, but the precise hand-off to register a custom skill into that manifest (versus the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product skill-creator/create-cowork-plugin tool is safer than me hand-editing the managed manifest dot json (which looks like it re-syncs and would wipe a manual entry).

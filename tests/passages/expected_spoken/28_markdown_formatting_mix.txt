@@ -1,0 +1,6 @@
+Release Notes.
+What changed.
+The splitter now handles abbreviations and version 1 point 2 point 0 versions.
+See the README for details.
+Known issues.
+Note: bold underscores and begin strike old text end strike are still read literally.

@@ -1,0 +1,119 @@
+{
+ "id": "24_paths_urls_identifiers",
+ "category": "paths_urls",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 19.85,
+ "synth_s": 0.95,
+ "wav_sha256": "47a3b2451e15af24b98b6f51bf26cc0ab2c427978a25ad2cae0fc22d78e318d0",
+ "sentences": [
+  {
+   "text": "Call split sentences in text processor dot py, then set SPLIT PATTERN and HF HUB OFFLINE equals 1.",
+   "synth_s": 0.349,
+   "ms": 7650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Call split sentences in text processor dot py, then set SPLIT PATTERN and HF HUB OFFLINE equals 1.",
+     "phonemes": "kˈɔl splˈɪt sˈɛntᵊnsᵻz ɪn tˈɛkst pɹˈɑsˌɛsəɹ dˈɑt pˈI, ðˈɛn sˈɛt splˈɪt pˈæTəɹn ænd ˌAʧˈɛf hˈʌb ˌɔflˈIn ˈikwᵊlz wˈʌn.",
+     "silent_words": [],
+     "samples": 183600,
+     "ms": 7650.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 600,
+       "ms": 60
+      },
+      {
+       "at_ms": 2710,
+       "ms": 70
+      },
+      {
+       "at_ms": 3080,
+       "ms": 510
+      },
+      {
+       "at_ms": 4150,
+       "ms": 60
+      },
+      {
+       "at_ms": 4330,
+       "ms": 70
+      },
+      {
+       "at_ms": 4830,
+       "ms": 230
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The KPipeline class wraps KModel, so use tts engine dot init once.",
+   "synth_s": 0.266,
+   "ms": 5425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The KPipeline class wraps KModel, so use tts engine dot init once.",
+     "phonemes": "ðə kˈApˌIplIn klˈæs ɹˈæps kˈAmˌɑdᵊl, sˌO jˈuz tˌitˌiˈɛs ˈɛnʤən dˈɑt ɪnˈɪt wˈʌns.",
+     "silent_words": [],
+     "samples": 130200,
+     "ms": 5425.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 2120,
+       "ms": 340
+      },
+      {
+       "at_ms": 4190,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Check config dot get('voice') and the dash dash noconfirm flag in naturalvoicetts dot spec.",
+   "synth_s": 0.331,
+   "ms": 6775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Check config dot get(voice') and the dash dash noconfirm flag in naturalvoicetts dot spec.",
+     "phonemes": "ʧˈɛk kənfˈɪɡ dˈɑt ɡˈɛt(vˈYs”) ænd ðə dˈæʃ dˈæʃ nˈɑkənfˌɜɹm flˈæɡ ɪn nˈæʧəɹɹˌælvYsəts dˈɑt spˈɛk.",
+     "silent_words": [],
+     "samples": 162600,
+     "ms": 6775.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 460,
+       "ms": 90
+      },
+      {
+       "at_ms": 1430,
+       "ms": 210
+      },
+      {
+       "at_ms": 2120,
+       "ms": 490
+      },
+      {
+       "at_ms": 6170,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

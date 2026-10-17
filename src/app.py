@@ -17,7 +17,7 @@ import pystray
 from PIL import Image
 
 import config
-from text_processor import split_sentences
+from normalizer import prepare_speech
 from audio_player import (
     play_audio, stop as audio_stop, toggle_pause,
     reset as audio_reset, is_stopped,
@@ -64,6 +64,14 @@ def _get_status() -> str:
 
 # --- TTS Worker Thread ---
 
+def speech_chunks(text: str) -> list[str]:
+    """The chunks the worker speaks for this text, in order.
+
+    A normalized copy for speech only: the text on screen is never changed (R5).
+    """
+    return [s.text for s in prepare_speech(text)]
+
+
 def _worker() -> None:
     """Background worker: synthesize and play text from the queue."""
     import tts_engine
@@ -87,7 +95,7 @@ def _worker() -> None:
         audio_reset()
         _set_status('Reading...')
 
-        sentences = split_sentences(text)
+        sentences = speech_chunks(text)
         if not sentences:
             _set_status('Idle')
             continue

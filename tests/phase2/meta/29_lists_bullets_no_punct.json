@@ -1,0 +1,251 @@
+{
+ "id": "29_lists_bullets_no_punct",
+ "category": "lists",
+ "origin": "synthetic",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 24.93,
+ "synth_s": 1.49,
+ "wav_sha256": "ab3486bf871986c2957afa8b0d3da0d4957ee9d0daa17c9529aed427d73d60db",
+ "sentences": [
+  {
+   "text": "Before you start, check these:",
+   "synth_s": 0.134,
+   "ms": 2150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Before you start, check these:",
+     "phonemes": "bəfˈɔɹ ju stˈɑɹt, ʧˈɛk ðˈiz:",
+     "silent_words": [],
+     "samples": 51600,
+     "ms": 2150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 60
+      },
+      {
+       "at_ms": 1280,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Python 3 point 11 installed.",
+   "synth_s": 0.157,
+   "ms": 2750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Python 3 point 11 installed.",
+     "phonemes": "pˈIθˌɑn θɹˈi pˈYnt əlˈɛvᵊn ɪnstˈɔld.",
+     "silent_words": [],
+     "samples": 66000,
+     "ms": 2750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1600,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "espeak-ng in Program Files.",
+   "synth_s": 0.146,
+   "ms": 2525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "espeak-ng in Program Files.",
+     "phonemes": "ˈispikˌɛnʤˈi ɪn pɹˈOɡɹˌæm fˈIlz.",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "CUDA drivers up to date.",
+   "synth_s": 0.145,
+   "ms": 2500.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "CUDA drivers up to date.",
+     "phonemes": "sˌijˌudˌiˈA dɹˈIvəɹz ˌʌp tə dˈAt.",
+     "silent_words": [],
+     "samples": 60000,
+     "ms": 2500.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1930,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "at least 4 gigabytes of VRAM.",
+   "synth_s": 0.147,
+   "ms": 2350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "at least 4 gigabytes of VRAM.",
+     "phonemes": "æt lˈist fˈɔɹ ɡˈɪɡəbˌIts ʌv vˈiɹˌæm.",
+     "silent_words": [],
+     "samples": 56400,
+     "ms": 2350.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 680,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "driver 550 or newer.",
+   "synth_s": 0.169,
+   "ms": 2800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "driver 550 or newer.",
+     "phonemes": "dɹˈIvəɹ fˈIv hˈʌndɹəd fˈɪfti ɔɹ nˈuəɹ.",
+     "silent_words": [],
+     "samples": 67200,
+     "ms": 2800.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1650,
+       "ms": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then follow the steps:",
+   "synth_s": 0.121,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then follow the steps:",
+     "phonemes": "ðˈɛn fˈɑlO ðə stˈɛps:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 310.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 1230,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One. Clone the repo.",
+   "synth_s": 0.13,
+   "ms": 2000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One. Clone the repo.",
+     "phonemes": "wˈʌn. klˈOn ðə ɹˈipˌO.",
+     "silent_words": [],
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 330.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 660,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two. Run pip install dash r requirements dot txt.",
+   "synth_s": 0.219,
+   "ms": 4100.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two. Run pip install dash r requirements dot txt.",
+     "phonemes": "tˈu. ɹˈʌn pˈɪp ɪnstˈɔl dˈæʃ ˈɑɹ ɹəkwˈIəɹmᵊnts dˈɑt tˌiˌɛkstˈi.",
+     "silent_words": [],
+     "samples": 98400,
+     "ms": 4100.0,
+     "lead_ms": 300.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 570,
+       "ms": 240
+      },
+      {
+       "at_ms": 1200,
+       "ms": 60
+      },
+      {
+       "at_ms": 2890,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Three. Start the app.",
+   "synth_s": 0.117,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Three. Start the app.",
+     "phonemes": "θɹˈi. stˈɑɹt ði ˈæp.",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 370.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1330,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

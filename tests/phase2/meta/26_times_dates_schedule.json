@@ -1,0 +1,177 @@
+{
+ "id": "26_times_dates_schedule",
+ "category": "times_dates",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 26.15,
+ "synth_s": 1.33,
+ "wav_sha256": "415a07e0b6b615a41584e8691951148db87a8d6fd138b1c5032a161140fd2a02",
+ "sentences": [
+  {
+   "text": "The meeting is on October 17th, 2026 at fourteen thirty.",
+   "synth_s": 0.252,
+   "ms": 5025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The meeting is on October 17th, 2026 at fourteen thirty.",
+     "phonemes": "ðə mˈiTɪŋ ɪz ˌɔn ɑktˈObəɹ sˌɛvəntˈinθ, twˈɛnti twˈɛnti sˈɪks æt fˌɔɹtˈin θˈɜɹTi.",
+     "silent_words": [],
+     "samples": 120600,
+     "ms": 5025.0,
+     "lead_ms": 330.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1130,
+       "ms": 80
+      },
+      {
+       "at_ms": 2130,
+       "ms": 400
+      },
+      {
+       "at_ms": 3450,
+       "ms": 60
+      },
+      {
+       "at_ms": 3660,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It moved from October 3rd, 2026 to October 24th, 2026 at nine A M.",
+   "synth_s": 0.339,
+   "ms": 6750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It moved from October 3rd, 2026 to October 24th, 2026 at nine A M.",
+     "phonemes": "ˌɪt mˈuvd fɹʌm ɑktˈObəɹ θˈɜɹd, twˈɛnti twˈɛnti sˈɪks tʊ ɑktˈObəɹ twˈɛnti fˈɔɹθ, twˈɛnti twˈɛnti sˈɪks æt nˈIn ɐ ˈɛm",
+     "silent_words": [],
+     "samples": 162000,
+     "ms": 6750.0,
+     "lead_ms": 310.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 1300,
+       "ms": 70
+      },
+      {
+       "at_ms": 1640,
+       "ms": 270
+      },
+      {
+       "at_ms": 2670,
+       "ms": 70
+      },
+      {
+       "at_ms": 2890,
+       "ms": 60
+      },
+      {
+       "at_ms": 3160,
+       "ms": 60
+      },
+      {
+       "at_ms": 4060,
+       "ms": 270
+      },
+      {
+       "at_ms": 5070,
+       "ms": 70
+      },
+      {
+       "at_ms": 5270,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The log shows seventeen oh six twenty seven to seventeen oh six thirty six, about 9 seconds.",
+   "synth_s": 0.326,
+   "ms": 6800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The log shows seventeen oh six twenty seven to seventeen oh six thirty six, about 9 seconds.",
+     "phonemes": "ðə lˈɔɡ ʃˈOz sˌɛvəntˈin ˈO sˈɪks twˈɛnti sˈɛvən tə sˌɛvəntˈin ˈO sˈɪks θˈɜɹTi sˈɪks, əbˈWt nˈIn sˈɛkəndz.",
+     "silent_words": [],
+     "samples": 163200,
+     "ms": 6800.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 2830,
+       "ms": 90
+      },
+      {
+       "at_ms": 4650,
+       "ms": 100
+      },
+      {
+       "at_ms": 4850,
+       "ms": 380
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll be back by 3 P M on Monday, January 5th.",
+   "synth_s": 0.213,
+   "ms": 3875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll be back by 3 P M on Monday, January 5th.",
+     "phonemes": "ˌIl bi bˈæk bI θɹˈi pˈi ˈɛm ˌɔn mˈʌndˌA, ʤˈænjəwˌɛɹi fˈɪfθ.",
+     "silent_words": [],
+     "samples": 93000,
+     "ms": 3875.0,
+     "lead_ms": 330.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 2180,
+       "ms": 280
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The 1990s were different from the 2020s.",
+   "synth_s": 0.203,
+   "ms": 3700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The 1990s were different from the 2020s.",
+     "phonemes": "ðə nˌIntˈin nˈIndiz wɜɹ dˈɪfəɹənt fɹʌm ðə twˈɛnti twˈɛntiz.",
+     "silent_words": [],
+     "samples": 88800,
+     "ms": 3700.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 1390,
+       "ms": 280
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

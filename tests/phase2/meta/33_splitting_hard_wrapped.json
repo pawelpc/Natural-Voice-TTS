@@ -1,0 +1,150 @@
+{
+ "id": "33_splitting_hard_wrapped",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 4,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 4,
+ "duration_s": 22.62,
+ "synth_s": 1.12,
+ "wav_sha256": "9086c44e867523a02bdb9bbcbfeab8be0abd6c55cc8b312fa3af2214127f674b",
+ "sentences": [
+  {
+   "text": "This paragraph was copied from a PDF, so every line ends with a hard line break even though the sentence keeps going.",
+   "synth_s": 0.37,
+   "ms": 7900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This paragraph was copied from a PDF, so every line ends with a hard line break even though the sentence keeps going.",
+     "phonemes": "ðˌɪs pˈɛɹəɡɹˌæf wʌz kˈɑpɪd fɹʌm ɐ pˌidˌiˈɛf, sˌO ˈɛvəɹi lˈIn ˈɛndz wɪð ɐ hˈɑɹd lˈIn bɹˈAk ˈivən ðˌO ðə sˈɛntᵊns kˈips ɡˈOɪŋ.",
+     "silent_words": [],
+     "samples": 189600,
+     "ms": 7900.0,
+     "lead_ms": 300.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 1060,
+       "ms": 70
+      },
+      {
+       "at_ms": 2460,
+       "ms": 480
+      },
+      {
+       "at_ms": 3120,
+       "ms": 80
+      },
+      {
+       "at_ms": 5260,
+       "ms": 70
+      },
+      {
+       "at_ms": 5360,
+       "ms": 310
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A reader should not pause at the end of each line, only at the real sentence ends.",
+   "synth_s": 0.243,
+   "ms": 5025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A reader should not pause at the end of each line, only at the real sentence ends.",
+     "phonemes": "ɐ ɹˈidəɹ ʃˌʊd nˌɑt pˈɔz æt ði ˈɛnd ʌv ˈiʧ lˈIn, ˈOnli æt ðə ɹˈiᵊl sˈɛntᵊns ˈɛndz.",
+     "silent_words": [],
+     "samples": 120600,
+     "ms": 5025.0,
+     "lead_ms": 310.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1070,
+       "ms": 100
+      },
+      {
+       "at_ms": 1740,
+       "ms": 60
+      },
+      {
+       "at_ms": 2620,
+       "ms": 380
+      },
+      {
+       "at_ms": 3360,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The same thing happens with plain-text email, which is often wrapped at about seventy characters per line.",
+   "synth_s": 0.327,
+   "ms": 6625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The same thing happens with plain-text email, which is often wrapped at about seventy characters per line.",
+     "phonemes": "ðə sˈAm θˈɪŋ hˈæpənz wɪð plˌAntˈɛkst ˈimˌAl, wˌɪʧ ɪz ˈɔfᵊn ɹˈæpt æt əbˈWt sˈɛvənti kˈɛɹəktəɹz pɜɹ lˈIn.",
+     "silent_words": [],
+     "samples": 159000,
+     "ms": 6625.0,
+     "lead_ms": 300.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1550,
+       "ms": 80
+      },
+      {
+       "at_ms": 2660,
+       "ms": 460
+      },
+      {
+       "at_ms": 4030,
+       "ms": 90
+      },
+      {
+       "at_ms": 4150,
+       "ms": 120
+      },
+      {
+       "at_ms": 5330,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A second paragraph follows the blank line.",
+   "synth_s": 0.178,
+   "ms": 3075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A second paragraph follows the blank line.",
+     "phonemes": "ɐ sˈɛkənd pˈɛɹəɡɹˌæf fˈɑlOz ðə blˈæŋk lˈIn.",
+     "silent_words": [],
+     "samples": 73800,
+     "ms": 3075.0,
+     "lead_ms": 310.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 1260,
+       "ms": 250
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

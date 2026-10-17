@@ -1,0 +1,18 @@
+Results.
+One. Installer rebuilt check mark.
+dist, NaturalVoiceTTS Setup 1 dot 1 dot 0 dot exe — 1798 megabytes, built today four forty six P M, exit code 0.
+All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).
+Two. Committed + pushed check mark.
+Commit b b a 2 2 0 0 on master, pushed to github dot com slash pawelpc slash Natural Voice TTS — the three fix files with a D1/D2/D3 message.
+(The installer dot exe itself is gitignored and stays local, as it should — it's 1.8 gigabytes.)
+Three. Pre-manual-test gate — all green check mark.
+Build-fix propagation: D3 change confirmed inside the bundled mcp server, server dot py — rules out stale-file builds.
+Runtime launch (packaging check): freshly-built exe reached TTS engine ready to Ready! with no traceback — catches the PyInstaller hidden-import breakage you've hit before.
+End-to-end pipe test (the actual bug): pushed messages through the named pipe exactly like the MCP server does.
+The D1 fix is proven live.
+Table. Test, Header, Received, Result.
+Row 1. 420-byte ASCII, 420, 420, full payload, 0 dropped.
+Row 2. 112-byte multibyte (em dash, curly quotes, ellipsis), 112, 112, decoded to 104 chars, played "First sentence — with an em dash…"
+header equals received on both, and the multibyte message decoded and spoke cleanly — the exact case (— " …) that used to truncate or throw.
+STOP also worked both times.
+Test exe was shut down; no NaturalVoiceTTS process is running now.

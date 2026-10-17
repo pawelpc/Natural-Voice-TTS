@@ -1,0 +1,5 @@
+To test it, run this:
+Code block skipped.
+The splitter looks like this:
+Code block skipped.
+After that, the app should start normally.

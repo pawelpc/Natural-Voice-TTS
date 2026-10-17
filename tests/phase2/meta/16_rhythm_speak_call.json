@@ -1,0 +1,153 @@
+{
+ "id": "16_rhythm_speak_call",
+ "category": "rhythm",
+ "origin": "real",
+ "chunks": 4,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 4,
+ "duration_s": 21.6,
+ "synth_s": 1.08,
+ "wav_sha256": "adcf654cb4ea731382ae69d455b6763464d8f9ac0201d76ff39ba85e8ec2a174",
+ "sentences": [
+  {
+   "text": "Got it.",
+   "synth_s": 0.1,
+   "ms": 1325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Got it.",
+     "phonemes": "ɡˌɑt ɪt.",
+     "silent_words": [],
+     "samples": 31800,
+     "ms": 1325.0,
+     "lead_ms": 370.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "I'll speak my full responses for the rest of this session, and I'll keep them in clean prose so they sound natural out loud.",
+   "synth_s": 0.363,
+   "ms": 7650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll speak my full responses for the rest of this session, and I'll keep them in clean prose so they sound natural out loud.",
+     "phonemes": "ˌIl spˈik mI fˈʊl ɹəspˈɑnsᵻz fɔɹ ðə ɹˈɛst ʌv ðɪs sˈɛʃən, ænd ˌIl kˈip ðˌɛm ɪn klˈin pɹˈOz sˌO ðA sˈWnd nˈæʧəɹᵊl ˈWt lˈWd.",
+     "silent_words": [],
+     "samples": 183600,
+     "ms": 7650.0,
+     "lead_ms": 330.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 90
+      },
+      {
+       "at_ms": 2990,
+       "ms": 450
+      },
+      {
+       "at_ms": 3810,
+       "ms": 90
+      },
+      {
+       "at_ms": 5070,
+       "ms": 270
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "What would you like to do next?",
+   "synth_s": 0.124,
+   "ms": 2025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "What would you like to do next?",
+     "phonemes": "wˌʌt wʊd ju lˈIk tə dˈu nˈɛkst?",
+     "silent_words": [],
+     "samples": 48600,
+     "ms": 2025.0,
+     "lead_ms": 300.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 800,
+       "ms": 60
+      },
+      {
+       "at_ms": 1350,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "We can attempt the remote control connection from your phone using slash r c, run another brain dump on a different topic, or wrap up the session and prep your git commit.",
+   "synth_s": 0.498,
+   "ms": 10600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "We can attempt the remote control connection from your phone using slash r c, run another brain dump on a different topic, or wrap up the session and prep your git commit.",
+     "phonemes": "wˌi kæn ətˈɛmpt ðə ɹəmˈOt kəntɹˈOl kənˈɛkʃən fɹʌm jʊɹ fˈOn jˈuzɪŋ slˈæʃ ˈɑɹ sˈi, ɹˈʌn ənˈʌðəɹ bɹˈAn dˈʌmp ˌɔn ɐ dˈɪfəɹənt tˈɑpɪk, ɔɹ ɹˈæp ˌʌp ðə sˈɛʃən ænd pɹˈɛp jʊɹ ɡˈɪt kəmˈɪt.",
+     "silent_words": [],
+     "samples": 254400,
+     "ms": 10600.0,
+     "lead_ms": 310.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 820,
+       "ms": 90
+      },
+      {
+       "at_ms": 1300,
+       "ms": 70
+      },
+      {
+       "at_ms": 4330,
+       "ms": 500
+      },
+      {
+       "at_ms": 6860,
+       "ms": 60
+      },
+      {
+       "at_ms": 7030,
+       "ms": 80
+      },
+      {
+       "at_ms": 7130,
+       "ms": 380
+      },
+      {
+       "at_ms": 8000,
+       "ms": 80
+      },
+      {
+       "at_ms": 8690,
+       "ms": 260
+      },
+      {
+       "at_ms": 9630,
+       "ms": 90
+      },
+      {
+       "at_ms": 9980,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

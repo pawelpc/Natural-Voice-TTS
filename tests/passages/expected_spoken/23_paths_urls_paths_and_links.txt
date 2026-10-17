@@ -1,0 +1,2 @@
+Open src slash app dot py and C drive, Users, paul, Documents, notes dot txt, then visit github dot com slash pawelpc slash Natural Voice TTS slash releases or www dot example dot com slash docs question mark page equals 2.
+Email me at paul at example dot com if the link at localhost colon 8080 slash api slash v1 fails.

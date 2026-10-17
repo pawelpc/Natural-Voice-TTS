@@ -1,0 +1,140 @@
+{
+ "id": "23_paths_urls_paths_and_links",
+ "category": "paths_urls",
+ "origin": "synthetic",
+ "chunks": 2,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 2,
+ "duration_s": 27.35,
+ "synth_s": 1.23,
+ "wav_sha256": "8e07f412f197f3fb35199796c8659450a114203e8c0fd01681446e8fb764a527",
+ "sentences": [
+  {
+   "text": "Open src slash app dot py and C drive, Users, paul, Documents, notes dot txt, then visit github dot com slash pawelpc slash Natural Voice TTS slash releases or www dot example dot com slash docs question mark page equals 2.",
+   "synth_s": 0.84,
+   "ms": 18900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Open src slash app dot py and C drive, Users, paul, Documents, notes dot txt, then visit github dot com slash pawelpc slash Natural Voice TTS slash releases or www dot example dot com slash docs question mark page equals 2.",
+     "phonemes": "ˈOpᵊn ˌɛsˌɑɹsˈi slˈæʃ ˈæp dˈɑt pˈI ænd sˈi dɹˈIv, jˈuzəɹz, pˈɔl, dˈɑkjəmənts, nˈOts dˈɑt tˌiˌɛkstˈi, ðˈɛn vˈɪzət ɡˈɪthʌb dˈɑt kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹᵊl vˈYs tˌitˌiˈɛs slˈæʃ ɹəlˈisᵻz ɔɹ dˌʌbᵊljˌudˌʌbᵊljˌudˈʌbᵊljˌu dˈɑt ɪɡzˈæmpəl dˈɑt kˈɑm slˈæʃ dˈɑks kwˈɛsʧᵊn mˈɑɹk pˈAʤ ˈikwᵊlz tˈu.",
+     "silent_words": [],
+     "samples": 453600,
+     "ms": 18900.0,
+     "lead_ms": 330.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1750,
+       "ms": 120
+      },
+      {
+       "at_ms": 2040,
+       "ms": 80
+      },
+      {
+       "at_ms": 3190,
+       "ms": 440
+      },
+      {
+       "at_ms": 4200,
+       "ms": 250
+      },
+      {
+       "at_ms": 4840,
+       "ms": 100
+      },
+      {
+       "at_ms": 5500,
+       "ms": 360
+      },
+      {
+       "at_ms": 6390,
+       "ms": 70
+      },
+      {
+       "at_ms": 7150,
+       "ms": 530
+      },
+      {
+       "at_ms": 8790,
+       "ms": 80
+      },
+      {
+       "at_ms": 9540,
+       "ms": 70
+      },
+      {
+       "at_ms": 9790,
+       "ms": 90
+      },
+      {
+       "at_ms": 12680,
+       "ms": 400
+      },
+      {
+       "at_ms": 15150,
+       "ms": 100
+      },
+      {
+       "at_ms": 15420,
+       "ms": 80
+      },
+      {
+       "at_ms": 17590,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Email me at paul at example dot com if the link at localhost colon 8080 slash api slash v1 fails.",
+   "synth_s": 0.385,
+   "ms": 8450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Email me at paul at example dot com if the link at localhost colon 8080 slash api slash v1 fails.",
+     "phonemes": "ˈimˌAl mˌi æt pˈɔl æt ɪɡzˈæmpəl dˈɑt kˈɑm ɪf ðə lˈɪŋk æt lˈOkəlhˌOst kˈOlən ˈATi ˈATi slˈæʃ ˌApˌiˈI slˈæʃ vˈi wˈʌn fˈAlz.",
+     "silent_words": [],
+     "samples": 202800,
+     "ms": 8450.0,
+     "lead_ms": 340.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 880,
+       "ms": 80
+      },
+      {
+       "at_ms": 2030,
+       "ms": 100
+      },
+      {
+       "at_ms": 2490,
+       "ms": 390
+      },
+      {
+       "at_ms": 4040,
+       "ms": 210
+      },
+      {
+       "at_ms": 4980,
+       "ms": 70
+      },
+      {
+       "at_ms": 5840,
+       "ms": 120
+      },
+      {
+       "at_ms": 7030,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+The edits are written to disk (real file changes, not a runtime patch), so they persist across any app or computer restart.
+The catch is which copy of the code you actually run:
+If you tested by running from source (python src slash app dot py, with the MCP server pointed at mcp tts server slash server dot py) — you're already running the fixed code, and every restart re-reads those dot py files.
+check mark Fully persistent, nothing more to do.
+Given your test passed, this is almost certainly what you did — the frozen exe couldn't have contained the fix.
+If/when you run the installed/frozen app (NaturalVoiceTTS dot exe from dist or Program Files) — that build was compiled before these edits, so it still contains the old, buggy code.
+A restart just re-runs the stale exe. warning.
+Bottom line: your current (source) run is fixed and stays fixed.
+But the existing dist, NaturalVoiceTTS build and any installed dot exe are now stale — if you ever launch or reinstall from those, the bug comes back until you run build dot bat to rebuild.
+If this machine is meant to run the installed app long-term, rebuild + reinstall once so the fix is baked in.

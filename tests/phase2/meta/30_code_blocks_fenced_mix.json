@@ -1,0 +1,114 @@
+{
+ "id": "30_code_blocks_fenced_mix",
+ "category": "code_blocks",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 10.2,
+ "synth_s": 0.64,
+ "wav_sha256": "faeb6ee3e45483a312bee3eef3c1617bc0ecd1bbcbacfbb7fc4937de086089a8",
+ "sentences": [
+  {
+   "text": "To test it, run this:",
+   "synth_s": 0.118,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "To test it, run this:",
+     "phonemes": "tə tˈɛst ɪt, ɹˈʌn ðˈɪs:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 300.0,
+     "trail_ms": 415.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Code block skipped.",
+   "synth_s": 0.114,
+   "ms": 1800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Code block skipped.",
+     "phonemes": "kˈOd blˈɑk skˈɪpt.",
+     "silent_words": [],
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 340.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The splitter looks like this:",
+   "synth_s": 0.126,
+   "ms": 2000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The splitter looks like this:",
+     "phonemes": "ðə splˈɪTəɹ lˈʊks lˈIk ðˈɪs:",
+     "silent_words": [],
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 300.0,
+     "trail_ms": 420.0,
+     "pauses": [
+      {
+       "at_ms": 1220,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Code block skipped.",
+   "synth_s": 0.112,
+   "ms": 1800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Code block skipped.",
+     "phonemes": "kˈOd blˈɑk skˈɪpt.",
+     "silent_words": [],
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 340.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "After that, the app should start normally.",
+   "synth_s": 0.165,
+   "ms": 2725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "After that, the app should start normally.",
+     "phonemes": "ˈæftəɹ ðˈæt, ði ˈæp ʃˌʊd stˈɑɹt nˈɔɹməli.",
+     "silent_words": [],
+     "samples": 65400,
+     "ms": 2725.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 840,
+       "ms": 120
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

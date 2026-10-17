@@ -1,0 +1,13 @@
+The log is conclusive — and it's a clean bill of health for the code.
+Every message that reached the pipe came through 100% intact:
+Table. Time, Header bytes, Received, Sentences, All played?
+Row 1. seventeen eighteen fifty six, 111, 111, 3, check mark 1 to 3 of 3.
+Row 2. seventeen nineteen fifty five, 57, 57, 1, check mark.
+Row 3. seventeen twenty one fifteen, 36, 36, 1, check mark.
+Row 4. seventeen twenty two nineteen, 113, 113, 5, check mark 1 to 5 of 5.
+Row 5. seventeen twenty three nineteen, 392, 392, 6, check mark 1 to 6 of 6.
+Row 6. seventeen twenty four forty five, 376, 376, 4, check mark 1 to 4 of 4.
+Row 7. seventeen twenty six fifty two, 3091, 3091, 20, check mark 1 to 20 of 20.
+header equals received on all seven, including the 3091-byte / 20-sentence em-dash-heavy essay that played completely 1 of 20…20 of 20.
+That's exactly the size and content profile that used to drop tail sentences.
+The D1 fix holds under real load.

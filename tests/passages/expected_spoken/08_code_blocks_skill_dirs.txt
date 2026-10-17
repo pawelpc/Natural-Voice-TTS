@@ -1,0 +1,7 @@
+This is very revealing.
+The working Cowork skills (docx, pdf, xlsx, pptx, schedule, etc.) all live under one managed directory:
+Code block skipped.
+But natural-voice-tts was installed to a completely different place:
+Code block skipped.
+That's almost certainly why Cowork never sees it — install config dot py drops it in App Data, Claude, skills, which isn't the directory Cowork (local-agent-mode) indexes.
+Let me confirm the mechanism — whether that managed dir has a manifest/registry, and how custom skills are meant to register — before I prescribe a fix.

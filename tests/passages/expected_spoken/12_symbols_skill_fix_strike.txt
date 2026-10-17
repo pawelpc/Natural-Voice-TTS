@@ -1,0 +1,11 @@
+The skill wording is what let the agent under-send.
+Proposed changes to SKILL dot md:
+Add an explicit completeness rule (Step 3).
+Send the complete response, verbatim — the same text you wrote to chat, every sentence, in order.
+Never summarize, shorten, excerpt, or send only the first part.
+The spoken words must match the written words.
+Replace the problematic line 42.
+begin strike "Don't call speak with markdown formatting… send clean readable text." end strike
+to "You may strip pure markdown formatting characters (**, #, backticks) so they aren't read aloud, but do not remove, shorten, or reword any sentences.
+The TTS app handles normal punctuation and Unicode (em dashes, curly quotes, ellipses) correctly — it read a 20-sentence em-dash essay with zero problems — so there's no need to strip those."
+This keeps R1 intact (identical content to both channels) while still giving clean audio.

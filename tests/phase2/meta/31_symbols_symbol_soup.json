@@ -1,0 +1,228 @@
+{
+ "id": "31_symbols_symbol_soup",
+ "category": "symbols",
+ "origin": "synthetic",
+ "chunks": 8,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 8,
+ "duration_s": 27.0,
+ "synth_s": 1.47,
+ "wav_sha256": "23bb3fd56641068b80e83467eb53161f468871555d05941e40caa210db926050",
+ "sentences": [
+  {
+   "text": "Use A & B, not A + B.",
+   "synth_s": 0.141,
+   "ms": 2525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Use A & B, not A + B.",
+     "phonemes": "jˈuz ˈA ænd bˈi, nˌɑt ɐ plˈʌs bˈi",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 320.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 170
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Temperatures greater than or equal to 30 degrees are bad; about 50% of units fail.",
+   "synth_s": 0.297,
+   "ms": 6175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Temperatures greater than or equal to 30 degrees are bad; about 50% of units fail.",
+     "phonemes": "tˈɛmpɹəʧəɹz ɡɹˈATəɹ ðən ɔɹ ˈikwᵊl tə θˈɜɹTi dəɡɹˈiz ɑɹ bˈæd; əbˈWt fˈɪfti pəɹsˈɛnt ʌv jˈunəts fˈAl.",
+     "silent_words": [],
+     "samples": 148200,
+     "ms": 6175.0,
+     "lead_ms": 290.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1590,
+       "ms": 60
+      },
+      {
+       "at_ms": 1750,
+       "ms": 60
+      },
+      {
+       "at_ms": 2110,
+       "ms": 100
+      },
+      {
+       "at_ms": 3470,
+       "ms": 500
+      },
+      {
+       "at_ms": 5330,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Cost times 2 equals total.",
+   "synth_s": 0.138,
+   "ms": 2325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Cost times 2 equals total.",
+     "phonemes": "kˈɔst tˈImz tˈu ˈikwᵊlz tˈOTᵊl.",
+     "silent_words": [],
+     "samples": 55800,
+     "ms": 2325.0,
+     "lead_ms": 310.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Press Control Windows T to the app reads the text.",
+   "synth_s": 0.188,
+   "ms": 3525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Press Control Windows T to the app reads the text.",
+     "phonemes": "pɹˈɛs kəntɹˈOl wˈɪndOz tˈi tə ði ˈæp ɹˈidz ðə tˈɛkst.",
+     "silent_words": [],
+     "samples": 84600,
+     "ms": 3525.0,
+     "lead_ms": 320.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1600,
+       "ms": 200
+      },
+      {
+       "at_ms": 2180,
+       "ms": 60
+      },
+      {
+       "at_ms": 2800,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It's our number 1 priority @ 100%.",
+   "synth_s": 0.195,
+   "ms": 3400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It's our number 1 priority @ 100%.",
+     "phonemes": "ˌɪts ˌWəɹ nˈʌmbəɹ wˈʌn pɹIˈɔɹəTi æt wˈʌn hˈʌndɹəd pəɹsˈɛnt.",
+     "silent_words": [],
+     "samples": 81600,
+     "ms": 3400.0,
+     "lead_ms": 320.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1710,
+       "ms": 210
+      },
+      {
+       "at_ms": 2450,
+       "ms": 60
+      },
+      {
+       "at_ms": 2830,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "In code, x not equal to y and a less than or equal to b.",
+   "synth_s": 0.233,
+   "ms": 4400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "In code, x not equal to y and a less than or equal to b.",
+     "phonemes": "ɪn kˈOd, ˈɛks nˌɑt ˈikwᵊl tə wˈI ænd ɐ lˈɛs ðən ɔɹ ˈikwᵊl tə bˈi",
+     "silent_words": [],
+     "samples": 105600,
+     "ms": 4400.0,
+     "lead_ms": 310.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 860,
+       "ms": 190
+      },
+      {
+       "at_ms": 2170,
+       "ms": 310
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Copyright 2026.",
+   "synth_s": 0.137,
+   "ms": 2275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Copyright 2026.",
+     "phonemes": "kˈɑpiɹˌIt twˈɛnti twˈɛnti sˈɪks.",
+     "silent_words": [],
+     "samples": 54600,
+     "ms": 2275.0,
+     "lead_ms": 300.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 70
+      },
+      {
+       "at_ms": 1620,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Item A/B testing is done.",
+   "synth_s": 0.139,
+   "ms": 2375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Item A/B testing is done.",
+     "phonemes": "ˈITəm ˈA bˈi tˈɛstɪŋ ɪz dˈʌn.",
+     "silent_words": [],
+     "samples": 57000,
+     "ms": 2375.0,
+     "lead_ms": 340.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,495 @@
+{
+ "id": "13_rhythm_honest_caveat",
+ "category": "rhythm",
+ "origin": "real",
+ "chunks": 14,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 14,
+ "duration_s": 90.22,
+ "synth_s": 4.46,
+ "wav_sha256": "c2e0f282c15990ccf0e961442a8470618ee3f3e763edc2e1e354f85428752d6c",
+ "sentences": [
+  {
+   "text": "An honest caveat.",
+   "synth_s": 0.136,
+   "ms": 1900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "An honest caveat.",
+     "phonemes": "ɐn ˈɑnəst kˈæviˌæt.",
+     "silent_words": [],
+     "samples": 45600,
+     "ms": 1900.0,
+     "lead_ms": 350.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1320,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "This is now about as explicit as a skill instruction can get — it names the exact move the agent made (short chat + long speech) and states that matching the two channels beats brevity while voice is on.",
+   "synth_s": 0.608,
+   "ms": 13400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This is now about as explicit as a skill instruction can get — it names the exact move the agent made (short chat + long speech) and states that matching the two channels beats brevity while voice is on.",
+     "phonemes": "ðˌɪs ɪz nˈW əbˈWt æz ɪksplˈɪsət æz ɐ skˈɪl ɪnstɹˈʌkʃən kæn ɡˈɛt — ɪt nˈAmz ði ɪɡzˈækt mˈuv ði ˈAʤᵊnt mˌAd (ʃˈɔɹt ʧˈæt plˈʌs lˈɔŋ spˈiʧ) ænd stˈAts ðæt mˈæʧɪŋ ðə tˈu ʧˈænᵊlz bˈits bɹˈɛvəTi wˌIl vˈYs ɪz ˌɔn.",
+     "silent_words": [],
+     "samples": 321600,
+     "ms": 13400.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1500,
+       "ms": 60
+      },
+      {
+       "at_ms": 1900,
+       "ms": 80
+      },
+      {
+       "at_ms": 3580,
+       "ms": 620
+      },
+      {
+       "at_ms": 5180,
+       "ms": 70
+      },
+      {
+       "at_ms": 6440,
+       "ms": 370
+      },
+      {
+       "at_ms": 7120,
+       "ms": 100
+      },
+      {
+       "at_ms": 7470,
+       "ms": 90
+      },
+      {
+       "at_ms": 8430,
+       "ms": 60
+      },
+      {
+       "at_ms": 8610,
+       "ms": 560
+      },
+      {
+       "at_ms": 11010,
+       "ms": 60
+      },
+      {
+       "at_ms": 11280,
+       "ms": 70
+      },
+      {
+       "at_ms": 11780,
+       "ms": 170
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "But it's still an instruction, not a hard guarantee: it's steering an LLM that's also holding a competing \"keep chat concise\" preference.",
+   "synth_s": 0.423,
+   "ms": 8850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "But it's still an instruction, not a hard guarantee: it's steering an LLM that's also holding a competing \"keep chat concise\" preference.",
+     "phonemes": "bˌʌt ɪts stˈɪl ɐn ɪnstɹˈʌkʃən, nˌɑt ɐ hˈɑɹd ɡˌɛɹəntˈi: ɪts stˈɪɹɪŋ ɐn ˌɛlˌɛlˈɛm ðæts ˈɔlsO hˈOldɪŋ ɐ kəmpˈiTɪŋ “kˈip ʧˈæt kənsˈIs” pɹˈɛfəɹəns.",
+     "silent_words": [],
+     "samples": 212400,
+     "ms": 8850.0,
+     "lead_ms": 290.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1510,
+       "ms": 230
+      },
+      {
+       "at_ms": 2840,
+       "ms": 610
+      },
+      {
+       "at_ms": 6370,
+       "ms": 110
+      },
+      {
+       "at_ms": 6980,
+       "ms": 70
+      },
+      {
+       "at_ms": 7630,
+       "ms": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It should hold, but I can't promise a model will never rationalize around it again.",
+   "synth_s": 0.271,
+   "ms": 5300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It should hold, but I can't promise a model will never rationalize around it again.",
+     "phonemes": "ˌɪt ʃˌʊd hˈOld, bˌʌt ˌI kˈænt pɹˈɑməs ɐ mˈɑdᵊl wɪl nˈɛvəɹ ɹˈæʃənᵊlˌIz əɹˈWnd ɪt əɡˈɛn.",
+     "silent_words": [],
+     "samples": 127200,
+     "ms": 5300.0,
+     "lead_ms": 310.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 410
+      },
+      {
+       "at_ms": 1850,
+       "ms": 90
+      },
+      {
+       "at_ms": 2750,
+       "ms": 120
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two things worth knowing:",
+   "synth_s": 0.128,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two things worth knowing:",
+     "phonemes": "tˈu θˈɪŋz wˈɜɹθ nˈOɪŋ:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 300.0,
+     "trail_ms": 475.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Where the competing preference lives matters.",
+   "synth_s": 0.167,
+   "ms": 2850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Where the competing preference lives matters.",
+     "phonemes": "wˌɛɹ ðə kəmpˈiTɪŋ pɹˈɛfəɹəns lˈɪvz mˈæTəɹz.",
+     "silent_words": [],
+     "samples": 68400,
+     "ms": 2850.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 1520,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The agent cited a \"standing preference for concise, direct text responses.\"",
+   "synth_s": 0.275,
+   "ms": 5175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The agent cited a \"standing preference for concise, direct text responses.\"",
+     "phonemes": "ði ˈAʤᵊnt sˈITᵻd ɐ “stˈændɪŋ pɹˈɛfəɹəns fɔɹ kənsˈIs, dəɹˈɛkt tˈɛkst ɹəspˈɑnsᵻz.”",
+     "silent_words": [],
+     "samples": 124200,
+     "ms": 5175.0,
+     "lead_ms": 310.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1930,
+       "ms": 70
+      },
+      {
+       "at_ms": 2930,
+       "ms": 390
+      },
+      {
+       "at_ms": 3580,
+       "ms": 70
+      },
+      {
+       "at_ms": 3660,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "If that's set in that session's memory/custom instructions, softening or scoping it (\"concise unless voice is on\") would remove the tug-of-war at the source.",
+   "synth_s": 0.479,
+   "ms": 10150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "If that's set in that session's memory/custom instructions, softening or scoping it (\"concise unless voice is on\") would remove the tug-of-war at the source.",
+     "phonemes": "ˌɪf ðˈæts sˈɛt ɪn ðˈæt sˈɛʃənz mˈɛməɹi kˈʌstəm ɪnstɹˈʌkʃənz, sˈɔfənɪŋ ɔɹ skˈOpɪŋ ɪt (“kənsˈIs ənlˈɛs vˈYs ɪz ˌɔn”) wʊd ɹəmˈuv ðə tˈʌɡʌvwˈɔɹ æt ðə sˈɔɹs.",
+     "silent_words": [],
+     "samples": 243600,
+     "ms": 10150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 3230,
+       "ms": 330
+      },
+      {
+       "at_ms": 5000,
+       "ms": 450
+      },
+      {
+       "at_ms": 7260,
+       "ms": 460
+      },
+      {
+       "at_ms": 8400,
+       "ms": 60
+      },
+      {
+       "at_ms": 9100,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I can't see or edit that from here, but you can.",
+   "synth_s": 0.178,
+   "ms": 3250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I can't see or edit that from here, but you can.",
+     "phonemes": "ˌI kˈænt sˈi ɔɹ ˈɛdət ðæt fɹʌm hˈɪɹ, bˌʌt ju kˈæn.",
+     "silent_words": [],
+     "samples": 78000,
+     "ms": 3250.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1320,
+       "ms": 60
+      },
+      {
+       "at_ms": 1970,
+       "ms": 210
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The bulletproof fix is structural, not prompt-based.",
+   "synth_s": 0.182,
+   "ms": 3450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The bulletproof fix is structural, not prompt-based.",
+     "phonemes": "ðə bˈʊlətpɹˌuf fˈɪks ɪz stɹˈʌkʧəɹəl, nˌɑt pɹˈɑmptbˌAst.",
+     "silent_words": [],
+     "samples": 82800,
+     "ms": 3450.0,
+     "lead_ms": 300.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 1850,
+       "ms": 230
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "If it recurs and you want a hard guarantee, the real fix is to stop relying on the agent to send text twice — for example, have the integration speak the actual chat message rather than a separately-supplied argument, so the two can't differ.",
+   "synth_s": 0.695,
+   "ms": 15600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "If it recurs and you want a hard guarantee, the real fix is to stop relying on the agent to send text twice — for example, have the integration speak the actual chat message rather than a separately-supplied argument, so the two can't differ.",
+     "phonemes": "ˌɪf ɪt ɹəkˈɜɹz ænd ju wˈɑnt ɐ hˈɑɹd ɡˌɛɹəntˈi, ðə ɹˈiᵊl fˈɪks ɪz tə stˈɑp ɹᵻlˈIɪŋ ˌɔn ði ˈAʤᵊnt tə sˈɛnd tˈɛkst twˈIs — fɔɹ ɪɡzˈæmpəl, hæv ði ˌɪntəɡɹˈAʃən spˈik ði ˈækʧəwəl ʧˈæt mˈɛsɪʤ ɹˈæðəɹ ðən ɐ sˈɛpəɹətlisəplˌId ˈɑɹɡjəmənt, sˌO ðə tˈu kˈænt dˈɪfəɹ.",
+     "silent_words": [],
+     "samples": 374400,
+     "ms": 15600.0,
+     "lead_ms": 310.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 2680,
+       "ms": 390
+      },
+      {
+       "at_ms": 3650,
+       "ms": 70
+      },
+      {
+       "at_ms": 4430,
+       "ms": 70
+      },
+      {
+       "at_ms": 6830,
+       "ms": 570
+      },
+      {
+       "at_ms": 8050,
+       "ms": 340
+      },
+      {
+       "at_ms": 9670,
+       "ms": 60
+      },
+      {
+       "at_ms": 11060,
+       "ms": 210
+      },
+      {
+       "at_ms": 12070,
+       "ms": 60
+      },
+      {
+       "at_ms": 13370,
+       "ms": 440
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "That's a design change to the MCP/skill flow, not a one-liner, but I can scope it if the instruction approach proves unreliable.",
+   "synth_s": 0.419,
+   "ms": 8775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's a design change to the MCP/skill flow, not a one-liner, but I can scope it if the instruction approach proves unreliable.",
+     "phonemes": "ðˈæts ɐ dəzˈIn ʧˈAnʤ tə ði ˌɛmsˌipˈi skˈɪl flˈO, nˌɑt ɐ wˌʌnlˈInəɹ, bˌʌt ˌI kæn skˈOp ɪt ɪf ði ɪnstɹˈʌkʃən əpɹˈOʧ pɹˈuvz ˌʌnɹəlˈIəbᵊl.",
+     "silent_words": [],
+     "samples": 210600,
+     "ms": 8775.0,
+     "lead_ms": 300.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 3130,
+       "ms": 340
+      },
+      {
+       "at_ms": 4280,
+       "ms": 540
+      },
+      {
+       "at_ms": 5640,
+       "ms": 70
+      },
+      {
+       "at_ms": 6610,
+       "ms": 60
+      },
+      {
+       "at_ms": 6960,
+       "ms": 70
+      },
+      {
+       "at_ms": 7430,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Give it a run after the restart and tell me how it behaves.",
+   "synth_s": 0.217,
+   "ms": 3850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Give it a run after the restart and tell me how it behaves.",
+     "phonemes": "ɡˈɪv ɪt ɐ ɹˈʌn ˈæftəɹ ðə ɹˈistˌɑɹt ænd tˈɛl mˌi hˌW ɪt bəhˈAvz.",
+     "silent_words": [],
+     "samples": 92400,
+     "ms": 3850.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 1820,
+       "ms": 340
+      },
+      {
+       "at_ms": 2790,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "If it diverges again, that's our signal to go structural rather than keep tightening wording.",
+   "synth_s": 0.287,
+   "ms": 5800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "If it diverges again, that's our signal to go structural rather than keep tightening wording.",
+     "phonemes": "ˌɪf ɪt dəvˈɜɹʤᵻz əɡˈɛn, ðˈæts ˌWəɹ sˈɪɡnᵊl tə ɡˌO stɹˈʌkʧəɹəl ɹˈæðəɹ ðən kˈip tˈItnɪŋ wˈɜɹdɪŋ.",
+     "silent_words": [],
+     "samples": 139200,
+     "ms": 5800.0,
+     "lead_ms": 310.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 1360,
+       "ms": 380
+      },
+      {
+       "at_ms": 3410,
+       "ms": 230
+      },
+      {
+       "at_ms": 4390,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
