@@ -1,0 +1,194 @@
+{
+ "id": "28_markdown_formatting_mix",
+ "category": "markdown",
+ "origin": "synthetic",
+ "chunks": 7,
+ "skipped": 1,
+ "kokoro_segments": 9,
+ "duration_s": 27.95,
+ "synth_s": 1.6,
+ "wav_sha256": "4832dff442b4cb523ace7c9623ddf0350514e0042f8e540fcf5c5e0ffacd7957",
+ "sentences": [
+  {
+   "text": "# Release Notes",
+   "synth_s": 0.117,
+   "ms": 1750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "# Release Notes",
+     "phonemes": "hˈæʃ ɹəlˈis nˈOts",
+     "samples": 42000,
+     "ms": 1750.0,
+     "lead_ms": 360.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 1190,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "## What changed",
+   "synth_s": 0.117,
+   "ms": 1700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## What changed",
+     "phonemes": "hˈæʃ wˌʌt ʧˈAnʤd",
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 360.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The **splitter** now handles *abbreviations* and `v1.2.0` versions.",
+   "synth_s": 0.496,
+   "ms": 8700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The **splitter** now handles *abbreviations* and `v1",
+     "phonemes": "ðə ˈæstəɹɹˌɪsk splˈɪTəɹɹ ˈæstəɹɹˌɪskəstəɹɹˌɪsk nˈW hˈændəlz əbɹˌiviˈAʃənz ænd “vˈi wˈʌn",
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 1050,
+       "ms": 60
+      },
+      {
+       "at_ms": 2430,
+       "ms": 70
+      },
+      {
+       "at_ms": 4020,
+       "ms": 360
+      }
+     ]
+    },
+    {
+     "graphemes": "2",
+     "phonemes": "tˈu",
+     "samples": 31200,
+     "ms": 1300.0,
+     "lead_ms": 390.0,
+     "trail_ms": 540.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "0` versions",
+     "phonemes": "zˈɪɹO“ vˈɜɹʒənz",
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 380.0,
+     "trail_ms": 500.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "See [the README](https://github.com/pawelpc/Natural-Voice-TTS#readme) for details.",
+   "synth_s": 0.464,
+   "ms": 8500.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "See [the README](https://github",
+     "phonemes": "sˈi [ðə ɹˈidmi](ˌAʧtˌitˈipˌiˈɛs:slˈæʃslæʃ ɡˈɪthʌb",
+     "samples": 89400,
+     "ms": 3725.0,
+     "lead_ms": 320.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 80
+      },
+      {
+       "at_ms": 1910,
+       "ms": 220
+      }
+     ]
+    },
+    {
+     "graphemes": "com/pawelpc/Natural-Voice-TTS#readme) for details",
+     "phonemes": "kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs hˈæʃ ɹˈidmi) fɔɹ dətˈAlz",
+     "samples": 114600,
+     "ms": 4775.0,
+     "lead_ms": 290.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1120,
+       "ms": 80
+      },
+      {
+       "at_ms": 3390,
+       "ms": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "---",
+   "synth_s": 0.002,
+   "ms": 0,
+   "skipped": true,
+   "kokoro_segments": []
+  },
+  {
+   "text": "### Known issues",
+   "synth_s": 0.122,
+   "ms": 1925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "### Known issues",
+     "phonemes": "hˈæʃhæʃ nˈOn ˈɪʃjuz",
+     "samples": 46200,
+     "ms": 1925.0,
+     "lead_ms": 350.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "> Note: __bold underscores__ and ~~old text~~ are still read literally.",
+   "synth_s": 0.279,
+   "ms": 5375.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "> Note: __bold underscores__ and ~~old text~~ are still read literally",
+     "phonemes": ") nˈOt: bˈOld ˈʌndəɹskˌɔɹz ænd ˈOld tˈɛkst tˈɪldətˌɪldə ɑɹ stˈɪl ɹˈɛd lˈɪTəɹəli",
+     "samples": 129000,
+     "ms": 5375.0,
+     "lead_ms": 320.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 700,
+       "ms": 290
+      },
+      {
+       "at_ms": 3360,
+       "ms": 330
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "id": "01_markdown_what_i_did",
+    "category": "markdown",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 3-10",
+    "tests": "headings, bold, inline code, markdown link, arrow-free prose"
+  },
+  {
+    "id": "02_tables_install_table",
+    "category": "tables",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 28-36",
+    "tests": "markdown table with code paths and arrows"
+  },
+  {
+    "id": "03_paths_urls_source_vs_frozen",
+    "category": "paths_urls",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 40-45",
+    "tests": "python src/app.py, .py, exe, emoji"
+  },
+  {
+    "id": "04_rhythm_solid_confirmation",
+    "category": "rhythm",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 185-190",
+    "tests": "long prose, em dashes, numbered causes"
+  },
+  {
+    "id": "05_times_dates_build_progress",
+    "category": "times_dates",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 98-105",
+    "tests": "clock times, ~12 min, ~1.8 GB, pid"
+  },
+  {
+    "id": "06_units_toolchain",
+    "category": "units",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 70-73",
+    "tests": "versions, GB/MB, pid, mutex"
+  },
+  {
+    "id": "07_tables_log_table",
+    "category": "tables",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 220-232",
+    "tests": "table of times and byte counts, ✅, [1–20/20]"
+  },
+  {
+    "id": "08_code_blocks_skill_dirs",
+    "category": "code_blocks",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 371-383",
+    "tests": "fenced code blocks holding Windows paths"
+  },
+  {
+    "id": "09_lists_results",
+    "category": "lists",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 156-176",
+    "tests": "numbered bold headings, bullets, table, ✅"
+  },
+  {
+    "id": "10_splitting_blockquote",
+    "category": "splitting",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 204-210",
+    "tests": "blockquote, quoted sentence inside sentence"
+  },
+  {
+    "id": "11_numbers_versions_commit_status",
+    "category": "numbers_versions",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 118-126",
+    "tests": "commit range e3f15ec..bba2200, 1798 MB, 4:46 PM"
+  },
+  {
+    "id": "12_symbols_skill_fix_strike",
+    "category": "symbols",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 238-248",
+    "tests": "strikethrough, arrow →, ** # backticks as literals"
+  },
+  {
+    "id": "13_rhythm_honest_caveat",
+    "category": "rhythm",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 306-313",
+    "tests": "long reasoning prose, parentheses, quotes"
+  },
+  {
+    "id": "14_abbreviations_plugin_plan",
+    "category": "abbreviations",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 446-451",
+    "tests": "vs., .claude-plugin/plugin.json, /skill-creator"
+  },
+  {
+    "id": "15_markdown_what_i_built",
+    "category": "markdown",
+    "origin": "real",
+    "source": "transcript ed778b0c (Natural_Voice_TTS, 2026-07/10), assistant text msg lines 463-470",
+    "tests": "heading, bold, links, backticks, nested quotes"
+  },
+  {
+    "id": "16_rhythm_speak_call",
+    "category": "rhythm",
+    "origin": "real",
+    "source": "transcript a974ea46, mcp__natural-voice-tts__speak input #2",
+    "tests": "actual text Claude sent through MCP speak (clean prose)"
+  },
+  {
+    "id": "17_splitting_july_regression",
+    "category": "splitting",
+    "origin": "real",
+    "source": "_bugfix-closing-report.md lines 122-126 (Claude-written test string)",
+    "tests": "July dropped-sentence test string (R4 regression); hard-wrapped lines"
+  },
+  {
+    "id": "18_abbreviations_titles_places",
+    "category": "abbreviations",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "Dr. Mr. Mrs. p.m. St. U.S. e.g. i.e. etc. mid-sentence"
+  },
+  {
+    "id": "19_abbreviations_academic",
+    "category": "abbreviations",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "Prof. Ph.D. vs. Fig. approx. No. Vol. pp. cf. sig."
+  },
+  {
+    "id": "20_splitting_initials",
+    "category": "splitting",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "initials and dotted acronyms, incl. sentence-final U.K./E.U."
+  },
+  {
+    "id": "21_numbers_versions_decimals_versions",
+    "category": "numbers_versions",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "decimals, semver, leading-dot decimal, local version label"
+  },
+  {
+    "id": "22_splitting_ellipses_quotes",
+    "category": "splitting",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "ellipses (ASCII and …), quoted ? and !, ?!, em dash"
+  },
+  {
+    "id": "23_paths_urls_paths_and_links",
+    "category": "paths_urls",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "POSIX path, Windows path, https URL, www URL with query, email, localhost URL"
+  },
+  {
+    "id": "24_paths_urls_identifiers",
+    "category": "paths_urls",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "snake_case, CamelCase, dotted calls, env var assignment, CLI flag"
+  },
+  {
+    "id": "25_units_measurements",
+    "category": "units",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "SI units, °C, N·m, data sizes, km/h, mph, V/A/W, seconds"
+  },
+  {
+    "id": "26_times_dates_schedule",
+    "category": "times_dates",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "ISO date, 24h time, US date, a.m., arrow between times, 3pm, Mon. Jan., decades"
+  },
+  {
+    "id": "27_numbers_versions_numbers_mixed",
+    "category": "numbers_versions",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "thousands separators, %, currencies, ordinals, Roman numerals, phone, score, ratio, fraction"
+  },
+  {
+    "id": "28_markdown_formatting_mix",
+    "category": "markdown",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "headings, bold, italic, inline code, link, rule, blockquote, strikethrough"
+  },
+  {
+    "id": "29_lists_bullets_no_punct",
+    "category": "lists",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "bullets and numbered items with no end punctuation, nested bullets"
+  },
+  {
+    "id": "30_code_blocks_fenced_mix",
+    "category": "code_blocks",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "two fenced blocks (powershell, python) between prose"
+  },
+  {
+    "id": "31_symbols_symbol_soup",
+    "category": "symbols",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "& + ≥ ° ~ % × = → # @ != <= © /"
+  },
+  {
+    "id": "32_rhythm_long_sentences",
+    "category": "rhythm",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "long multi-clause sentences, parentheses, colon, paragraph break"
+  },
+  {
+    "id": "33_splitting_hard_wrapped",
+    "category": "splitting",
+    "origin": "synthetic",
+    "source": "written for this test set",
+    "tests": "hard-wrapped lines inside sentences (PDF/email via hotkey)"
+  }
+]

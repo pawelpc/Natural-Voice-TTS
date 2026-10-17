@@ -1,0 +1,16 @@
+To test it, run this:
+
+```powershell
+cd C:\Projects\Natural_Voice_TTS
+python src/app.py
+```
+
+The splitter looks like this:
+
+```python
+def split_sentences(text: str) -> list[str]:
+    parts = re.split(r'(?<=[.!?])\s+', text)
+    return [p for p in parts if p]
+```
+
+After that, the app should start normally.

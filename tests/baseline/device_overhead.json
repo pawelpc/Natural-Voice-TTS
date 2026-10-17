@@ -1,0 +1,55 @@
+{
+ "device": "Headset (Baseus Bowie MA10 Hand",
+ "rows": [
+  {
+   "clip_s": 1.275,
+   "wall_s": 2.1611,
+   "ok": true,
+   "overhead_s": 0.8861
+  },
+  {
+   "clip_s": 7.6,
+   "wall_s": 7.7135,
+   "ok": true,
+   "overhead_s": 0.1135
+  },
+  {
+   "clip_s": 1.975,
+   "wall_s": 2.0861,
+   "ok": true,
+   "overhead_s": 0.1111
+  },
+  {
+   "clip_s": 1.275,
+   "wall_s": 1.3751,
+   "ok": true,
+   "overhead_s": 0.1001
+  },
+  {
+   "clip_s": 7.6,
+   "wall_s": 7.716,
+   "ok": true,
+   "overhead_s": 0.116
+  },
+  {
+   "clip_s": 1.975,
+   "wall_s": 2.0781,
+   "ok": true,
+   "overhead_s": 0.1031
+  },
+  {
+   "clip_s": 1.0,
+   "wall_s": 1.1184,
+   "ok": true,
+   "overhead_s": 0.1184
+  },
+  {
+   "clip_s": 1.0,
+   "wall_s": 1.0754,
+   "ok": true,
+   "overhead_s": 0.0754
+  }
+ ],
+ "first_call_overhead_s": 0.8861,
+ "later_overhead_median_s": 0.1111
+}

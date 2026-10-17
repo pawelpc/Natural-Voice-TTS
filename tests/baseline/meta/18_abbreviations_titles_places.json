@@ -1,0 +1,251 @@
+{
+ "id": "18_abbreviations_titles_places",
+ "category": "abbreviations",
+ "origin": "synthetic",
+ "chunks": 11,
+ "skipped": 0,
+ "kokoro_segments": 15,
+ "duration_s": 24.77,
+ "synth_s": 1.68,
+ "wav_sha256": "7822f08441fc86e70e8386abc06785051d22b6ec41725e63f7416d416d00c435",
+ "sentences": [
+  {
+   "text": "Dr.",
+   "synth_s": 0.102,
+   "ms": 1450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Dr",
+     "phonemes": "dˈɑktəɹ",
+     "samples": 34800,
+     "ms": 1450.0,
+     "lead_ms": 390.0,
+     "trail_ms": 530.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Smith met Mr.",
+   "synth_s": 0.116,
+   "ms": 1800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Smith met Mr",
+     "phonemes": "smˈɪθ mˈɛt mˈɪstəɹ",
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 340.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "and Mrs.",
+   "synth_s": 0.106,
+   "ms": 1550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "and Mrs",
+     "phonemes": "ænd mˈɪsɪz",
+     "samples": 37200,
+     "ms": 1550.0,
+     "lead_ms": 400.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Jones at 5 p.m.",
+   "synth_s": 0.221,
+   "ms": 3275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Jones at 5 p",
+     "phonemes": "ʤˈOnz æt fˈIv pˈi",
+     "samples": 47400,
+     "ms": 1975.0,
+     "lead_ms": 360.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1050,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "m",
+     "phonemes": "ˈɛm",
+     "samples": 31200,
+     "ms": 1300.0,
+     "lead_ms": 400.0,
+     "trail_ms": 550.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "on Main St.",
+   "synth_s": 0.113,
+   "ms": 1675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "on Main St",
+     "phonemes": "ˌɔn mˈAn sənt",
+     "samples": 40200,
+     "ms": 1675.0,
+     "lead_ms": 400.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "near the U.S.",
+   "synth_s": 0.207,
+   "ms": 2900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "near the U",
+     "phonemes": "nˌɪɹ ðə jˈu",
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 390.0,
+     "trail_ms": 560.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "S",
+     "phonemes": "ˈɛs",
+     "samples": 30000,
+     "ms": 1250.0,
+     "lead_ms": 400.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Army base.",
+   "synth_s": 0.106,
+   "ms": 1550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Army base",
+     "phonemes": "ˈɑɹmi bˈAs",
+     "samples": 37200,
+     "ms": 1550.0,
+     "lead_ms": 400.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "They covered several topics, e.g.",
+   "synth_s": 0.249,
+   "ms": 3800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "They covered several topics, e",
+     "phonemes": "ðˌA kˈʌvəɹd sˈɛvəɹəl tˈɑpɪks, ˈi",
+     "samples": 61200,
+     "ms": 2550.0,
+     "lead_ms": 310.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1710,
+       "ms": 130
+      }
+     ]
+    },
+    {
+     "graphemes": "g",
+     "phonemes": "ʤˈi",
+     "samples": 30000,
+     "ms": 1250.0,
+     "lead_ms": 380.0,
+     "trail_ms": 510.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "budgets, i.e.",
+   "synth_s": 0.209,
+   "ms": 2975.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "budgets, i",
+     "phonemes": "bˈʌʤəts, ˈI",
+     "samples": 41400,
+     "ms": 1725.0,
+     "lead_ms": 380.0,
+     "trail_ms": 535.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "e",
+     "phonemes": "ˈi",
+     "samples": 30000,
+     "ms": 1250.0,
+     "lead_ms": 400.0,
+     "trail_ms": 550.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "the real costs, etc.",
+   "synth_s": 0.144,
+   "ms": 2225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "the real costs, etc",
+     "phonemes": "ðə ɹˈiᵊl kˈɔsts, ɛtsˈɛTəɹə",
+     "samples": 53400,
+     "ms": 2225.0,
+     "lead_ms": 320.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1000,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then they left.",
+   "synth_s": 0.109,
+   "ms": 1575.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then they left",
+     "phonemes": "ðˈɛn ðA lˈɛft",
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 380.0,
+     "trail_ms": 445.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

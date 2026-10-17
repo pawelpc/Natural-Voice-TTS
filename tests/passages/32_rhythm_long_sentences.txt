@@ -1,0 +1,3 @@
+When the engine reads a long sentence, with several clauses separated by commas, semicolons and dashes, it should keep a steady rhythm; it should pause briefly at each comma, a little longer at the semicolon, and it should not run out of breath before the end. Parenthetical remarks (like this one) should sound like asides. A colon introduces something: a list, an example, or an explanation.
+
+A new paragraph should feel like a new thought. It should start after a clear pause.

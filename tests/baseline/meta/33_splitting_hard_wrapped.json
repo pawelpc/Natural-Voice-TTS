@@ -1,0 +1,163 @@
+{
+ "id": "33_splitting_hard_wrapped",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 4,
+ "skipped": 0,
+ "kokoro_segments": 8,
+ "duration_s": 24.7,
+ "synth_s": 1.45,
+ "wav_sha256": "4ca9ba266a89e5cd8889aded4d804ddfb5a478dfe089a697579bc9f714253f69",
+ "sentences": [
+  {
+   "text": "This paragraph was copied from a PDF, so every line ends with a hard line\nbreak even though the sentence keeps going.",
+   "synth_s": 0.439,
+   "ms": 7875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This paragraph was copied from a PDF, so every line ends with a hard line",
+     "phonemes": "ðˌɪs pˈɛɹəɡɹˌæf wʌz kˈɑpɪd fɹʌm ɐ pˌidˌiˈɛf, sˌO ˈɛvəɹi lˈIn ˈɛndz wɪð ɐ hˈɑɹd lˈIn",
+     "samples": 127200,
+     "ms": 5300.0,
+     "lead_ms": 310.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 2330,
+       "ms": 440
+      },
+      {
+       "at_ms": 2930,
+       "ms": 80
+      },
+      {
+       "at_ms": 3630,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "break even though the sentence keeps going",
+     "phonemes": "bɹˈAk ˈivən ðˌO ðə sˈɛntᵊns kˈips ɡˈOɪŋ",
+     "samples": 61800,
+     "ms": 2575.0,
+     "lead_ms": 330.0,
+     "trail_ms": 435.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "A reader should not pause at\nthe end of each line, only at the real sentence ends.",
+   "synth_s": 0.34,
+   "ms": 5600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A reader should not pause at",
+     "phonemes": "ɐ ɹˈidəɹ ʃˌʊd nˌɑt pˈɔz æt",
+     "samples": 48600,
+     "ms": 2025.0,
+     "lead_ms": 310.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 1030,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "the end of each line, only at the real sentence ends",
+     "phonemes": "ði ˈɛnd ʌv ˈiʧ lˈIn, ˈOnli æt ðə ɹˈiᵊl sˈɛntᵊns ˈɛndz",
+     "samples": 85800,
+     "ms": 3575.0,
+     "lead_ms": 310.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 1320,
+       "ms": 300
+      },
+      {
+       "at_ms": 1910,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The same thing\nhappens with plain-text email, which is often wrapped at about seventy\ncharacters per line.",
+   "synth_s": 0.488,
+   "ms": 8250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The same thing",
+     "phonemes": "ðə sˈAm θˈɪŋ",
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 390.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "happens with plain-text email, which is often wrapped at about seventy",
+     "phonemes": "hˈæpənz wɪð plˌAntˈɛkst ˈimˌAl, wˌɪʧ ɪz ˈɔfᵊn ɹˈæpt æt əbˈWt sˈɛvənti",
+     "samples": 115200,
+     "ms": 4800.0,
+     "lead_ms": 310.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 860,
+       "ms": 110
+      },
+      {
+       "at_ms": 1940,
+       "ms": 380
+      }
+     ]
+    },
+    {
+     "graphemes": "characters per line",
+     "phonemes": "kˈɛɹəktəɹz pɜɹ lˈIn",
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 320.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 580,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A second paragraph follows the blank line.",
+   "synth_s": 0.179,
+   "ms": 2975.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A second paragraph follows the blank line",
+     "phonemes": "ɐ sˈɛkənd pˈɛɹəɡɹˌæf fˈɑlOz ðə blˈæŋk lˈIn",
+     "samples": 71400,
+     "ms": 2975.0,
+     "lead_ms": 310.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 1260,
+       "ms": 200
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

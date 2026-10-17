@@ -1,0 +1,243 @@
+{
+ "id": "29_lists_bullets_no_punct",
+ "category": "lists",
+ "origin": "synthetic",
+ "chunks": 7,
+ "skipped": 0,
+ "kokoro_segments": 15,
+ "duration_s": 28.12,
+ "synth_s": 1.86,
+ "wav_sha256": "530c017b27cd3d1531a0cf7b5db8c6e18b5714b45878ff268e8484540d8a3d7c",
+ "sentences": [
+  {
+   "text": "Before you start, check these:",
+   "synth_s": 0.142,
+   "ms": 2150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Before you start, check these:",
+     "phonemes": "bəfˈɔɹ ju stˈɑɹt, ʧˈɛk ðˈiz:",
+     "samples": 51600,
+     "ms": 2150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 70
+      },
+      {
+       "at_ms": 1280,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- Python 3.11 installed\n- espeak-ng in Program Files\n- CUDA drivers up to date\n - at least 4 GB of VRAM\n - driver 550 or newer",
+   "synth_s": 0.839,
+   "ms": 13450.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- Python 3",
+     "phonemes": "— pˈIθˌɑn θɹˈi",
+     "samples": 40200,
+     "ms": 1675.0,
+     "lead_ms": 380.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "11 installed",
+     "phonemes": "əlˈɛvᵊn ɪnstˈɔld",
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 370.0,
+     "trail_ms": 475.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "- espeak-ng in Program Files",
+     "phonemes": "ˈispikˌɛnʤˈi ɪn pɹˈOɡɹˌæm fˈIlz",
+     "samples": 59400,
+     "ms": 2475.0,
+     "lead_ms": 320.0,
+     "trail_ms": 415.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "- CUDA drivers up to date",
+     "phonemes": "sˌijˌudˌiˈA dɹˈIvəɹz ˌʌp tə dˈAt",
+     "samples": 59400,
+     "ms": 2475.0,
+     "lead_ms": 310.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 1950,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "- at least 4 GB of VRAM",
+     "phonemes": "— æt lˈist fˈɔɹ ʤˌibˈi ʌv vˈiɹˌæm",
+     "samples": 53400,
+     "ms": 2225.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "- driver 550 or newer",
+     "phonemes": "dɹˈIvəɹ fˈIv hˈʌndɹəd fˈɪfti ɔɹ nˈuəɹ",
+     "samples": 66600,
+     "ms": 2775.0,
+     "lead_ms": 310.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1680,
+       "ms": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then follow the steps:",
+   "synth_s": 0.121,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then follow the steps:",
+     "phonemes": "ðˈɛn fˈɑlO ðə stˈɛps:",
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 310.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 1230,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "1.",
+   "synth_s": 0.096,
+   "ms": 1275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "1",
+     "phonemes": "wˈʌn",
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 400.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Clone the repo\n2.",
+   "synth_s": 0.19,
+   "ms": 2425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Clone the repo",
+     "phonemes": "klˈOn ðə ɹˈipˌO",
+     "samples": 27000,
+     "ms": 1125.0,
+     "lead_ms": 350.0,
+     "trail_ms": 205.0,
+     "pauses": [
+      {
+       "at_ms": 790,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "2",
+     "phonemes": "tˈu",
+     "samples": 31200,
+     "ms": 1300.0,
+     "lead_ms": 390.0,
+     "trail_ms": 540.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Run pip install -r requirements.txt\n3.",
+   "synth_s": 0.364,
+   "ms": 5425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Run pip install -r requirements",
+     "phonemes": "ɹˈʌn pˈɪp ɪnstˈɔl —ˈɑɹ ɹəkwˈIəɹmᵊnts",
+     "samples": 61800,
+     "ms": 2575.0,
+     "lead_ms": 320.0,
+     "trail_ms": 395.0,
+     "pauses": [
+      {
+       "at_ms": 1220,
+       "ms": 160
+      }
+     ]
+    },
+    {
+     "graphemes": "txt",
+     "phonemes": "tˌiˌɛkstˈi",
+     "samples": 36000,
+     "ms": 1500.0,
+     "lead_ms": 380.0,
+     "trail_ms": 500.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "3",
+     "phonemes": "θɹˈi",
+     "samples": 32400,
+     "ms": 1350.0,
+     "lead_ms": 380.0,
+     "trail_ms": 540.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Start the app",
+   "synth_s": 0.106,
+   "ms": 1525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Start the app",
+     "phonemes": "stˈɑɹt ði ˈæp",
+     "samples": 36600,
+     "ms": 1525.0,
+     "lead_ms": 350.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 940,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

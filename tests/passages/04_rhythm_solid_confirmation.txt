@@ -1,0 +1,6 @@
+That's a solid confirmation — the fix survived a full reinstall, a Claude Desktop restart, and a brand-new session, and the pipe delivered correctly once it settled. That also definitively answers your earlier "will it persist after restart" question: yes.
+
+The two initial failures are worth pinning down, though, because the **signature matters**. The dropped-sentence bug we fixed was *silent partial loss* — you'd hear most of a response with a few sentences missing. Two attempts failing outright and then working is a different shape, and almost certainly a **startup/timing** issue, not a regression. The most likely causes, in order:
+
+1. **App still warming up.** After install/reboot, the tray app takes ~6–9 s to load the Kokoro model (your log showed `17:06:27 → 17:06:36`). Any `speak()` before it finishes returns `Error: Named pipe … not found` — because the pipe listener starts only *after* the engine is ready.
+2. **Pipe reconnect race.** The listener holds a *single* pipe instance. Between one client disconnecting and the loop recreating the pipe, there's a millisecond gap where a fast follow-up `speak()` can get "pipe not found" / "all instances busy." Two rapid early calls could hit this.

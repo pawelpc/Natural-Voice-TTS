@@ -1,0 +1,8 @@
+Yes — it's still running and progressing normally. Here's exactly where it is:
+
+- **PyInstaller finished** — the fresh exe was written at 4:23:38 PM (rebuilt).
+- **Now in the Inno Setup step** (`ISCC` pid 12024, ~12 min of CPU so far), compressing the torch/CUDA DLLs into the ~1.8 GB installer. This compression phase is the slowest part of the whole build and produces no incremental Claude activity.
+
+That's also why your **usage page shows no change**: this is a local build process on your machine — it burns CPU/disk, not Claude tokens. I'm just idling in the background waiting for it to finish, so there's nothing for the usage page to reflect until I act again.
+
+Packing a 1.8 GB installer typically takes several more minutes. I'll be notified automatically the moment `build.bat` exits, then I'll run the static verification, commit + push, and set up the runtime smoke test. No action needed from you right now.

@@ -1,0 +1,728 @@
+{
+ "env": {
+  "python": "3.10.11",
+  "torch": "2.6.0+cu124",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "kokoro": "0.9.4",
+  "misaki": "0.9.4",
+  "force_cpu": ""
+ },
+ "split_pattern": "[.!?\\n]+",
+ "H1": [
+  {
+   "input": "Dr. Smith arrived late.",
+   "chunks": [
+    "Dr.",
+    "Smith arrived late."
+   ],
+   "wrong_split": true
+  },
+  {
+   "input": "Use a short tool, e.g. this one, for the job.",
+   "chunks": [
+    "Use a short tool, e.g.",
+    "this one, for the job."
+   ],
+   "wrong_split": true
+  },
+  {
+   "input": "The U.S. Army left the base.",
+   "chunks": [
+    "The U.S.",
+    "Army left the base."
+   ],
+   "wrong_split": true
+  },
+  {
+   "input": "Mr. and Mrs. Jones came at 5 p.m. today.",
+   "chunks": [
+    "Mr.",
+    "and Mrs.",
+    "Jones came at 5 p.m.",
+    "today."
+   ],
+   "wrong_split": true
+  },
+  {
+   "input": "J. R. R. Tolkien wrote the book.",
+   "chunks": [
+    "J.",
+    "R.",
+    "R.",
+    "Tolkien wrote the book."
+   ],
+   "wrong_split": true
+  },
+  {
+   "input": "Version 3.5 is out now.",
+   "chunks": [
+    "Version 3.5 is out now."
+   ],
+   "wrong_split": false
+  },
+  {
+   "input": "It ended... then it began again.",
+   "chunks": [
+    "It ended...",
+    "then it began again."
+   ],
+   "wrong_split": true
+  }
+ ],
+ "H2": [
+  {
+   "input": "Upgrade to v1.1.0 now.",
+   "current_segments": [
+    {
+     "graphemes": "Upgrade to v1",
+     "phonemes": "ˈʌpɡɹˌAd tə vˈi wˈʌn"
+    },
+    {
+     "graphemes": "1",
+     "phonemes": "wˈʌn"
+    },
+    {
+     "graphemes": "0 now",
+     "phonemes": "nˈW"
+    }
+   ],
+   "kokoro_default_segments": [
+    {
+     "graphemes": "Upgrade to v1.1.0 now.",
+     "phonemes": "ˈʌpɡɹˌAd tə vˈi wˈʌn wˈʌn zˈɪɹO nˈW."
+    }
+   ],
+   "current_last_phoneme": "W",
+   "kokoro_default_last_phoneme": "."
+  },
+  {
+   "input": "Pi is 3.5 or so.",
+   "current_segments": [
+    {
+     "graphemes": "Pi is 3",
+     "phonemes": "pˈI ɪz θɹˈi"
+    },
+    {
+     "graphemes": "5 or so",
+     "phonemes": "fˈIv ɔɹ sˌO"
+    }
+   ],
+   "kokoro_default_segments": [
+    {
+     "graphemes": "Pi is 3.5 or so.",
+     "phonemes": "pˈI ɪz θɹˈi pYnt fˈIv ɔɹ sˌO."
+    }
+   ],
+   "current_last_phoneme": "O",
+   "kokoro_default_last_phoneme": "."
+  },
+  {
+   "input": "Open app.py today.",
+   "current_segments": [
+    {
+     "graphemes": "Open app",
+     "phonemes": "ˈOpᵊn ˈæp"
+    },
+    {
+     "graphemes": "py today",
+     "phonemes": "pˈI tədˈA"
+    }
+   ],
+   "kokoro_default_segments": [
+    {
+     "graphemes": "Open app.py today.",
+     "phonemes": "ˈOpᵊn ˈæp.pˈI tədˈA."
+    }
+   ],
+   "current_last_phoneme": "A",
+   "kokoro_default_last_phoneme": "."
+  },
+  {
+   "input": "Are you sure?",
+   "current_segments": [
+    {
+     "graphemes": "Are you sure",
+     "phonemes": "ˌɑɹ ju ʃˈʊɹ"
+    }
+   ],
+   "kokoro_default_segments": [
+    {
+     "graphemes": "Are you sure?",
+     "phonemes": "ˌɑɹ ju ʃˈʊɹ?"
+    }
+   ],
+   "current_last_phoneme": "ɹ",
+   "kokoro_default_last_phoneme": "?"
+  },
+  {
+   "input": "Stop right there!",
+   "current_segments": [
+    {
+     "graphemes": "Stop right there",
+     "phonemes": "stˈɑp ɹˈIt ðˈɛɹ"
+    }
+   ],
+   "kokoro_default_segments": [
+    {
+     "graphemes": "Stop right there!",
+     "phonemes": "stˈɑp ɹˈIt ðˈɛɹ!"
+    }
+   ],
+   "current_last_phoneme": "ɹ",
+   "kokoro_default_last_phoneme": "!"
+  },
+  {
+   "input": "This line\nwraps in the middle.",
+   "current_segments": [
+    {
+     "graphemes": "This line",
+     "phonemes": "ðˌɪs lˈIn"
+    },
+    {
+     "graphemes": "wraps in the middle",
+     "phonemes": "ɹˈæps ɪn ðə mˈɪdᵊl"
+    }
+   ],
+   "kokoro_default_segments": [
+    {
+     "graphemes": "This line",
+     "phonemes": "ðˌɪs lˈIn"
+    },
+    {
+     "graphemes": "wraps in the middle.",
+     "phonemes": "ɹˈæps ɪn ðə mˈɪdᵊl."
+    }
+   ],
+   "current_last_phoneme": "l",
+   "kokoro_default_last_phoneme": "."
+  }
+ ],
+ "H2_questions": [
+  {
+   "input": "Are you sure?",
+   "current": {
+    "phonemes": "ˌɑɹ ju ʃˈʊɹ",
+    "tail_hz": 180.5,
+    "before_hz": 236.5,
+    "change_pct": -23.7
+   },
+   "kokoro_default": {
+    "phonemes": "ˌɑɹ ju ʃˈʊɹ?",
+    "tail_hz": 181.8,
+    "before_hz": 233.0,
+    "change_pct": -22.0
+   }
+  },
+  {
+   "input": "Is it ready yet?",
+   "current": {
+    "phonemes": "ˌɪz ɪt ɹˈɛdi jˈɛt",
+    "tail_hz": 186.0,
+    "before_hz": 223.3,
+    "change_pct": -16.7
+   },
+   "kokoro_default": {
+    "phonemes": "ˌɪz ɪt ɹˈɛdi jˈɛt?",
+    "tail_hz": 195.1,
+    "before_hz": 225.4,
+    "change_pct": -13.4
+   }
+  },
+  {
+   "input": "Did you see that?",
+   "current": {
+    "phonemes": "dˈɪd ju sˈi ðˈæt",
+    "tail_hz": 234.2,
+    "before_hz": 237.6,
+    "change_pct": -1.5
+   },
+   "kokoro_default": {
+    "phonemes": "dˈɪd ju sˈi ðˈæt?",
+    "tail_hz": 174.6,
+    "before_hz": 240.0,
+    "change_pct": -27.2
+   }
+  }
+ ],
+ "H3": [
+  {
+   "input": "**Bold** text here.",
+   "phonemes": "bˈOld ˈæstəɹɹˌɪskəstəɹɹˌɪsk tˈɛkst hˈɪɹ.",
+   "tokens": [
+    [
+     "*",
+     ""
+    ],
+    [
+     "*",
+     ""
+    ],
+    [
+     "Bold**",
+     "bˈOld ˈæstəɹɹˌɪskəstəɹɹˌɪsk"
+    ],
+    [
+     "text",
+     "tˈɛkst"
+    ],
+    [
+     "here",
+     "hˈɪɹ"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "# Release Notes",
+   "phonemes": "hˈæʃ ɹəlˈis nˈOts",
+   "tokens": [
+    [
+     "#",
+     "hˈæʃ"
+    ],
+    [
+     "Release",
+     "ɹəlˈis"
+    ],
+    [
+     "Notes",
+     "nˈOts"
+    ]
+   ]
+  },
+  {
+   "input": "Use `split_sentences()` here.",
+   "phonemes": "jˈus “splˌɪtsˈɛntᵊnsᵻz()” hˈɪɹ.",
+   "tokens": [
+    [
+     "Use",
+     "jˈus"
+    ],
+    [
+     "`",
+     "“"
+    ],
+    [
+     "split_sentences",
+     "splˌɪtsˈɛntᵊnsᵻz"
+    ],
+    [
+     "(",
+     "("
+    ],
+    [
+     ")",
+     ")"
+    ],
+    [
+     "`",
+     "”"
+    ],
+    [
+     "here",
+     "hˈɪɹ"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "- espeak-ng installed",
+   "phonemes": " ˈispikˌɛnʤˈi ɪnstˈɔld",
+   "tokens": [
+    [
+     "-",
+     ""
+    ],
+    [
+     "espeak-ng",
+     "ˈispikˌɛnʤˈi"
+    ],
+    [
+     "installed",
+     "ɪnstˈɔld"
+    ]
+   ]
+  },
+  {
+   "input": "Open src/app.py now.",
+   "phonemes": "ˈOpᵊn ˌɛsˌɑɹsˈi slˈæʃ ˈæp.pˈI nˈW.",
+   "tokens": [
+    [
+     "Open",
+     "ˈOpᵊn"
+    ],
+    [
+     "src/app.py",
+     "ˌɛsˌɑɹsˈi slˈæʃ ˈæp.pˈI"
+    ],
+    [
+     "now",
+     "nˈW"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "Open C:\\Users\\paul\\notes.txt now.",
+   "phonemes": "ˈOpᵊn sˈi:bˈækslæʃ jˈuzəɹz bˈækslæʃ pˈɔl bˈækslæʃ nˈOts.tˌiˌɛkstˈi nˈW.",
+   "tokens": [
+    [
+     "Open",
+     "ˈOpᵊn"
+    ],
+    [
+     "C:\\Users\\paul\\notes.txt",
+     "sˈi:bˈækslæʃ jˈuzəɹz bˈækslæʃ pˈɔl bˈækslæʃ nˈOts.tˌiˌɛkstˈi"
+    ],
+    [
+     "now",
+     "nˈW"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "Visit https://github.com/pawelpc/Natural-Voice-TTS today.",
+   "phonemes": "vˈɪzət ˌAʧtˌitˈipˌiˈɛs:slˈæʃslæʃ ɡˈɪthʌb.kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs tədˈA.",
+   "tokens": [
+    [
+     "Visit",
+     "vˈɪzət"
+    ],
+    [
+     "https://github.com/pawelpc/Natural-Voice-TTS",
+     "ˌAʧtˌitˈipˌiˈɛs:slˈæʃslæʃ ɡˈɪthʌb.kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs"
+    ],
+    [
+     "today",
+     "tədˈA"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "Email paul@example.com today.",
+   "phonemes": "ˈimˌAl pˈɔl æt ɛɡzˈæmpᵊl.kˈɑm tədˈA.",
+   "tokens": [
+    [
+     "Email",
+     "ˈimˌAl"
+    ],
+    [
+     "paul@example.com",
+     "pˈɔl æt ɛɡzˈæmpᵊl.kˈɑm"
+    ],
+    [
+     "today",
+     "tədˈA"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "It is 25 mm thick and weighs 1.2 kg.",
+   "phonemes": "ˌɪt ɪz twˈɛnti fˈIv m θˈɪk ænd wˈAz wˈʌn pYnt tˈu kˌAʤˈi.",
+   "tokens": [
+    [
+     "It",
+     "ˌɪt"
+    ],
+    [
+     "is",
+     "ɪz"
+    ],
+    [
+     "25",
+     "twˈɛnti fˈIv"
+    ],
+    [
+     "mm",
+     "m"
+    ],
+    [
+     "thick",
+     "θˈɪk"
+    ],
+    [
+     "and",
+     "ænd"
+    ],
+    [
+     "weighs",
+     "wˈAz"
+    ],
+    [
+     "1.2",
+     "wˈʌn pYnt tˈu"
+    ],
+    [
+     "kg",
+     "kˌAʤˈi"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "Meet at 14:30 on 2026-10-17.",
+   "phonemes": "mˈit æt fˈɔɹtin:θˈɜɹTi ˌɔn twˈɛnti twˈɛnti sˈɪkstˌɛnsˌɛvəntˈin.",
+   "tokens": [
+    [
+     "Meet",
+     "mˈit"
+    ],
+    [
+     "at",
+     "æt"
+    ],
+    [
+     "14:30",
+     "fˈɔɹtin:θˈɜɹTi"
+    ],
+    [
+     "on",
+     "ˌɔn"
+    ],
+    [
+     "2026-10-17",
+     "twˈɛnti twˈɛnti sˈɪkstˌɛnsˌɛvəntˈin"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "About ~50% → done.",
+   "phonemes": "əbˈWt tˈɪldə fˈɪfti pəɹsˈɛnt ɹˈIt ˈæɹO dˈʌn.",
+   "tokens": [
+    [
+     "About",
+     "əbˈWt"
+    ],
+    [
+     "~50%",
+     "tˈɪldə fˈɪfti pəɹsˈɛnt"
+    ],
+    [
+     "→",
+     "ɹˈIt ˈæɹO"
+    ],
+    [
+     "done",
+     "dˈʌn"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "Louis XVI ruled France.",
+   "phonemes": "lˈui ˌɛksvˌiˈI ɹˈuld fɹˈæns.",
+   "tokens": [
+    [
+     "Louis",
+     "lˈui"
+    ],
+    [
+     "XVI",
+     "ˌɛksvˌiˈI"
+    ],
+    [
+     "ruled",
+     "ɹˈuld"
+    ],
+    [
+     "France",
+     "fɹˈæns"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "See [the README](https://example.com/readme) first.",
+   "phonemes": "sˈi ði ˌɑɹˌiˌAdˌiˌɛmˈi fˈɜɹst.",
+   "tokens": [
+    [
+     "See",
+     "sˈi"
+    ],
+    [
+     "the",
+     "ði"
+    ],
+    [
+     "README",
+     "ˌɑɹˌiˌAdˌiˌɛmˈi"
+    ],
+    [
+     "first",
+     "fˈɜɹst"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  },
+  {
+   "input": "| File | How it is packaged |",
+   "phonemes": " fˈIl  hˌW ɪt ɪz pˈækɪʤd ",
+   "tokens": [
+    [
+     "|",
+     ""
+    ],
+    [
+     "File",
+     "fˈIl"
+    ],
+    [
+     "|",
+     ""
+    ],
+    [
+     "How",
+     "hˌW"
+    ],
+    [
+     "it",
+     "ɪt"
+    ],
+    [
+     "is",
+     "ɪz"
+    ],
+    [
+     "packaged",
+     "pˈækɪʤd"
+    ],
+    [
+     "|",
+     ""
+    ]
+   ]
+  },
+  {
+   "input": "Run `e3f15ec..bba2200` now.",
+   "phonemes": "ɹˈʌn “ˈi θɹˈi ˈɛf fˈɪftin ˈɛk..bˌibˌiˈA tˈu θˈWzənd tˈuhˈʌndɹɪd” nˈW.",
+   "tokens": [
+    [
+     "Run",
+     "ɹˈʌn"
+    ],
+    [
+     "`",
+     "“"
+    ],
+    [
+     "e3f15ec..bba2200",
+     "ˈi θɹˈi ˈɛf fˈɪftin ˈɛk..bˌibˌiˈA tˈu θˈWzənd tˈuhˈʌndɹɪd"
+    ],
+    [
+     "`",
+     "”"
+    ],
+    [
+     "now",
+     "nˈW"
+    ],
+    [
+     ".",
+     "."
+    ]
+   ]
+  }
+ ],
+ "H4": {
+  "audio_silence_by_boundary": {
+   "within_chunk_kokoro_split": {
+    "n": 169,
+    "min_ms": 350.0,
+    "median_ms": 825.0,
+    "max_ms": 1030.0,
+    "p10_ms": 725.0,
+    "p90_ms": 920.0
+   },
+   "between_chunks_same_paragraph": {
+    "n": 162,
+    "min_ms": 515.0,
+    "median_ms": 822.5,
+    "max_ms": 950.0,
+    "p10_ms": 750.0,
+    "p90_ms": 889.5
+   },
+   "between_chunks_new_paragraph": {
+    "n": 51,
+    "min_ms": 320.0,
+    "median_ms": 805.0,
+    "max_ms": 910.0,
+    "p10_ms": 380.0,
+    "p90_ms": 880.0
+   },
+   "internal_pause": {
+    "n": 979,
+    "min_ms": 60,
+    "median_ms": 90,
+    "max_ms": 660,
+    "p10_ms": 60.0,
+    "p90_ms": 420.0
+   }
+  },
+  "worker_gaps": {
+   "17_splitting_july_regression": {
+    "ttfa_median_s": 0.485,
+    "ttfa_min_s": 0.463,
+    "ttfa_max_s": 0.586,
+    "gap_median_s": 0.428,
+    "gap_max_s": 0.49
+   },
+   "16_rhythm_speak_call": {
+    "ttfa_median_s": 0.642,
+    "ttfa_min_s": 0.585,
+    "ttfa_max_s": 0.647,
+    "gap_median_s": 0.121,
+    "gap_max_s": 0.731
+   },
+   "01_markdown_what_i_did": {
+    "ttfa_median_s": 0.508,
+    "ttfa_min_s": 0.466,
+    "ttfa_max_s": 0.519,
+    "gap_median_s": 0.643,
+    "gap_max_s": 0.878
+   }
+  },
+  "device_overhead": {
+   "device": "Headset (Baseus Bowie MA10 Hand",
+   "first_call_overhead_s": 0.8861,
+   "later_overhead_median_s": 0.1111
+  }
+ }
+}

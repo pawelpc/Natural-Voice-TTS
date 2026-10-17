@@ -1,0 +1,1 @@
+Pi is about 3.14159. Upgrade from v1.1.0 to v1.2.0 today. Python 3.11 and torch 2.6.0+cu124 are required. The ratio was 0.5, not .75. Kokoro 0.9.4 ships with misaki 0.9.4.

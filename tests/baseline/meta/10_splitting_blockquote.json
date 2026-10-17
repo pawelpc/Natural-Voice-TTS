@@ -1,0 +1,328 @@
+{
+ "id": "10_splitting_blockquote",
+ "category": "splitting",
+ "origin": "real",
+ "chunks": 6,
+ "skipped": 0,
+ "kokoro_segments": 8,
+ "duration_s": 61.3,
+ "synth_s": 3.2,
+ "wav_sha256": "2bc207928ae1a39517a44b2096f60650ceee16998ccfd48777459fe69a412a32",
+ "sentences": [
+  {
+   "text": "Read it — and I can already see the likely culprit.",
+   "synth_s": 0.189,
+   "ms": 3200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Read it — and I can already see the likely culprit",
+     "phonemes": "ɹˈid ɪt — ænd ˌI kæn ˌɔlɹˈɛdi sˈi ðə lˈIkli kˈʌlpɹət",
+     "samples": 76800,
+     "ms": 3200.0,
+     "lead_ms": 320.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 680,
+       "ms": 240
+      },
+      {
+       "at_ms": 2460,
+       "ms": 60
+      },
+      {
+       "at_ms": 2650,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The skill's ongoing-mode instructions do say \"full response text\" (lines 22, 33–36), but **line 42** undercuts them:",
+   "synth_s": 0.486,
+   "ms": 10075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The skill's ongoing-mode instructions do say \"full response text\" (lines 22, 33–36), but **line 42** undercuts them:",
+     "phonemes": "ðə skˈɪlz ˈɔnɡˌOɪŋmˌOd ɪnstɹˈʌkʃənz dˈu sˈA “fˈʊl ɹəspˈɑns tˈɛkst” (lˈInz twˈɛnti tˈu, θˈɜɹTi θɹˈi θˈɜɹTi sˈɪks), bˌʌt lˈIn fˈɔɹTi tˈu ˌʌndəɹkˈʌts ðˌɛm:",
+     "samples": 241800,
+     "ms": 10075.0,
+     "lead_ms": 300.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 2870,
+       "ms": 230
+      },
+      {
+       "at_ms": 4020,
+       "ms": 70
+      },
+      {
+       "at_ms": 4260,
+       "ms": 510
+      },
+      {
+       "at_ms": 5850,
+       "ms": 220
+      },
+      {
+       "at_ms": 6350,
+       "ms": 60
+      },
+      {
+       "at_ms": 6620,
+       "ms": 70
+      },
+      {
+       "at_ms": 7170,
+       "ms": 80
+      },
+      {
+       "at_ms": 7390,
+       "ms": 440
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "> \"Don't call `speak` with markdown formatting, code blocks, or special characters — send clean readable text.\"",
+   "synth_s": 0.434,
+   "ms": 7175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "> \"Don't call `speak` with markdown formatting, code blocks, or special characters — send clean readable text",
+     "phonemes": "“dˈOnt kˈɔl “spˈik” wɪð mˈɑɹkdˌWn fˈɔɹmˌæTɪŋ, kˈOd blˈɑks, ɔɹ spˈɛʃᵊl kˈɛɹəktəɹz — sˈɛnd klˈin ɹˈidəbᵊl tˈɛkst",
+     "samples": 159000,
+     "ms": 6625.0,
+     "lead_ms": 310.0,
+     "trail_ms": 255.0,
+     "pauses": [
+      {
+       "at_ms": 850,
+       "ms": 60
+      },
+      {
+       "at_ms": 1060,
+       "ms": 70
+      },
+      {
+       "at_ms": 1140,
+       "ms": 190
+      },
+      {
+       "at_ms": 1660,
+       "ms": 70
+      },
+      {
+       "at_ms": 2530,
+       "ms": 200
+      },
+      {
+       "at_ms": 4100,
+       "ms": 80
+      },
+      {
+       "at_ms": 4460,
+       "ms": 400
+      },
+      {
+       "at_ms": 5160,
+       "ms": 70
+      },
+      {
+       "at_ms": 6200,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "\"",
+     "phonemes": "“",
+     "samples": 13200,
+     "ms": 550.0,
+     "lead_ms": 440.0,
+     "trail_ms": 0.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "That's vague enough to license exactly what you saw: a model can read \"send clean readable text\" as \"send a trimmed/cleaned subset,\" and there's **no explicit rule forbidding partial sends**.",
+   "synth_s": 0.645,
+   "ms": 13575.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's vague enough to license exactly what you saw: a model can read \"send clean readable text\" as \"send a trimmed/cleaned subset,\" and there's **no explicit rule forbidding partial sends**",
+     "phonemes": "ðˈæts vˈAɡ ɪnˈʌf tə lˈIsᵊns ɪɡzˈæktli wˌʌt ju sˈɔ: ɐ mˈɑdᵊl kæn ɹˈid “sˈɛnd klˈin ɹˈidəbᵊl tˈɛkst” æz “sˈɛnd ɐ tɹˈɪmd klˈind sˈʌbsˌɛt,” ænd ðɛɹz ˈæstəɹɹˌɪskəstəɹɹˌɪsk nˈO ɪksplˈɪsət ɹˈul fəɹbˈɪdɪŋ pˈɑɹʃᵊl sˈɛndz",
+     "samples": 325800,
+     "ms": 13575.0,
+     "lead_ms": 320.0,
+     "trail_ms": 565.0,
+     "pauses": [
+      {
+       "at_ms": 2080,
+       "ms": 60
+      },
+      {
+       "at_ms": 2900,
+       "ms": 520
+      },
+      {
+       "at_ms": 4430,
+       "ms": 240
+      },
+      {
+       "at_ms": 4960,
+       "ms": 70
+      },
+      {
+       "at_ms": 6030,
+       "ms": 60
+      },
+      {
+       "at_ms": 6260,
+       "ms": 360
+      },
+      {
+       "at_ms": 7630,
+       "ms": 70
+      },
+      {
+       "at_ms": 8480,
+       "ms": 600
+      },
+      {
+       "at_ms": 11710,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Combined, it invites the divergence R1 was meant to prevent — full text to chat, a reduced version to `speak()`.",
+   "synth_s": 0.405,
+   "ms": 7625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Combined, it invites the divergence R1 was meant to prevent — full text to chat, a reduced version to `speak()`",
+     "phonemes": "kəmbˈInd, ɪt ɪnvˈIts ðə dəvˈɜɹʤəns ˈɑɹ wˈʌn wʌz mˈɛnt tə pɹivˈɛnt — fˈʊl tˈɛkst tə ʧˈæt, ɐ ɹədˈust vˈɜɹʒən tə “spˈik()“",
+     "samples": 183000,
+     "ms": 7625.0,
+     "lead_ms": 290.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 840,
+       "ms": 290
+      },
+      {
+       "at_ms": 2360,
+       "ms": 60
+      },
+      {
+       "at_ms": 3910,
+       "ms": 230
+      },
+      {
+       "at_ms": 5060,
+       "ms": 550
+      },
+      {
+       "at_ms": 6830,
+       "ms": 60
+      },
+      {
+       "at_ms": 7020,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "So the durable fix is a SKILL.md revision that makes it unambiguous: send the **entire** response verbatim — every sentence, no summarizing, no excerpting, no omissions — and reframe the formatting note so it can't be read as permission to change the words.",
+   "synth_s": 1.043,
+   "ms": 19650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "So the durable fix is a SKILL",
+     "phonemes": "sˌO ðə dˈʊɹəbᵊl fˈɪks ɪz ɐ skˈɪl",
+     "samples": 54600,
+     "ms": 2275.0,
+     "lead_ms": 290.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 940,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "md revision that makes it unambiguous: send the **entire** response verbatim — every sentence, no summarizing, no excerpting, no omissions — and reframe the formatting note so it can't be read as permission to change the words",
+     "phonemes": "ˌɛmdˈi ɹəvˈɪʒᵊn ðæt mˌAks ɪt ˌʌnˌæmbˈɪɡjəwəs: sˈɛnd ðə ˈæstəɹɹˌɪskəstəɹɹˌɪsk ɛntˈIəɹɹ ˈæstəɹɹˌɪsk ɹəspˈɑns vəɹbˈATəm — ˈɛvəɹi sˈɛntᵊns, nˈO sˈʌməɹˌIzɪŋ, nˈO ɛksˈɜɹptɪŋ, nˈO Omˈɪʃənz — ænd ɹifɹˈAm ðə fˈɔɹmˌæTɪŋ nˈOt sˌO ɪt kˈænt bi ɹˈɛd æz pəɹmˈɪʃən tə ʧˈAnʤ ðə wˈɜɹdz",
+     "samples": 417000,
+     "ms": 17375.0,
+     "lead_ms": 330.0,
+     "trail_ms": 545.0,
+     "pauses": [
+      {
+       "at_ms": 1830,
+       "ms": 120
+      },
+      {
+       "at_ms": 2850,
+       "ms": 530
+      },
+      {
+       "at_ms": 6470,
+       "ms": 60
+      },
+      {
+       "at_ms": 6990,
+       "ms": 640
+      },
+      {
+       "at_ms": 8530,
+       "ms": 240
+      },
+      {
+       "at_ms": 9680,
+       "ms": 310
+      },
+      {
+       "at_ms": 10870,
+       "ms": 220
+      },
+      {
+       "at_ms": 11950,
+       "ms": 430
+      },
+      {
+       "at_ms": 13950,
+       "ms": 180
+      },
+      {
+       "at_ms": 14310,
+       "ms": 60
+      },
+      {
+       "at_ms": 14590,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

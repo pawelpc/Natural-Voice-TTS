@@ -1,0 +1,384 @@
+{
+ "id": "14_abbreviations_plugin_plan",
+ "category": "abbreviations",
+ "origin": "real",
+ "chunks": 6,
+ "skipped": 0,
+ "kokoro_segments": 12,
+ "duration_s": 76.58,
+ "synth_s": 3.94,
+ "wav_sha256": "478823a555c77756005e497600d1e7bc2b051f98245900be3d553a7e862ede61",
+ "sentences": [
+  {
+   "text": "Here's what I recommend, split by who does what:",
+   "synth_s": 0.188,
+   "ms": 3175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here's what I recommend, split by who does what:",
+     "phonemes": "hˈɪɹz wˌʌt ˌI ɹˌɛkəmˈɛnd, splˈɪt bI hˌu dˈʌz wˌʌt:",
+     "samples": 76200,
+     "ms": 3175.0,
+     "lead_ms": 310.0,
+     "trail_ms": 545.0,
+     "pauses": [
+      {
+       "at_ms": 1330,
+       "ms": 210
+      },
+      {
+       "at_ms": 1650,
+       "ms": 60
+      },
+      {
+       "at_ms": 1860,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Me (now, in the repo):** finalize the `SKILL.md` with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (`.claude-plugin/plugin.json` + `skills/natural-voice-tts/`), and fix `install_config.py` so it stops installing to the dead location.",
+   "synth_s": 1.407,
+   "ms": 26900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Me (now, in the repo):** finalize the `SKILL",
+     "phonemes": "— mˌi (nˈW, ɪn ðə ɹˈipˌO: fˈInᵊlˌIz ðə “skˈɪl",
+     "samples": 76200,
+     "ms": 3175.0,
+     "lead_ms": 330.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 1420,
+       "ms": 310
+      }
+     ]
+    },
+    {
+     "graphemes": "md` with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (`",
+     "phonemes": "ˌɛmdˈi“ wɪð jʊɹ kˌɔɹtɹəpˈɔɹTəɹ ɹˈulz (vəɹbˈATəm wˈɜɹdz, nˈuməɹəlzæznˈʌmbəɹz ˌOkˈA, nˈʌθɪŋ ˈædᵻddɹˈɑpt ʧˈAnʤd, spˈik ˈɛvəɹi tˈɜɹn ˌʌntˈɪl vˈYs ˈɔf), lˈA ɪt ˈWt æz ɐ pɹˈɑpəɹ plˈʌɡɪn pˈækɪʤ (“",
+     "samples": 290400,
+     "ms": 12100.0,
+     "lead_ms": 330.0,
+     "trail_ms": 390.0,
+     "pauses": [
+      {
+       "at_ms": 2310,
+       "ms": 110
+      },
+      {
+       "at_ms": 3250,
+       "ms": 420
+      },
+      {
+       "at_ms": 5150,
+       "ms": 260
+      },
+      {
+       "at_ms": 5580,
+       "ms": 70
+      },
+      {
+       "at_ms": 6340,
+       "ms": 80
+      },
+      {
+       "at_ms": 6990,
+       "ms": 300
+      },
+      {
+       "at_ms": 7590,
+       "ms": 70
+      },
+      {
+       "at_ms": 9150,
+       "ms": 440
+      },
+      {
+       "at_ms": 10350,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "claude-plugin/plugin",
+     "phonemes": "klˈɔdplˈʌɡɪn slˈæʃ plˈʌɡɪn",
+     "samples": 49800,
+     "ms": 2075.0,
+     "lead_ms": 300.0,
+     "trail_ms": 435.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "json` + `skills/natural-voice-tts/`), and fix `install_config",
+     "phonemes": "ʤˈAsˈɑn” plˈʌs “skˈɪlz slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs slˈæʃ”), ænd fˈɪks “ɪnstˈɔl kənfˈɪɡ",
+     "samples": 145200,
+     "ms": 6050.0,
+     "lead_ms": 320.0,
+     "trail_ms": 420.0,
+     "pauses": [
+      {
+       "at_ms": 1200,
+       "ms": 90
+      },
+      {
+       "at_ms": 3620,
+       "ms": 450
+      },
+      {
+       "at_ms": 4210,
+       "ms": 70
+      },
+      {
+       "at_ms": 4400,
+       "ms": 70
+      },
+      {
+       "at_ms": 4600,
+       "ms": 70
+      },
+      {
+       "at_ms": 5350,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "py` so it stops installing to the dead location",
+     "phonemes": "pˈI“ sˌO ɪt stˈɑps ɪnstˈɔlɪŋ tə ðə dˈɛd lOkˈAʃən",
+     "samples": 84000,
+     "ms": 3500.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 650,
+       "ms": 180
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **You (in Cowork):** run **`/skill-creator`** (or `/create-cowork-plugin`) and point it at that prepared `SKILL.md` so it registers into the manifest system Cowork actually reads.",
+   "synth_s": 0.724,
+   "ms": 14150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **You (in Cowork):** run **`/skill-creator`** (or `/create-cowork-plugin`) and point it at that prepared `SKILL",
+     "phonemes": "— jˌu (ɪn kˈWɜɹk:ˈæstəɹɹˌɪsk ɹˈʌn ˈæstəɹɹˌɪskəstəɹɹˌɪsk“skˈɪl kɹiˈATəɹ” (ɔɹ “slˈæʃ kɹiˈAtkˈWɜɹkplˈʌɡɪn”) ænd pˈYnt ɪt æt ðˈæt pɹipˈɛɹd “skˈɪl",
+     "samples": 217200,
+     "ms": 9050.0,
+     "lead_ms": 330.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1080,
+       "ms": 60
+      },
+      {
+       "at_ms": 1160,
+       "ms": 280
+      },
+      {
+       "at_ms": 3260,
+       "ms": 150
+      },
+      {
+       "at_ms": 4180,
+       "ms": 320
+      },
+      {
+       "at_ms": 5940,
+       "ms": 70
+      },
+      {
+       "at_ms": 6410,
+       "ms": 420
+      },
+      {
+       "at_ms": 7570,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "md` so it registers into the manifest system Cowork actually reads",
+     "phonemes": "ˌɛmdˈi” sˌO ɪt ɹˈɛʤəstəɹz ˈɪntu ðə mˈænəfˌɛst sˈɪstəm kˈWɜɹk ˈækʧəwəli ɹˈidz",
+     "samples": 122400,
+     "ms": 5100.0,
+     "lead_ms": 330.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 850,
+       "ms": 190
+      },
+      {
+       "at_ms": 2300,
+       "ms": 70
+      },
+      {
+       "at_ms": 2980,
+       "ms": 340
+      },
+      {
+       "at_ms": 3640,
+       "ms": 60
+      },
+      {
+       "at_ms": 3730,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll guide the exact steps.",
+   "synth_s": 0.133,
+   "ms": 2075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll guide the exact steps",
+     "phonemes": "ˌIl ɡˈId ði ɪɡzˈækt stˈɛps",
+     "samples": 49800,
+     "ms": 2075.0,
+     "lead_ms": 320.0,
+     "trail_ms": 405.0,
+     "pauses": [
+      {
+       "at_ms": 1480,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One honesty note: I've confirmed *where* Cowork reads skills, but the precise hand-off to register a **custom** skill into that manifest (vs.",
+   "synth_s": 0.62,
+   "ms": 12975.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One honesty note: I've confirmed *where* Cowork reads skills, but the precise hand-off to register a **custom** skill into that manifest (vs",
+     "phonemes": "wˈʌn ˈɑnəsti nˈOt: ˌIv kənfˈɜɹmd ˈæstəɹɹˌɪsk wˈɛɹ kˈWɜɹk ɹˈidz skˈɪlz, bˌʌt ðə pɹisˈIs hˈændˌɔf tə ɹˈɛʤəstəɹ ɐ ˈæstəɹɹˌɪskəstəɹɹˌɪsk kˈʌstəm ˈæstəɹɹˌɪskəstəɹɹˌɪsk skˈɪl ˈɪntu ðˈæt mˈænəfˌɛst (vˈiz",
+     "samples": 311400,
+     "ms": 12975.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1280,
+       "ms": 590
+      },
+      {
+       "at_ms": 3200,
+       "ms": 60
+      },
+      {
+       "at_ms": 4810,
+       "ms": 450
+      },
+      {
+       "at_ms": 6380,
+       "ms": 160
+      },
+      {
+       "at_ms": 8260,
+       "ms": 100
+      },
+      {
+       "at_ms": 10290,
+       "ms": 140
+      },
+      {
+       "at_ms": 11210,
+       "ms": 60
+      },
+      {
+       "at_ms": 11560,
+       "ms": 380
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product `skill-creator`/`create-cowork-plugin` tool is safer than me hand-editing the managed `manifest.json` (which looks like it re-syncs and would wipe a manual entry).",
+   "synth_s": 0.869,
+   "ms": 17300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product `skill-creator`/`create-cowork-plugin` tool is safer than me hand-editing the managed `manifest",
+     "phonemes": "ði ænθɹˈɑpɪkmˌænɪʤd wˈʌnz) ɪz ðə pˈɑɹt ˌI kˈænt fˈʊli tˈɛst fɹʌm hˈɪɹ — ðˈæts wˌI ɹˈWTɪŋ ɪt θɹu ði ɪnpɹˈɑdˌʌkt “skˈɪlkɹiˈATəɹ slˈæʃ kɹiˈAtkˈWɜɹkplˈʌɡɪn” tˈul ɪz sˈAfəɹ ðən mˌi hˌændˈɛdəTɪŋ ðə mˈænɪʤd “mˈænəfˌɛst",
+     "samples": 308400,
+     "ms": 12850.0,
+     "lead_ms": 320.0,
+     "trail_ms": 270.0,
+     "pauses": [
+      {
+       "at_ms": 1660,
+       "ms": 340
+      },
+      {
+       "at_ms": 3920,
+       "ms": 490
+      },
+      {
+       "at_ms": 5310,
+       "ms": 80
+      },
+      {
+       "at_ms": 6200,
+       "ms": 90
+      },
+      {
+       "at_ms": 6330,
+       "ms": 240
+      },
+      {
+       "at_ms": 8340,
+       "ms": 70
+      },
+      {
+       "at_ms": 8790,
+       "ms": 570
+      },
+      {
+       "at_ms": 11860,
+       "ms": 120
+      }
+     ]
+    },
+    {
+     "graphemes": "json` (which looks like it re-syncs and would wipe a manual entry)",
+     "phonemes": "ʤˈAsˈɑn” (wˌɪʧ lˈʊks lˈIk ɪt ɹˌisˈɪŋks ænd wʊd wˈIp ɐ mˈænjəwəl ˈɛntɹi)",
+     "samples": 106800,
+     "ms": 4450.0,
+     "lead_ms": 320.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 960,
+       "ms": 270
+      },
+      {
+       "at_ms": 2450,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

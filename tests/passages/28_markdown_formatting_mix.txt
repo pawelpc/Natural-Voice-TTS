@@ -1,0 +1,11 @@
+# Release Notes
+
+## What changed
+
+The **splitter** now handles *abbreviations* and `v1.2.0` versions. See [the README](https://github.com/pawelpc/Natural-Voice-TTS#readme) for details.
+
+---
+
+### Known issues
+
+> Note: __bold underscores__ and ~~old text~~ are still read literally.

@@ -1,0 +1,440 @@
+{
+ "id": "01_markdown_what_i_did",
+ "category": "markdown",
+ "origin": "real",
+ "chunks": 8,
+ "skipped": 0,
+ "kokoro_segments": 11,
+ "duration_s": 81.58,
+ "synth_s": 4.16,
+ "wav_sha256": "6aeffc645b86a9d0cfb3229db25ba86278f13ef574daf769138b54ba9289178d",
+ "sentences": [
+  {
+   "text": "## What I did",
+   "synth_s": 0.149,
+   "ms": 1675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## What I did",
+     "phonemes": "hˈæʃ wˌʌt ˌI dˈɪd",
+     "samples": 40200,
+     "ms": 1675.0,
+     "lead_ms": 360.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Followed the diagnose-then-fix workflow from the brief.",
+   "synth_s": 0.199,
+   "ms": 3300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Followed the diagnose-then-fix workflow from the brief",
+     "phonemes": "fˈɑlOd ðə dˌIəɡnˈOsðˌɛnfˈɪks wˈɜɹkflˌO fɹʌm ðə bɹˈif",
+     "samples": 79200,
+     "ms": 3300.0,
+     "lead_ms": 340.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1940,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**Root cause confirmed as D1** (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox.",
+   "synth_s": 0.651,
+   "ms": 13625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**Root cause confirmed as D1** (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox",
+     "phonemes": "ɹˈut kˈɔz kənfˈɜɹmd æz dˈi wˈʌn ˈæstəɹɹˌɪskəstəɹɹˌɪsk (ʃˈɔɹtɹˌid ˌɔn ðə bˌItmˈOd nˈAmd pˈIp) — vˈIə kˈOd ənˈæləsɪs plˈʌs ɐ dətˌɜɹmənˈɪstɪk sˌɪmjəlˈAʃən, sˈɪns ˌI kˈænt ɹˈʌn ðə lˈIv pˈIp fɹʌm ðə sˈændbˌɑks",
+     "samples": 327000,
+     "ms": 13625.0,
+     "lead_ms": 330.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 530,
+       "ms": 100
+      },
+      {
+       "at_ms": 1870,
+       "ms": 70
+      },
+      {
+       "at_ms": 2460,
+       "ms": 70
+      },
+      {
+       "at_ms": 3680,
+       "ms": 420
+      },
+      {
+       "at_ms": 5760,
+       "ms": 60
+      },
+      {
+       "at_ms": 6040,
+       "ms": 60
+      },
+      {
+       "at_ms": 6120,
+       "ms": 630
+      },
+      {
+       "at_ms": 8110,
+       "ms": 240
+      },
+      {
+       "at_ms": 8750,
+       "ms": 60
+      },
+      {
+       "at_ms": 10260,
+       "ms": 400
+      },
+      {
+       "at_ms": 11940,
+       "ms": 70
+      },
+      {
+       "at_ms": 12200,
+       "ms": 100
+      },
+      {
+       "at_ms": 12960,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "### Root cause\nThe pipe path is the only one that reassembles text from bytes.",
+   "synth_s": 0.367,
+   "ms": 6000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "### Root cause",
+     "phonemes": "hˈæʃhæʃ ɹˈut kˈɔz",
+     "samples": 46800,
+     "ms": 1950.0,
+     "lead_ms": 360.0,
+     "trail_ms": 510.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "The pipe path is the only one that reassembles text from bytes",
+     "phonemes": "ðə pˈIp pˈæθ ɪz ði ˈOnli wˈʌn ðæt ɹˌiəsˈɛmbᵊlz tˈɛkst fɹʌm bˈIts",
+     "samples": 97200,
+     "ms": 4050.0,
+     "lead_ms": 300.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 570,
+       "ms": 70
+      },
+      {
+       "at_ms": 900,
+       "ms": 80
+      },
+      {
+       "at_ms": 990,
+       "ms": 80
+      },
+      {
+       "at_ms": 1890,
+       "ms": 130
+      },
+      {
+       "at_ms": 3470,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "In [`pipe_listener.py`](src/pipe_listener.py) the payload was read with a **single** `ReadFile(pipe, length)`.",
+   "synth_s": 0.64,
+   "ms": 11400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "In [`pipe_listener",
+     "phonemes": "ɪn [“pˌIplˈɪsᵊnəɹ",
+     "samples": 41400,
+     "ms": 1725.0,
+     "lead_ms": 370.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "py`](src/pipe_listener",
+     "phonemes": "pˈI](ˌɛsˌɑɹsˈi slˈæʃ pˈIp lˈɪsənəɹ",
+     "samples": 61200,
+     "ms": 2550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "py) the payload was read with a **single** `ReadFile(pipe, length)`",
+     "phonemes": "pˈI) ðə pˈAlˌOd wʌz ɹˈɛd wɪð ɐ ˈæstəɹɹˌɪskəstəɹɹˌɪsk sˈɪŋɡᵊl ˈæstəɹɹˌɪskəstəɹɹˌɪsk “ɹˈid fˈIl(pˈIp, lˈɛŋθ)”",
+     "samples": 171000,
+     "ms": 7125.0,
+     "lead_ms": 300.0,
+     "trail_ms": 575.0,
+     "pauses": [
+      {
+       "at_ms": 4350,
+       "ms": 290
+      },
+      {
+       "at_ms": 5340,
+       "ms": 370
+      },
+      {
+       "at_ms": 5930,
+       "ms": 70
+      },
+      {
+       "at_ms": 6010,
+       "ms": 230
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Windows `PIPE_TYPE_BYTE` pipes don't guarantee one `ReadFile` returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a **truncated prefix** (tail sentences vanish), or a cut mid-UTF-8-sequence made `decode()` raise and the broad `except` dropped the **whole** message.",
+   "synth_s": 1.12,
+   "ms": 24175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Windows `PIPE_TYPE_BYTE` pipes don't guarantee one `ReadFile` returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a **truncated prefix** (tail sentences vanish), or a cut mid-UTF-8-sequence made `decode()` raise and the broad `except` dropped the **whole** message",
+     "phonemes": "wˈɪndOz “pˌIptˈIpbˈIt” pˈIps dˈOnt ɡˌɛɹəntˈi wˈʌn “ɹˌidfˈIl” ɹətˈɜɹnz ˈɔl ɹəkwˈɛstᵻd bˈIts — fɔɹ lˈɔŋɡəɹ ˈAʤᵊnt ɹəspˈɑnsᵻz ðə pˈAlˌOd əɹˈIvz fɹˈæɡmˌɛntᵻd, sˌO ðə sˈɪŋɡᵊl ɹˈid ɹətˈɜɹnd ɐ ˈæstəɹɹˌɪskəstəɹɹˌɪsk tɹˈʌŋkATᵻd pɹˈifˌɪks (tˈAl sˈɛntᵊnsᵻz vˈænɪʃ), ɔɹ ɐ kˈʌt mˈɪd jˌutˌiˈɛf ˈAt sˈikwəns mˌAd “dˌikˈOd()“ ɹˈAz ænd ðə bɹˈɔd “ɪksˈɛpt“ dɹˈɑpt ðə ˈæstəɹɹˌɪskəstəɹɹˌɪsk hˈOl ˈæstəɹɹˌɪskəstəɹɹˌɪsk mˈɛsɪʤ",
+     "samples": 580200,
+     "ms": 24175.0,
+     "lead_ms": 330.0,
+     "trail_ms": 625.0,
+     "pauses": [
+      {
+       "at_ms": 1240,
+       "ms": 80
+      },
+      {
+       "at_ms": 1510,
+       "ms": 260
+      },
+      {
+       "at_ms": 4370,
+       "ms": 60
+      },
+      {
+       "at_ms": 5370,
+       "ms": 70
+      },
+      {
+       "at_ms": 5560,
+       "ms": 530
+      },
+      {
+       "at_ms": 6590,
+       "ms": 60
+      },
+      {
+       "at_ms": 8500,
+       "ms": 60
+      },
+      {
+       "at_ms": 9070,
+       "ms": 440
+      },
+      {
+       "at_ms": 10840,
+       "ms": 70
+      },
+      {
+       "at_ms": 11710,
+       "ms": 90
+      },
+      {
+       "at_ms": 12260,
+       "ms": 60
+      },
+      {
+       "at_ms": 12480,
+       "ms": 70
+      },
+      {
+       "at_ms": 12630,
+       "ms": 60
+      },
+      {
+       "at_ms": 12800,
+       "ms": 300
+      },
+      {
+       "at_ms": 14390,
+       "ms": 570
+      },
+      {
+       "at_ms": 16080,
+       "ms": 60
+      },
+      {
+       "at_ms": 17620,
+       "ms": 580
+      },
+      {
+       "at_ms": 19250,
+       "ms": 160
+      },
+      {
+       "at_ms": 19750,
+       "ms": 90
+      },
+      {
+       "at_ms": 19880,
+       "ms": 420
+      },
+      {
+       "at_ms": 21770,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The hotkey path never touches the pipe, which is exactly why it never dropped anything.",
+   "synth_s": 0.292,
+   "ms": 5600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The hotkey path never touches the pipe, which is exactly why it never dropped anything",
+     "phonemes": "ðə hˈɑtki pˈæθ nˈɛvəɹ tˈʌʧᵻz ðə pˈIp, wˌɪʧ ɪz ɪɡzˈæktli wˌI ɪt nˈɛvəɹ dɹˈɑpt ˈɛniθˌɪŋ",
+     "samples": 134400,
+     "ms": 5600.0,
+     "lead_ms": 300.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 1040,
+       "ms": 140
+      },
+      {
+       "at_ms": 2270,
+       "ms": 80
+      },
+      {
+       "at_ms": 2360,
+       "ms": 410
+      },
+      {
+       "at_ms": 3430,
+       "ms": 60
+      },
+      {
+       "at_ms": 4850,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "My simulation with a ≤5-byte-per-call fake `ReadFile`: old single read returned 5 of 102 bytes; new `_read_exactly` returns all 102, and mid-stream EOF raises a clean `IOError`.",
+   "synth_s": 0.738,
+   "ms": 15800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "My simulation with a ≤5-byte-per-call fake `ReadFile`: old single read returned 5 of 102 bytes; new `_read_exactly` returns all 102, and mid-stream EOF raises a clean `IOError`",
+     "phonemes": "mˌI sˌɪmjəlˈAʃən wɪð ɐ lˈɛs ɔɹ ˈikwᵊl tə fˈIvbˈItpɜɹkˈɔl fˈAk “ɹˌidfˈIl”: ˈOld sˈɪŋɡᵊl ɹˈid ɹətˈɜɹnd fˈIv ʌv wˈʌn hˈʌndɹəd tˈu bˈIts; nˈu “ɹˌidɪɡzˈæktli“ ɹətˈɜɹnz ˈɔl wˈʌn hˈʌndɹəd tˈu, ænd mˌɪdstɹˈim ˌiˌOˈɛf ɹˈAzᵻz ɐ klˈin “ˌIˈO ˈɛɹəɹ”",
+     "samples": 379200,
+     "ms": 15800.0,
+     "lead_ms": 320.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 2000,
+       "ms": 60
+      },
+      {
+       "at_ms": 2690,
+       "ms": 60
+      },
+      {
+       "at_ms": 2890,
+       "ms": 60
+      },
+      {
+       "at_ms": 3560,
+       "ms": 70
+      },
+      {
+       "at_ms": 3660,
+       "ms": 220
+      },
+      {
+       "at_ms": 4440,
+       "ms": 640
+      },
+      {
+       "at_ms": 7700,
+       "ms": 90
+      },
+      {
+       "at_ms": 7930,
+       "ms": 520
+      },
+      {
+       "at_ms": 8830,
+       "ms": 130
+      },
+      {
+       "at_ms": 9500,
+       "ms": 60
+      },
+      {
+       "at_ms": 9790,
+       "ms": 330
+      },
+      {
+       "at_ms": 11710,
+       "ms": 370
+      },
+      {
+       "at_ms": 12750,
+       "ms": 70
+      },
+      {
+       "at_ms": 14380,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

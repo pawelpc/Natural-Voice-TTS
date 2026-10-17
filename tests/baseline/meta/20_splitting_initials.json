@@ -1,0 +1,275 @@
+{
+ "id": "20_splitting_initials",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 13,
+ "skipped": 0,
+ "kokoro_segments": 16,
+ "duration_s": 23.15,
+ "synth_s": 1.73,
+ "wav_sha256": "58eb373e579093b38395ab49f6549a61ea77666bcc3f8dadf5d67ad5241f587b",
+ "sentences": [
+  {
+   "text": "J.",
+   "synth_s": 0.094,
+   "ms": 1225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "J",
+     "phonemes": "ʤˈA",
+     "samples": 29400,
+     "ms": 1225.0,
+     "lead_ms": 370.0,
+     "trail_ms": 515.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "R.",
+   "synth_s": 0.099,
+   "ms": 1175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "R",
+     "phonemes": "ˈɑɹ",
+     "samples": 28200,
+     "ms": 1175.0,
+     "lead_ms": 380.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "R.",
+   "synth_s": 0.095,
+   "ms": 1175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "R",
+     "phonemes": "ˈɑɹ",
+     "samples": 28200,
+     "ms": 1175.0,
+     "lead_ms": 400.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Tolkien wrote the book.",
+   "synth_s": 0.125,
+   "ms": 1875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Tolkien wrote the book",
+     "phonemes": "tɔlkˈin ɹˈOt ðə bˈʊk",
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 330.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 60
+      },
+      {
+       "at_ms": 1310,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "George W.",
+   "synth_s": 0.111,
+   "ms": 1650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "George W",
+     "phonemes": "ʤˈɔɹʤ dˈʌbᵊlju",
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 370.0,
+     "trail_ms": 500.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Bush gave the speech.",
+   "synth_s": 0.117,
+   "ms": 1825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Bush gave the speech",
+     "phonemes": "bˈʊʃ ɡˈAv ðə spˈiʧ",
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 340.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The U.K.",
+   "synth_s": 0.201,
+   "ms": 2550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The U",
+     "phonemes": "ðə jˈu",
+     "samples": 34200,
+     "ms": 1425.0,
+     "lead_ms": 400.0,
+     "trail_ms": 545.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "K",
+     "phonemes": "kˈA",
+     "samples": 27000,
+     "ms": 1125.0,
+     "lead_ms": 380.0,
+     "trail_ms": 435.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "and the E.U.",
+   "synth_s": 0.201,
+   "ms": 2825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "and the E",
+     "phonemes": "ænd ði ˈi",
+     "samples": 37200,
+     "ms": 1550.0,
+     "lead_ms": 410.0,
+     "trail_ms": 550.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "U",
+     "phonemes": "jˈu",
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 390.0,
+     "trail_ms": 545.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "agreed on a deal.",
+   "synth_s": 0.114,
+   "ms": 1725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "agreed on a deal",
+     "phonemes": "əɡɹˈid ˌɔn ɐ dˈil",
+     "samples": 41400,
+     "ms": 1725.0,
+     "lead_ms": 350.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "A.I.",
+   "synth_s": 0.211,
+   "ms": 1525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A",
+     "phonemes": "ɐ",
+     "samples": 18000,
+     "ms": 750.0,
+     "lead_ms": 360.0,
+     "trail_ms": 210.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "I",
+     "phonemes": "ˌI",
+     "samples": 18600,
+     "ms": 775.0,
+     "lead_ms": 370.0,
+     "trail_ms": 215.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "tools are everywhere now.",
+   "synth_s": 0.126,
+   "ms": 1975.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "tools are everywhere now",
+     "phonemes": "tˈulz ɑɹ ˈɛvɹiwˌɛɹ nˈW",
+     "samples": 47400,
+     "ms": 1975.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 780,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Contact J.",
+   "synth_s": 0.115,
+   "ms": 1775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Contact J",
+     "phonemes": "kˈɑntækt ʤˈA",
+     "samples": 42600,
+     "ms": 1775.0,
+     "lead_ms": 380.0,
+     "trail_ms": 535.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Smith for details.",
+   "synth_s": 0.118,
+   "ms": 1850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Smith for details",
+     "phonemes": "smˈɪθ fɔɹ dətˈAlz",
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 340.0,
+     "trail_ms": 460.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

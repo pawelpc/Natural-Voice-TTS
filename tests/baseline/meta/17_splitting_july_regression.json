@@ -1,0 +1,259 @@
+{
+ "id": "17_splitting_july_regression",
+ "category": "splitting",
+ "origin": "real",
+ "chunks": 9,
+ "skipped": 0,
+ "kokoro_segments": 12,
+ "duration_s": 32.12,
+ "synth_s": 1.92,
+ "wav_sha256": "db2ec70d90f19d71874c80eb3814865c483a237ffba06a14a6c7114f19db5272",
+ "sentences": [
+  {
+   "text": "Sentence one is short.",
+   "synth_s": 0.126,
+   "ms": 1800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Sentence one is short",
+     "phonemes": "sˈɛntᵊns wˈʌn ɪz ʃˈɔɹt",
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 300.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 1320,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Sentence two runs a little longer — with an em dash — to add\nbytes.",
+   "synth_s": 0.317,
+   "ms": 5250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Sentence two runs a little longer — with an em dash — to add",
+     "phonemes": "sˈɛntᵊns tˈu ɹˈʌnz ɐ lˈɪTᵊl lˈɔŋɡəɹ — wɪð ɐn ˈɛm dˈæʃ — tʊ ˈæd",
+     "samples": 94200,
+     "ms": 3925.0,
+     "lead_ms": 300.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1940,
+       "ms": 70
+      },
+      {
+       "at_ms": 2860,
+       "ms": 130
+      }
+     ]
+    },
+    {
+     "graphemes": "bytes",
+     "phonemes": "bˈIts",
+     "samples": 31800,
+     "ms": 1325.0,
+     "lead_ms": 390.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Here is a third sentence with \"curly quotes\" and an ellipsis… Sentence four asks\na question?",
+   "synth_s": 0.378,
+   "ms": 6650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here is a third sentence with \"curly quotes\" and an ellipsis… Sentence four asks",
+     "phonemes": "hˈɪɹ ɪz ɐ θˈɜɹd sˈɛntᵊns wɪð “kˈɜɹli kwˈOts” ænd ɐn əlˈɪpsɪs… sˈɛntᵊns fˈɔɹ ˈæsks",
+     "samples": 121200,
+     "ms": 5050.0,
+     "lead_ms": 320.0,
+     "trail_ms": 420.0,
+     "pauses": [
+      {
+       "at_ms": 690,
+       "ms": 90
+      },
+      {
+       "at_ms": 1510,
+       "ms": 100
+      },
+      {
+       "at_ms": 2320,
+       "ms": 100
+      },
+      {
+       "at_ms": 3120,
+       "ms": 360
+      },
+      {
+       "at_ms": 3900,
+       "ms": 90
+      }
+     ]
+    },
+    {
+     "graphemes": "a question",
+     "phonemes": "ɐ kwˈɛsʧᵊn",
+     "samples": 38400,
+     "ms": 1600.0,
+     "lead_ms": 390.0,
+     "trail_ms": 520.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Sentence five!",
+   "synth_s": 0.115,
+   "ms": 1775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Sentence five",
+     "phonemes": "sˈɛntᵊns fˈIv",
+     "samples": 42600,
+     "ms": 1775.0,
+     "lead_ms": 380.0,
+     "trail_ms": 555.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Number six keeps the payload growing so the pipe fragments.",
+   "synth_s": 0.219,
+   "ms": 3825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Number six keeps the payload growing so the pipe fragments",
+     "phonemes": "nˈʌmbəɹ sˈɪks kˈips ðə pˈAlˌOd ɡɹˈOɪŋ sˌO ðə pˈIp fɹˈæɡmənts",
+     "samples": 91800,
+     "ms": 3825.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 800,
+       "ms": 70
+      },
+      {
+       "at_ms": 990,
+       "ms": 180
+      },
+      {
+       "at_ms": 2790,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Seven, eight, and nine follow in quick succession.",
+   "synth_s": 0.192,
+   "ms": 3250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Seven, eight, and nine follow in quick succession",
+     "phonemes": "sˈɛvən, ˈAt, ænd nˈIn fˈɑlO ɪn kwˈɪk səksˈɛʃən",
+     "samples": 78000,
+     "ms": 3250.0,
+     "lead_ms": 300.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 910,
+       "ms": 260
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Ten is here.",
+   "synth_s": 0.109,
+   "ms": 1575.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Ten is here",
+     "phonemes": "tˈɛn ɪz hˈɪɹ",
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 370.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Eleven is the\nsecond-to-last.",
+   "synth_s": 0.232,
+   "ms": 3525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Eleven is the",
+     "phonemes": "əlˈɛvᵊn ɪz ðə",
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 390.0,
+     "trail_ms": 575.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "second-to-last",
+     "phonemes": "sˈɛkəndtəlˈæst",
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 370.0,
+     "trail_ms": 460.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "This twelfth and final sentence is the tail that used to disappear.",
+   "synth_s": 0.237,
+   "ms": 4475.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This twelfth and final sentence is the tail that used to disappear",
+     "phonemes": "ðˌɪs twˈɛlfθ ænd fˈInᵊl sˈɛntᵊns ɪz ðə tˈAl ðæt jˈust tə dˌɪsəpˈɪɹ",
+     "samples": 107400,
+     "ms": 4475.0,
+     "lead_ms": 310.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 870,
+       "ms": 60
+      },
+      {
+       "at_ms": 1090,
+       "ms": 70
+      },
+      {
+       "at_ms": 1960,
+       "ms": 330
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

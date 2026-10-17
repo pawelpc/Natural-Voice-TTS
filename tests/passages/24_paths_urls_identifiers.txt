@@ -1,0 +1,1 @@
+Call split_sentences() in text_processor.py, then set SPLIT_PATTERN and HF_HUB_OFFLINE=1. The KPipeline class wraps KModel, so use tts_engine.init() once. Check config.get('voice') and the --noconfirm flag in naturalvoicetts.spec.

@@ -1,0 +1,4 @@
+Toolchain is all present (PyInstaller 6.19, Inno Setup 6, espeak-ng, Kokoro model cached). Two things to note:
+
+- The installer is **~1.8 GB** — confirms it must stay a local artifact, not a git commit.
+- Your current app is **running** (pid 14652, the installed copy). Building won't touch it, but the strongest pre-flight test — actually launching the freshly-built exe — is blocked by the app's single-instance mutex while that instance runs. I'll handle that at the end.

@@ -1,0 +1,385 @@
+{
+ "id": "12_symbols_skill_fix_strike",
+ "category": "symbols",
+ "origin": "real",
+ "chunks": 8,
+ "skipped": 0,
+ "kokoro_segments": 14,
+ "duration_s": 68.2,
+ "synth_s": 3.68,
+ "wav_sha256": "b3e3f33adcfc0ebde904e557cea0066405903b3b0b9904824794579de34d3993",
+ "sentences": [
+  {
+   "text": "The skill wording is what let the agent under-send.",
+   "synth_s": 0.189,
+   "ms": 3300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The skill wording is what let the agent under-send",
+     "phonemes": "ðə skˈɪl wˈɜɹdɪŋ ɪz wˌʌt lˈɛt ði ˈAʤᵊnt ˈʌndəɹsˌɛnd",
+     "samples": 79200,
+     "ms": 3300.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 230
+      },
+      {
+       "at_ms": 1860,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Proposed changes to `SKILL.md`:",
+   "synth_s": 0.245,
+   "ms": 3675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Proposed changes to `SKILL",
+     "phonemes": "pɹəpˈOzd ʧˈAnʤᵻz tə “skˈɪl",
+     "samples": 51000,
+     "ms": 2125.0,
+     "lead_ms": 300.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "md`:",
+     "phonemes": "ˌɛmdˈi”:",
+     "samples": 37200,
+     "ms": 1550.0,
+     "lead_ms": 410.0,
+     "trail_ms": 580.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "**Add an explicit completeness rule (Step 3):**\n> Send the **complete response, verbatim** — the same text you wrote to chat, every sentence, in order.",
+   "synth_s": 0.609,
+   "ms": 11675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**Add an explicit completeness rule (Step 3):**",
+     "phonemes": "ˈæd ɐn ɪksplˈɪsət kəmplˈitnəs ɹˈul (stˈɛp θɹˈi):",
+     "samples": 78600,
+     "ms": 3275.0,
+     "lead_ms": 310.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1040,
+       "ms": 60
+      },
+      {
+       "at_ms": 1930,
+       "ms": 200
+      }
+     ]
+    },
+    {
+     "graphemes": "> Send the **complete response, verbatim** — the same text you wrote to chat, every sentence, in order",
+     "phonemes": "sˈɛnd ðə ˈæstəɹɹˌɪskəstəɹɹˌɪsk kəmplˈit ɹəspˈɑns, vɜɹbˈATɪm ˈæstəɹɹˌɪsk — ðə sˈAm tˈɛkst ju ɹˈOt tə ʧˈæt, ˈɛvəɹi sˈɛntᵊns, ɪn ˈɔɹdəɹ",
+     "samples": 201600,
+     "ms": 8400.0,
+     "lead_ms": 310.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1510,
+       "ms": 100
+      },
+      {
+       "at_ms": 2630,
+       "ms": 150
+      },
+      {
+       "at_ms": 4030,
+       "ms": 490
+      },
+      {
+       "at_ms": 6040,
+       "ms": 370
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Never summarize, shorten, excerpt, or send only the first part.",
+   "synth_s": 0.245,
+   "ms": 4650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Never summarize, shorten, excerpt, or send only the first part",
+     "phonemes": "nˈɛvəɹ sˈʌməɹˌIz, ʃˈɔɹtn, ˈɛksˌɜɹpt, ɔɹ sˈɛnd ˈOnli ðə fˈɜɹst pˈɑɹt",
+     "samples": 111600,
+     "ms": 4650.0,
+     "lead_ms": 320.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 1280,
+       "ms": 150
+      },
+      {
+       "at_ms": 1900,
+       "ms": 70
+      },
+      {
+       "at_ms": 2350,
+       "ms": 90
+      },
+      {
+       "at_ms": 2470,
+       "ms": 340
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The spoken words must match the written words.",
+   "synth_s": 0.176,
+   "ms": 2925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The spoken words must match the written words",
+     "phonemes": "ðə spˈOkən wˈɜɹdz mˈʌst mˈæʧ ðə ɹˈɪtn wˈɜɹdz",
+     "samples": 70200,
+     "ms": 2925.0,
+     "lead_ms": 290.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 1110,
+       "ms": 170
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**Replace the problematic line 42:**\n> ~~\"Don't call `speak` with markdown formatting… send clean readable text.\"~~\n>\n> → \"You may strip pure markdown *formatting characters* (`**`, `#`, backticks) so they aren't read aloud, but do not remove, shorten, or reword any sentences.",
+   "synth_s": 1.149,
+   "ms": 21425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**Replace the problematic line 42:**",
+     "phonemes": "ɹəplˈAs ðə pɹˌɑbləmˈæTɪk lˈIn fˈɔɹTi tˈu:ˈæstəɹɹˌɪsk",
+     "samples": 90600,
+     "ms": 3775.0,
+     "lead_ms": 320.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 2390,
+       "ms": 250
+      }
+     ]
+    },
+    {
+     "graphemes": "> ~~\"Don't call `speak` with markdown formatting… send clean readable text",
+     "phonemes": "\" kˈɔl “spˈik” wɪð mˈɑɹkdˌWn fˈɔɹmˌæTɪŋ… sˈɛnd klˈin ɹˈidəbᵊl tˈɛkst",
+     "samples": 107400,
+     "ms": 4475.0,
+     "lead_ms": 310.0,
+     "trail_ms": 415.0,
+     "pauses": [
+      {
+       "at_ms": 860,
+       "ms": 60
+      },
+      {
+       "at_ms": 1300,
+       "ms": 80
+      },
+      {
+       "at_ms": 2160,
+       "ms": 340
+      },
+      {
+       "at_ms": 2760,
+       "ms": 70
+      },
+      {
+       "at_ms": 3820,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "\"~~",
+     "phonemes": "“tˈɪldətˌɪldə",
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 370.0,
+     "trail_ms": 515.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "> → \"You may strip pure markdown *formatting characters* (`**`, `#`, backticks) so they aren't read aloud, but do not remove, shorten, or reword any sentences",
+     "phonemes": "ɹˈIt ˈæɹO “jˌu mˈA stɹˈɪp pjˈʊɹ mˈɑɹkdˌWn ˈæstəɹɹˌɪsk fˈɔɹmæTɪŋ kˈɛɹəktəɹz (“ˈæstəɹɹˌɪsk, ““, bˈæktɪks) sˌO ðA ˌɑɹnt ɹˈɛd əlˈWd, bˌʌt dˈu nˌɑt ɹəmˈuv, ʃˈɔɹtn, ɔɹ ɹiwˈɜɹd ˈɛni sˈɛntᵊnsᵻz",
+     "samples": 278400,
+     "ms": 11600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1420,
+       "ms": 120
+      },
+      {
+       "at_ms": 2930,
+       "ms": 70
+      },
+      {
+       "at_ms": 3670,
+       "ms": 80
+      },
+      {
+       "at_ms": 4040,
+       "ms": 440
+      },
+      {
+       "at_ms": 5160,
+       "ms": 380
+      },
+      {
+       "at_ms": 5800,
+       "ms": 100
+      },
+      {
+       "at_ms": 6220,
+       "ms": 70
+      },
+      {
+       "at_ms": 7450,
+       "ms": 460
+      },
+      {
+       "at_ms": 8780,
+       "ms": 150
+      },
+      {
+       "at_ms": 9480,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The TTS app handles normal punctuation and Unicode (em dashes, curly quotes, ellipses) correctly — it read a 20-sentence em-dash essay with zero problems — so there's no need to strip those.\"",
+   "synth_s": 0.743,
+   "ms": 14300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The TTS app handles normal punctuation and Unicode (em dashes, curly quotes, ellipses) correctly — it read a 20-sentence em-dash essay with zero problems — so there's no need to strip those",
+     "phonemes": "ðə tˌitˌiˈɛs ˈæp hˈændəlz nˈɔɹmᵊl pˌʌŋkʧəwˈAʃən ænd jˈunəkˌOd (ˈɛm dˈæʃᵻz, kˈɜɹli kwˈOts, əlˈɪpsiz) kəɹˈɛktli — ɪt ɹˈɛd ɐ twˈɛnti sˈɛntᵊns ˌɛmdˈæʃ ˈɛsA wɪð zˈɪɹO pɹˈɑbləmz — sˌO ðɛɹz nˈO nˈid tə stɹˈɪp ðˈOz",
+     "samples": 330000,
+     "ms": 13750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1310,
+       "ms": 60
+      },
+      {
+       "at_ms": 3080,
+       "ms": 60
+      },
+      {
+       "at_ms": 4590,
+       "ms": 310
+      },
+      {
+       "at_ms": 5470,
+       "ms": 60
+      },
+      {
+       "at_ms": 5650,
+       "ms": 270
+      },
+      {
+       "at_ms": 6550,
+       "ms": 110
+      },
+      {
+       "at_ms": 6940,
+       "ms": 70
+      },
+      {
+       "at_ms": 7240,
+       "ms": 500
+      },
+      {
+       "at_ms": 8900,
+       "ms": 70
+      },
+      {
+       "at_ms": 10990,
+       "ms": 480
+      },
+      {
+       "at_ms": 12620,
+       "ms": 120
+      }
+     ]
+    },
+    {
+     "graphemes": "\"",
+     "phonemes": "“",
+     "samples": 13200,
+     "ms": 550.0,
+     "lead_ms": 430.0,
+     "trail_ms": 0.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "This keeps R1 intact (identical content to both channels) while still giving clean audio.",
+   "synth_s": 0.325,
+   "ms": 6250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This keeps R1 intact (identical content to both channels) while still giving clean audio",
+     "phonemes": "ðˌɪs kˈips ˈɑɹ wˈʌn ɪntˈækt (Idˈɛntəkᵊl kˈɑntɛnt tə bˈOθ ʧˈænᵊlz) wˌIl stˈɪl ɡˈɪvɪŋ klˈin ˈɔdiO",
+     "samples": 150000,
+     "ms": 6250.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1680,
+       "ms": 60
+      },
+      {
+       "at_ms": 1840,
+       "ms": 270
+      },
+      {
+       "at_ms": 3860,
+       "ms": 370
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

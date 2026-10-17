@@ -1,0 +1,9 @@
+## 1. Are the changed files part of the install? — Yes, all three.
+
+| File I changed | How it's packaged |
+|---|---|
+| `src/app.py` | PyInstaller **entry point** (`naturalvoicetts.spec` line 57) → compiled into `NaturalVoiceTTS.exe` |
+| `src/pipe_listener.py` | Imported by `app.py`, so PyInstaller bundles it into the same frozen exe |
+| `mcp_tts_server/server.py` | `build.bat` step 5 copies the whole `mcp_tts_server/` folder into `dist\NaturalVoiceTTS\mcp_server\`, which Inno Setup then packs into the installer |
+
+So every edit lands in the installer when you run `build.bat`.

@@ -1,0 +1,8 @@
+## An honest caveat
+This is now about as explicit as a skill instruction can get — it names the exact move the agent made (short chat + long speech) and states that matching the two channels beats brevity while voice is on. But it's still an **instruction**, not a hard guarantee: it's steering an LLM that's also holding a competing "keep chat concise" preference. It should hold, but I can't promise a model will never rationalize around it again.
+
+Two things worth knowing:
+- **Where the competing preference lives matters.** The agent cited a *"standing preference for concise, direct text responses."* If that's set in that session's memory/custom instructions, softening or scoping it ("concise unless voice is on") would remove the tug-of-war at the source. I can't see or edit that from here, but you can.
+- **The bulletproof fix is structural, not prompt-based.** If it recurs and you want a hard guarantee, the real fix is to stop relying on the agent to send text twice — e.g., have the integration speak the actual chat message rather than a separately-supplied argument, so the two *can't* differ. That's a design change to the MCP/skill flow, not a one-liner, but I can scope it if the instruction approach proves unreliable.
+
+Give it a run after the restart and tell me how it behaves. If it diverges again, that's our signal to go structural rather than keep tightening wording.

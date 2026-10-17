@@ -1,0 +1,146 @@
+{
+ "id": "24_paths_urls_identifiers",
+ "category": "paths_urls",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "kokoro_segments": 7,
+ "duration_s": 20.77,
+ "synth_s": 1.22,
+ "wav_sha256": "221c8e87200ae539d32cbf7e32709dbbde8129f30da74a3e5bfd071433c5f88e",
+ "sentences": [
+  {
+   "text": "Call split_sentences() in text_processor.py, then set SPLIT_PATTERN and HF_HUB_OFFLINE=1.",
+   "synth_s": 0.436,
+   "ms": 7725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Call split_sentences() in text_processor",
+     "phonemes": "kˈɔl splˌɪtsˈɛntᵊnsᵻz() ɪn tˌɛkstpɹˈɑsˌɛsəɹ",
+     "samples": 77400,
+     "ms": 3225.0,
+     "lead_ms": 300.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 1430,
+       "ms": 280
+      },
+      {
+       "at_ms": 2140,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "py, then set SPLIT_PATTERN and HF_HUB_OFFLINE=1",
+     "phonemes": "pˈI, ðˈɛn sˈɛt splˌɪtpˈæTəɹn ænd ˌAʧˈɛf hˈʌb ˈɔflIn ˈikwᵊlz wˈʌn",
+     "samples": 108000,
+     "ms": 4500.0,
+     "lead_ms": 310.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 670,
+       "ms": 150
+      },
+      {
+       "at_ms": 1830,
+       "ms": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The KPipeline class wraps KModel, so use tts_engine.init() once.",
+   "synth_s": 0.346,
+   "ms": 6100.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The KPipeline class wraps KModel, so use tts_engine",
+     "phonemes": "ðə kˈApˌIplIn klˈæs ɹˈæps kˈAmˌɑdᵊl, sˌO jˈuz tˌitˌiˈɛs ˈɛnʤɪn",
+     "samples": 102000,
+     "ms": 4250.0,
+     "lead_ms": 300.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 2070,
+       "ms": 290
+      }
+     ]
+    },
+    {
+     "graphemes": "init() once",
+     "phonemes": "ɪnˈɪt() wˈʌns",
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 380.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 840,
+       "ms": 220
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Check config.get('voice') and the --noconfirm flag in naturalvoicetts.spec.",
+   "synth_s": 0.442,
+   "ms": 6950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Check config",
+     "phonemes": "ʧˈɛk kənfˈɪɡ",
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 370.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 570,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "get(voice') and the --noconfirm flag in naturalvoicetts",
+     "phonemes": "ɡˈɛt(vˈYs”) ænd ðə nˈɑkənfˌɜɹm flˈæɡ ɪn nˈæʧəɹɹˌælvYsəts",
+     "samples": 96000,
+     "ms": 4000.0,
+     "lead_ms": 340.0,
+     "trail_ms": 390.0,
+     "pauses": [
+      {
+       "at_ms": 520,
+       "ms": 90
+      },
+      {
+       "at_ms": 1100,
+       "ms": 310
+      },
+      {
+       "at_ms": 3450,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "spec",
+     "phonemes": "spˈɛk",
+     "samples": 31200,
+     "ms": 1300.0,
+     "lead_ms": 380.0,
+     "trail_ms": 480.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+Open src/app.py and C:\Users\paul\Documents\notes.txt, then visit https://github.com/pawelpc/Natural-Voice-TTS/releases or www.example.com/docs?page=2. Email me at paul@example.com if the link at http://localhost:8080/api/v1 fails.

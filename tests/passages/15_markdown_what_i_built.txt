@@ -1,0 +1,8 @@
+Done. Here's the wrap-up.
+
+## What I built (committed locally as `0018ba1`)
+- **Plugin package** at [`mcp_tts_server/plugin/`](mcp_tts_server/plugin) — `.claude-plugin/plugin.json` + `skills/natural-voice-tts/SKILL.md`. This is now the single source of truth; the old `mcp_tts_server/skill/` folder is removed.
+- **Finalized `SKILL.md`** with your **court-reporter rule** spelled out explicitly: speak the written words verbatim; numerals-as-numbers ("Louis XVI" → "the sixteenth") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.
+- **`install_config.py` fixed** — points at the plugin skill, **overwrites** on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.
+- **Closeout doc** [`_voice-skill-registration-findings.md`](_voice-skill-registration-findings.md) — written to the manager agent, covering what we found (the two-skill-systems discovery, the `/`-list verification, the corrected understanding vs. the old PHASE6 claim) and the recommended registration plan.
+- Also refreshed the installed loose copy at `%APPDATA%\Claude\skills\...` so it's current for any surface that does read it.

@@ -1,0 +1,157 @@
+{
+ "id": "22_splitting_ellipses_quotes",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 6,
+ "skipped": 0,
+ "kokoro_segments": 9,
+ "duration_s": 14.68,
+ "synth_s": 1.01,
+ "wav_sha256": "fe0ab8b2aca5d76a1953f0164bd6ae30f74691e7f22d38915fe55820fb159148",
+ "sentences": [
+  {
+   "text": "He paused...",
+   "synth_s": 0.105,
+   "ms": 1575.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "He paused",
+     "phonemes": "hˌi pˈɔzd",
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 400.0,
+     "trail_ms": 545.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "then said, \"Are you sure?\" She replied, \"Yes.\" Wait… what?",
+   "synth_s": 0.355,
+   "ms": 5425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "then said, \"Are you sure",
+     "phonemes": "ðˈɛn sˈɛd, “ˌɑɹ ju ʃˈʊɹ",
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 320.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 830,
+       "ms": 130
+      }
+     ]
+    },
+    {
+     "graphemes": "\" She replied, \"Yes",
+     "phonemes": "“ ʃˌi ɹᵻplˈId, “jˈɛs",
+     "samples": 46200,
+     "ms": 1925.0,
+     "lead_ms": 310.0,
+     "trail_ms": 415.0,
+     "pauses": [
+      {
+       "at_ms": 970,
+       "ms": 90
+      }
+     ]
+    },
+    {
+     "graphemes": "\" Wait… what",
+     "phonemes": "“ wˈAt… wˌʌt",
+     "samples": 36000,
+     "ms": 1500.0,
+     "lead_ms": 380.0,
+     "trail_ms": 430.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "\"Go!\" he shouted.",
+   "synth_s": 0.202,
+   "ms": 2700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "\"Go",
+     "phonemes": "“ɡˌO",
+     "samples": 30000,
+     "ms": 1250.0,
+     "lead_ms": 400.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "\" he shouted",
+     "phonemes": "“ hi ʃˈWTᵻd",
+     "samples": 34800,
+     "ms": 1450.0,
+     "lead_ms": 380.0,
+     "trail_ms": 460.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "It's done — finally.",
+   "synth_s": 0.124,
+   "ms": 1825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It's done — finally",
+     "phonemes": "ˌɪts dˈʌn — fˈInᵊli",
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 350.0,
+     "trail_ms": 475.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Was it worth it?!",
+   "synth_s": 0.108,
+   "ms": 1525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Was it worth it",
+     "phonemes": "wˌʌz ɪt wˈɜɹθ ɪt",
+     "samples": 36600,
+     "ms": 1525.0,
+     "lead_ms": 350.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 800,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Absolutely.",
+   "synth_s": 0.112,
+   "ms": 1625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Absolutely",
+     "phonemes": "ˈæbsəlˌutli",
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 400.0,
+     "trail_ms": 515.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

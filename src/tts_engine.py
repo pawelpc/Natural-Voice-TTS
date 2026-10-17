@@ -98,11 +98,22 @@ def _get_device() -> str:
 
 
 def _get_bundled_model_dir() -> str | None:
-    """Return the bundled kokoro_model directory if running frozen."""
+    """Return a local kokoro_model directory, or None to fall back to the HF cache.
+
+    Frozen mode uses the folder next to the executable. Source mode uses
+    NVTTS_MODEL_DIR if set, else the model inside a previous build in dist/.
+    """
     if getattr(sys, 'frozen', False):
-        model_dir = os.path.join(os.path.dirname(sys.executable), 'kokoro_model')
-        if os.path.isdir(model_dir):
-            logger.info("Found bundled model at %s", model_dir)
+        candidates = [os.path.join(os.path.dirname(sys.executable), 'kokoro_model')]
+    else:
+        repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        candidates = [
+            os.environ.get('NVTTS_MODEL_DIR', ''),
+            os.path.join(repo_root, 'dist', 'NaturalVoiceTTS', 'kokoro_model'),
+        ]
+    for model_dir in candidates:
+        if model_dir and os.path.isfile(os.path.join(model_dir, 'config.json')):
+            logger.info("Found local model at %s", model_dir)
             return model_dir
     return None
 
@@ -142,7 +153,7 @@ def init(lang_code: str = DEFAULT_LANG) -> KPipeline:
     try:
         bundled = _get_bundled_model_dir()
         if bundled:
-            # Frozen mode: load model from bundled files
+            # Local model folder (frozen bundle, or dist/ when running from source)
             config_path = os.path.join(bundled, 'config.json')
             model_path = os.path.join(bundled, 'kokoro-v1_0.pth')
             logger.info("Loading bundled model: %s", model_path)

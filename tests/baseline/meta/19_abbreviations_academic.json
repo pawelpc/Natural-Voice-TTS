@@ -1,0 +1,287 @@
+{
+ "id": "19_abbreviations_academic",
+ "category": "abbreviations",
+ "origin": "synthetic",
+ "chunks": 13,
+ "skipped": 0,
+ "kokoro_segments": 15,
+ "duration_s": 26.18,
+ "synth_s": 1.77,
+ "wav_sha256": "de4f01e82917edc95992485cda6f651a8db0f4925a8f51fb5ec9e59890154a6e",
+ "sentences": [
+  {
+   "text": "Prof.",
+   "synth_s": 0.104,
+   "ms": 1225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Prof",
+     "phonemes": "pɹˈɑf",
+     "samples": 29400,
+     "ms": 1225.0,
+     "lead_ms": 390.0,
+     "trail_ms": 415.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Lee, Ph.D., works at St.",
+   "synth_s": 0.322,
+   "ms": 4625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Lee, Ph",
+     "phonemes": "lˈi, pˌiˈAʧ",
+     "samples": 42600,
+     "ms": 1775.0,
+     "lead_ms": 400.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 710,
+       "ms": 130
+      }
+     ]
+    },
+    {
+     "graphemes": "D",
+     "phonemes": "dˈi",
+     "samples": 30000,
+     "ms": 1250.0,
+     "lead_ms": 380.0,
+     "trail_ms": 530.0,
+     "pauses": []
+    },
+    {
+     "graphemes": ", works at St",
+     "phonemes": ", wˈɜɹks æt sənt",
+     "samples": 38400,
+     "ms": 1600.0,
+     "lead_ms": 360.0,
+     "trail_ms": 450.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Mary's Hospital vs.",
+   "synth_s": 0.138,
+   "ms": 2100.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Mary's Hospital vs",
+     "phonemes": "mˈɛɹiz hˈɑspˌɪTᵊl vˈiz",
+     "samples": 50400,
+     "ms": 2100.0,
+     "lead_ms": 320.0,
+     "trail_ms": 440.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Johns Hopkins.",
+   "synth_s": 0.117,
+   "ms": 1775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Johns Hopkins",
+     "phonemes": "ʤˈɑnz hˈɑpkɪnz",
+     "samples": 42600,
+     "ms": 1775.0,
+     "lead_ms": 380.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Fig.",
+   "synth_s": 0.101,
+   "ms": 1325.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Fig",
+     "phonemes": "fˈɪɡ",
+     "samples": 31800,
+     "ms": 1325.0,
+     "lead_ms": 390.0,
+     "trail_ms": 525.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "3 shows approx.",
+   "synth_s": 0.117,
+   "ms": 1825.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "3 shows approx",
+     "phonemes": "θɹˈi ʃˈOz əpɹˈɑks",
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 390.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1190,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "40 samples; see No.",
+   "synth_s": 0.133,
+   "ms": 2225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "40 samples; see No",
+     "phonemes": "fˈɔɹTi sˈæmpᵊlz; sˈi nˈO",
+     "samples": 53400,
+     "ms": 2225.0,
+     "lead_ms": 370.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 1200,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "7, Vol.",
+   "synth_s": 0.114,
+   "ms": 1675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "7, Vol",
+     "phonemes": "sˈɛvən, vˈɑl",
+     "samples": 40200,
+     "ms": 1675.0,
+     "lead_ms": 370.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 810,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "2, pp.",
+   "synth_s": 0.115,
+   "ms": 1725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "2, pp",
+     "phonemes": "tˈu, pˌipˈi",
+     "samples": 41400,
+     "ms": 1725.0,
+     "lead_ms": 370.0,
+     "trail_ms": 535.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "14–18.",
+   "synth_s": 0.119,
+   "ms": 1800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "14–18",
+     "phonemes": "fˈɔɹtin ˈAtin",
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 390.0,
+     "trail_ms": 520.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The results, cf.",
+   "synth_s": 0.127,
+   "ms": 1850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The results, cf",
+     "phonemes": "ðə ɹəzˈʌlts, sˌiˈɛf",
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 350.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 770,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Table 2, were sig.",
+   "synth_s": 0.136,
+   "ms": 2050.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Table 2, were sig",
+     "phonemes": "tˈAbᵊl tˈu, wɜɹ sˈɪɡ",
+     "samples": 49200,
+     "ms": 2050.0,
+     "lead_ms": 330.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1010,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "at the 5% level.",
+   "synth_s": 0.128,
+   "ms": 1975.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "at the 5% level",
+     "phonemes": "æt ðə fˈIv pəɹsˈɛnt lˈɛvᵊl",
+     "samples": 47400,
+     "ms": 1975.0,
+     "lead_ms": 310.0,
+     "trail_ms": 415.0,
+     "pauses": [
+      {
+       "at_ms": 870,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

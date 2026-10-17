@@ -1,0 +1,9 @@
+Committed and **pushed to `master`** (`e3f15ec..bba2200`). GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.
+
+Status so far:
+- ✅ Installer rebuilt: `dist\NaturalVoiceTTS_Setup_1.1.0.exe` (1798 MB, 4:46 PM today)
+- ✅ Fix verified present in bundled files
+- ✅ Source fixes committed + pushed
+- ⏳ Runtime smoke test — the last gate before your manual retest
+
+The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass). Since your next step is to uninstall it anyway, stopping it now is harmless. How do you want to handle it?

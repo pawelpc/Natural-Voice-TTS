@@ -1,0 +1,7 @@
+Read it — and I can already see the likely culprit. The skill's ongoing-mode instructions do say "full response text" (lines 22, 33–36), but **line 42** undercuts them:
+
+> "Don't call `speak` with markdown formatting, code blocks, or special characters — send clean readable text."
+
+That's vague enough to license exactly what you saw: a model can read "send clean readable text" as "send a trimmed/cleaned subset," and there's **no explicit rule forbidding partial sends**. Combined, it invites the divergence R1 was meant to prevent — full text to chat, a reduced version to `speak()`.
+
+So the durable fix is a SKILL.md revision that makes it unambiguous: send the **entire** response verbatim — every sentence, no summarizing, no excerpting, no omissions — and reframe the formatting note so it can't be read as permission to change the words.

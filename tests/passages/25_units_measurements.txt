@@ -1,0 +1,1 @@
+The bracket is 25 mm thick and weighs 1.2 kg. Torque it to 12 N·m at 20 °C. The drive holds 2 TB, the GPU has 4 GB, and the CPU runs at 3.5 GHz. Drive at 60 km/h, or about 37 mph. A 5 V, 2 A supply delivers 10 W. The file is 327 MB and loads in 4.6 s.

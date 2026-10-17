@@ -1,0 +1,320 @@
+{
+ "id": "02_tables_install_table",
+ "category": "tables",
+ "origin": "real",
+ "chunks": 5,
+ "skipped": 0,
+ "kokoro_segments": 16,
+ "duration_s": 54.92,
+ "synth_s": 3.16,
+ "wav_sha256": "4b3f4f78d781f9a30172c3dc69c13b9954d4c5c68748c3d7a42158425b8e70bd",
+ "sentences": [
+  {
+   "text": "## 1.",
+   "synth_s": 0.116,
+   "ms": 1475.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## 1",
+     "phonemes": "hˈæʃ wˈʌn",
+     "samples": 35400,
+     "ms": 1475.0,
+     "lead_ms": 380.0,
+     "trail_ms": 515.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Are the changed files part of the install?",
+   "synth_s": 0.165,
+   "ms": 2675.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Are the changed files part of the install",
+     "phonemes": "ˌɑɹ ðə ʧˈAnʤd fˈIlz pˈɑɹt ʌv ði ɪnstˈɔl",
+     "samples": 64200,
+     "ms": 2675.0,
+     "lead_ms": 310.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 1280,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "— Yes, all three.",
+   "synth_s": 0.127,
+   "ms": 1900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "— Yes, all three",
+     "phonemes": "— jˈɛs, ˈɔl θɹˈi",
+     "samples": 45600,
+     "ms": 1900.0,
+     "lead_ms": 380.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 780,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "| File I changed | How it's packaged |\n|---|---|\n| `src/app.py` | PyInstaller **entry point** (`naturalvoicetts.spec` line 57) → compiled into `NaturalVoiceTTS.exe` |\n| `src/pipe_listener.py` | Imported by `app.py`, so PyInstaller bundles it into the same frozen exe |\n| `mcp_tts_server/server.py` | `build.bat` step 5 copies the whole `mcp_tts_server/` folder into `dist\\NaturalVoiceTTS\\mcp_server\\`, which Inno Setup then packs into the installer |",
+   "synth_s": 2.438,
+   "ms": 44025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "| File I changed | How it's packaged |",
+     "phonemes": "fˈIl ˌI ʧˈAnʤd  hˌW ɪts pˈækɪʤd",
+     "samples": 56400,
+     "ms": 2350.0,
+     "lead_ms": 360.0,
+     "trail_ms": 450.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "| `src/app",
+     "phonemes": "“ˌɛsˌɑɹsˈi slˈæʃ ˈæp",
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 330.0,
+     "trail_ms": 415.0,
+     "pauses": [
+      {
+       "at_ms": 1370,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "py` | PyInstaller **entry point** (`naturalvoicetts",
+     "phonemes": "pˈI”  pˈI ɪnstˈɔləɹ ˈæstəɹɹˌɪskəstəɹɹˌɪsk ˈɛntɹi pˈYnt (“nˈæʧəɹɹˌælvYsəts",
+     "samples": 114600,
+     "ms": 4775.0,
+     "lead_ms": 290.0,
+     "trail_ms": 365.0,
+     "pauses": [
+      {
+       "at_ms": 590,
+       "ms": 70
+      },
+      {
+       "at_ms": 3060,
+       "ms": 340
+      },
+      {
+       "at_ms": 4250,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "spec` line 57) → compiled into `NaturalVoiceTTS",
+     "phonemes": "spˈɛk” lˈIn fˈɪfti sˈɛvən) ɹˈIt ˈæɹO kəmpˈIld ˈɪntu “nˈæʧəɹᵊlvˌYstˌitˌiˈɛs",
+     "samples": 124200,
+     "ms": 5175.0,
+     "lead_ms": 280.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 550,
+       "ms": 80
+      },
+      {
+       "at_ms": 1110,
+       "ms": 70
+      },
+      {
+       "at_ms": 1670,
+       "ms": 380
+      }
+     ]
+    },
+    {
+     "graphemes": "exe` |",
+     "phonemes": "ˌiˌɛksˈi”",
+     "samples": 36600,
+     "ms": 1525.0,
+     "lead_ms": 400.0,
+     "trail_ms": 535.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "| `src/pipe_listener",
+     "phonemes": "“ˌɛsˌɑɹsˈi slˈæʃ pˈIp lˈɪsənəɹ",
+     "samples": 56400,
+     "ms": 2350.0,
+     "lead_ms": 330.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "py` | Imported by `app",
+     "phonemes": "pˈI”  ɪmpˈɔɹTᵻd bI “ˈæp",
+     "samples": 51000,
+     "ms": 2125.0,
+     "lead_ms": 310.0,
+     "trail_ms": 395.0,
+     "pauses": [
+      {
+       "at_ms": 640,
+       "ms": 120
+      },
+      {
+       "at_ms": 1630,
+       "ms": 90
+      }
+     ]
+    },
+    {
+     "graphemes": "py`, so PyInstaller bundles it into the same frozen exe |",
+     "phonemes": "pˈI, sˌO pˈI ɪnstˈɔləɹ bˈʌndᵊlz ɪt ˈɪntu ðə sˈAm fɹˈOzən ˌiˌɛksˈi",
+     "samples": 103800,
+     "ms": 4325.0,
+     "lead_ms": 310.0,
+     "trail_ms": 545.0,
+     "pauses": [
+      {
+       "at_ms": 570,
+       "ms": 140
+      },
+      {
+       "at_ms": 2760,
+       "ms": 60
+      },
+      {
+       "at_ms": 3200,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "| `mcp_tts_server/server",
+     "phonemes": "“ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ sˈɜɹvəɹ",
+     "samples": 78600,
+     "ms": 3275.0,
+     "lead_ms": 330.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 180
+      }
+     ]
+    },
+    {
+     "graphemes": "py` | `build",
+     "phonemes": "pˈI“  “bˈɪld",
+     "samples": 46800,
+     "ms": 1950.0,
+     "lead_ms": 380.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 760,
+       "ms": 210
+      }
+     ]
+    },
+    {
+     "graphemes": "bat` step 5 copies the whole `mcp_tts_server/` folder into `dist\\NaturalVoiceTTS\\mcp_server\\`, which Inno Setup then packs into the installer |",
+     "phonemes": "bˈæt” stˈɛp fˈIv kˈɑpiz ðə hˈOl “ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ” fˈOldəɹ ˈɪntu “dˈɪst bˈækslæʃ nˈæʧəɹɹᵊl vˈYs tˌitˌiˈɛs bˈækslæʃ ˌɛmsˌipˈi sˈɜɹvəɹ bˈækslæʃ”, wˌɪʧ ɪnnˈO sˈɛTˌʌp ðˈɛn pˈæks ˈɪntu ði ɪnstˈɔləɹ",
+     "samples": 343200,
+     "ms": 14300.0,
+     "lead_ms": 330.0,
+     "trail_ms": 570.0,
+     "pauses": [
+      {
+       "at_ms": 550,
+       "ms": 100
+      },
+      {
+       "at_ms": 880,
+       "ms": 160
+      },
+      {
+       "at_ms": 1330,
+       "ms": 70
+      },
+      {
+       "at_ms": 2180,
+       "ms": 290
+      },
+      {
+       "at_ms": 4700,
+       "ms": 510
+      },
+      {
+       "at_ms": 7500,
+       "ms": 70
+      },
+      {
+       "at_ms": 8270,
+       "ms": 60
+      },
+      {
+       "at_ms": 8900,
+       "ms": 170
+      },
+      {
+       "at_ms": 10760,
+       "ms": 560
+      },
+      {
+       "at_ms": 12200,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "So every edit lands in the installer when you run `build.bat`.",
+   "synth_s": 0.312,
+   "ms": 4850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "So every edit lands in the installer when you run `build",
+     "phonemes": "sˌO ˈɛvəɹi ˈɛdət lˈændz ɪn ði ɪnstˈɔləɹ wˌɛn ju ɹˈʌn “bˈɪld",
+     "samples": 85800,
+     "ms": 3575.0,
+     "lead_ms": 270.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 410,
+       "ms": 70
+      },
+      {
+       "at_ms": 2650,
+       "ms": 130
+      }
+     ]
+    },
+    {
+     "graphemes": "bat`",
+     "phonemes": "bˈæt”",
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 380.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

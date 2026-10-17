@@ -1,0 +1,756 @@
+{
+ "id": "09_lists_results",
+ "category": "lists",
+ "origin": "real",
+ "chunks": 16,
+ "skipped": 0,
+ "kokoro_segments": 30,
+ "duration_s": 134.38,
+ "synth_s": 7.33,
+ "wav_sha256": "c22b3cd08184f645e54877acc969fee3c24c9b4d57e631439ab4efc00edfc0d6",
+ "sentences": [
+  {
+   "text": "## Results",
+   "synth_s": 0.118,
+   "ms": 1625.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "## Results",
+     "phonemes": "hˈæʃ ɹəzˈʌlts",
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 370.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 990,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**1.",
+   "synth_s": 0.096,
+   "ms": 1275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**1",
+     "phonemes": "wˈʌn",
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 400.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Installer rebuilt** ✅\n`dist\\NaturalVoiceTTS_Setup_1.1.0.exe` — 1798 MB, built today 4:46 PM, exit code 0.",
+   "synth_s": 0.947,
+   "ms": 16200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Installer rebuilt** ✅",
+     "phonemes": "ɪnstˈɔləɹ ɹibˈɪltˈæstəɹɹˌɪsk wˈIt hˈɛvi ʧˈɛk mˈɑɹk",
+     "samples": 80400,
+     "ms": 3350.0,
+     "lead_ms": 330.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 1790,
+       "ms": 70
+      },
+      {
+       "at_ms": 2570,
+       "ms": 90
+      }
+     ]
+    },
+    {
+     "graphemes": "`dist\\NaturalVoiceTTS_Setup_1",
+     "phonemes": "“dˈɪst bˈækslæʃ nˈæʧəɹɹᵊl vˈYs tˌitˌiˈɛs sˈɛTʌp wˈʌn",
+     "samples": 86400,
+     "ms": 3600.0,
+     "lead_ms": 340.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1770,
+       "ms": 80
+      },
+      {
+       "at_ms": 2750,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "1",
+     "phonemes": "wˈʌn",
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 400.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "0",
+     "phonemes": "zˈɪɹO",
+     "samples": 34200,
+     "ms": 1425.0,
+     "lead_ms": 390.0,
+     "trail_ms": 555.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "exe` — 1798 MB, built today 4:46 PM, exit code 0",
+     "phonemes": "ˌiˌɛksˈi“ — sˌɛvəntˈin nˈIndi ˈAt ˌɛmbˈi, bˈɪlt tədˈA fˈɔɹ:fˈɔɹTi sˈɪks pˌiˈɛm, ˈɛɡzət kˈOd zˈɪɹO",
+     "samples": 157200,
+     "ms": 6550.0,
+     "lead_ms": 330.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 930,
+       "ms": 300
+      },
+      {
+       "at_ms": 2650,
+       "ms": 100
+      },
+      {
+       "at_ms": 2900,
+       "ms": 60
+      },
+      {
+       "at_ms": 3600,
+       "ms": 350
+      },
+      {
+       "at_ms": 4970,
+       "ms": 90
+      },
+      {
+       "at_ms": 5310,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).",
+   "synth_s": 0.382,
+   "ms": 7650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon)",
+     "phonemes": "ˈɔl pˈAlˌOd vˈɛɹᵻfˌId pɹˈɛzᵊnt (tˈɔɹʧ sˌijˌudˌiˈA, kəkˈɔɹO mˈɑdᵊl plˈʌs twˈɛnti sˈɛvən vˈYsᵻz, ˈispikˌɛnʤˈi, ˈIkˌɑn)",
+     "samples": 183600,
+     "ms": 7650.0,
+     "lead_ms": 330.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 1470,
+       "ms": 70
+      },
+      {
+       "at_ms": 1870,
+       "ms": 280
+      },
+      {
+       "at_ms": 3050,
+       "ms": 390
+      },
+      {
+       "at_ms": 5530,
+       "ms": 170
+      },
+      {
+       "at_ms": 6530,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "**2.",
+   "synth_s": 0.127,
+   "ms": 1775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**2",
+     "phonemes": "ˈæstəɹɹˌɪsk tˈu",
+     "samples": 42600,
+     "ms": 1775.0,
+     "lead_ms": 380.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Committed + pushed** ✅\nCommit `bba2200` on `master`, pushed to `github.com/pawelpc/Natural-Voice-TTS` — the three fix files with a D1/D2/D3 message.",
+   "synth_s": 0.806,
+   "ms": 14950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Committed + pushed** ✅",
+     "phonemes": "kəmˈɪTᵻd plˈʌs pˈʊʃtˈæstəɹɹˌɪsk wˈIt hˈɛvi ʧˈɛk mˈɑɹk",
+     "samples": 77400,
+     "ms": 3225.0,
+     "lead_ms": 310.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 900,
+       "ms": 70
+      },
+      {
+       "at_ms": 2450,
+       "ms": 80
+      }
+     ]
+    },
+    {
+     "graphemes": "Commit `bba2200` on `master`, pushed to `github",
+     "phonemes": "kəmˈɪt “bˌibˌiˈA tˈu θˈWzənd tˈuhˈʌndɹɪd“ ˌɔn “mˈæstəɹ”, pˈʊʃt tə “ɡˈɪthʌb",
+     "samples": 111600,
+     "ms": 4650.0,
+     "lead_ms": 280.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 540,
+       "ms": 60
+      },
+      {
+       "at_ms": 2250,
+       "ms": 80
+      },
+      {
+       "at_ms": 2970,
+       "ms": 300
+      },
+      {
+       "at_ms": 3670,
+       "ms": 60
+      }
+     ]
+    },
+    {
+     "graphemes": "com/pawelpc/Natural-Voice-TTS` — the three fix files with a D1/D2/D3 message",
+     "phonemes": "kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs” — ðə θɹˈi fˈɪks fˈIlz wɪð ɐ dˈi wˈʌn dˈi tˈu dˈi θɹˈi mˈɛsɪʤ",
+     "samples": 169800,
+     "ms": 7075.0,
+     "lead_ms": 290.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1120,
+       "ms": 90
+      },
+      {
+       "at_ms": 2830,
+       "ms": 490
+      },
+      {
+       "at_ms": 3390,
+       "ms": 70
+      },
+      {
+       "at_ms": 3980,
+       "ms": 80
+      },
+      {
+       "at_ms": 5900,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "(The installer `.exe` itself is gitignored and stays local, as it should — it's 1.8 GB.)",
+   "synth_s": 0.576,
+   "ms": 8700.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "(The installer `",
+     "phonemes": "(ði ɪnstˈɔləɹ “",
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 370.0,
+     "trail_ms": 540.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "exe` itself is gitignored and stays local, as it should — it's 1",
+     "phonemes": "ˌiˌɛksˈi“ ɪtsˈɛlf ɪz ɡˈɪTɪɡnəɹd ænd stˈAz lˈOkəl, æz ɪt ʃˌʊd — ɪts wˈʌn",
+     "samples": 116400,
+     "ms": 4850.0,
+     "lead_ms": 330.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 970,
+       "ms": 100
+      },
+      {
+       "at_ms": 2860,
+       "ms": 60
+      },
+      {
+       "at_ms": 3090,
+       "ms": 390
+      }
+     ]
+    },
+    {
+     "graphemes": "8 GB",
+     "phonemes": "ˈAt ʤˌibˈi",
+     "samples": 38400,
+     "ms": 1600.0,
+     "lead_ms": 400.0,
+     "trail_ms": 530.0,
+     "pauses": []
+    },
+    {
+     "graphemes": ")",
+     "phonemes": ")",
+     "samples": 13200,
+     "ms": 550.0,
+     "lead_ms": 390.0,
+     "trail_ms": 10.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "**3.",
+   "synth_s": 0.106,
+   "ms": 1350.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "**3",
+     "phonemes": "θɹˈi",
+     "samples": 32400,
+     "ms": 1350.0,
+     "lead_ms": 370.0,
+     "trail_ms": 550.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Pre-manual-test gate — all green** ✅\n- **Build-fix propagation:** D3 change confirmed inside the *bundled* `mcp_server\\server.py` — rules out stale-file builds.",
+   "synth_s": 0.891,
+   "ms": 17225.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Pre-manual-test gate — all green** ✅",
+     "phonemes": "pɹˌimˈænjəwəltˈɛst ɡˈAt — ˈɔl ɡɹˈin ˈæstəɹɹˌɪskəstəɹɹˌɪsk wˈIt hˈɛvi ʧˈɛk mˈɑɹk",
+     "samples": 124200,
+     "ms": 5175.0,
+     "lead_ms": 300.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 1480,
+       "ms": 430
+      },
+      {
+       "at_ms": 4340,
+       "ms": 90
+      },
+      {
+       "at_ms": 4620,
+       "ms": 120
+      }
+     ]
+    },
+    {
+     "graphemes": "- **Build-fix propagation:** D3 change confirmed inside the *bundled* `mcp_server\\server",
+     "phonemes": "— bˌɪldfˈɪks pɹˌɑpəɡˈAʃən:ˈæstəɹɹˌɪsk dˈi θɹˈi ʧˈAnʤ kənfˈɜɹmd ɪnsˈId ðə ˈæstəɹɹˌɪsk bˈʌndᵊld ˈæstəɹɹˌɪsk “ˌɛmsˌipˈi sˈɜɹvəɹ bˈækslæʃ sˈɜɹvəɹ",
+     "samples": 228000,
+     "ms": 9500.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 810,
+       "ms": 60
+      },
+      {
+       "at_ms": 1590,
+       "ms": 300
+      },
+      {
+       "at_ms": 2410,
+       "ms": 80
+      },
+      {
+       "at_ms": 3400,
+       "ms": 310
+      },
+      {
+       "at_ms": 5400,
+       "ms": 90
+      },
+      {
+       "at_ms": 6560,
+       "ms": 440
+      }
+     ]
+    },
+    {
+     "graphemes": "py` — rules out stale-file builds",
+     "phonemes": "pˈI” — ɹˈulz ˈWt stˈAlfˌIl bˈɪldz",
+     "samples": 61200,
+     "ms": 2550.0,
+     "lead_ms": 310.0,
+     "trail_ms": 400.0,
+     "pauses": [
+      {
+       "at_ms": 620,
+       "ms": 140
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **Runtime launch (packaging check):** freshly-built exe reached `TTS engine ready` → `Ready!` with no traceback — catches the PyInstaller hidden-import breakage you've hit before.",
+   "synth_s": 0.626,
+   "ms": 12175.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **Runtime launch (packaging check):** freshly-built exe reached `TTS engine ready` → `Ready",
+     "phonemes": "— ɹˈʌntIm lˈɔnʧ (pˈækəʤɪŋ ʧˈɛk: fɹˈɛʃlibˌɪlt ˌiˌɛksˈi ɹˈiʧt “tˌitˌiˈɛs ˈɛnʤən ɹˈɛdi” “ “ɹˈɛdi",
+     "samples": 155400,
+     "ms": 6475.0,
+     "lead_ms": 310.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1900,
+       "ms": 80
+      },
+      {
+       "at_ms": 2000,
+       "ms": 400
+      },
+      {
+       "at_ms": 3800,
+       "ms": 70
+      },
+      {
+       "at_ms": 5220,
+       "ms": 350
+      }
+     ]
+    },
+    {
+     "graphemes": "` with no traceback — catches the PyInstaller hidden-import breakage you've hit before",
+     "phonemes": "“ wɪð nˈO tɹˈAsbæk — kˈɛʧᵻz ði pˈI ɪnstˈɔləɹ hˌɪdᵊnˈɪmpˌɔɹt bɹˈAkɪʤ juv hˈɪt bəfˈɔɹ",
+     "samples": 136800,
+     "ms": 5700.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1350,
+       "ms": 70
+      },
+      {
+       "at_ms": 1430,
+       "ms": 370
+      },
+      {
+       "at_ms": 3840,
+       "ms": 120
+      },
+      {
+       "at_ms": 4680,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "- **End-to-end pipe test (the actual bug):** pushed messages through the named pipe exactly like the MCP server does.",
+   "synth_s": 0.398,
+   "ms": 7950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "- **End-to-end pipe test (the actual bug):** pushed messages through the named pipe exactly like the MCP server does",
+     "phonemes": "— ˈɛndtʊˈɛnd pˈIp tˈɛst (ði ˈækʧəwəl bˈʌɡ: pˈʊʃt mˈɛsɪʤᵻz θɹu ðə nˈAmd pˈIp ɪɡzˈæktli lˈIk ði ˌɛmsˌipˈi sˈɜɹvəɹ dˈʌz",
+     "samples": 190800,
+     "ms": 7950.0,
+     "lead_ms": 320.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1590,
+       "ms": 250
+      },
+      {
+       "at_ms": 2650,
+       "ms": 540
+      },
+      {
+       "at_ms": 4620,
+       "ms": 60
+      },
+      {
+       "at_ms": 4890,
+       "ms": 60
+      },
+      {
+       "at_ms": 4970,
+       "ms": 90
+      },
+      {
+       "at_ms": 5430,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The D1 fix is proven live:",
+   "synth_s": 0.157,
+   "ms": 2425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The D1 fix is proven live:",
+     "phonemes": "ðə dˈi wˈʌn fˈɪks ɪz pɹˈuvən lˈIv:",
+     "samples": 58200,
+     "ms": 2425.0,
+     "lead_ms": 310.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1210,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "| Test | Header | Received | Result |\n|---|---|---|---|\n| 420-byte ASCII | 420 | **420** | full payload, 0 dropped |\n| 112-byte multibyte (em dash, curly quotes, ellipsis) | 112 | **112** | decoded to 104 chars, played \"First sentence — with an em dash…\" |",
+   "synth_s": 1.17,
+   "ms": 23075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "| Test | Header | Received | Result |",
+     "phonemes": "tˈɛst  hˈɛdəɹ  ɹəsˈivd  ɹəzˈʌlt",
+     "samples": 54600,
+     "ms": 2275.0,
+     "lead_ms": 300.0,
+     "trail_ms": 425.0,
+     "pauses": [
+      {
+       "at_ms": 1750,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "| 420-byte ASCII | 420 | **420** | full payload, 0 dropped |",
+     "phonemes": "fˈɔɹ hˈʌndɹəd twˈɛnti bˈIt ˈæski  fˈɔɹ hˈʌndɹəd twˈɛnti  ˈæstəɹɹˌɪsk fˈɔɹhˈʌndɹɪd twˈɛnti  fˈʊl pˈAlˌOd, zˈɪɹO dɹˈɑpt",
+     "samples": 172800,
+     "ms": 7200.0,
+     "lead_ms": 330.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 1830,
+       "ms": 260
+      },
+      {
+       "at_ms": 2920,
+       "ms": 180
+      },
+      {
+       "at_ms": 3630,
+       "ms": 60
+      },
+      {
+       "at_ms": 4540,
+       "ms": 360
+      },
+      {
+       "at_ms": 5650,
+       "ms": 280
+      },
+      {
+       "at_ms": 6600,
+       "ms": 70
+      }
+     ]
+    },
+    {
+     "graphemes": "| 112-byte multibyte (em dash, curly quotes, ellipsis) | 112 | **112** | decoded to 104 chars, played \"First sentence — with an em dash…\" |",
+     "phonemes": "wˈʌn hˈʌndɹəd twˈɛlv bˈIt mˌʌltɪbˈIt (ˈɛm dˈæʃ, kˈɜɹli kwˈOts, əlˈɪpsɪs)  wˈʌn hˈʌndɹəd twˈɛlv  ˈæstəɹɹˌɪsk wˈʌnhˈʌndɹɪd twˈɛlvˈæstəɹɹˌɪsk  dˌikˈOdᵻd tə wˈʌn hˈʌndɹəd fˈɔɹ ʧˈɑɹz, plˈAd “fˈɜɹst sˈɛntᵊns — wɪð ɐn ˈɛm dˈæʃ…”",
+     "samples": 326400,
+     "ms": 13600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1110,
+       "ms": 70
+      },
+      {
+       "at_ms": 1950,
+       "ms": 120
+      },
+      {
+       "at_ms": 2770,
+       "ms": 220
+      },
+      {
+       "at_ms": 3580,
+       "ms": 60
+      },
+      {
+       "at_ms": 3750,
+       "ms": 280
+      },
+      {
+       "at_ms": 4680,
+       "ms": 580
+      },
+      {
+       "at_ms": 8330,
+       "ms": 290
+      },
+      {
+       "at_ms": 9760,
+       "ms": 80
+      },
+      {
+       "at_ms": 10530,
+       "ms": 310
+      },
+      {
+       "at_ms": 12030,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "`header == received` on both, and the multibyte message decoded and spoke cleanly — the exact case (`—` `\"` `…`) that used to truncate or throw.",
+   "synth_s": 0.497,
+   "ms": 10150.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "`header == received` on both, and the multibyte message decoded and spoke cleanly — the exact case (`—` `\"` `…`) that used to truncate or throw",
+     "phonemes": "“hˈɛdəɹ ˈikwᵊlzˌikwᵊlz ɹəsˈivd” ˌɔn bˈOθ, ænd ðə mˌʌltɪbˈIt mˈɛsɪʤ dˌikˈOdᵻd ænd spˈOk klˈinli — ði ɪɡzˈækt kˈAs (“—“ “““ “…”) ðæt jˈust tə tɹˈʌŋkˌAt ɔɹ θɹˈO",
+     "samples": 243600,
+     "ms": 10150.0,
+     "lead_ms": 300.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 2360,
+       "ms": 420
+      },
+      {
+       "at_ms": 3970,
+       "ms": 70
+      },
+      {
+       "at_ms": 4970,
+       "ms": 120
+      },
+      {
+       "at_ms": 5560,
+       "ms": 320
+      },
+      {
+       "at_ms": 6870,
+       "ms": 390
+      },
+      {
+       "at_ms": 7570,
+       "ms": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "`__STOP__` also worked both times.",
+   "synth_s": 0.149,
+   "ms": 2300.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "`__STOP__` also worked both times",
+     "phonemes": "“stˈɑp” ˈɔlsO wˈɜɹkt bˈOθ tˈImz",
+     "samples": 55200,
+     "ms": 2300.0,
+     "lead_ms": 300.0,
+     "trail_ms": 410.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Test exe was shut down; **no `NaturalVoiceTTS` process is running** now.",
+   "synth_s": 0.283,
+   "ms": 5550.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Test exe was shut down; **no `NaturalVoiceTTS` process is running** now",
+     "phonemes": "tˈɛst ˌiˌɛksˈi wʌz ʃˈʌt dˌWn; nˈO “nˈæʧəɹᵊlvˌYstˌitˌiˈɛs” pɹˈɑsˌɛs ɪz ɹˈʌnɪŋ nˈW",
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1470,
+       "ms": 90
+      },
+      {
+       "at_ms": 1860,
+       "ms": 410
+      },
+      {
+       "at_ms": 3730,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

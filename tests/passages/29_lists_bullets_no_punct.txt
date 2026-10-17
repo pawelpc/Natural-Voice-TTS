@@ -1,0 +1,13 @@
+Before you start, check these:
+
+- Python 3.11 installed
+- espeak-ng in Program Files
+- CUDA drivers up to date
+  - at least 4 GB of VRAM
+  - driver 550 or newer
+
+Then follow the steps:
+
+1. Clone the repo
+2. Run pip install -r requirements.txt
+3. Start the app

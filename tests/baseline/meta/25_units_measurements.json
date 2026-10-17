@@ -1,0 +1,209 @@
+{
+ "id": "25_units_measurements",
+ "category": "units",
+ "origin": "synthetic",
+ "chunks": 6,
+ "skipped": 0,
+ "kokoro_segments": 9,
+ "duration_s": 29.48,
+ "synth_s": 1.69,
+ "wav_sha256": "c19d2a171e781ad7ed2ada465c598a5d4fc2208a173cf8f18c1b756970acfe96",
+ "sentences": [
+  {
+   "text": "The bracket is 25 mm thick and weighs 1.2 kg.",
+   "synth_s": 0.31,
+   "ms": 4950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The bracket is 25 mm thick and weighs 1",
+     "phonemes": "ðə bɹˈækət ɪz twˈɛnti fˈIv m θˈɪk ænd wˈAz wˈʌn",
+     "samples": 81000,
+     "ms": 3375.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 90
+      },
+      {
+       "at_ms": 1850,
+       "ms": 80
+      },
+      {
+       "at_ms": 1940,
+       "ms": 260
+      }
+     ]
+    },
+    {
+     "graphemes": "2 kg",
+     "phonemes": "tˈu kˌAʤˈi",
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 380.0,
+     "trail_ms": 535.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Torque it to 12 N·m at 20 °C.",
+   "synth_s": 0.18,
+   "ms": 3025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Torque it to 12 N·m at 20 °C",
+     "phonemes": "tˈɔɹk ɪt tə twˈɛlv ˈɛn ˈɛm æt twˈɛnti dᵻɡɹˈiz sˈi",
+     "samples": 72600,
+     "ms": 3025.0,
+     "lead_ms": 290.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1580,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The drive holds 2 TB, the GPU has 4 GB, and the CPU runs at 3.5 GHz.",
+   "synth_s": 0.416,
+   "ms": 7500.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The drive holds 2 TB, the GPU has 4 GB, and the CPU runs at 3",
+     "phonemes": "ðə dɹˈIv hˈOldz tˈu tˌibˈi, ðə ʤˌipˌijˈu hæz fˈɔɹ ʤˌibˈi, ænd ðə sˌipˌijˈu ɹˈʌnz æt θɹˈi",
+     "samples": 139200,
+     "ms": 5800.0,
+     "lead_ms": 300.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1670,
+       "ms": 340
+      },
+      {
+       "at_ms": 2850,
+       "ms": 60
+      },
+      {
+       "at_ms": 3500,
+       "ms": 310
+      },
+      {
+       "at_ms": 4890,
+       "ms": 90
+      }
+     ]
+    },
+    {
+     "graphemes": "5 GHz",
+     "phonemes": "fˈIv ɡˈɪɡəhˌɜɹts",
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 380.0,
+     "trail_ms": 420.0,
+     "pauses": [
+      {
+       "at_ms": 1110,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Drive at 60 km/h, or about 37 mph.",
+   "synth_s": 0.25,
+   "ms": 4600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Drive at 60 km/h, or about 37 mph",
+     "phonemes": "dɹˈIv æt sˈɪksti kˌAˈɛm slˈæʃ ˈAʧ, ɔɹ əbˈWt θˈɜɹTi sˈɛvən ˌɛmpˌiˈAʧ",
+     "samples": 110400,
+     "ms": 4600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 2070,
+       "ms": 340
+      },
+      {
+       "at_ms": 2690,
+       "ms": 140
+      },
+      {
+       "at_ms": 3980,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A 5 V, 2 A supply delivers 10 W.",
+   "synth_s": 0.199,
+   "ms": 3600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A 5 V, 2 A supply delivers 10 W",
+     "phonemes": "ɐ fˈIv vˈi, tˈu ɐ səplˈI dəlˈɪvəɹz tˈɛn dˈʌbᵊlju",
+     "samples": 86400,
+     "ms": 3600.0,
+     "lead_ms": 300.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1000,
+       "ms": 260
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The file is 327 MB and loads in 4.6 s.",
+   "synth_s": 0.336,
+   "ms": 5800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The file is 327 MB and loads in 4",
+     "phonemes": "ðə fˈIl ɪz θɹˈi hˈʌndɹəd twˈɛnti sˈɛvən ˌɛmbˈi ænd lˈOdz ɪn fˈɔɹ",
+     "samples": 102000,
+     "ms": 4250.0,
+     "lead_ms": 300.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 920,
+       "ms": 70
+      },
+      {
+       "at_ms": 2390,
+       "ms": 360
+      }
+     ]
+    },
+    {
+     "graphemes": "6 s",
+     "phonemes": "sˈɪks ˈɛs",
+     "samples": 37200,
+     "ms": 1550.0,
+     "lead_ms": 390.0,
+     "trail_ms": 510.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,243 @@
+{
+ "id": "21_numbers_versions_decimals_versions",
+ "category": "numbers_versions",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "kokoro_segments": 19,
+ "duration_s": 33.65,
+ "synth_s": 2.25,
+ "wav_sha256": "371ea02312b6b0c0fefac14bfb1a6576f0a0d0c47d2265aa4079f88cc8f9102e",
+ "sentences": [
+  {
+   "text": "Pi is about 3.14159.",
+   "synth_s": 0.285,
+   "ms": 4650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Pi is about 3",
+     "phonemes": "pˈI ɪz əbˈWt θɹˈi",
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 350.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 920,
+       "ms": 110
+      }
+     ]
+    },
+    {
+     "graphemes": "14159",
+     "phonemes": "fˌɔɹtˈin θˈWzᵊnd wˈʌn hˈʌndɹəd fˈɪfti nˈIn",
+     "samples": 67800,
+     "ms": 2825.0,
+     "lead_ms": 320.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 830,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Upgrade from v1.1.0 to v1.2.0 today.",
+   "synth_s": 0.543,
+   "ms": 7875.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Upgrade from v1",
+     "phonemes": "ˈʌpɡɹˌAd fɹʌm vˈi wˈʌn",
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "1",
+     "phonemes": "wˈʌn",
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 400.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "0 to v1",
+     "phonemes": "zˈɪɹO tə vˈi wˈʌn",
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 360.0,
+     "trail_ms": 480.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "2",
+     "phonemes": "tˈu",
+     "samples": 31200,
+     "ms": 1300.0,
+     "lead_ms": 390.0,
+     "trail_ms": 540.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "0 today",
+     "phonemes": "zˈɪɹO tədˈA",
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 380.0,
+     "trail_ms": 565.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Python 3.11 and torch 2.6.0+cu124 are required.",
+   "synth_s": 0.509,
+   "ms": 7850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Python 3",
+     "phonemes": "pˈIθˌɑn θɹˈi",
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 370.0,
+     "trail_ms": 520.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "11 and torch 2",
+     "phonemes": "əlˈɛvᵊn ænd tˈɔɹʧ tˈu",
+     "samples": 46800,
+     "ms": 1950.0,
+     "lead_ms": 320.0,
+     "trail_ms": 460.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "6",
+     "phonemes": "sˈɪks",
+     "samples": 30000,
+     "ms": 1250.0,
+     "lead_ms": 380.0,
+     "trail_ms": 440.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "0+cu124 are required",
+     "phonemes": "zˈiəɹO plˈʌs kˈu wˈʌnhˈʌndɹɪd twˈɛnti fˈɔɹ ɑɹ ɹəkwˈIəɹd",
+     "samples": 72000,
+     "ms": 3000.0,
+     "lead_ms": 330.0,
+     "trail_ms": 370.0,
+     "pauses": [
+      {
+       "at_ms": 2120,
+       "ms": 80
+      },
+      {
+       "at_ms": 2400,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The ratio was 0.5, not .75.",
+   "synth_s": 0.333,
+   "ms": 5000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The ratio was 0",
+     "phonemes": "ðə ɹˈAʃiO wʌz zˈɪɹO",
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 340.0,
+     "trail_ms": 480.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "5, not",
+     "phonemes": "fˈIv, nˌɑt",
+     "samples": 38400,
+     "ms": 1600.0,
+     "lead_ms": 390.0,
+     "trail_ms": 480.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "75",
+     "phonemes": "sˈɛvənti fˈIv",
+     "samples": 37200,
+     "ms": 1550.0,
+     "lead_ms": 360.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Kokoro 0.9.4 ships with misaki 0.9.4.",
+   "synth_s": 0.578,
+   "ms": 8275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Kokoro 0",
+     "phonemes": "kəkˈɔɹO zˈɪɹO",
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 370.0,
+     "trail_ms": 520.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "9",
+     "phonemes": "nˈIn",
+     "samples": 36000,
+     "ms": 1500.0,
+     "lead_ms": 410.0,
+     "trail_ms": 630.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "4 ships with misaki 0",
+     "phonemes": "fˈɔɹ ʃˈɪps wɪð mɪsəki zˈɪɹO",
+     "samples": 54000,
+     "ms": 2250.0,
+     "lead_ms": 360.0,
+     "trail_ms": 460.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "9",
+     "phonemes": "nˈIn",
+     "samples": 36000,
+     "ms": 1500.0,
+     "lead_ms": 410.0,
+     "trail_ms": 650.0,
+     "pauses": []
+    },
+    {
+     "graphemes": "4",
+     "phonemes": "fˈɔɹ",
+     "samples": 31800,
+     "ms": 1325.0,
+     "lead_ms": 380.0,
+     "trail_ms": 535.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}
