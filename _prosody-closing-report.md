@@ -9,7 +9,7 @@
 | 1 Splitting | unit tests, zero wrong splits | **Passed** (R3 later found failing on passage 16) | §Phase 1 below |
 | 2 Normalization | expected-output files match; R4, R5 hold | **Passed**; R3 open | §Phase 2 below |
 | 3 Pauses | measured gaps within ±50 ms of targets | **Passed**: 516/516; R3 passes | §Phase 3 below |
-| 4 Paul's listening check | Paul passes it | not started | |
+| 4 Paul's listening check | Paul passes it | **Waiting for Paul**: page published | §Phase 4 below |
 | 5 Release | only after Phase 4 | not started | |
 
 ---
@@ -366,3 +366,20 @@ Passage 16 is higher than the other two. A likely but **unverified** reason: in 
 stopped after 4 chunks, and the next read's first synthesis waits on the lock while the old
 producer finishes its current chunk (passage 16's second chunk takes about 340 ms). The same wait would
 happen when Paul starts a new read while one is still playing.
+---
+
+## Phase 4 — Paul's listening check (in progress)
+
+- **A/B page:** https://claude.ai/artifact/YavTFrd8ndpBu7MPSeKkTZ (private to Paul). It holds 33 pairs,
+  filterable by category: **Before** = `tests/baseline/wav` (v1.1.0 code), **After** = `tests/phase3/wav`
+  (final code, commit `2478f8f`). Each pair is rated Better / Same / Worse with an optional note,
+  and there is an overall Pass / Not yet.
+- **Where the ratings go:** the page's database, collection `ratings` (one document per passage id) and
+  `summary/overall`, read back with `ArtifactData list`. The page falls back to browser storage
+  plus a "Copy results as text" button if the store isn't available.
+- **Source:** `tests/phase4/listening.template.html` + `tests/phase4/build_page.py` (which fills in the
+  passages, the Phase 0 chunks, the reviewed spoken output and the render durations).
+  The MP3s (24.2 MB, 64 kbit/s) are made by `build_page.py --audio-out <dir>` and are not committed.
+- **Checked after publishing:** a probe rating written, listed and deleted through the page's store; one
+  published MP3 fetched back byte-identical (152,640 bytes). Not checked: playback in Paul's browser
+  or phone, which only he can confirm.

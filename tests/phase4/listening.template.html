@@ -1,0 +1,413 @@
+<title>Kokoro Listening Check</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column of before/after strips under a sticky tally, like a channel list on a mixing desk. */
+:root {
+  --bg: #eef1f4; --surface: #ffffff; --ink: #17212b; --muted: #56636f; --line: #d3dae1;
+  --accent: #b45309; --accent-ink: #ffffff; --chip: #e2e7ec;
+  --better: #15803d; --same: #5b6774; --worse: #b91c1c;
+  --better-bg: #e3f3e8; --same-bg: #e6eaee; --worse-bg: #f8e3e3;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-head: "IBM Plex Sans Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11171d; --surface: #1a222a; --ink: #e6ebf0; --muted: #9aa7b3; --line: #2c3742;
+    --accent: #f59e0b; --accent-ink: #1a1206; --chip: #24303b;
+    --better: #4ade80; --same: #a3afba; --worse: #f87171;
+    --better-bg: #16301f; --same-bg: #242e38; --worse-bg: #3a1c1c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11171d; --surface: #1a222a; --ink: #e6ebf0; --muted: #9aa7b3; --line: #2c3742;
+  --accent: #f59e0b; --accent-ink: #1a1206; --chip: #24303b;
+  --better: #4ade80; --same: #a3afba; --worse: #f87171;
+  --better-bg: #16301f; --same-bg: #242e38; --worse-bg: #3a1c1c;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.wrap { max-width: 860px; margin: 0 auto; display: grid; gap: 20px; }
+h1, h2, h3 { font-family: var(--font-head); text-wrap: balance; margin: 0; letter-spacing: 0.005em; }
+h1 { font-size: 1.9rem; font-weight: 600; line-height: 1.15; }
+h2 { font-size: 1.15rem; font-weight: 600; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+header.intro { padding-top: 28px; display: grid; gap: 10px; }
+.eyebrow { font: 500 0.75rem var(--font-mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
+.intro p { max-width: 65ch; }
+.tip { border-left: 3px solid var(--accent); padding: 8px 12px; background: var(--surface); border-radius: 0 6px 6px 0; max-width: 65ch; }
+
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); padding-block: 10px; border-bottom: 1px solid var(--line);
+  display: grid; gap: 10px;
+}
+.tally { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; }
+.tally .count { font: 600 1.05rem var(--font-mono); font-variant-numeric: tabular-nums; }
+.tally .b { color: var(--better); } .tally .s { color: var(--same); } .tally .w { color: var(--worse); }
+.meter { height: 6px; background: var(--chip); border-radius: 3px; overflow: hidden; display: flex; }
+.meter span { display: block; height: 100%; transition: width .2s; }
+.meter .b { background: var(--better); } .meter .s { background: var(--same); } .meter .w { background: var(--worse); }
+.filters { display: grid; gap: 8px; margin-top: -8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font: 500 0.8rem var(--font-body); border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  padding: 4px 10px; border-radius: 999px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip .n { color: var(--muted); margin-left: 4px; font-family: var(--font-mono); }
+.chip[aria-pressed="true"] .n { color: var(--bg); opacity: .75; }
+
+.status { font-size: 0.85rem; color: var(--muted); }
+.status.warn { color: var(--worse); }
+
+.list { display: grid; gap: 12px; }
+.pair {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  padding: 14px 16px; display: grid; gap: 12px; min-width: 0;
+}
+.pair[data-verdict="better"] { box-shadow: inset 4px 0 0 var(--better); }
+.pair[data-verdict="same"] { box-shadow: inset 4px 0 0 var(--same); }
+.pair[data-verdict="worse"] { box-shadow: inset 4px 0 0 var(--worse); }
+.pair-head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.pair-head .num { font: 500 0.85rem var(--font-mono); color: var(--muted); }
+.tag { font: 500 0.72rem var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.origin { font-size: 0.78rem; color: var(--muted); }
+.what { color: var(--muted); font-size: 0.9rem; min-width: 0; overflow-wrap: anywhere; }
+.players { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 560px) { .players { grid-template-columns: 1fr; } }
+.player { display: grid; gap: 4px; min-width: 0; }
+.player label { font: 600 0.8rem var(--font-head); text-transform: uppercase; letter-spacing: 0.08em; display: flex; justify-content: space-between; }
+.player label .mono { font-weight: 400; color: var(--muted); text-transform: none; letter-spacing: 0; }
+audio { width: 100%; height: 36px; }
+.rate { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.rate .q { font-size: 0.85rem; color: var(--muted); margin-right: 4px; }
+.vote {
+  font: 500 0.9rem var(--font-body); padding: 7px 14px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); min-width: 84px;
+}
+.vote:hover { border-color: var(--muted); }
+.vote[data-v="better"][aria-pressed="true"] { background: var(--better-bg); border-color: var(--better); color: var(--better); }
+.vote[data-v="same"][aria-pressed="true"] { background: var(--same-bg); border-color: var(--same); color: var(--ink); }
+.vote[data-v="worse"][aria-pressed="true"] { background: var(--worse-bg); border-color: var(--worse); color: var(--worse); }
+textarea, .note {
+  width: 100%; min-height: 38px; resize: vertical; font: 0.9rem var(--font-body); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px;
+}
+details { font-size: 0.88rem; }
+summary { cursor: pointer; color: var(--muted); }
+.texts { display: grid; gap: 10px; margin-top: 8px; }
+.texts h3 { font: 600 0.75rem var(--font-head); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.screen { white-space: pre-wrap; font: 0.82rem/1.45 var(--font-mono); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 8px 10px; overflow-x: auto; max-height: 260px; overflow-y: auto; }
+ol.chunks { margin: 0; padding-left: 22px; display: grid; gap: 2px; }
+ol.chunks li { overflow-wrap: anywhere; }
+.final { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 12px; }
+.final .rate .vote { min-width: 120px; }
+.vote[data-v="pass"][aria-pressed="true"] { background: var(--better-bg); border-color: var(--better); color: var(--better); }
+.vote[data-v="fail"][aria-pressed="true"] { background: var(--worse-bg); border-color: var(--worse); color: var(--worse); }
+.copy { font: 500 0.85rem var(--font-body); background: transparent; color: var(--ink); border: 1px dashed var(--line);
+  border-radius: 6px; padding: 6px 12px; cursor: pointer; justify-self: start; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .meter span { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <span class="eyebrow">Natural Voice TTS · Phase 4</span>
+    <h1>Kokoro listening check</h1>
+    <p>33 passages, each rendered twice with the same voice (af_heart, speed 1.0). <b>Before</b> is the app as it was
+      (v1.1.0). <b>After</b> has the new sentence splitting, reading rules and pause lengths. For each pair, say whether
+      After sounds better, the same or worse. A note helps most when something sounds wrong.</p>
+    <p class="tip">Your PC plays through the headset's hands-free (phone-call) output, which sounds thin whatever the voice
+      does. Phone speakers, earbuds or the headset's stereo output give a fairer comparison.</p>
+  </header>
+
+  <div class="bar" id="bar">
+    <div class="tally" aria-live="polite">
+      <span><span class="count" id="t-rated">0</span> <span class="muted">of <span id="t-total">0</span> rated</span></span>
+      <span class="b"><span class="count" id="t-better">0</span> better</span>
+      <span class="s"><span class="count" id="t-same">0</span> same</span>
+      <span class="w"><span class="count" id="t-worse">0</span> worse</span>
+    </div>
+    <div class="meter" aria-hidden="true"><span class="b" id="m-b"></span><span class="s" id="m-s"></span><span class="w" id="m-w"></span></div>
+  </div>
+  <div class="filters">
+    <div class="chips" id="chips" role="toolbar" aria-label="Filter by category"></div>
+    <p class="status" id="status">Connecting to saved ratings…</p>
+  </div>
+
+  <main class="list" id="list"></main>
+
+  <section class="final" aria-labelledby="final-h">
+    <h2 id="final-h">Overall: does Phase 4 pass?</h2>
+    <p class="muted">Pass means the After versions are good enough to build the v1.2.0 installer. Anything marked Worse gets
+      fixed first either way.</p>
+    <div class="rate" role="group" aria-label="Overall verdict">
+      <button class="vote" data-v="pass" id="final-pass" aria-pressed="false">Pass</button>
+      <button class="vote" data-v="fail" id="final-fail" aria-pressed="false">Not yet</button>
+    </div>
+    <textarea id="final-note" placeholder="Anything else to change (optional)" aria-label="Overall note"></textarea>
+    <button class="copy" id="copy">Copy results as text</button>
+    <p class="status" id="copy-status"></p>
+  </section>
+</div>
+
+<script type="application/json" id="passages">/*DATA*/</script>
+<script>
+(() => {
+  const PASSAGES = JSON.parse(document.getElementById('passages').textContent);
+  const CATEGORY_NAMES = {
+    rhythm: 'Rhythm', splitting: 'Splitting', abbreviations: 'Abbreviations', numbers_versions: 'Numbers and versions',
+    markdown: 'Markdown', paths_urls: 'Paths and URLs', tables: 'Tables', code_blocks: 'Code blocks', lists: 'Lists',
+    symbols: 'Symbols', units: 'Units', times_dates: 'Times and dates',
+  };
+  const LOCAL_KEY = 'kokoro-listening-ratings';
+  const NOTE_SAVE_MS = 800;
+  const ratings = {};        // id -> {verdict, note}
+  let overall = {};          // {verdict, note}
+  let db = null;
+  let filter = 'all';
+  const writes = {};         // doc path -> promise chain (one write at a time per doc)
+
+  const $ = (id) => document.getElementById(id);
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
+
+  function loadLocal() {
+    try { const v = JSON.parse(localStorage.getItem(LOCAL_KEY) || '{}'); Object.assign(ratings, v.ratings || {}); overall = v.overall || {}; } catch (e) {}
+  }
+  function saveLocal() {
+    try { localStorage.setItem(LOCAL_KEY, JSON.stringify({ ratings, overall })); } catch (e) {}
+  }
+
+  function queueWrite(path, body) {
+    if (!db) { saveLocal(); return; }
+    const prev = writes[path] || Promise.resolve();
+    writes[path] = prev.then(() => db.doc(path).set(body)).then(() => {
+      setStatus('Saved.', false);
+    }).catch((e) => {
+      saveLocal();
+      setStatus(e && e.code === 'invalid_argument'
+        ? 'This view can listen but not save ratings. They are kept in this browser only.'
+        : 'Could not save just now; kept in this browser. Try again in a moment.', true);
+    });
+  }
+
+  function setStatus(text, warn) { const s = $('status'); s.textContent = text; s.classList.toggle('warn', !!warn); }
+
+  function counts(list) {
+    const c = { better: 0, same: 0, worse: 0 };
+    list.forEach((p) => { const v = ratings[p.id] && ratings[p.id].verdict; if (c[v] !== undefined) c[v]++; });
+    return c;
+  }
+
+  function renderTally() {
+    const c = counts(PASSAGES);
+    const rated = c.better + c.same + c.worse;
+    $('t-rated').textContent = rated; $('t-total').textContent = PASSAGES.length;
+    $('t-better').textContent = c.better; $('t-same').textContent = c.same; $('t-worse').textContent = c.worse;
+    const pct = (n) => `${(n / PASSAGES.length) * 100}%`;
+    $('m-b').style.width = pct(c.better); $('m-s').style.width = pct(c.same); $('m-w').style.width = pct(c.worse);
+  }
+
+  function renderChips() {
+    const cats = [...new Set(PASSAGES.map((p) => p.category))];
+    const unrated = PASSAGES.filter((p) => !(ratings[p.id] && ratings[p.id].verdict)).length;
+    const items = [['all', 'All', PASSAGES.length], ['unrated', 'Not rated', unrated],
+      ...cats.map((c) => [c, CATEGORY_NAMES[c] || c, PASSAGES.filter((p) => p.category === c).length])];
+    const box = $('chips');
+    box.replaceChildren(...items.map(([key, label, n]) => {
+      const b = document.createElement('button');
+      b.className = 'chip'; b.type = 'button'; b.id = `chip-${key}`;
+      b.setAttribute('aria-pressed', String(filter === key));
+      b.append(label);
+      const span = document.createElement('span'); span.className = 'n'; span.textContent = n; b.append(span);
+      b.addEventListener('click', () => { filter = key; renderChips(); applyFilter(); });
+      return b;
+    }));
+  }
+
+  function applyFilter() {
+    document.querySelectorAll('.pair').forEach((el) => {
+      const id = el.dataset.id, cat = el.dataset.category;
+      const rated = ratings[id] && ratings[id].verdict;
+      el.hidden = !(filter === 'all' || (filter === 'unrated' ? !rated : cat === filter));
+    });
+  }
+
+  function chunkList(chunks) {
+    const ol = document.createElement('ol'); ol.className = 'chunks';
+    chunks.forEach((t) => { const li = document.createElement('li'); li.textContent = t; ol.append(li); });
+    return ol;
+  }
+
+  function buildCard(p) {
+    const card = document.createElement('article');
+    card.className = 'pair'; card.dataset.id = p.id; card.dataset.category = p.category;
+
+    const head = document.createElement('div'); head.className = 'pair-head';
+    const num = document.createElement('span'); num.className = 'num'; num.textContent = `#${p.num}`;
+    const tag = document.createElement('span'); tag.className = 'tag'; tag.textContent = CATEGORY_NAMES[p.category] || p.category;
+    const origin = document.createElement('span'); origin.className = 'origin';
+    origin.textContent = p.origin === 'real' ? 'real Claude text' : 'written for the test';
+    head.append(num, tag, origin);
+    const what = document.createElement('p'); what.className = 'what'; what.textContent = p.tests;
+
+    const players = document.createElement('div'); players.className = 'players';
+    [['before', 'Before', p.before_s], ['after', 'After', p.after_s]].forEach(([side, label, secs]) => {
+      const wrap = document.createElement('div'); wrap.className = 'player';
+      const id = `a-${side}-${p.num}`;
+      const lab = document.createElement('label'); lab.htmlFor = id;
+      const name = document.createElement('span'); name.textContent = label;
+      const dur = document.createElement('span'); dur.className = 'mono'; dur.textContent = fmt(secs);
+      lab.append(name, dur);
+      const audio = document.createElement('audio');
+      audio.id = id; audio.controls = true; audio.preload = 'none'; audio.src = `audio/${side}/${p.id}.mp3`;
+      wrap.append(lab, audio);
+      players.append(wrap);
+    });
+
+    const rate = document.createElement('div'); rate.className = 'rate'; rate.setAttribute('role', 'group');
+    rate.setAttribute('aria-label', `After compared with Before, passage ${p.num}`);
+    const q = document.createElement('span'); q.className = 'q'; q.textContent = 'After is';
+    rate.append(q);
+    [['better', 'Better'], ['same', 'Same'], ['worse', 'Worse']].forEach(([v, label]) => {
+      const b = document.createElement('button'); b.className = 'vote'; b.type = 'button'; b.dataset.v = v;
+      b.id = `v-${v}-${p.num}`; b.textContent = label; b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', () => {
+        const cur = ratings[p.id] || {};
+        const verdict = cur.verdict === v ? null : v;
+        ratings[p.id] = { ...cur, verdict };
+        queueWrite(`ratings/${p.id}`, { verdict, note: ratings[p.id].note || '', updatedAt: new Date().toISOString() });
+        paintCard(card, p.id); renderTally(); renderChips(); applyFilter();
+      });
+      rate.append(b);
+    });
+
+    const note = document.createElement('textarea'); note.className = 'note'; note.id = `note-${p.num}`;
+    note.placeholder = 'Note (optional): what sounds better or worse?'; note.setAttribute('aria-label', `Note for passage ${p.num}`);
+    let timer = null;
+    const saveNote = () => {
+      clearTimeout(timer);
+      const cur = ratings[p.id] || {};
+      if ((cur.note || '') === note.value) return;
+      ratings[p.id] = { ...cur, note: note.value };
+      queueWrite(`ratings/${p.id}`, { verdict: cur.verdict || null, note: note.value, updatedAt: new Date().toISOString() });
+    };
+    note.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(saveNote, NOTE_SAVE_MS); });
+    note.addEventListener('blur', saveNote);
+
+    const det = document.createElement('details');
+    const sum = document.createElement('summary'); sum.textContent = 'Show the text and what each version says';
+    const texts = document.createElement('div'); texts.className = 'texts';
+    const h1 = document.createElement('h3'); h1.textContent = 'On screen';
+    const screen = document.createElement('div'); screen.className = 'screen'; screen.textContent = p.screen;
+    const h2 = document.createElement('h3'); h2.textContent = `Before: ${p.before_chunks.length} pieces`;
+    const h3 = document.createElement('h3'); h3.textContent = `After: ${p.after_chunks.length} pieces, as spoken`;
+    texts.append(h1, screen, h2, chunkList(p.before_chunks), h3, chunkList(p.after_chunks));
+    det.append(sum, texts);
+
+    card.append(head, what, players, rate, note, det);
+    paintCard(card, p.id);
+    return card;
+  }
+
+  function paintCard(card, id) {
+    const r = ratings[id] || {};
+    card.dataset.verdict = r.verdict || '';
+    card.querySelectorAll('.vote').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === r.verdict)));
+    const note = card.querySelector('.note');
+    if (note && document.activeElement !== note && note.value !== (r.note || '')) note.value = r.note || '';
+  }
+
+  function paintOverall() {
+    $('final-pass').setAttribute('aria-pressed', String(overall.verdict === 'pass'));
+    $('final-fail').setAttribute('aria-pressed', String(overall.verdict === 'fail'));
+    const n = $('final-note');
+    if (document.activeElement !== n && n.value !== (overall.note || '')) n.value = overall.note || '';
+  }
+
+  function repaintAll() {
+    document.querySelectorAll('.pair').forEach((c) => paintCard(c, c.dataset.id));
+    paintOverall(); renderTally(); renderChips(); applyFilter();
+  }
+
+  function resultsText() {
+    const lines = PASSAGES.map((p) => {
+      const r = ratings[p.id] || {};
+      return `#${p.num} ${p.category}: ${r.verdict || 'not rated'}${r.note ? ' | ' + r.note : ''}`;
+    });
+    lines.push(`Overall: ${overall.verdict || 'not decided'}${overall.note ? ' | ' + overall.note : ''}`);
+    return lines.join('\n');
+  }
+
+  // Build the page.
+  $('list').replaceChildren(...PASSAGES.map(buildCard));
+  loadLocal();
+  repaintAll();
+
+  // Only one clip plays at a time.
+  document.addEventListener('play', (e) => {
+    document.querySelectorAll('audio').forEach((a) => { if (a !== e.target) a.pause(); });
+  }, true);
+
+  ['pass', 'fail'].forEach((v) => $(`final-${v}`).addEventListener('click', () => {
+    overall = { ...overall, verdict: overall.verdict === v ? null : v };
+    queueWrite('summary/overall', { verdict: overall.verdict, note: overall.note || '', updatedAt: new Date().toISOString() });
+    paintOverall();
+  }));
+  let finalTimer = null;
+  const saveFinalNote = () => {
+    clearTimeout(finalTimer);
+    const v = $('final-note').value;
+    if ((overall.note || '') === v) return;
+    overall = { ...overall, note: v };
+    queueWrite('summary/overall', { verdict: overall.verdict || null, note: v, updatedAt: new Date().toISOString() });
+  };
+  $('final-note').addEventListener('input', () => { clearTimeout(finalTimer); finalTimer = setTimeout(saveFinalNote, NOTE_SAVE_MS); });
+  $('final-note').addEventListener('blur', saveFinalNote);
+
+  $('copy').addEventListener('click', () => {
+    const text = resultsText();
+    const done = (msg) => { $('copy-status').textContent = msg; };
+    try {
+      navigator.clipboard.writeText(text).then(() => done('Copied. Paste it into the chat.'), () => fallback());
+    } catch (e) { fallback(); }
+    function fallback() {
+      const n = $('final-note'); const keep = n.value;
+      n.value = text; n.select(); done('Copy blocked here: the results are selected in the box above. Copy them, then undo.');
+      n.addEventListener('blur', () => { n.value = keep; }, { once: true });
+    }
+  });
+
+  // Saved ratings, shared with Claude.
+  if (window.claude && typeof window.claude.use === 'function') {
+    window.claude.use('db').then((store) => {
+      if (!store) { setStatus('Ratings are kept in this browser only. Use “Copy results” to send them.', true); return; }
+      db = store;
+      setStatus('Ratings save automatically.', false);
+      db.collection('ratings').onSnapshot((snap) => {
+        snap.docs.forEach((d) => { if (d.exists) ratings[d.id] = { ...d.data() }; });
+        repaintAll();
+      }, () => setStatus('Lost the connection to saved ratings. Reload the page to reconnect.', true));
+      db.doc('summary/overall').onSnapshot((d) => {
+        if (d.exists) { overall = { ...d.data() }; paintOverall(); }
+      }, () => {});
+    });
+  } else {
+    setStatus('Ratings are kept in this browser only. Use “Copy results” to send them.', true);
+  }
+})();
+</script>
