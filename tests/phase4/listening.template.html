@@ -275,7 +275,10 @@ ol.chunks li { overflow-wrap: anywhere; }
       lab.append(name, dur);
       const audio = document.createElement('audio');
       audio.id = id; audio.controls = true; audio.preload = 'none'; audio.src = `audio/${side}/${p.id}.mp3`;
-      wrap.append(lab, audio);
+      const err = document.createElement('p'); err.className = 'status warn'; err.hidden = true;
+      err.textContent = 'This clip could not be loaded. Open the published page, or run build_page.py with --audio-out next to this file.';
+      audio.addEventListener('error', () => { err.hidden = false; });
+      wrap.append(lab, audio, err);
       players.append(wrap);
     });
 

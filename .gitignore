@@ -22,6 +22,7 @@ Desktop.ini
 # Project
 test_output.wav
 *.wav
+tests/phase4/audio/
 
 # Internal docs (not part of the app)
 _team-lead-brief*.md
