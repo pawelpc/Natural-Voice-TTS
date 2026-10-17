@@ -17,6 +17,7 @@ import pystray
 from PIL import Image
 
 import config
+import pauses
 from normalizer import prepare_speech
 from audio_player import (
     play_audio, stop as audio_stop, toggle_pause,
@@ -64,6 +65,11 @@ def _get_status() -> str:
 
 # --- TTS Worker Thread ---
 
+PREFETCH_CHUNKS = 2       # chunks synthesized ahead of the one playing
+_READ_DONE = object()     # producer -> player: no more chunks for this read
+_synth_lock = threading.Lock()  # one synthesis at a time, even across a stop and a new read
+
+
 def speech_chunks(text: str) -> list[str]:
     """The chunks the worker speaks for this text, in order.
 
@@ -72,10 +78,61 @@ def speech_chunks(text: str) -> list[str]:
     return [s.text for s in prepare_speech(text)]
 
 
+def render_chunk(tts_engine, chunks: list, i: int, voice: str, speed: float):
+    """Synthesize chunk i and shape its pauses (pauses.shape_chunk).
+
+    Returns (audio, pause_marks); audio is None when nothing could be produced.
+    """
+    text = chunks[i].text
+    try:
+        with _synth_lock:
+            segments = [(audio, tokens, graphemes) for graphemes, audio, tokens
+                        in tts_engine.synthesize_segments(text, voice=voice, speed=speed)]
+    except Exception:
+        logger.exception("Failed to synthesize: %.60s...", text)
+        return None, []
+    if not segments:
+        # No exception, but the engine produced no audio — previously a silent
+        # drop. Surface it so the caller's skip is explainable in the log.
+        logger.warning("Synthesis produced no audio for: %.80s", text)
+        return None, []
+    kind, pause_ms = pauses.pause_after(chunks, i)
+    audio, marks = pauses.shape_chunk(segments, kind, pause_ms)
+    if len(audio) == 0:
+        logger.warning("Synthesis produced only silence for: %.80s", text)
+        return None, []
+    return audio, marks
+
+
+def _produce(tts_engine, chunks: list, voice: str, speed: float,
+             ready: queue.Queue, cancel: threading.Event) -> None:
+    """Synthesize chunks in order into `ready` while earlier ones play."""
+    for i in range(len(chunks)):
+        if cancel.is_set():
+            return
+        audio, _ = render_chunk(tts_engine, chunks, i, voice, speed)
+        while not cancel.is_set():
+            try:
+                ready.put((i, audio), timeout=0.1)
+                break
+            except queue.Full:
+                continue
+    while not cancel.is_set():
+        try:
+            ready.put(_READ_DONE, timeout=0.1)
+            return
+        except queue.Full:
+            continue
+
+
 def _worker() -> None:
-    """Background worker: synthesize and play text from the queue."""
+    """Background worker: synthesize and play text from the queue.
+
+    A producer thread synthesizes the next chunks while the current one plays,
+    so the pause between sentences is the deliberate one from pauses.py, not
+    the time it takes to synthesize a later sentence (Phase 0, H4).
+    """
     import tts_engine
-    import numpy as np
 
     logger.info("TTS worker thread started")
 
@@ -95,12 +152,12 @@ def _worker() -> None:
         audio_reset()
         _set_status('Reading...')
 
-        sentences = speech_chunks(text)
-        if not sentences:
+        chunks = prepare_speech(text)
+        if not chunks:
             _set_status('Idle')
             continue
 
-        logger.info("Reading %d sentences", len(sentences))
+        logger.info("Reading %d sentences", len(chunks))
 
         skipped = 0
 
@@ -108,48 +165,39 @@ def _worker() -> None:
         voice = config.get('voice')
         speed = config.get('speed')
 
-        pending_audio = None
-        pending_label = None
-
-        for i, sentence in enumerate(sentences):
-            if is_stopped():
-                break
-
-            if pending_audio is not None:
-                current_audio = pending_audio
-                current_label = pending_label
-                pending_audio = None
-                pending_label = None
-            else:
-                current_audio = _synthesize_sentence(tts_engine, sentence, voice, speed)
-                current_label = sentence
-
-            if current_audio is None:
-                # D2: a sentence produced no audio (synthesis failed or returned
-                # empty). Previously this was skipped with no trace. Log it and
-                # remember to notify Paul at the end of the read.
-                skipped += 1
-                logger.warning(
-                    "Skipped sentence [%d/%d] (no audio produced): %.80s",
-                    i + 1, len(sentences), current_label,
-                )
-                continue
-
-            # Lookahead
-            next_sentence = sentences[i + 1] if i + 1 < len(sentences) else None
-            if next_sentence and not is_stopped():
-                pending_audio = _synthesize_sentence(tts_engine, next_sentence, voice, speed)
-                pending_label = next_sentence
-
-            logger.info("Playing [%d/%d]: %.60s...", i + 1, len(sentences), current_label)
-            completed = play_audio(current_audio)
-            if not completed:
-                break
+        ready: queue.Queue = queue.Queue(maxsize=PREFETCH_CHUNKS)
+        cancel = threading.Event()
+        producer = threading.Thread(
+            target=_produce, args=(tts_engine, chunks, voice, speed, ready, cancel),
+            daemon=True, name='tts-synth',
+        )
+        producer.start()
+        try:
+            while True:
+                item = ready.get()
+                if item is _READ_DONE or is_stopped():
+                    break
+                i, audio = item
+                if audio is None:
+                    # D2: a sentence produced no audio (synthesis failed or returned
+                    # empty). Previously this was skipped with no trace. Log it and
+                    # remember to notify Paul at the end of the read.
+                    skipped += 1
+                    logger.warning(
+                        "Skipped sentence [%d/%d] (no audio produced): %.80s",
+                        i + 1, len(chunks), chunks[i].text,
+                    )
+                    continue
+                logger.info("Playing [%d/%d]: %.60s...", i + 1, len(chunks), chunks[i].text)
+                if not play_audio(audio):
+                    break
+        finally:
+            cancel.set()  # the producer stops after its current chunk
 
         _set_status('Idle')
         if skipped:
             logger.warning(
-                "Finished reading — %d of %d sentence(s) skipped", skipped, len(sentences)
+                "Finished reading — %d of %d sentence(s) skipped", skipped, len(chunks)
             )
             _notify(
                 'Natural Voice TTS',
@@ -157,21 +205,6 @@ def _worker() -> None:
             )
         else:
             logger.info("Finished reading")
-
-
-def _synthesize_sentence(tts_engine, sentence: str, voice: str, speed: float):
-    """Synthesize a single sentence, returning the audio array or None."""
-    import numpy as np
-    try:
-        chunks = list(tts_engine.synthesize(sentence, voice=voice, speed=speed))
-        if chunks:
-            return np.concatenate([audio for _, audio in chunks])
-        # No exception, but the engine produced no audio — previously a silent
-        # drop. Surface it so the caller's skip is explainable in the log.
-        logger.warning("Synthesis produced no audio for: %.80s", sentence)
-    except Exception:
-        logger.exception("Failed to synthesize: %.60s...", sentence)
-    return None
 
 
 # --- Hotkey Callbacks ---

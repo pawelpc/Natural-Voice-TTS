@@ -1,9 +1,11 @@
 """Render every passage in tests/passages/ the way the tray app speaks it.
 
-For each passage: the chunks the app's worker would speak (app.speech_chunks,
-falling back to split_sentences() for older checkouts) -> app._synthesize_sentence() per chunk,
-audio joined back to back (device gaps between chunks are measured separately
-by measure_ttfa.py). Writes one WAV and one JSON per passage, plus a summary.
+For each passage: normalizer.prepare_speech() -> app.render_chunk() per chunk
+(the same calls the worker makes, including the pauses), audio joined back to
+back. Any extra delay from the sound device is measured separately
+(measure_device.py). Writes one WAV and one JSON per passage, plus a summary;
+the JSON lists every deliberate pause (kind, target, position) for
+measure_pauses.py.
 
 Usage:
     python tests/render_passages.py --out tests/baseline
@@ -25,8 +27,7 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
     tts_engine = harness.load_engine()
     recorder = harness.install_recorder(tts_engine)
     import app
-    from text_processor import split_sentences
-    chunker = getattr(app, 'speech_chunks', split_sentences)
+    from normalizer import prepare_speech
 
     voice, speed = tts_engine.DEFAULT_VOICE, tts_engine.DEFAULT_SPEED
     summary = {'env': harness.env_info(), 'voice': voice, 'speed': speed, 'passages': []}
@@ -34,13 +35,19 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
     for entry in harness.load_manifest():
         if only and entry['id'] not in only:
             continue
-        chunks = chunker(entry['text'])
-        sentences, audios, skipped = [], [], 0
-        for chunk in chunks:
+        spoken = prepare_speech(entry['text'])
+        chunks = [s.text for s in spoken]
+        sentences, audios, skipped, pause_marks = [], [], 0, []
+        offset_ms = 0.0
+        for i, chunk in enumerate(chunks):
             recorder.records.clear()
             t0 = time.perf_counter()
-            audio = app._synthesize_sentence(tts_engine, chunk, voice, speed)
+            audio, marks = app.render_chunk(tts_engine, spoken, i, voice, speed)  # same as the worker
             synth_s = time.perf_counter() - t0
+            pause_marks += [{'kind': m.kind, 'target_ms': m.target_ms, 'at_ms': round(offset_ms + m.at_ms, 1),
+                             'chunk': i} for m in marks]
+            if audio is not None:
+                offset_ms += len(audio) / harness.SAMPLE_RATE * 1000
             segments = []
             for rec in recorder.records:
                 seg = {k: rec[k] for k in ('graphemes', 'phonemes', 'silent_words', 'samples')}
@@ -66,11 +73,11 @@ def render(out_dir: Path, only: list[str] | None = None) -> dict:
                 'kokoro_segments': sum(len(s['kokoro_segments']) for s in sentences),
                 'duration_s': round(len(full) / harness.SAMPLE_RATE, 2),
                 'synth_s': round(sum(s['synth_s'] for s in sentences), 2),
-                'wav_sha256': sha, 'sentences': sentences}
+                'wav_sha256': sha, 'pauses': pause_marks, 'sentences': sentences}
         (out_dir / 'meta').mkdir(parents=True, exist_ok=True)
         (out_dir / 'meta' / f"{entry['id']}.json").write_text(
             json.dumps(meta, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
-        summary['passages'].append({k: v for k, v in meta.items() if k != 'sentences'})
+        summary['passages'].append({k: v for k, v in meta.items() if k not in ('sentences', 'pauses')})
         print(f"{entry['id']}: {len(chunks)} chunks, {meta['kokoro_segments']} kokoro segments, "
               f"{meta['duration_s']} s audio, {skipped} skipped, silent words: {silent}")
 

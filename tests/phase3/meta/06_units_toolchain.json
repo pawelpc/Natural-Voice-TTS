@@ -1,0 +1,320 @@
+{
+ "id": "06_units_toolchain",
+ "category": "units",
+ "origin": "real",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 32.9,
+ "synth_s": 1.74,
+ "wav_sha256": "0e3bd9bb4e7233ea8cab00648a64f84b32a94ec8293e021660fe9554d640329d",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 3445.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 4855.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 5880.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 7290.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 8660.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 11965.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 14420.0,
+   "chunk": 2
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 15455.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 19865.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 21135.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 22530.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 24480.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 26960.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 31165.0,
+   "chunk": 4
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Toolchain is all present (PyInstaller 6 point 19, Inno Setup 6, espeak-ng, Kokoro model cached).",
+   "synth_s": 0.381,
+   "ms": 7740.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Toolchain is all present (PyInstaller 6 point 19, Inno Setup 6, espeak-ng, Kokoro model cached).",
+     "phonemes": "tˈulʧAn ɪz ˈɔl pɹˈɛzᵊnt (pˈI ɪnstˈɔləɹ sˈɪks pˈYnt nˌIntˈin, ɪnnˈO sˈɛTˌʌp sˈɪks, ˈispikˌɛnʤˈi, kəkˈɔɹO mˈɑdᵊl kˈæʃt).",
+     "silent_words": [],
+     "samples": 194400,
+     "ms": 8100.0,
+     "lead_ms": 310.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1180,
+       "ms": 60
+      },
+      {
+       "at_ms": 1570,
+       "ms": 390
+      },
+      {
+       "at_ms": 2960,
+       "ms": 60
+      },
+      {
+       "at_ms": 3760,
+       "ms": 340
+      },
+      {
+       "at_ms": 4790,
+       "ms": 60
+      },
+      {
+       "at_ms": 5090,
+       "ms": 80
+      },
+      {
+       "at_ms": 5320,
+       "ms": 180
+      },
+      {
+       "at_ms": 6330,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two things to note:",
+   "synth_s": 0.115,
+   "ms": 1720.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two things to note:",
+     "phonemes": "tˈu θˈɪŋz tə nˈOt:",
+     "silent_words": [],
+     "samples": 42000,
+     "ms": 1750.0,
+     "lead_ms": 350.0,
+     "trail_ms": 480.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The installer is about 1.8 gigabytes — confirms it must stay a local artifact, not a git commit.",
+   "synth_s": 0.33,
+   "ms": 6545.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The installer is about 1.8 gigabytes — confirms it must stay a local artifact, not a git commit.",
+     "phonemes": "ði ɪnstˈɔləɹ ɪz əbˈWt wˈʌn pYnt ˈAt ɡˈɪɡəbˌIts — kənfˈɜɹmz ɪt mˈʌst stˈA ɐ lˈOkəl ˈɑɹTəfˌækt, nˌɑt ɐ ɡˈɪt kəmˈɪt.",
+     "silent_words": [],
+     "samples": 172200,
+     "ms": 7175.0,
+     "lead_ms": 320.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 2160,
+       "ms": 100
+      },
+      {
+       "at_ms": 2820,
+       "ms": 460
+      },
+      {
+       "at_ms": 5410,
+       "ms": 90
+      },
+      {
+       "at_ms": 5540,
+       "ms": 310
+      },
+      {
+       "at_ms": 6200,
+       "ms": 90
+      },
+      {
+       "at_ms": 6570,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Your current app is running (pid 14652, the installed copy).",
+   "synth_s": 0.304,
+   "ms": 5580.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Your current app is running (pid 14652, the installed copy).",
+     "phonemes": "jˌʊɹ kˈɜɹənt ˈæp ɪz ɹˈʌnɪŋ (pˈɪd fˌɔɹtˈin θˈWzᵊnd sˈɪks hˈʌndɹəd fˈɪfti tˈu, ði ɪnstˈɔld kˈɑpi).",
+     "silent_words": [],
+     "samples": 146400,
+     "ms": 6100.0,
+     "lead_ms": 320.0,
+     "trail_ms": 550.0,
+     "pauses": [
+      {
+       "at_ms": 430,
+       "ms": 60
+      },
+      {
+       "at_ms": 1000,
+       "ms": 60
+      },
+      {
+       "at_ms": 1600,
+       "ms": 370
+      },
+      {
+       "at_ms": 4180,
+       "ms": 300
+      },
+      {
+       "at_ms": 5330,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Building won't touch it, but the strongest pre-flight test — actually launching the freshly-built exe — is blocked by the app's single-instance mutex while that instance runs.",
+   "synth_s": 0.483,
+   "ms": 10030.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Building won't touch it, but the strongest pre-flight test — actually launching the freshly-built exe — is blocked by the app's single-instance mutex while that instance runs.",
+     "phonemes": "bˈɪldɪŋ wOnt tˈʌʧ ɪt, bˌʌt ðə stɹˈɔŋɡᵻst pɹˌiflˈIt tˈɛst — ˈækʧəwəli lˈɑnʧɪŋ ðə fɹˈɛʃlibˌɪlt ˌiˌɛksˈi — ɪz blˈɑkt bI ði ˈæps sˌɪŋɡᵊlˈɪnstᵊns mjˈuTɛks wˌIl ðˈæt ˈɪnstᵊns ɹˈʌnz.",
+     "silent_words": [],
+     "samples": 265200,
+     "ms": 11050.0,
+     "lead_ms": 330.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1280,
+       "ms": 330
+      },
+      {
+       "at_ms": 2420,
+       "ms": 70
+      },
+      {
+       "at_ms": 3360,
+       "ms": 500
+      },
+      {
+       "at_ms": 5400,
+       "ms": 70
+      },
+      {
+       "at_ms": 6140,
+       "ms": 420
+      },
+      {
+       "at_ms": 7660,
+       "ms": 70
+      },
+      {
+       "at_ms": 9090,
+       "ms": 150
+      },
+      {
+       "at_ms": 9580,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll handle that at the end.",
+   "synth_s": 0.131,
+   "ms": 1280.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll handle that at the end.",
+     "phonemes": "ˌIl hˈændəl ðˈæt æt ði ˈɛnd.",
+     "silent_words": [],
+     "samples": 49800,
+     "ms": 2075.0,
+     "lead_ms": 320.0,
+     "trail_ms": 475.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

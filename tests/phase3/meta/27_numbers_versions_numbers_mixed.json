@@ -1,0 +1,298 @@
+{
+ "id": "27_numbers_versions_numbers_mixed",
+ "category": "numbers_versions",
+ "origin": "synthetic",
+ "chunks": 7,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 7,
+ "duration_s": 27.32,
+ "synth_s": 1.55,
+ "wav_sha256": "89a6bfa552a58f8105e5ba7861af95a7ad74f4e4104f15a8411f818232748b37",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 4420.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 6490.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 9370.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 12050.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 13380.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 13980.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 15320.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 18425.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 20040.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 21275.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 24445.0,
+   "chunk": 5
+  }
+ ],
+ "sentences": [
+  {
+   "text": "We sold 1,234,567 units, a 12.5% rise.",
+   "synth_s": 0.351,
+   "ms": 6940.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "We sold 1,234,567 units, a 12.5% rise.",
+     "phonemes": "wˌi sˈOld wˈʌn mˈɪljᵊn tˈu hˈʌndɹəd θˈɜɹTi fˈɔɹ θˈWzᵊnd fˈIv hˈʌndɹəd sˈɪksti sˈɛvən jˈunəts, ɐ twˈɛlv pYnt fˈIv pəɹsˈɛnt ɹˈIz.",
+     "silent_words": [],
+     "samples": 180600,
+     "ms": 7525.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1910,
+       "ms": 120
+      },
+      {
+       "at_ms": 2380,
+       "ms": 90
+      },
+      {
+       "at_ms": 2690,
+       "ms": 60
+      },
+      {
+       "at_ms": 3110,
+       "ms": 70
+      },
+      {
+       "at_ms": 4550,
+       "ms": 90
+      },
+      {
+       "at_ms": 4730,
+       "ms": 450
+      },
+      {
+       "at_ms": 5560,
+       "ms": 80
+      },
+      {
+       "at_ms": 5910,
+       "ms": 80
+      },
+      {
+       "at_ms": 6230,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Costs were $4.99, €20 and £3.50.",
+   "synth_s": 0.286,
+   "ms": 5560.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Costs were $4.99, €20 and £3.50.",
+     "phonemes": "kˈɔsts wɜɹ fˈɔɹ dˈɑləɹz ænd nˈIndi nˈIn sˈɛnts, twˈɛnti jˈʊɹOz ænd θɹˈi pˈWndz ænd fˈɪfti pˈɛns.",
+     "silent_words": [],
+     "samples": 146400,
+     "ms": 6100.0,
+     "lead_ms": 300.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 860,
+       "ms": 90
+      },
+      {
+       "at_ms": 2730,
+       "ms": 420
+      },
+      {
+       "at_ms": 4730,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "They ranked 1st, 2nd, 3rd and 21st.",
+   "synth_s": 0.193,
+   "ms": 3270.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "They ranked 1st, 2nd, 3rd and 21st.",
+     "phonemes": "ðˌA ɹˈæŋkt fˈɜɹst, sˈɛkənd, θˈɜɹd ænd twˈɛnti fˈɜɹst.",
+     "silent_words": [],
+     "samples": 85200,
+     "ms": 3550.0,
+     "lead_ms": 330.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 790,
+       "ms": 60
+      },
+      {
+       "at_ms": 1210,
+       "ms": 160
+      },
+      {
+       "at_ms": 1760,
+       "ms": 180
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Louis the Sixteenth and Henry the Eighth ruled long ago.",
+   "synth_s": 0.19,
+   "ms": 3105.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Louis the Sixteenth and Henry the Eighth ruled long ago.",
+     "phonemes": "lˈui ðə sˌɪkstˈinθ ænd hˈɛnɹi ði ˈAθ ɹˈuld lˈɔŋ əɡˈO.",
+     "silent_words": [],
+     "samples": 84600,
+     "ms": 3525.0,
+     "lead_ms": 330.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1050,
+       "ms": 70
+      },
+      {
+       "at_ms": 1140,
+       "ms": 60
+      },
+      {
+       "at_ms": 1980,
+       "ms": 70
+      },
+      {
+       "at_ms": 2070,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Call 5 5 5, 0 1 4 2.",
+   "synth_s": 0.179,
+   "ms": 2850.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Call 5 5 5, 0 1 4 2.",
+     "phonemes": "kˈɔl fˈIv fˈIv fˈIv, zˈɪɹO wˈʌn fˈɔɹ tˈu.",
+     "silent_words": [],
+     "samples": 78600,
+     "ms": 3275.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1440,
+       "ms": 290
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The score was 3-2 and the screen is 16:9.",
+   "synth_s": 0.189,
+   "ms": 3170.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The score was 3-2 and the screen is 16:9.",
+     "phonemes": "ðə skˈɔɹ wʌz θɹˈitˌu ænd ðə skɹˈin ɪz sˈɪkstin:nˈIn.",
+     "silent_words": [],
+     "samples": 84000,
+     "ms": 3500.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 2330,
+       "ms": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Roughly one third of the 2,000 tests passed.",
+   "synth_s": 0.164,
+   "ms": 2420.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Roughly one third of the 2,000 tests passed.",
+     "phonemes": "ɹˈʌfli wˈʌn θˈɜɹd ʌv ðə tˈu θˈWzᵊnd tˈɛsts pˈæst.",
+     "silent_words": [],
+     "samples": 76800,
+     "ms": 3200.0,
+     "lead_ms": 330.0,
+     "trail_ms": 440.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

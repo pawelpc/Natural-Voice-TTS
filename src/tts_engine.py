@@ -232,6 +232,20 @@ def synthesize(
     """Synthesize text into audio chunks.
 
     Yields (graphemes, audio) tuples where audio is a float32 numpy array at 24 kHz.
+    """
+    for graphemes, audio, _tokens in synthesize_segments(text, voice=voice, speed=speed):
+        yield graphemes, audio
+
+
+def synthesize_segments(
+    text: str,
+    voice: str = DEFAULT_VOICE,
+    speed: float = DEFAULT_SPEED,
+) -> 'Generator[tuple[str, np.ndarray, list], None, None]':
+    """Synthesize text, also yielding Kokoro's tokens (with start_ts/end_ts in seconds).
+
+    Yields (graphemes, audio, tokens). The token timestamps let the caller find
+    the pause at each comma (pauses.set_clause_pauses).
     Logs timing information to detect CPU fallback or performance issues.
     """
     pipeline = get_pipeline()
@@ -243,16 +257,17 @@ def synthesize(
         chunk_count = 0
         total_samples = 0
 
-        for graphemes, phonemes, audio in pipeline(
+        for result in pipeline(
             text,
             voice=voice,
             speed=speed,
             split_pattern=SPLIT_PATTERN,
         ):
+            audio = result.audio
             if audio is not None and len(audio) > 0:
                 chunk_count += 1
                 total_samples += len(audio)
-                yield graphemes, audio
+                yield result.graphemes, audio, result.tokens or []
 
         elapsed = time.time() - start_time
         audio_duration = total_samples / SAMPLE_RATE if chunk_count > 0 else 0

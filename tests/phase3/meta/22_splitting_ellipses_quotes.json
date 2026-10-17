@@ -1,0 +1,222 @@
+{
+ "id": "22_splitting_ellipses_quotes",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 7,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 7,
+ "duration_s": 10.93,
+ "synth_s": 0.86,
+ "wav_sha256": "19bb03c605e93100cdb3fe4ca25e4c1a54a66a10511e62abb72faf5de50b109e",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 1290.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 2150.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 3295.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 3955.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 4670.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 5345.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 6885.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 7785.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 8525.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 9745.0,
+   "chunk": 5
+  }
+ ],
+ "sentences": [
+  {
+   "text": "He paused... then said, \"Are you sure?\"",
+   "synth_s": 0.159,
+   "ms": 2600.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "He paused... then said, \"Are you sure?\"",
+     "phonemes": "hˌi pˈɔzd... ðˈɛn sˈɛd, “ˌɑɹ ju ʃˈʊɹ?”",
+     "silent_words": [],
+     "samples": 66600,
+     "ms": 2775.0,
+     "lead_ms": 330.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 940,
+       "ms": 210
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "She replied, \"Yes.\"",
+   "synth_s": 0.132,
+   "ms": 1805.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "She replied, \"Yes.\"",
+     "phonemes": "ʃˌi ɹᵻplˈId, “jˈɛs.”",
+     "silent_words": [],
+     "samples": 49200,
+     "ms": 2050.0,
+     "lead_ms": 320.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1020,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Wait… what?",
+   "synth_s": 0.11,
+   "ms": 1390.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Wait… what?",
+     "phonemes": "wˈAt… wˌʌt?",
+     "silent_words": [],
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 390.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "\"Go!\" he shouted.",
+   "synth_s": 0.127,
+   "ms": 1540.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "\"Go!\" he shouted.",
+     "phonemes": "“ɡˌO!” hi ʃˈWTᵻd.",
+     "silent_words": [],
+     "samples": 46800,
+     "ms": 1950.0,
+     "lead_ms": 360.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 190
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "It's done — finally.",
+   "synth_s": 0.118,
+   "ms": 1640.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "It's done — finally.",
+     "phonemes": "ˌɪts dˈʌn — fˈInᵊli.",
+     "silent_words": [],
+     "samples": 43800,
+     "ms": 1825.0,
+     "lead_ms": 330.0,
+     "trail_ms": 495.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Was it worth it?!",
+   "synth_s": 0.102,
+   "ms": 1220.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Was it worth it?!",
+     "phonemes": "wˌʌz ɪt wˈɜɹθ ɪt?!",
+     "silent_words": [],
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 340.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 780,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Absolutely.",
+   "synth_s": 0.112,
+   "ms": 730.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Absolutely.",
+     "phonemes": "ˈæbsəlˌutli.",
+     "silent_words": [],
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 390.0,
+     "trail_ms": 520.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

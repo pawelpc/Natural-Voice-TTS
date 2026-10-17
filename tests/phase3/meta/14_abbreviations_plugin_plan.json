@@ -1,0 +1,419 @@
+{
+ "id": "14_abbreviations_plugin_plan",
+ "category": "abbreviations",
+ "origin": "real",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 65.18,
+ "synth_s": 2.98,
+ "wav_sha256": "814f7718eb402c4be150d61327c35923dc9579302c523a2c34f0a2da577caeff",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 1020.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 2385.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 3650.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 4495.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8555.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10145.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 11845.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 13715.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 21565.0,
+   "chunk": 1
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 26445.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 27865.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 38285.0,
+   "chunk": 2
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 40095.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 41790.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 44110.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 52755.0,
+   "chunk": 4
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Here's what I recommend, split by who does what:",
+   "synth_s": 0.175,
+   "ms": 3185.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here's what I recommend, split by who does what:",
+     "phonemes": "hˈɪɹz wˌʌt ˌI ɹˌɛkəmˈɛnd, splˈɪt bI hˌu dˈʌz wˌʌt:",
+     "silent_words": [],
+     "samples": 76200,
+     "ms": 3175.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1330,
+       "ms": 220
+      },
+      {
+       "at_ms": 1650,
+       "ms": 60
+      },
+      {
+       "at_ms": 1860,
+       "ms": 90
+      },
+      {
+       "at_ms": 2630,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Me (now, in the repo): finalize the SKILL dot md with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (dot claude plugin slash plugin dot json + skills slash natural voice tts), and fix install config dot py so it stops installing to the dead location.",
+   "synth_s": 1.057,
+   "ms": 23810.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Me (now, in the repo): finalize the SKILL dot md with your court-reporter rules (verbatim words, numerals-as-numbers OK, nothing added/dropped/changed, speak every turn until voice off), lay it out as a proper plugin package (dot claude plugin slash plugin dot json + skills slash natural voice tts), and fix install config dot py so it stops installing to the dead location.",
+     "phonemes": "mˌi (nˈW, ɪn ðə ɹˈipˌO: fˈInᵊlˌIz ðə skˈɪl dˈɑt ˌɛmdˈi wɪð jʊɹ kˌɔɹtɹəpˈɔɹTəɹ ɹˈulz (vəɹbˈATəm wˈɜɹdz, nˈuməɹəlzæznˈʌmbəɹz ˌOkˈA, nˈʌθɪŋ ˈædᵻddɹˈɑpt ʧˈAnʤd, spˈik ˈɛvəɹi tˈɜɹn ˌʌntˈɪl vˈYs ˈɔf), lˈA ɪt ˈWt æz ɐ pɹˈɑpəɹ plˈʌɡɪn pˈækɪʤ (dˈɑt klˈɔd plˈʌɡɪn slˈæʃ plˈʌɡɪn dˈɑt ʤˈAsˈɑn plˈʌs skˈɪlz slˈæʃ nˈæʧəɹᵊl vˈYs tˌitˌiˈɛs), ænd fˈɪks ɪnstˈɔl kənfˈɪɡ dˈɑt pˈI sˌO ɪt stˈɑps ɪnstˈɔlɪŋ tə ðə dˈɛd lOkˈAʃən.",
+     "silent_words": [],
+     "samples": 609600,
+     "ms": 25400.0,
+     "lead_ms": 330.0,
+     "trail_ms": 540.0,
+     "pauses": [
+      {
+       "at_ms": 1150,
+       "ms": 70
+      },
+      {
+       "at_ms": 1440,
+       "ms": 530
+      },
+      {
+       "at_ms": 3100,
+       "ms": 90
+      },
+      {
+       "at_ms": 4910,
+       "ms": 100
+      },
+      {
+       "at_ms": 5820,
+       "ms": 430
+      },
+      {
+       "at_ms": 7640,
+       "ms": 240
+      },
+      {
+       "at_ms": 8060,
+       "ms": 60
+      },
+      {
+       "at_ms": 8830,
+       "ms": 60
+      },
+      {
+       "at_ms": 9390,
+       "ms": 330
+      },
+      {
+       "at_ms": 11390,
+       "ms": 530
+      },
+      {
+       "at_ms": 13050,
+       "ms": 60
+      },
+      {
+       "at_ms": 13990,
+       "ms": 400
+      },
+      {
+       "at_ms": 14570,
+       "ms": 80
+      },
+      {
+       "at_ms": 17150,
+       "ms": 60
+      },
+      {
+       "at_ms": 19570,
+       "ms": 610
+      },
+      {
+       "at_ms": 21330,
+       "ms": 70
+      },
+      {
+       "at_ms": 21790,
+       "ms": 90
+      },
+      {
+       "at_ms": 22190,
+       "ms": 320
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "You (in Cowork): run slash skill creator (or slash create cowork plugin) and point it at that prepared SKILL dot md so it registers into the manifest system Cowork actually reads.",
+   "synth_s": 0.534,
+   "ms": 11740.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "You (in Cowork): run slash skill creator (or slash create cowork plugin) and point it at that prepared SKILL dot md so it registers into the manifest system Cowork actually reads.",
+     "phonemes": "jˌu (ɪn kˈWɜɹk: ɹˈʌn slˈæʃ skˈɪl kɹiˈATəɹ (ɔɹ slˈæʃ kɹiˈAt kˈWɜɹk plˈʌɡɪn) ænd pˈYnt ɪt æt ðˈæt pɹipˈɛɹd skˈɪl dˈɑt ˌɛmdˈi sˌO ɪt ɹˈɛʤəstəɹz ˈɪntu ðə mˈænəfˌɛst sˈɪstəm kˈWɜɹk ˈækʧəwəli ɹˈidz.",
+     "silent_words": [],
+     "samples": 296400,
+     "ms": 12350.0,
+     "lead_ms": 330.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 90
+      },
+      {
+       "at_ms": 1210,
+       "ms": 440
+      },
+      {
+       "at_ms": 3160,
+       "ms": 290
+      },
+      {
+       "at_ms": 4390,
+       "ms": 90
+      },
+      {
+       "at_ms": 5310,
+       "ms": 460
+      },
+      {
+       "at_ms": 6300,
+       "ms": 60
+      },
+      {
+       "at_ms": 6520,
+       "ms": 60
+      },
+      {
+       "at_ms": 7570,
+       "ms": 90
+      },
+      {
+       "at_ms": 8200,
+       "ms": 330
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "I'll guide the exact steps.",
+   "synth_s": 0.128,
+   "ms": 2160.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "I'll guide the exact steps.",
+     "phonemes": "ˌIl ɡˈId ði ɪɡzˈækt stˈɛps.",
+     "silent_words": [],
+     "samples": 51000,
+     "ms": 2125.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1480,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One honesty note: I've confirmed where Cowork reads skills, but the precise hand-off to register a custom skill into that manifest (versus the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product skill-creator/create-cowork-plugin tool is safer than me hand-editing the managed manifest dot json (which looks like it re-syncs and would wipe a manual entry).",
+   "synth_s": 1.089,
+   "ms": 24285.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One honesty note: I've confirmed where Cowork reads skills, but the precise hand-off to register a custom skill into that manifest (versus the Anthropic-managed ones) is the part I can't fully test from here — that's why routing it through the in-product skill-creator/create-cowork-plugin tool is safer than me hand-editing the managed manifest dot json (which looks like it re-syncs and would wipe a manual entry).",
+     "phonemes": "wˈʌn ˈɑnəsti nˈOt: ˌIv kənfˈɜɹmd wˌɛɹ kˈWɜɹk ɹˈidz skˈɪlz, bˌʌt ðə pɹisˈIs hˈændˌɔf tə ɹˈɛʤəstəɹ ɐ kˈʌstəm skˈɪl ˈɪntu ðˈæt mˈænəfˌɛst (vˈɜɹsəs ði ænθɹˈɑpɪkmˌænɪʤd wˈʌnz) ɪz ðə pˈɑɹt ˌI kˈænt fˈʊli tˈɛst fɹʌm hˈɪɹ — ðˈæts wˌI ɹˈWTɪŋ ɪt θɹu ði ɪnpɹˈɑdˌʌkt skˈɪlkɹiˈATəɹ slˈæʃ kɹiˈAtkˈWɜɹkplˈʌɡɪn tˈul ɪz sˈAfəɹ ðən mˌi hˌændˈɛdəTɪŋ ðə mˈænɪʤd mˈænəfˌɛst dˈɑt ʤˈAsˈɑn (wˌɪʧ lˈʊks lˈIk ɪt ɹˌisˈɪŋks ænd wʊd wˈIp ɐ mˈænjəwəl ˈɛntɹi).",
+     "silent_words": [],
+     "samples": 624600,
+     "ms": 26025.0,
+     "lead_ms": 330.0,
+     "trail_ms": 585.0,
+     "pauses": [
+      {
+       "at_ms": 1220,
+       "ms": 550
+      },
+      {
+       "at_ms": 2960,
+       "ms": 60
+      },
+      {
+       "at_ms": 3890,
+       "ms": 400
+      },
+      {
+       "at_ms": 6090,
+       "ms": 60
+      },
+      {
+       "at_ms": 7580,
+       "ms": 70
+      },
+      {
+       "at_ms": 7940,
+       "ms": 540
+      },
+      {
+       "at_ms": 8950,
+       "ms": 60
+      },
+      {
+       "at_ms": 9530,
+       "ms": 60
+      },
+      {
+       "at_ms": 10310,
+       "ms": 410
+      },
+      {
+       "at_ms": 11660,
+       "ms": 130
+      },
+      {
+       "at_ms": 12740,
+       "ms": 470
+      },
+      {
+       "at_ms": 14050,
+       "ms": 90
+      },
+      {
+       "at_ms": 14970,
+       "ms": 90
+      },
+      {
+       "at_ms": 16660,
+       "ms": 60
+      },
+      {
+       "at_ms": 17010,
+       "ms": 90
+      },
+      {
+       "at_ms": 17810,
+       "ms": 350
+      },
+      {
+       "at_ms": 20550,
+       "ms": 80
+      },
+      {
+       "at_ms": 20830,
+       "ms": 90
+      },
+      {
+       "at_ms": 21090,
+       "ms": 90
+      },
+      {
+       "at_ms": 21800,
+       "ms": 560
+      },
+      {
+       "at_ms": 23690,
+       "ms": 290
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

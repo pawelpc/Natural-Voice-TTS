@@ -1,0 +1,318 @@
+{
+ "id": "29_lists_bullets_no_punct",
+ "category": "lists",
+ "origin": "synthetic",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 22.85,
+ "synth_s": 1.42,
+ "wav_sha256": "117bcf2bcd2aae2027096428b77168fb89658e83a24e5e383b5990dce5300ec4",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 665.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 1530.0,
+   "chunk": 0
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 4305.0,
+   "chunk": 1
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 6615.0,
+   "chunk": 2
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 8895.0,
+   "chunk": 3
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 11010.0,
+   "chunk": 4
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 13535.0,
+   "chunk": 5
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 15450.0,
+   "chunk": 6
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 17415.0,
+   "chunk": 7
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 21260.0,
+   "chunk": 8
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Before you start, check these:",
+   "synth_s": 0.132,
+   "ms": 2330.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Before you start, check these:",
+     "phonemes": "bəfˈɔɹ ju stˈɑɹt, ʧˈɛk ðˈiz:",
+     "silent_words": [],
+     "samples": 51600,
+     "ms": 2150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 430.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 70
+      },
+      {
+       "at_ms": 1280,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Python 3 point 11 installed.",
+   "synth_s": 0.153,
+   "ms": 2525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Python 3 point 11 installed.",
+     "phonemes": "pˈIθˌɑn θɹˈi pˈYnt əlˈɛvᵊn ɪnstˈɔld.",
+     "silent_words": [],
+     "samples": 66000,
+     "ms": 2750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 470,
+       "ms": 60
+      },
+      {
+       "at_ms": 1600,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "espeak-ng in Program Files.",
+   "synth_s": 0.15,
+   "ms": 2310.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "espeak-ng in Program Files.",
+     "phonemes": "ˈispikˌɛnʤˈi ɪn pɹˈOɡɹˌæm fˈIlz.",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "CUDA drivers up to date.",
+   "synth_s": 0.139,
+   "ms": 2280.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "CUDA drivers up to date.",
+     "phonemes": "sˌijˌudˌiˈA dɹˈIvəɹz ˌʌp tə dˈAt.",
+     "silent_words": [],
+     "samples": 60000,
+     "ms": 2500.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1930,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "at least 4 gigabytes of VRAM.",
+   "synth_s": 0.138,
+   "ms": 2115.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "at least 4 gigabytes of VRAM.",
+     "phonemes": "æt lˈist fˈɔɹ ɡˈɪɡəbˌIts ʌv vˈiɹˌæm.",
+     "silent_words": [],
+     "samples": 56400,
+     "ms": 2350.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 660,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "driver 550 or newer.",
+   "synth_s": 0.157,
+   "ms": 2775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "driver 550 or newer.",
+     "phonemes": "dɹˈIvəɹ fˈIv hˈʌndɹəd fˈɪfti ɔɹ nˈuəɹ.",
+     "silent_words": [],
+     "samples": 67200,
+     "ms": 2800.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1660,
+       "ms": 140
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then follow the steps:",
+   "synth_s": 0.113,
+   "ms": 1915.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then follow the steps:",
+     "phonemes": "ðˈɛn fˈɑlO ðə stˈɛps:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 320.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 1230,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One. Clone the repo.",
+   "synth_s": 0.122,
+   "ms": 1715.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One. Clone the repo.",
+     "phonemes": "wˈʌn. klˈOn ðə ɹˈipˌO.",
+     "silent_words": [],
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 330.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 650,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two. Run pip install dash r requirements dot txt.",
+   "synth_s": 0.206,
+   "ms": 3845.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two. Run pip install dash r requirements dot txt.",
+     "phonemes": "tˈu. ɹˈʌn pˈɪp ɪnstˈɔl dˈæʃ ˈɑɹ ɹəkwˈIəɹmᵊnts dˈɑt tˌiˌɛkstˈi.",
+     "silent_words": [],
+     "samples": 98400,
+     "ms": 4100.0,
+     "lead_ms": 300.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 580,
+       "ms": 230
+      },
+      {
+       "at_ms": 2890,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Three. Start the app.",
+   "synth_s": 0.112,
+   "ms": 1040.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Three. Start the app.",
+     "phonemes": "θɹˈi. stˈɑɹt ði ˈæp.",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 370.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1330,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

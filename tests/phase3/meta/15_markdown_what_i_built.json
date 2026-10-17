@@ -1,0 +1,608 @@
+{
+ "id": "15_markdown_what_i_built",
+ "category": "markdown",
+ "origin": "real",
+ "chunks": 9,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 9,
+ "duration_s": 81.52,
+ "synth_s": 3.91,
+ "wav_sha256": "ee90e810238f65699690ba1fb8a66bf2980f17ab73c8f6afc92dd54cd0885430",
+ "pauses": [
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 380.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 1690.0,
+   "chunk": 1
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 5870.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10280.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 17300.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 19485.0,
+   "chunk": 4
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 23870.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 28460.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 30180.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 34690.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 35725.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 36340.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 37085.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 38205.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 40050.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 42110.0,
+   "chunk": 5
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 44610.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 47180.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 48655.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 52965.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 55230.0,
+   "chunk": 6
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 57685.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 61995.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 63595.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 66870.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 68300.0,
+   "chunk": 7
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 74110.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 77420.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 78060.0,
+   "chunk": 8
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Done.",
+   "synth_s": 0.097,
+   "ms": 830.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Done.",
+     "phonemes": "dˈʌn.",
+     "silent_words": [],
+     "samples": 30600,
+     "ms": 1275.0,
+     "lead_ms": 390.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Here's the wrap-up.",
+   "synth_s": 0.117,
+   "ms": 1660.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Here's the wrap-up.",
+     "phonemes": "hˈɪɹz ðə ɹˈæpəp.",
+     "silent_words": [],
+     "samples": 40800,
+     "ms": 1700.0,
+     "lead_ms": 350.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 1130,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "What I built (committed locally as 0 0 1 8 b a 1).",
+   "synth_s": 0.214,
+   "ms": 4180.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "What I built (committed locally as 0 0 1 8 b a 1).",
+     "phonemes": "wˌʌt ˌI bˈɪlt (kəmˈɪTᵻd lˈOkəli æz zˈɪɹO zˈɪɹO wˈʌn ˈAt bˈi ɐ wˈʌn).",
+     "silent_words": [],
+     "samples": 101400,
+     "ms": 4225.0,
+     "lead_ms": 320.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 780,
+       "ms": 60
+      },
+      {
+       "at_ms": 930,
+       "ms": 110
+      },
+      {
+       "at_ms": 1850,
+       "ms": 240
+      },
+      {
+       "at_ms": 3130,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Plugin package at mcp tts server slash plugin — dot claude plugin slash plugin dot json + skills slash natural voice tts slash SKILL dot md.",
+   "synth_s": 0.505,
+   "ms": 11080.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Plugin package at mcp tts server slash plugin — dot claude plugin slash plugin dot json + skills slash natural voice tts slash SKILL dot md.",
+     "phonemes": "plˈʌɡɪn pˈækɪʤ æt ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ plˈʌɡɪn — dˈɑt klˈɔd plˈʌɡɪn slˈæʃ plˈʌɡɪn dˈɑt ʤˈAsˈɑn plˈʌs skˈɪlz slˈæʃ nˈæʧəɹᵊl vˈYs tˌitˌiˈɛs slˈæʃ skˈɪl dˈɑt ˌɛmdˈi.",
+     "silent_words": [],
+     "samples": 282000,
+     "ms": 11750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1200,
+       "ms": 100
+      },
+      {
+       "at_ms": 2660,
+       "ms": 110
+      },
+      {
+       "at_ms": 3910,
+       "ms": 510
+      },
+      {
+       "at_ms": 4590,
+       "ms": 80
+      },
+      {
+       "at_ms": 5710,
+       "ms": 60
+      },
+      {
+       "at_ms": 6920,
+       "ms": 60
+      },
+      {
+       "at_ms": 7550,
+       "ms": 280
+      },
+      {
+       "at_ms": 8910,
+       "ms": 60
+      },
+      {
+       "at_ms": 9690,
+       "ms": 110
+      },
+      {
+       "at_ms": 10770,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "This is now the single source of truth; the old mcp tts server slash skill folder is removed.",
+   "synth_s": 0.339,
+   "ms": 6670.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This is now the single source of truth; the old mcp tts server slash skill folder is removed.",
+     "phonemes": "ðˌɪs ɪz nˈW ðə sˈɪŋɡᵊl sˈɔɹs ʌv tɹˈuθ; ði ˈOld ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ skˈɪl fˈOldəɹ ɪz ɹəmˈuvd.",
+     "silent_words": [],
+     "samples": 174000,
+     "ms": 7250.0,
+     "lead_ms": 320.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1710,
+       "ms": 60
+      },
+      {
+       "at_ms": 2020,
+       "ms": 560
+      },
+      {
+       "at_ms": 3640,
+       "ms": 60
+      },
+      {
+       "at_ms": 4410,
+       "ms": 220
+      },
+      {
+       "at_ms": 5700,
+       "ms": 90
+      },
+      {
+       "at_ms": 6670,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Finalized SKILL dot md with your court-reporter rule spelled out explicitly: speak the written words verbatim; numerals-as-numbers (\"Louis the Sixteenth\" to \"the sixteenth\") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.",
+   "synth_s": 0.923,
+   "ms": 20740.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Finalized SKILL dot md with your court-reporter rule spelled out explicitly: speak the written words verbatim; numerals-as-numbers (\"Louis the Sixteenth\" to \"the sixteenth\") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.",
+     "phonemes": "fˈInᵊlˌIzd skˈɪl dˈɑt ˌɛmdˈi wɪð jʊɹ kˌɔɹtɹəpˈɔɹTəɹ ɹˈul spˈɛld ˈWt ɪksplˈɪsətli: spˈik ðə ɹˈɪtn wˈɜɹdz vəɹbˈATəm; nˈuməɹəlzæznˈʌmbəɹz (“lˈui ðə sˌɪkstˈinθ” tə “ðə sˌɪkstˈinθ“) ɪz fˈIn; nˈʌθɪŋ ˈædᵻd, dɹˈɑpt, ɹiwˈɜɹdᵻd, ɔɹ sˈʌməɹˌIzd; wˈʌn ɹəspˈɑns tə bˈOθ ʧˈænᵊlz; spˈik ˈɛvəɹi tˈɜɹn ˌʌntˈɪl vˈYs ˈɔf; bɹˈɛvəTi pɹˈɛfəɹəns nˈɛvəɹ kˈɔzᵻz dəvˈɜɹʤəns.",
+     "silent_words": [],
+     "samples": 529200,
+     "ms": 22050.0,
+     "lead_ms": 360.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 1500,
+       "ms": 60
+      },
+      {
+       "at_ms": 3880,
+       "ms": 60
+      },
+      {
+       "at_ms": 4400,
+       "ms": 540
+      },
+      {
+       "at_ms": 6460,
+       "ms": 420
+      },
+      {
+       "at_ms": 8130,
+       "ms": 250
+      },
+      {
+       "at_ms": 9330,
+       "ms": 210
+      },
+      {
+       "at_ms": 10260,
+       "ms": 390
+      },
+      {
+       "at_ms": 11190,
+       "ms": 420
+      },
+      {
+       "at_ms": 11790,
+       "ms": 60
+      },
+      {
+       "at_ms": 12450,
+       "ms": 120
+      },
+      {
+       "at_ms": 12990,
+       "ms": 80
+      },
+      {
+       "at_ms": 14530,
+       "ms": 370
+      },
+      {
+       "at_ms": 16540,
+       "ms": 360
+      },
+      {
+       "at_ms": 17200,
+       "ms": 60
+      },
+      {
+       "at_ms": 18740,
+       "ms": 520
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "install config dot py fixed — points at the plugin skill, overwrites on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.",
+   "synth_s": 0.603,
+   "ms": 13075.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "install config dot py fixed — points at the plugin skill, overwrites on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.",
+     "phonemes": "ɪnstˈɔl kənfˈɪɡ dˈɑt pˈI fˈɪkst — pˈYnts æt ðə plˈʌɡɪn skˈɪl, ˌOvəɹɹˈIts ˌɔn ɹˌiənstˈɔl (ɪt pɹˈiviəsli skˈɪpt wˌɛn ɐ kˈɑpi ɪɡzˈɪstᵻd, wˌɪʧ ɪz wˌI stˈAl skˈɪl tˈɛkst lˈɪŋɡəɹd), ænd nˈW pɹˈɪnts kˈWɜɹk ˈɪmpˌɔɹt ɪnstɹˈʌkʃənz.",
+     "silent_words": [],
+     "samples": 335400,
+     "ms": 13975.0,
+     "lead_ms": 320.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1570,
+       "ms": 80
+      },
+      {
+       "at_ms": 1930,
+       "ms": 70
+      },
+      {
+       "at_ms": 2340,
+       "ms": 130
+      },
+      {
+       "at_ms": 3750,
+       "ms": 400
+      },
+      {
+       "at_ms": 5650,
+       "ms": 340
+      },
+      {
+       "at_ms": 6060,
+       "ms": 80
+      },
+      {
+       "at_ms": 8270,
+       "ms": 450
+      },
+      {
+       "at_ms": 10790,
+       "ms": 440
+      },
+      {
+       "at_ms": 11570,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Closeout doc voice skill registration findings dot md — written to the manager agent, covering what we found (the two-skill-systems discovery, the /-list verification, the corrected understanding versus the old PHASE6 claim) and the recommended registration plan.",
+   "synth_s": 0.748,
+   "ms": 16425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Closeout doc voice skill registration findings dot md — written to the manager agent, covering what we found (the two-skill-systems discovery, the /-list verification, the corrected understanding versus the old PHASE6 claim) and the recommended registration plan.",
+     "phonemes": "klˈOzˌWt dˈɑk vˈYs skˈɪl ɹˌɛʤəstɹˈAʃən fˈIndɪŋz dˈɑt ˌɛmdˈi — ɹˈɪtn tə ðə mˈænɪʤəɹ ˈAʤᵊnt, kˈʌvəɹɪŋ wˌʌt wi fˈWnd (ðə tˌuskˈɪlsˈɪstəmz dəskˈʌvəɹi, ðə lˈɪst vˌɛɹəfəkˈAʃən, ðə kəɹˈɛktᵻd ˌʌndəɹstˈændɪŋ vˈɜɹsəs ði ˈOld fˈAz sˈɪks klˈAm) ænd ðə ɹˌɛkəmˈɛndᵻd ɹˌɛʤəstɹˈAʃən plˈæn.",
+     "silent_words": [],
+     "samples": 421200,
+     "ms": 17550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 2500,
+       "ms": 70
+      },
+      {
+       "at_ms": 3050,
+       "ms": 90
+      },
+      {
+       "at_ms": 3370,
+       "ms": 120
+      },
+      {
+       "at_ms": 4070,
+       "ms": 370
+      },
+      {
+       "at_ms": 5850,
+       "ms": 520
+      },
+      {
+       "at_ms": 7490,
+       "ms": 270
+      },
+      {
+       "at_ms": 9450,
+       "ms": 270
+      },
+      {
+       "at_ms": 10950,
+       "ms": 460
+      },
+      {
+       "at_ms": 11750,
+       "ms": 80
+      },
+      {
+       "at_ms": 13610,
+       "ms": 60
+      },
+      {
+       "at_ms": 14170,
+       "ms": 60
+      },
+      {
+       "at_ms": 14800,
+       "ms": 420
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Also refreshed the installed loose copy at App Data, Claude, skills... so it's current for any surface that does read it.",
+   "synth_s": 0.359,
+   "ms": 6860.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Also refreshed the installed loose copy at App Data, Claude, skills... so it's current for any surface that does read it.",
+     "phonemes": "ˈɔlsO ɹəfɹˈɛʃt ði ɪnstˈɔld lˈus kˈɑpi æt ˈæp dˈATə, klˈɔd, skˈɪlz... sˌO ɪts kˈɜɹənt fɔɹ ˈɛni sˈɜɹfəs ðæt dˈʌz ɹˈid ɪt.",
+     "silent_words": [],
+     "samples": 182400,
+     "ms": 7600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 580.0,
+     "pauses": [
+      {
+       "at_ms": 2230,
+       "ms": 60
+      },
+      {
+       "at_ms": 2650,
+       "ms": 110
+      },
+      {
+       "at_ms": 3080,
+       "ms": 240
+      },
+      {
+       "at_ms": 4290,
+       "ms": 490
+      },
+      {
+       "at_ms": 6110,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,14 +1,14 @@
 # Closing Report (DRAFT): Natural Voice TTS — Speaking Flow and Text Handling
 
 **Model:** Opus 5.5 (`claude-opus-5-5`) · **Started:** 2026-10-17
-**Status:** Phase 2 gate passed. R3 is open (+12% on one passage, came in Phase 1). Phase 3 next.
+**Status:** Phase 3 gate passed; R3 passes (TTFA 43–77% faster than Phase 0). **Stopped before Phase 4** for Paul's listening check.
 
 | Phase | Gate | Status | Evidence |
 |---|---|---|---|
 | 0 Environment and baseline | source synthesis runs; 30 baseline WAVs; H1–H4 decided | **Passed** | §Phase 0 below |
 | 1 Splitting | unit tests, zero wrong splits | **Passed** (R3 later found failing on passage 16) | §Phase 1 below |
 | 2 Normalization | expected-output files match; R4, R5 hold | **Passed**; R3 open | §Phase 2 below |
-| 3 Pauses | measured gaps within ±50 ms of targets | not started | |
+| 3 Pauses | measured gaps within ±50 ms of targets | **Passed**: 516/516; R3 passes | §Phase 3 below |
 | 4 Paul's listening check | Paul passes it | not started | |
 | 5 Release | only after Phase 4 | not started | |
 
@@ -298,3 +298,71 @@ R3 is a before/after rule for the finished work, but I measured it at each check
 - "Louis XVI" is converted even where the sentence is *about* the notation (passage 15).
 - A version inside a file name reads with "dot" ("Setup 1 dot 1 dot 0 dot exe").
 - "the about 1.8 gigabyte installer" (`~` is always "about").
+
+---
+
+## Phase 3 — Pauses
+
+### What changed
+- **`src/pauses.py`** (new). Pause targets as named constants:
+  `COMMA_PAUSE_MS = 200` (`, ; : — …` inside a sentence), `SENTENCE_PAUSE_MS = 450`,
+  `ITEM_PAUSE_MS = 550` (between list items or table rows), `PARAGRAPH_PAUSE_MS = 800`,
+  `HEADING_PAUSE_MS = 800`. These are my starting values; Paul's ear in Phase 4 decides.
+  - `pause_after(chunks, i)` picks the boundary kind from the chunk's block (Phase 1 `split_chunks`).
+  - `trim_edges()` cuts Kokoro's ~330 ms lead and ~490 ms tail of near-silence from every chunk.
+  - `set_clause_pauses()` uses Kokoro's token timestamps (`start_ts`/`end_ts`) to find the pause at
+    each clause mark and replaces the whole silent run with exactly 200 ms. Where Kokoro left no
+    silence, 200 ms is inserted at the quietest frame between the two words, with 4 ms fades.
+  - `shape_chunk()` builds a chunk's final audio and returns a `PauseMark` for each pause.
+- **`src/tts_engine.py`**: `synthesize_segments()` also yields Kokoro's tokens; `synthesize()`
+  wraps it unchanged.
+- **`src/app.py`** worker: a producer thread (`_produce`, `PREFETCH_CHUNKS = 2`) synthesizes the next
+  chunks **while the current one plays**. Before, the worker synthesized the next-but-one sentence
+  *before* playing the current one, so each gap included a synthesis time (Phase 0, H4) and the first
+  audio waited for two syntheses. `render_chunk()` (synthesize + shape) is used by both the worker
+  and the render harness. A lock keeps synthesis to one at a time across a stop and a new read. The
+  D2 behaviour is kept: a chunk with no audio is skipped, logged and counted, with one notification
+  per read.
+
+### Gate evidence
+- **Pause gate: PASS.** `tests/measure_pauses.py` reads only the WAVs (`tests/phase3/wav`), finds
+  the silent run at each recorded pause, and compares its length to the target
+  (`tests/phase3/pauses.json`): **516 of 516 within ±50 ms**. Comma 304/304 (max error 25 ms), sentence
+  129/129, paragraph 48/48, item 21/21, heading 14/14 (0 ms).
+  The first full run had 518/519. The miss was a comma pause wrongly placed after "…" when only a
+  closing quote followed it. It was fixed and has a regression test.
+  The smoke run before that had found a real bug: only the part of Kokoro's pause inside the search window
+  was replaced, which left 380 ms instead of 200 ms. Also fixed, with its own test.
+- **Unit tests: 257 passed** (`python -m pytest tests -q`). New: `tests/test_pauses.py` (11,
+  synthetic audio) and `tests/test_worker.py` (4, the real `app._worker` with a fake engine and
+  player: every chunk plays in order; a failing chunk is skipped and reported exactly once (D2);
+  stop ends the read and the synthesis thread, and the next read plays in full; chunk 2 is
+  synthesized while chunk 1 plays, with no extra wait).
+- **Render** (`tests/phase3/`): 33 WAVs, 1346.6 s of audio (baseline 1673.7 s), 0 skipped,
+  0 silent words (R4).
+- **R2:** `pipe_listener.py` and `mcp_tts_server/` are untouched (no commit touches them).
+
+### What the live app adds that the WAVs don't show
+Each chunk is still played with its own `sd.play()` call. On Paul's Bluetooth headset that adds
+about **+0.11 s per chunk** (`tests/baseline/device_overhead.json`, median of later plays), and about
++0.89 s on the first play after idle. So a 450 ms sentence pause is about 560 ms live. If Paul hears that
+as too long or uneven, the fix is a single continuous output stream in `audio_player.py` (not done:
+it changes pause/stop behaviour and needs a live test on his device).
+
+### R3 — final check, Phase 0 vs Phase 3: PASS
+`tests/phase3/r3.json` (ABBA order, 6 rounds × 5 runs = 30 samples a side, bootstrap 95% CI):
+
+| Passage | Phase 0 | Phase 3 | Change (95% CI) |
+|---|---|---|---|
+| 17 July regression string | 0.526 s | 0.131 s | **−75.1%** (−76.5% to −72.2%) |
+| 16 real `speak` call | 0.644 s | 0.367 s | **−43.0%** (−60.2% to −41.2%) |
+| 01 real markdown response | 0.517 s | 0.117 s | **−77.4%** (−78.0% to −76.1%) |
+
+Even the worst confidence bound (−41.2%) is far inside the +10% limit, so the +12% open since Phase 1 is
+resolved: the first sentence no longer waits for the second to be synthesized. Also, the first chunk
+now starts with its sound, not ~330 ms of Kokoro's leading silence, so the audible start comes earlier
+still (not included in these numbers, which stop at the first `play_audio()` call).
+Passage 16 is higher than the other two. A likely but **unverified** reason: in the harness each read is
+stopped after 4 chunks, and the next read's first synthesis waits on the lock while the old
+producer finishes its current chunk (passage 16's second chunk takes about 340 ms). The same wait would
+happen when Paul starts a new read while one is still playing.

@@ -1,0 +1,146 @@
+{
+ "id": "18_abbreviations_titles_places",
+ "category": "abbreviations",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 12.14,
+ "synth_s": 0.67,
+ "wav_sha256": "d4daacb75e3c0f6e872d4a3a05f240f5f047e773d85bf75d34fa68f49373b5f6",
+ "pauses": [
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 5695.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 7535.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8725.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10165.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 10895.0,
+   "chunk": 1
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Doctor Smith met Mr. and Mrs. Jones at 5 P M on Main Street near the U.S. Army base.",
+   "synth_s": 0.305,
+   "ms": 6145.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Doctor Smith met Mr. and Mrs. Jones at 5 P M on Main Street near the U.S. Army base.",
+     "phonemes": "dˈɑktəɹ smˈɪθ mˈɛt mˈɪstəɹ ænd mˈɪsɪz ʤˈOnz æt fˈIv pˈi ˈɛm ˌɔn mˈAn stɹˈit nˌɪɹ ðə jˌuˈɛs ˈɑɹmi bˈAs.",
+     "silent_words": [],
+     "samples": 155400,
+     "ms": 6475.0,
+     "lead_ms": 330.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 480,
+       "ms": 80
+      },
+      {
+       "at_ms": 960,
+       "ms": 150
+      },
+      {
+       "at_ms": 2670,
+       "ms": 160
+      },
+      {
+       "at_ms": 2910,
+       "ms": 60
+      },
+      {
+       "at_ms": 2990,
+       "ms": 80
+      },
+      {
+       "at_ms": 3300,
+       "ms": 90
+      },
+      {
+       "at_ms": 4320,
+       "ms": 420
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "They covered several topics, for example budgets, that is the real costs, etc.",
+   "synth_s": 0.257,
+   "ms": 5200.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "They covered several topics, for example budgets, that is the real costs, etc.",
+     "phonemes": "ðˌA kˈʌvəɹd sˈɛvəɹəl tˈɑpɪks, fɔɹ ɪɡzˈæmpəl bˈʌʤəts, ðˈæt ɪz ðə ɹˈiᵊl kˈɔsts, ɛtsˈɛTəɹə",
+     "silent_words": [],
+     "samples": 129000,
+     "ms": 5375.0,
+     "lead_ms": 310.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1520,
+       "ms": 70
+      },
+      {
+       "at_ms": 1710,
+       "ms": 220
+      },
+      {
+       "at_ms": 2920,
+       "ms": 100
+      },
+      {
+       "at_ms": 4090,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then they left.",
+   "synth_s": 0.11,
+   "ms": 800.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then they left.",
+     "phonemes": "ðˈɛn ðA lˈɛft.",
+     "silent_words": [],
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 370.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

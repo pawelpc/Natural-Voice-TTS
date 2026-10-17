@@ -1,0 +1,163 @@
+{
+ "id": "20_splitting_initials",
+ "category": "splitting",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 10.44,
+ "synth_s": 0.73,
+ "wav_sha256": "9599a748f7d5711f01b26c6580dc020a3ed093251fd431a013027dede07eae1d",
+ "pauses": [
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 1600.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 3850.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 6365.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 8245.0,
+   "chunk": 3
+  }
+ ],
+ "sentences": [
+  {
+   "text": "J. R. R. Tolkien wrote the book.",
+   "synth_s": 0.141,
+   "ms": 2050.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "J. R. R. Tolkien wrote the book.",
+     "phonemes": "ʤˈA ˈɑɹ ˈɑɹ tɔlkˈin ɹˈOt ðə bˈʊk.",
+     "silent_words": [],
+     "samples": 57000,
+     "ms": 2375.0,
+     "lead_ms": 310.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 1480,
+       "ms": 60
+      },
+      {
+       "at_ms": 1780,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "George W. Bush gave the speech.",
+   "synth_s": 0.147,
+   "ms": 2250.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "George W. Bush gave the speech.",
+     "phonemes": "ʤˈɔɹʤ dˈʌbᵊlju bˈʊʃ ɡˈAv ðə spˈiʧ.",
+     "silent_words": [],
+     "samples": 62400,
+     "ms": 2600.0,
+     "lead_ms": 320.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1950,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The U.K. and the E.U. agreed on a deal.",
+   "synth_s": 0.161,
+   "ms": 2515.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The U.K. and the E.U. agreed on a deal.",
+     "phonemes": "ðə jˌukˈA ænd ði ˌijˈu əɡɹˈid ˌɔn ɐ dˈil.",
+     "silent_words": [],
+     "samples": 69000,
+     "ms": 2875.0,
+     "lead_ms": 340.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 890,
+       "ms": 120
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A.I. tools are everywhere now.",
+   "synth_s": 0.129,
+   "ms": 1880.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A.I. tools are everywhere now.",
+     "phonemes": "ˌAˈI tˈulz ɑɹ ˈɛvɹiwˌɛɹ nˈW.",
+     "silent_words": [],
+     "samples": 54600,
+     "ms": 2275.0,
+     "lead_ms": 330.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1100,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Contact J. Smith for details.",
+   "synth_s": 0.148,
+   "ms": 1745.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Contact J. Smith for details.",
+     "phonemes": "kˈɑntækt ʤˈA smˈɪθ fɔɹ dətˈAlz.",
+     "silent_words": [],
+     "samples": 60000,
+     "ms": 2500.0,
+     "lead_ms": 310.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 720,
+       "ms": 100
+      },
+      {
+       "at_ms": 1320,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

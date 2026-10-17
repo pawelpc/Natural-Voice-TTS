@@ -1,0 +1,16 @@
+round 1 before done
+round 1 after done
+round 2 after done
+round 2 before done
+round 3 before done
+round 3 after done
+round 4 after done
+round 4 before done
+round 5 before done
+round 5 after done
+round 6 after done
+round 6 before done
+17_splitting_july_regression: before 0.526 s, after 0.131 s, change -75.1% (95% CI -76.5% to -72.2%)
+16_rhythm_speak_call: before 0.644 s, after 0.367 s, change -43.0% (95% CI -60.2% to -41.2%)
+01_markdown_what_i_did: before 0.517 s, after 0.117 s, change -77.4% (95% CI -78.0% to -76.1%)
+R3 PASS (worst median change -43.0%, worst CI upper end -41.2%, limit +10%)
