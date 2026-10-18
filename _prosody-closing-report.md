@@ -468,9 +468,12 @@ Edge cases of the #27 rule, as written: "4:3" stays as is (neither number is ove
   the bundled `mcp_server` files are byte-identical to HEAD (`install_config.py`, plugin `SKILL.md`, `server.py`);
   the frozen exe's archive contains `normalizer`, `pauses`, `num2words`, `text_processor`, `tts_engine`,
   `misaki.en`, `kokoro.pipeline`.
-- **Not yet checked:** launching the built exe. The installed 1.1.0 app is running, and its
-  single-instance lock would make a test launch exit at once. PyInstaller logged 48 "Hidden import not found"
-  errors (`munch`, `torch.distributed._shard.checkpoint.*`). They look harmless (`munch` isn't used by kokoro
-  0.9.4, and this Windows torch build lacks those modules), but only a launch shows it. The committed `build.log` has
-  no PyInstaller lines to compare against.
+- **Launch test, PASS** (Paul quit the installed app first). `dist\NaturalVoiceTTS\NaturalVoiceTTS.exe` reached
+  "Ready!" in 10 s (`%APPDATA%\NaturalVoiceTTS\app.log`, 23:51:20 to 23:51:29): bundled espeak-ng, Torch 2.6.0+cu124
+  on the GTX 1650, bundled model, pipe listener up. A test sentence sent through the named pipe
+  (`test_pipe.py`, the MCP path): `header=101 bytes, received=101 bytes`, read as **1 sentence** (no split at
+  "Dr."), spoken copy "…version 1 point 2 point 0, and Doctor…", played, `Finished reading` with no skips or errors.
+  Paul heard it. The first read after launch took about 2 s to start (cold GPU, first synthesis after load). The
+  48 "Hidden import not found" PyInstaller messages (`munch`, `torch.distributed._shard.checkpoint.*`)
+  caused no error at startup or on that read. The test instance was then closed; no app process left running.
 - `src/main.py` (terminal fallback) still runs with the new splitter but not the normalizer or pauses.
