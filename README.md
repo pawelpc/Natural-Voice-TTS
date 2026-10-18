@@ -6,10 +6,10 @@ System-wide text-to-speech for Windows using [Kokoro TTS](https://github.com/hex
 
 **No programming required.** Just download and run the installer:
 
-**[Download Natural Voice TTS v1.1.0](https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.1.0.exe)** (~1.8 GB)
+**[Download Natural Voice TTS v1.2.0](https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.2.0.exe)** (~1.8 GB)
 
 1. Click the link above to download the installer
-2. Run `NaturalVoiceTTS_Setup_1.1.0.exe` — if Windows SmartScreen appears, click **More info** → **Run anyway** (the app is unsigned open-source software)
+2. Run `NaturalVoiceTTS_Setup_1.2.0.exe` — if Windows SmartScreen appears, click **More info** → **Run anyway** (the app is unsigned open-source software)
 3. Follow the installer prompts (defaults are fine)
 4. Launch **Natural Voice TTS** from the Start Menu
 
@@ -22,6 +22,18 @@ The app runs in your system tray (bottom-right of the taskbar). To use it: selec
 | `Ctrl+Win+Z` | Pause / Resume |
 
 **Requirements:** Windows 10 or 11. An NVIDIA GPU (GTX 1650 or better) is recommended for fast synthesis; CPU mode works but is slower.
+
+## What's new in 1.2.0
+
+Smoother, more natural reading:
+
+- **Sentences split where they really end.** "Dr. Smith", "e.g.", "U.S. Army", "J. R. R. Tolkien", "3.14" and "v1.2.0" no longer break a sentence in two. Text copied from PDFs or email (with a line break in mid-sentence) reads as one sentence.
+- **Natural pauses.** Each pause has a set length: short at a comma, medium at a sentence end, longer at a paragraph or heading. The long silences between sentences are gone.
+- **Faster start.** The next sentence is prepared while the current one plays, so speech starts sooner (time to first audio is 60–77% shorter in testing) and there's no wait between sentences.
+- **Reads markdown, code and symbols sensibly.** It says "Table" and "Row 1"; strikethrough as "begin strike … end strike"; emoji by name ("check mark"). Code blocks become "Code block skipped." Paths and URLs read naturally ("src slash app dot py"), and so do dates ("October 17th, 2026"), versions ("version 1 point 2 point 0"), units ("25 millimeters"), "16:9" ("16 by 9"), and symbols like ≥ and →.
+- **No dropped words.** Some numbers and words that were silently skipped before are now spoken.
+
+What you see on screen is never changed; only the spoken copy is.
 
 ---
 
@@ -47,7 +59,15 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install -r requirements.txt
 ```
 
-**Note:** The first run downloads the Kokoro model (~350 MB). This is cached automatically for future runs.
+**Note:** The first run downloads the Kokoro model (~350 MB). This is cached automatically for future runs. Running from source can also use a local model folder instead (config.json, kokoro-v1_0.pth, voices\): set `NVTTS_MODEL_DIR` to it, or keep a previous build in `dist\NaturalVoiceTTS\kokoro_model`.
+
+### Tests
+
+```bash
+python -m pytest tests -q
+```
+
+`tests/README.md` describes the rendering and timing scripts (sample passages, pause measurement, time-to-first-audio A/B).
 
 ## Usage
 
@@ -132,7 +152,9 @@ This will:
 1. Run PyInstaller to create `dist\NaturalVoiceTTS\` with the bundled app
 2. Copy espeak-ng binaries into the dist folder
 3. Copy Kokoro model files from the HuggingFace cache
-4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.1.0.exe` (if Inno Setup is installed)
+4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.2.0.exe` (if Inno Setup is installed)
+
+PyInstaller replaces `dist\NaturalVoiceTTS\` on every build, including its `kokoro_model` folder, and the model is then copied back from the HuggingFace cache. Make sure the cache has the model before building.
 
 The installer installs to `C:\Program Files\NaturalVoiceTTS\` with Start Menu and optional desktop shortcuts. The uninstaller appears in "Add or Remove Programs".
 
@@ -146,8 +168,9 @@ src/
   main.py           — Terminal-mode entry point (fallback)
   tts_engine.py     — Kokoro TTS wrapper (model loading, synthesis)
   text_processor.py — Sentence splitting and text cleanup
-  normalizer.py     — What is spoken: markdown, paths, numbers, units read aloud
+  normalizer.py     — Spoken copy of the text (markdown, numbers, paths, symbols)
   lexicon.py        — Pronunciation list applied to the spoken copy
+  pauses.py         — Pause lengths between and inside sentences
   audio_player.py   — Audio playback with stop/pause/resume
   hotkeys.py        — Global hotkey listener and clipboard grab
   config.py         — Persistent JSON settings
@@ -157,6 +180,7 @@ assets/
   pronunciations.json — Built-in pronunciation list
 installer/
   setup.iss         — Inno Setup installer script
+tests/              — Unit tests, sample passages, render and timing scripts
 ```
 
 ## License

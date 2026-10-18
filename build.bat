@@ -10,7 +10,7 @@ if "%BUILD_LOGGED%"=="" (
 )
 
 echo ============================================================
-echo   Natural Voice TTS 1.1.0 - Build Script
+echo   Natural Voice TTS 1.2.0 - Build Script
 echo ============================================================
 echo   Started: %DATE% %TIME%
 echo.
@@ -184,7 +184,7 @@ echo   App folder:  %CD%\dist\NaturalVoiceTTS\
 echo   Executable:  %CD%\dist\NaturalVoiceTTS\NaturalVoiceTTS.exe
 
 if not "!ISCC!"=="" (
-    echo   Installer:   %CD%\dist\NaturalVoiceTTS_Setup_1.1.0.exe
+    echo   Installer:   %CD%\dist\NaturalVoiceTTS_Setup_1.2.0.exe
 )
 
 echo   Build log:   %BUILD_LOG%

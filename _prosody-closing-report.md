@@ -1,7 +1,7 @@
 # Closing Report (DRAFT): Natural Voice TTS — Speaking Flow and Text Handling
 
 **Model:** Opus 5.5 (`claude-opus-5-5`) · **Started:** 2026-10-17
-**Status:** Phase 4 **passed by Paul** (32 better, 1 same, 0 worse). Three of his notes applied. **Stopped before Phase 5** (installer, v1.2.0, README).
+**Status:** All phases done. Installer `NaturalVoiceTTS_Setup_1.2.0.exe` built and checked; Paul publishes the release.
 
 | Phase | Gate | Status | Evidence |
 |---|---|---|---|
@@ -10,7 +10,7 @@
 | 2 Normalization | expected-output files match; R4, R5 hold | **Passed**; R3 open | §Phase 2 below |
 | 3 Pauses | measured gaps within ±50 ms of targets | **Passed**: 516/516; R3 passes | §Phase 3 below |
 | 4 Paul's listening check | Paul passes it | **Passed**: 32 better, 1 same, 0 worse | §Phase 4 below |
-| 5 Release | only after Phase 4 | not started | |
+| 5 Release | only after Phase 4 | **Built**: installer ready, Paul publishes | §Phase 5 below |
 
 ---
 
@@ -431,7 +431,7 @@ Edge cases of the #27 rule, as written: "4:3" stays as is (neither number is ove
 - **R5** Screen text never changed: `test_screen_text_unchanged`; normalization only builds the spoken copy.
 - **R6** Every two-way reading was asked: 11 questions on 2026-10-17 (§Phase 2 R6 decisions, §Phase 4 #27).
   Standard readings I chose without asking are listed under Phase 2.
-- **R7** No installer build and no release: none run (`dist/` untouched since July). Phase 5 not started.
+- **R7** No installer build or release before Paul passed Phase 4: the first build ran in Phase 5, after his pass. No GitHub release made (Paul publishes).
 - **R8** A commit at each gate: `ce7177d` (0), `499fc3b` (1), `62d5cab` (2), `2478f8f` (3), `b2c866d`/`4f44430`
   (4 page), plus the post-pass notes commit. Nothing pushed.
 
@@ -443,3 +443,37 @@ Edge cases of the #27 rule, as written: "4:3" stays as is (neither number is ove
 5. Starting a new read while one plays waits for the old chunk's synthesis to finish (likely cause
    of passage 16's higher TTFA; not verified).
 6. Python is 3.10.11 on this machine; the brief's style rule says 3.11 (code avoids 3.11-only features).
+---
+
+## Phase 5 — Release build (2026-10-17)
+
+- **Version 1.2.0** in `installer/setup.iss`, `src/dialogs.py`, `build.bat`; `version_info.txt` to 1.2.0.0
+  (it was still 1.0.0.0). `naturalvoicetts.spec` lists `normalizer`, `pauses`, `num2words`. README: v1.2.0
+  link, "What's new in 1.2.0", local model folder, test command, build note. Commit `711490e`.
+  Release notes: `release_notes/1.2.0.md`.
+- **Built from master without the side branches**, as Paul didn't ask to merge them: the pronunciation list
+  (`claude/jovial-hypatia-0d6e6d`) and the emphasis research (`claude/angry-engelbart-71f331`).
+- **Two hazards, handled:**
+  1. PyInstaller replaces `dist/NaturalVoiceTTS/`, which held the only local copy of the model, and
+     `build.bat` copies the model back from the HF cache, which had none. Before building, I copied the model into
+     `%USERPROFILE%\.cache\huggingface\hub\models--hexgrad--Kokoro-82M\snapshots\local-from-dist\`
+     (29 files, SHA-256 identical). The build found it there.
+  2. `build.bat` copies the working-tree `mcp_tts_server/` into the installer. Paul chose to ship the
+     committed versions, so his two uncommitted files were stashed for the build and then restored. Git
+     rewrote their line endings on restore (LF to CRLF), so I put back the exact original bytes from a
+     backup copy; the SHA-256 now matches the pre-build hash.
+- **Build:** `build.log`, started 23:19:45, BUILD COMPLETE. `dist\NaturalVoiceTTS_Setup_1.2.0.exe`,
+  1,885,275,055 bytes (under GitHub's 2 GiB asset limit).
+- **Checked in the build:** the model in `dist` matches the protected copy (config, `.pth`, voices; 27 voices);
+  the bundled `mcp_server` files are byte-identical to HEAD (`install_config.py`, plugin `SKILL.md`, `server.py`);
+  the frozen exe's archive contains `normalizer`, `pauses`, `num2words`, `text_processor`, `tts_engine`,
+  `misaki.en`, `kokoro.pipeline`.
+- **Launch test, PASS** (Paul quit the installed app first). `dist\NaturalVoiceTTS\NaturalVoiceTTS.exe` reached
+  "Ready!" in 10 s (`%APPDATA%\NaturalVoiceTTS\app.log`, 23:51:20 to 23:51:29): bundled espeak-ng, Torch 2.6.0+cu124
+  on the GTX 1650, bundled model, pipe listener up. A test sentence sent through the named pipe
+  (`test_pipe.py`, the MCP path): `header=101 bytes, received=101 bytes`, read as **1 sentence** (no split at
+  "Dr."), spoken copy "…version 1 point 2 point 0, and Doctor…", played, `Finished reading` with no skips or errors.
+  Whether it sounded right is for Paul to confirm; the log shows it played. The first read after launch took about 2 s to start (cold GPU, first synthesis after load). The
+  48 "Hidden import not found" PyInstaller messages (`munch`, `torch.distributed._shard.checkpoint.*`)
+  caused no error at startup or on that read. The test instance was then closed; no app process left running.
+- `src/main.py` (terminal fallback) still runs with the new splitter but not the normalizer or pauses.
