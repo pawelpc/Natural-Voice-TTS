@@ -1,0 +1,276 @@
+{
+ "id": "25_units_measurements",
+ "category": "units",
+ "origin": "synthetic",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 27.32,
+ "synth_s": 1.55,
+ "wav_sha256": "b606d95fd3b90f7742bb68753f8142b5f88e9c4a572fbd4956de7ff3be9969e8",
+ "pauses": [
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 4155.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 7790.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 9815.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 11685.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 14605.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 16875.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 19025.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 20115.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 22205.0,
+   "chunk": 4
+  }
+ ],
+ "sentences": [
+  {
+   "text": "The bracket is 25 millimeters thick and weighs 1.2 kilograms.",
+   "synth_s": 0.254,
+   "ms": 4605.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The bracket is 25 millimeters thick and weighs 1.2 kilograms.",
+     "phonemes": "ðə bɹˈækət ɪz twˈɛnti fˈIv mˈɪləmˌiTəɹz θˈɪk ænd wˈAz wˈʌn pYnt tˈu kˈɪləɡɹˌæmz.",
+     "silent_words": [],
+     "samples": 118200,
+     "ms": 4925.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 60
+      },
+      {
+       "at_ms": 2230,
+       "ms": 80
+      },
+      {
+       "at_ms": 2320,
+       "ms": 360
+      },
+      {
+       "at_ms": 3550,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Torque it to 12 newton meters at 20 degrees Celsius.",
+   "synth_s": 0.215,
+   "ms": 3635.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Torque it to 12 newton meters at 20 degrees Celsius.",
+     "phonemes": "tˈɔɹk ɪt tə twˈɛlv nˈutᵊn mˈiTəɹz æt twˈɛnti dəɡɹˈiz sˈɛlsiəs.",
+     "silent_words": [],
+     "samples": 94800,
+     "ms": 3950.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 1880,
+       "ms": 280
+      },
+      {
+       "at_ms": 2240,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The drive holds 2 terabytes, the GPU has 4 gigabytes, and the CPU runs at 3.5 gigahertz.",
+   "synth_s": 0.359,
+   "ms": 6815.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The drive holds 2 terabytes, the GPU has 4 gigabytes, and the CPU runs at 3.5 gigahertz.",
+     "phonemes": "ðə dɹˈIv hˈOldz tˈu tˈɛɹəbˌIts, ðə ʤˌipˌijˈu hæz fˈɔɹ ɡˈɪɡəbˌIts, ænd ðə sˌipˌijˈu ɹˈʌnz æt θɹˈi pYnt fˈIv ɡˈɪɡəhˌɜɹts.",
+     "silent_words": [],
+     "samples": 177600,
+     "ms": 7400.0,
+     "lead_ms": 300.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1870,
+       "ms": 370
+      },
+      {
+       "at_ms": 3120,
+       "ms": 70
+      },
+      {
+       "at_ms": 3910,
+       "ms": 300
+      },
+      {
+       "at_ms": 5380,
+       "ms": 130
+      },
+      {
+       "at_ms": 6310,
+       "ms": 70
+      },
+      {
+       "at_ms": 6720,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Drive at 60 kilometers per hour, or about 37 miles per hour.",
+   "synth_s": 0.253,
+   "ms": 4420.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Drive at 60 kilometers per hour, or about 37 miles per hour.",
+     "phonemes": "dɹˈIv æt sˈɪksti kəlˈɑməTəɹz pɜɹ ˈWəɹ, ɔɹ əbˈWt θˈɜɹTi sˈɛvən mˈIlz pɜɹ ˈWəɹ.",
+     "silent_words": [],
+     "samples": 119400,
+     "ms": 4975.0,
+     "lead_ms": 320.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1560,
+       "ms": 60
+      },
+      {
+       "at_ms": 2140,
+       "ms": 380
+      },
+      {
+       "at_ms": 2840,
+       "ms": 130
+      },
+      {
+       "at_ms": 3960,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "A 5 volt, 2 amp supply delivers 10 watts.",
+   "synth_s": 0.199,
+   "ms": 3180.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "A 5 volt, 2 amp supply delivers 10 watts.",
+     "phonemes": "ɐ fˈIv vˈOlt, tˈu ˈæmp səplˈI dəlˈɪvəɹz tˈɛn wˈɑts.",
+     "silent_words": [],
+     "samples": 85800,
+     "ms": 3575.0,
+     "lead_ms": 310.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 950,
+       "ms": 290
+      },
+      {
+       "at_ms": 2930,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The file is 327 megabytes and loads in 4.6 seconds.",
+   "synth_s": 0.274,
+   "ms": 4660.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The file is 327 megabytes and loads in 4.6 seconds.",
+     "phonemes": "ðə fˈIl ɪz θɹˈi hˈʌndɹəd twˈɛnti sˈɛvən mˈɛɡəbˌIts ænd lˈOdz ɪn fˈɔɹ pYnt sˈɪks sˈɛkəndz.",
+     "silent_words": [],
+     "samples": 130800,
+     "ms": 5450.0,
+     "lead_ms": 300.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 960,
+       "ms": 80
+      },
+      {
+       "at_ms": 2540,
+       "ms": 60
+      },
+      {
+       "at_ms": 2690,
+       "ms": 350
+      },
+      {
+       "at_ms": 3740,
+       "ms": 60
+      },
+      {
+       "at_ms": 4610,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

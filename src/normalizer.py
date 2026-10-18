@@ -146,6 +146,19 @@ US_DATE_RE = re.compile(r'\b(\d{1,2})/(\d{1,2})/(\d{4})\b')
 MONTH_DAY_RE = re.compile(r'\b(Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?(?= \d)')
 MONTH_NAME_DAY_RE = re.compile(r'\b(' + '|'.join(MONTHS) + r') (\d{1,2})\b(?![\d:]|st|nd|rd|th)')
 DAY_NAME_RE = re.compile(r'\b(Mon|Tue|Tues|Wed|Thu|Thur|Thurs|Fri|Sat|Sun)\.(?=[\s,])')
+# Two numbers with a colon that can't be a clock time read "by" (Paul, Phase 4 #27): the first
+# is over 12 or the second over 59 ("16:9" -> "16 by 9", also "14:30" -> "14 by 30"). Three-part
+# times ("17:06:27") and anything with a.m./p.m. stay clock times.
+RATIO_RE = re.compile(r'(?<![\d:.])(\d{1,3}):(\d{1,3})(?![\d:])')
+AMPM_AFTER_RE = re.compile(r'\s*[AaPp]\.?[Mm]\b')
+RATIO_HOUR_MAX, RATIO_MINUTE_MAX = 12, 59
+# A lone capital A next to an operator is a variable: say the letter, not the article "uh"
+# (Paul, Phase 4 #31). misaki's [word](/phonemes/) markup sets the phonemes directly.
+OPERATORS = r'[+\-−×*/=&<>≤≥≠]'
+LETTER_A_RE = re.compile(r'(?<![\w\[.])A(?=\s?' + OPERATORS + r'\s?(?:[A-Z]\b|\d))'
+                         r'|(?<=' + OPERATORS + r' )A\b(?![\w.\'])'
+                         r'|(?<=' + OPERATORS + r')A\b(?![\w.\'])')
+LETTER_A_SPOKEN = '[A](/ˈA/)'
 TIME_RE = re.compile(r'(?<![\d:])(\d{1,2}):(\d{2})(?::(\d{2}))?(?![\d:])(\s*(?:[AaPp]\.?[Mm]\.?)(?![\w]))?')
 AMPM_RE = re.compile(r'(?<=\d)\s?([AaPp])\.?[Mm]\b\.?')
 PHONE_RE = re.compile(r'(?<![\d-])((?:\d{3}-)?\d{3}-\d{4})(?![\d-])')
@@ -332,6 +345,13 @@ def _say_time(m: re.Match) -> str:
     return ' '.join(words)
 
 
+def _say_ratio(m: re.Match) -> str:
+    a, b = int(m.group(1)), int(m.group(2))
+    if AMPM_AFTER_RE.match(m.string, m.end()) or (a <= RATIO_HOUR_MAX and b <= RATIO_MINUTE_MAX):
+        return m.group(0)
+    return f'{a} by {b}'
+
+
 def _say_unit(m: re.Match) -> str:
     number, space, unit = m.group(1), m.group(2), m.group(3)
     if unit in UNITS_NEED_SPACE and not space:
@@ -445,6 +465,7 @@ def normalize_inline(text: str) -> str:
         lambda m: f'{m.group(1)} {num2words(int(m.group(2)), to="ordinal_num")}' if 1 <= int(m.group(2)) <= 31
         else m.group(0), text)
     text = DAY_NAME_RE.sub(lambda m: DAY_ABBR[m.group(1)], text)
+    text = RATIO_RE.sub(_say_ratio, text)
     text = TIME_RE.sub(_say_time, text)
     text = AMPM_RE.sub(lambda m: ' ' + _ampm(m.group(0), m.string, m.end()), text)
 
@@ -460,9 +481,10 @@ def normalize_inline(text: str) -> str:
     for pattern, spoken in ABBREVIATIONS:
         text = re.sub(pattern, lambda m, s=spoken: s.capitalize() if m.start() == 0 else s, text)
     text = re.sub(r'(?i)\b(copyright)\s*©', r'\1', text)
+    text = LETTER_A_RE.sub(LETTER_A_SPOKEN, text)
     for literal, spoken in SYMBOL_WORDS:
         text = text.replace(literal, spoken)
-    text = re.sub(r'(?<=\w)\s*=\s*(?=\w)', ' equals ', text)
+    text = re.sub(r'(?<=[\w)])\s*=\s*(?=[\w\[])', ' equals ', text)  # ")" / "[": after LETTER_A_SPOKEN
     text = text.replace('\\', ' ')
 
     # Tidy spacing left by the substitutions.

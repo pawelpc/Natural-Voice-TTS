@@ -1,0 +1,194 @@
+{
+ "id": "28_markdown_formatting_mix",
+ "category": "markdown",
+ "origin": "synthetic",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 17.8,
+ "synth_s": 1.05,
+ "wav_sha256": "528eb796d7f4ed842d0fc5a06d6502cc3f82c02ef6ac95c9f1d5af0fca8105f2",
+ "pauses": [
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 770.0,
+   "chunk": 0
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 2280.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 8020.0,
+   "chunk": 2
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 10330.0,
+   "chunk": 3
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 11940.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 13095.0,
+   "chunk": 5
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Release Notes.",
+   "synth_s": 0.11,
+   "ms": 1570.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Release Notes.",
+     "phonemes": "ɹəlˈis nˈOts.",
+     "silent_words": [],
+     "samples": 39600,
+     "ms": 1650.0,
+     "lead_ms": 380.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "What changed.",
+   "synth_s": 0.099,
+   "ms": 1510.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "What changed.",
+     "phonemes": "wˌʌt ʧˈAnʤd.",
+     "silent_words": [],
+     "samples": 37800,
+     "ms": 1575.0,
+     "lead_ms": 380.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The splitter now handles abbreviations and version 1 point 2 point 0 versions.",
+   "synth_s": 0.28,
+   "ms": 5390.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The splitter now handles abbreviations and version 1 point 2 point 0 versions.",
+     "phonemes": "ðə splˈɪTəɹ nˈW hˈændəlz əbɹˌiviˈAʃənz ænd vˈɜɹʒən wˈʌn pˈYnt tˈu pˈYnt zˈɪɹO vˈɜɹʒənz.",
+     "silent_words": [],
+     "samples": 137400,
+     "ms": 5725.0,
+     "lead_ms": 310.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 430,
+       "ms": 60
+      },
+      {
+       "at_ms": 1050,
+       "ms": 120
+      },
+      {
+       "at_ms": 2400,
+       "ms": 350
+      },
+      {
+       "at_ms": 3770,
+       "ms": 80
+      },
+      {
+       "at_ms": 4070,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "See the README for details.",
+   "synth_s": 0.154,
+   "ms": 2660.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "See the README for details.",
+     "phonemes": "sˈi ði ˌɑɹˌiˌAdˌiˌɛmˈi fɔɹ dətˈAlz.",
+     "silent_words": [],
+     "samples": 63000,
+     "ms": 2625.0,
+     "lead_ms": 310.0,
+     "trail_ms": 455.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Known issues.",
+   "synth_s": 0.117,
+   "ms": 1610.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Known issues.",
+     "phonemes": "nˈOn ˈɪʃjuz.",
+     "silent_words": [],
+     "samples": 41400,
+     "ms": 1725.0,
+     "lead_ms": 390.0,
+     "trail_ms": 515.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Note: bold underscores and begin strike old text end strike are still read literally.",
+   "synth_s": 0.289,
+   "ms": 5065.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Note: bold underscores and begin strike old text end strike are still read literally.",
+     "phonemes": "nˈOt: bˈOld ˈʌndəɹskˌɔɹz ænd bəɡˈɪn stɹˈIk ˈOld tˈɛkst ˈɛnd stɹˈIk ɑɹ stˈɪl ɹˈɛd lˈɪTəɹəli.",
+     "silent_words": [],
+     "samples": 142800,
+     "ms": 5950.0,
+     "lead_ms": 320.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 680,
+       "ms": 250
+      },
+      {
+       "at_ms": 2710,
+       "ms": 300
+      },
+      {
+       "at_ms": 4080,
+       "ms": 250
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

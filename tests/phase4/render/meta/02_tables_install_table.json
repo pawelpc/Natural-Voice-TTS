@@ -1,0 +1,406 @@
+{
+ "id": "02_tables_install_table",
+ "category": "tables",
+ "origin": "real",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 46.73,
+ "synth_s": 2.56,
+ "wav_sha256": "c1ff6ff9fdab1aa4fd30dfc2c87341a1abdda1b9e563613453e78b01466a9f90",
+ "pauses": [
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 350.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 2510.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 3135.0,
+   "chunk": 0
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 3850.0,
+   "chunk": 0
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 5060.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 6065.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 7180.0,
+   "chunk": 1
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 8210.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10295.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 18180.0,
+   "chunk": 2
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 19175.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 21605.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 23280.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 26835.0,
+   "chunk": 3
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 27845.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 31205.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 36765.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 38420.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 39690.0,
+   "chunk": 4
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 42315.0,
+   "chunk": 4
+  }
+ ],
+ "sentences": [
+  {
+   "text": "One. Are the changed files part of the install? — Yes, all three.",
+   "synth_s": 0.245,
+   "ms": 4650.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One. Are the changed files part of the install? — Yes, all three.",
+     "phonemes": "wˈʌn. ˌɑɹ ðə ʧˈAnʤd fˈIlz pˈɑɹt ʌv ði ɪnstˈɔl? — jˈɛs, ˈɔl θɹˈi.",
+     "silent_words": [],
+     "samples": 108000,
+     "ms": 4500.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1660,
+       "ms": 60
+      },
+      {
+       "at_ms": 2560,
+       "ms": 410
+      },
+      {
+       "at_ms": 3400,
+       "ms": 80
+      },
+      {
+       "at_ms": 3650,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Table. File I changed, How it's packaged.",
+   "synth_s": 0.18,
+   "ms": 2980.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Table. File I changed, How it's packaged.",
+     "phonemes": "tˈAbᵊl. fˈIl ˌI ʧˈAnʤd, hˌW ɪts pˈækɪʤd.",
+     "silent_words": [],
+     "samples": 72600,
+     "ms": 3025.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 720,
+       "ms": 190
+      },
+      {
+       "at_ms": 2180,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 1. src slash app dot py, PyInstaller entry point (naturalvoicetts dot spec line 57) to compiled into NaturalVoiceTTS dot exe.",
+   "synth_s": 0.554,
+   "ms": 11000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 1. src slash app dot py, PyInstaller entry point (naturalvoicetts dot spec line 57) to compiled into NaturalVoiceTTS dot exe.",
+     "phonemes": "ɹˈO wˈʌn. ˌɛsˌɑɹsˈi slˈæʃ ˈæp dˈɑt pˈI, pˈI ɪnstˈɔləɹ ˈɛntɹi pˈYnt (nˈæʧəɹɹˌælvYsəts dˈɑt spˈɛk lˈIn fˈɪfti sˈɛvən) tə kəmpˈIld ˈɪntu nˈæʧəɹᵊlvˌYstˌitˌiˈɛs dˈɑt ˌiˌɛksˈi.",
+     "silent_words": [],
+     "samples": 282000,
+     "ms": 11750.0,
+     "lead_ms": 330.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 920,
+       "ms": 460
+      },
+      {
+       "at_ms": 2780,
+       "ms": 70
+      },
+      {
+       "at_ms": 3170,
+       "ms": 380
+      },
+      {
+       "at_ms": 5030,
+       "ms": 330
+      },
+      {
+       "at_ms": 6500,
+       "ms": 60
+      },
+      {
+       "at_ms": 6680,
+       "ms": 60
+      },
+      {
+       "at_ms": 6840,
+       "ms": 60
+      },
+      {
+       "at_ms": 7380,
+       "ms": 70
+      },
+      {
+       "at_ms": 7990,
+       "ms": 340
+      },
+      {
+       "at_ms": 10620,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 2. src slash pipe listener dot py, Imported by app dot py, so PyInstaller bundles it into the same frozen exe.",
+   "synth_s": 0.46,
+   "ms": 8655.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 2. src slash pipe listener dot py, Imported by app dot py, so PyInstaller bundles it into the same frozen exe.",
+     "phonemes": "ɹˈO tˈu. ˌɛsˌɑɹsˈi slˈæʃ pˈIp lˈɪsᵊnəɹ dˈɑt pˈI, ɪmpˈɔɹTᵻd bI ˈæp dˈɑt pˈI, sˌO pˈI ɪnstˈɔləɹ bˈʌndᵊlz ɪt ˈɪntu ðə sˈAm fɹˈOzən ˌiˌɛksˈi.",
+     "silent_words": [],
+     "samples": 227400,
+     "ms": 9475.0,
+     "lead_ms": 320.0,
+     "trail_ms": 545.0,
+     "pauses": [
+      {
+       "at_ms": 870,
+       "ms": 400
+      },
+      {
+       "at_ms": 2430,
+       "ms": 60
+      },
+      {
+       "at_ms": 3050,
+       "ms": 80
+      },
+      {
+       "at_ms": 3400,
+       "ms": 350
+      },
+      {
+       "at_ms": 4600,
+       "ms": 60
+      },
+      {
+       "at_ms": 4880,
+       "ms": 70
+      },
+      {
+       "at_ms": 5230,
+       "ms": 350
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 3. mcp tts server slash server dot py, build dot bat step 5 copies the whole mcp tts server folder into dist, NaturalVoiceTTS, mcp server, which Inno Setup then packs into the installer.",
+   "synth_s": 0.888,
+   "ms": 15830.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 3. mcp tts server slash server dot py, build dot bat step 5 copies the whole mcp tts server folder into dist, NaturalVoiceTTS, mcp server, which Inno Setup then packs into the installer.",
+     "phonemes": "ɹˈO θɹˈi. ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ slˈæʃ sˈɜɹvəɹ dˈɑt pˈI, bˈɪld dˈɑt bˈæt stˈɛp fˈIv kˈɑpiz ðə hˈOl ˌɛmsˌipˈi tˌitˌiˈɛs sˈɜɹvəɹ fˈOldəɹ ˈɪntu dˈɪst, nˈæʧəɹᵊlvˌYstˌitˌiˈɛs, ˌɛmsˌipˈi sˈɜɹvəɹ, wˌɪʧ ɪnnˈO sˈɛTˌʌp ðˈɛn pˈæks ˈɪntu ði ɪnstˈɔləɹ.",
+     "silent_words": [],
+     "samples": 401400,
+     "ms": 16725.0,
+     "lead_ms": 340.0,
+     "trail_ms": 555.0,
+     "pauses": [
+      {
+       "at_ms": 550,
+       "ms": 60
+      },
+      {
+       "at_ms": 900,
+       "ms": 500
+      },
+      {
+       "at_ms": 4080,
+       "ms": 70
+      },
+      {
+       "at_ms": 4470,
+       "ms": 410
+      },
+      {
+       "at_ms": 5930,
+       "ms": 160
+      },
+      {
+       "at_ms": 6980,
+       "ms": 100
+      },
+      {
+       "at_ms": 9110,
+       "ms": 80
+      },
+      {
+       "at_ms": 9800,
+       "ms": 70
+      },
+      {
+       "at_ms": 10240,
+       "ms": 330
+      },
+      {
+       "at_ms": 12020,
+       "ms": 210
+      },
+      {
+       "at_ms": 13310,
+       "ms": 440
+      },
+      {
+       "at_ms": 14650,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "So every edit lands in the installer when you run build dot bat.",
+   "synth_s": 0.235,
+   "ms": 3620.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "So every edit lands in the installer when you run build dot bat.",
+     "phonemes": "sˌO ˈɛvəɹi ˈɛdət lˈændz ɪn ði ɪnstˈɔləɹ wˌɛn ju ɹˈʌn bˈɪld dˈɑt bˈæt.",
+     "silent_words": [],
+     "samples": 104400,
+     "ms": 4350.0,
+     "lead_ms": 280.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 440,
+       "ms": 60
+      },
+      {
+       "at_ms": 2200,
+       "ms": 340
+      },
+      {
+       "at_ms": 3480,
+       "ms": 90
+      },
+      {
+       "at_ms": 3750,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

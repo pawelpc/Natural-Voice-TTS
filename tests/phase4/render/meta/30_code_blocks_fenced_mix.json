@@ -1,0 +1,152 @@
+{
+ "id": "30_code_blocks_fenced_mix",
+ "category": "code_blocks",
+ "origin": "synthetic",
+ "chunks": 5,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 5,
+ "duration_s": 9.74,
+ "synth_s": 0.62,
+ "wav_sha256": "c840030b2649b00d9594f3b945a2fb52130f53da2d3de4abaa8d19de57a2e2d9",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 525.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 1320.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 3105.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 5165.0,
+   "chunk": 2
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 6950.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8275.0,
+   "chunk": 4
+  }
+ ],
+ "sentences": [
+  {
+   "text": "To test it, run this:",
+   "synth_s": 0.118,
+   "ms": 2120.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "To test it, run this:",
+     "phonemes": "tə tˈɛst ɪt, ɹˈʌn ðˈɪs:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 300.0,
+     "trail_ms": 415.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Code block skipped.",
+   "synth_s": 0.114,
+   "ms": 1785.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Code block skipped.",
+     "phonemes": "kˈOd blˈɑk skˈɪpt.",
+     "silent_words": [],
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 350.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The splitter looks like this:",
+   "synth_s": 0.121,
+   "ms": 2060.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The splitter looks like this:",
+     "phonemes": "ðə splˈɪTəɹ lˈʊks lˈIk ðˈɪs:",
+     "silent_words": [],
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 320.0,
+     "trail_ms": 420.0,
+     "pauses": [
+      {
+       "at_ms": 1250,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Code block skipped.",
+   "synth_s": 0.111,
+   "ms": 1785.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Code block skipped.",
+     "phonemes": "kˈOd blˈɑk skˈɪpt.",
+     "silent_words": [],
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 350.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "After that, the app should start normally.",
+   "synth_s": 0.159,
+   "ms": 1995.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "After that, the app should start normally.",
+     "phonemes": "ˈæftəɹ ðˈæt, ði ˈæp ʃˌʊd stˈɑɹt nˈɔɹməli.",
+     "silent_words": [],
+     "samples": 65400,
+     "ms": 2725.0,
+     "lead_ms": 310.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 830,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 # Closing Report (DRAFT): Natural Voice TTS — Speaking Flow and Text Handling
 
 **Model:** Opus 5.5 (`claude-opus-5-5`) · **Started:** 2026-10-17
-**Status:** Phase 3 gate passed; R3 passes (TTFA 43–77% faster than Phase 0). **Stopped before Phase 4** for Paul's listening check.
+**Status:** Phase 4 **passed by Paul** (32 better, 1 same, 0 worse). Three of his notes applied. **Stopped before Phase 5** (installer, v1.2.0, README).
 
 | Phase | Gate | Status | Evidence |
 |---|---|---|---|
@@ -9,7 +9,7 @@
 | 1 Splitting | unit tests, zero wrong splits | **Passed** (R3 later found failing on passage 16) | §Phase 1 below |
 | 2 Normalization | expected-output files match; R4, R5 hold | **Passed**; R3 open | §Phase 2 below |
 | 3 Pauses | measured gaps within ±50 ms of targets | **Passed**: 516/516; R3 passes | §Phase 3 below |
-| 4 Paul's listening check | Paul passes it | **Waiting for Paul**: page published | §Phase 4 below |
+| 4 Paul's listening check | Paul passes it | **Passed**: 32 better, 1 same, 0 worse | §Phase 4 below |
 | 5 Release | only after Phase 4 | not started | |
 
 ---
@@ -368,7 +368,7 @@ producer finishes its current chunk (passage 16's second chunk takes about 340 m
 happen when Paul starts a new read while one is still playing.
 ---
 
-## Phase 4 — Paul's listening check (in progress)
+## Phase 4 — Paul's listening check
 
 - **A/B page:** https://claude.ai/artifact/YavTFrd8ndpBu7MPSeKkTZ (private to Paul). It holds 33 pairs,
   filterable by category: **Before** = `tests/baseline/wav` (v1.1.0 code), **After** = `tests/phase3/wav`
@@ -383,3 +383,63 @@ happen when Paul starts a new read while one is still playing.
 - **Checked after publishing:** a probe rating written, listed and deleted through the page's store; one
   published MP3 fetched back byte-identical (152,640 bytes). Not checked: playback in Paul's browser
   or phone, which only he can confirm.
+### Result: PASS
+Paul's ratings, verbatim in `tests/phase4/ratings.txt`: **32 better, 1 same (#16, the clean-prose speak
+call), 0 worse; overall: pass.** He rated on the local copy of the page, so the ratings reached me
+by "Copy results as text", not through the page's store (which is empty).
+
+### Paul's notes applied after the pass (2026-10-17)
+| # | Paul's note | Change | Evidence |
+|---|---|---|---|
+| 7 | Small pause between the row number and the first cell | A `.`/`!`/`?` inside a chunk ("Row 1.", "One. Clone…") now gets `INNER_STOP_PAUSE_MS = 300`. misaki keeps the dot inside "Mr.", "U.S.", "etc.", "Ph.D." (checked), so abbreviations don't get the pause | `test_inner_stop_pause_after_row_label`; pause gate below |
+| 27 | Colon between two numbers reads "by" when it can't be a time | `RATIO_RE`: two numbers, first over 12 or second over 59, no a.m./p.m. → "16 by 9". Three-part times unchanged. Asked first (R6): his rule as written also makes 24-hour times read "14 by 30" (passage 26); he chose that | 3 new inline cases; passages 26, 27 expected files updated |
+| 31 | "A" next to a symbol should be the letter | misaki read "A" in "not A + B" as the article `ɐ` (checked). A lone capital A next to an operator is now written `[A](/ˈA/)`, misaki's own phoneme markup, giving `ˈA` | 2 new inline cases; passage 31 expected file updated; R4 misaki test passes on it |
+
+Edge cases of the #27 rule, as written: "4:3" stays as is (neither number is over the limits) and "14:00" reads "14 by 0".
+
+### Notes for future sessions (Paul asked not to do these now)
+- **#8 Pronunciation list for names and brands:** "Cowork" is read "Cow ork". It should be "Co work". misaki's
+  `[word](/phonemes/)` markup (used for #31) is a ready mechanism: a small user-editable lexicon applied
+  in the normalizer.
+- **#13 Emphasis** for **bold**, `*asterisk*` and ALL-CAPS (non-abbreviation) text: pitch, loudness, duration.
+  Kokoro has no emphasis input. Options to research: misaki stress markup, a slower `speed` per span
+  (Kokoro takes speed per call), and gain on the span's audio.
+- **Live sentence gap on Paul's headset** (+~0.11 s per chunk, Phase 3): a continuous output stream in
+  `audio_player.py`, if he hears it.
+### Re-check after the notes (`tests/phase4/render`, final code)
+- Pause gate: **539/539 within ±50 ms** (comma 304, inner stop 23, sentence 129, paragraph 48, item 21,
+  heading 14; worst error 25 ms) (`tests/phase4/render/pauses.json`). 0 skipped, 0 silent words.
+- Unit tests: **263 passed** (`python -m pytest tests -q`).
+- R3 (Phase 0 vs final, ABBA, 30 samples a side, `tests/phase4/render/r3.json`): passage 17
+  0.533 → 0.130 s (**−75.6%**), passage 16 0.680 → 0.270 s (**−60.3%**), passage 01 0.516 → 0.118 s
+  (**−77.1%**). Pass.
+- The listening page now plays this render as "After", so Paul can spot-check #7, #26, #27 and #31.
+
+---
+
+## Rules compliance (R1–R8)
+- **R1** Model, voice, speed unchanged: same `kokoro-v1_0.pth`, `DEFAULT_VOICE = 'af_heart'`,
+  `DEFAULT_SPEED = 1.0` (`src/tts_engine.py`); source mode only gained a local path to the same file (Phase 0).
+- **R2** `pipe_listener.py` and `mcp_tts_server/` untouched: `git log 0018ba1..HEAD -- src/pipe_listener.py mcp_tts_server` is empty.
+  The worker's D2 skip/notify behaviour is kept (`tests/test_worker.py`).
+- **R3** TTFA not worse: final A/B −76%, −60%, −77% (`tests/phase4/render/r3.json`). It was +12% on one
+  passage at the Phase 1–2 checkpoints, found with the stronger A/B and resolved in Phase 3 (§Phase 2, §Phase 3).
+- **R4** No dropped words: split step keeps every word (`test_no_words_lost`); misaki gives every spoken
+  word phonemes (`test_every_word_gets_phonemes`); renders show 0 silent words (Phase 1 found 2 that were
+  already lost in v1.1.0, now fixed). Deliberately not spoken: code-block contents and the rows of tables with
+  10 or more data rows (brief and Paul's rule).
+- **R5** Screen text never changed: `test_screen_text_unchanged`; normalization only builds the spoken copy.
+- **R6** Every two-way reading was asked: 11 questions on 2026-10-17 (§Phase 2 R6 decisions, §Phase 4 #27).
+  Standard readings I chose without asking are listed under Phase 2.
+- **R7** No installer build and no release: none run (`dist/` untouched since July). Phase 5 not started.
+- **R8** A commit at each gate: `ce7177d` (0), `499fc3b` (1), `62d5cab` (2), `2478f8f` (3), `b2c866d`/`4f44430`
+  (4 page), plus the post-pass notes commit. Nothing pushed.
+
+## Open issues
+1. Device-mode harness hang (Phase 0), not reproduced outside the harness and not diagnosed.
+2. Live playback adds ~0.11 s per chunk on Paul's Bluetooth headset (separate `sd.play()` per chunk).
+3. Paul's PC plays through the headset's hands-free profile (narrowband).
+4. Future-session notes from Paul: pronunciation list (#8), emphasis (#13).
+5. Starting a new read while one plays waits for the old chunk's synthesis to finish (likely cause
+   of passage 16's higher TTFA; not verified).
+6. Python is 3.10.11 on this machine; the brief's style rule says 3.11 (code avoids 3.11-only features).

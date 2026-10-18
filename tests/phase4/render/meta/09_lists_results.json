@@ -1,0 +1,1040 @@
+{
+ "id": "09_lists_results",
+ "category": "lists",
+ "origin": "real",
+ "chunks": 18,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 18,
+ "duration_s": 112.9,
+ "synth_s": 5.82,
+ "wav_sha256": "61b781f605328c4089d1a3a30190857d3bf3a4e7d49e780431c5d3d825b760ac",
+ "pauses": [
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 610.0,
+   "chunk": 0
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 1750.0,
+   "chunk": 1
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 3530.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 4705.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8775.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10720.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 12935.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 14200.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 17400.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 19725.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 20760.0,
+   "chunk": 3
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 21465.0,
+   "chunk": 3
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 22615.0,
+   "chunk": 4
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 24310.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 27485.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 31780.0,
+   "chunk": 5
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 35305.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 39530.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 40285.0,
+   "chunk": 6
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 42015.0,
+   "chunk": 6
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 43155.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 44515.0,
+   "chunk": 7
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 45870.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 47880.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 51590.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 52795.0,
+   "chunk": 8
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 54675.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 57115.0,
+   "chunk": 9
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 60710.0,
+   "chunk": 9
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 61965.0,
+   "chunk": 9
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 65625.0,
+   "chunk": 9
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 68535.0,
+   "chunk": 10
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 73005.0,
+   "chunk": 10
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 75040.0,
+   "chunk": 11
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 76250.0,
+   "chunk": 12
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 76830.0,
+   "chunk": 12
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 77355.0,
+   "chunk": 12
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 78070.0,
+   "chunk": 12
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 78760.0,
+   "chunk": 12
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 81135.0,
+   "chunk": 13
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 82160.0,
+   "chunk": 13
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 83195.0,
+   "chunk": 13
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 84175.0,
+   "chunk": 13
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 85205.0,
+   "chunk": 13
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 88670.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 89585.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 90415.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 91450.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 92525.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 94505.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 95805.0,
+   "chunk": 14
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 96905.0,
+   "chunk": 14
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 99325.0,
+   "chunk": 15
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 102295.0,
+   "chunk": 15
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 103470.0,
+   "chunk": 15
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 105625.0,
+   "chunk": 15
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 107610.0,
+   "chunk": 16
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 110035.0,
+   "chunk": 17
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Results.",
+   "synth_s": 0.103,
+   "ms": 1410.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Results.",
+     "phonemes": "ɹəzˈʌlts.",
+     "silent_words": [],
+     "samples": 36000,
+     "ms": 1500.0,
+     "lead_ms": 390.0,
+     "trail_ms": 500.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "One. Installer rebuilt check mark.",
+   "synth_s": 0.164,
+   "ms": 2920.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One. Installer rebuilt check mark.",
+     "phonemes": "wˈʌn. ɪnstˈɔləɹ ɹibˈɪlt ʧˈɛk mˈɑɹk.",
+     "silent_words": [],
+     "samples": 66000,
+     "ms": 2750.0,
+     "lead_ms": 320.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 660,
+       "ms": 130
+      },
+      {
+       "at_ms": 1650,
+       "ms": 80
+      },
+      {
+       "at_ms": 2190,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "dist, NaturalVoiceTTS Setup 1 dot 1 dot 0 dot exe — 1798 megabytes, built today four forty six P M, exit code 0.",
+   "synth_s": 0.529,
+   "ms": 10320.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "dist, NaturalVoiceTTS Setup 1 dot 1 dot 0 dot exe — 1798 megabytes, built today four forty six P M, exit code 0.",
+     "phonemes": "dˈɪst, nˈæʧəɹᵊlvˌYstˌitˌiˈɛs sˈɛTˌʌp wˈʌn dˈɑt wˈʌn dˈɑt zˈɪɹO dˈɑt ˌiˌɛksˈi — sˌɛvəntˈin nˈIndi ˈAt mˈɛɡəbˌIts, bˈɪlt tədˈA fˈɔɹ fˈɔɹTi sˈɪks pˈi ˈɛm, ˈɛɡzət kˈOd zˈɪɹO.",
+     "silent_words": [],
+     "samples": 270600,
+     "ms": 11275.0,
+     "lead_ms": 370.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 750,
+       "ms": 90
+      },
+      {
+       "at_ms": 2400,
+       "ms": 60
+      },
+      {
+       "at_ms": 4070,
+       "ms": 80
+      },
+      {
+       "at_ms": 4710,
+       "ms": 520
+      },
+      {
+       "at_ms": 6980,
+       "ms": 400
+      },
+      {
+       "at_ms": 8760,
+       "ms": 70
+      },
+      {
+       "at_ms": 9400,
+       "ms": 350
+      },
+      {
+       "at_ms": 10030,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).",
+   "synth_s": 0.376,
+   "ms": 7615.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "All payload verified present (Torch/CUDA, Kokoro model + 27 voices, espeak-ng, icon).",
+     "phonemes": "ˈɔl pˈAlˌOd vˈɛɹᵻfˌId pɹˈɛzᵊnt (tˈɔɹʧ sˌijˌudˌiˈA, kəkˈɔɹO mˈɑdᵊl plˈʌs twˈɛnti sˈɛvən vˈYsᵻz, ˈispikˌɛnʤˈi, ˈIkˌɑn).",
+     "silent_words": [],
+     "samples": 184200,
+     "ms": 7675.0,
+     "lead_ms": 340.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1460,
+       "ms": 80
+      },
+      {
+       "at_ms": 1870,
+       "ms": 310
+      },
+      {
+       "at_ms": 3090,
+       "ms": 350
+      },
+      {
+       "at_ms": 5560,
+       "ms": 140
+      },
+      {
+       "at_ms": 6540,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two. Committed + pushed check mark.",
+   "synth_s": 0.161,
+   "ms": 2845.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two. Committed + pushed check mark.",
+     "phonemes": "tˈu. kəmˈɪTᵻd plˈʌs pˈʊʃt ʧˈɛk mˈɑɹk.",
+     "silent_words": [],
+     "samples": 63000,
+     "ms": 2625.0,
+     "lead_ms": 290.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 640,
+       "ms": 120
+      },
+      {
+       "at_ms": 2080,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Commit b b a 2 2 0 0 on master, pushed to github dot com slash pawelpc slash Natural Voice TTS — the three fix files with a D1/D2/D3 message.",
+   "synth_s": 0.536,
+   "ms": 10645.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Commit b b a 2 2 0 0 on master, pushed to github dot com slash pawelpc slash Natural Voice TTS — the three fix files with a D1/D2/D3 message.",
+     "phonemes": "kəmˈɪt bˈi bˈi ɐ tˈu tˈu zˈɪɹO zˈɪɹO ˌɔn mˈæstəɹ, pˈʊʃt tə ɡˈɪthʌb dˈɑt kˈɑm slˈæʃ pˈɔlpk slˈæʃ nˈæʧəɹᵊl vˈYs tˌitˌiˈɛs — ðə θɹˈi fˈɪks fˈIlz wɪð ɐ dˈi wˈʌn dˈi tˈu dˈi θɹˈi mˈɛsɪʤ.",
+     "silent_words": [],
+     "samples": 276000,
+     "ms": 11500.0,
+     "lead_ms": 290.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 500,
+       "ms": 70
+      },
+      {
+       "at_ms": 940,
+       "ms": 60
+      },
+      {
+       "at_ms": 2660,
+       "ms": 410
+      },
+      {
+       "at_ms": 3300,
+       "ms": 70
+      },
+      {
+       "at_ms": 4070,
+       "ms": 80
+      },
+      {
+       "at_ms": 4820,
+       "ms": 60
+      },
+      {
+       "at_ms": 5070,
+       "ms": 80
+      },
+      {
+       "at_ms": 6340,
+       "ms": 60
+      },
+      {
+       "at_ms": 7170,
+       "ms": 540
+      },
+      {
+       "at_ms": 8400,
+       "ms": 80
+      },
+      {
+       "at_ms": 10330,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "(The installer dot exe itself is gitignored and stays local, as it should — it's 1.8 gigabytes.)",
+   "synth_s": 0.335,
+   "ms": 7060.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "(The installer dot exe itself is gitignored and stays local, as it should — it's 1.8 gigabytes.)",
+     "phonemes": "(ði ɪnstˈɔləɹ dˈɑt ˌiˌɛksˈi ɪtsˈɛlf ɪz ɡˈɪTɪɡnəɹd ænd stˈAz lˈOkəl, æz ɪt ʃˌʊd — ɪts wˈʌn pYnt ˈAt ɡˈɪɡəbˌIts.)",
+     "silent_words": [],
+     "samples": 172200,
+     "ms": 7175.0,
+     "lead_ms": 330.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1260,
+       "ms": 110
+      },
+      {
+       "at_ms": 1910,
+       "ms": 60
+      },
+      {
+       "at_ms": 2310,
+       "ms": 150
+      },
+      {
+       "at_ms": 4110,
+       "ms": 470
+      },
+      {
+       "at_ms": 6060,
+       "ms": 100
+      },
+      {
+       "at_ms": 6520,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Three. Pre-manual-test gate — all green check mark.",
+   "synth_s": 0.208,
+   "ms": 3855.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Three. Pre-manual-test gate — all green check mark.",
+     "phonemes": "θɹˈi. pɹˌimˈænjəwəltˈɛst ɡˈAt — ˈɔl ɡɹˈin ʧˈɛk mˈɑɹk.",
+     "silent_words": [],
+     "samples": 91800,
+     "ms": 3825.0,
+     "lead_ms": 350.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 690,
+       "ms": 130
+      },
+      {
+       "at_ms": 1890,
+       "ms": 310
+      },
+      {
+       "at_ms": 3250,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Build-fix propagation: D3 change confirmed inside the bundled mcp server, server dot py — rules out stale-file builds.",
+   "synth_s": 0.429,
+   "ms": 8555.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Build-fix propagation: D3 change confirmed inside the bundled mcp server, server dot py — rules out stale-file builds.",
+     "phonemes": "bˌɪldfˈɪks pɹˌɑpəɡˈAʃən: dˈi θɹˈi ʧˈAnʤ kənfˈɜɹmd ɪnsˈId ðə bˈʌndᵊld ˌɛmsˌipˈi sˈɜɹvəɹ, sˈɜɹvəɹ dˈɑt pˈI — ɹˈulz ˈWt stˈAlfˌIl bˈɪldz.",
+     "silent_words": [],
+     "samples": 223200,
+     "ms": 9300.0,
+     "lead_ms": 330.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1550,
+       "ms": 520
+      },
+      {
+       "at_ms": 4470,
+       "ms": 60
+      },
+      {
+       "at_ms": 5590,
+       "ms": 340
+      },
+      {
+       "at_ms": 6490,
+       "ms": 90
+      },
+      {
+       "at_ms": 6930,
+       "ms": 230
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Runtime launch (packaging check): freshly-built exe reached TTS engine ready to Ready! with no traceback — catches the PyInstaller hidden-import breakage you've hit before.",
+   "synth_s": 0.546,
+   "ms": 10950.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Runtime launch (packaging check): freshly-built exe reached TTS engine ready to Ready! with no traceback — catches the PyInstaller hidden-import breakage you've hit before.",
+     "phonemes": "ɹˈʌntIm lˈɔnʧ (pˈækəʤɪŋ ʧˈɛk: fɹˈɛʃlibˌɪlt ˌiˌɛksˈi ɹˈiʧt tˌitˌiˈɛs ˈɛnʤən ɹˈɛdi tə ɹˈɛdi! wɪð nˈO tɹˈAsbæk — kˈɛʧᵻz ði pˈI ɪnstˈɔləɹ hˌɪdᵊnˈɪmpˌɔɹt bɹˈAkɪʤ juv hˈɪt bəfˈɔɹ.",
+     "silent_words": [],
+     "samples": 285000,
+     "ms": 11875.0,
+     "lead_ms": 310.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 1240,
+       "ms": 160
+      },
+      {
+       "at_ms": 2080,
+       "ms": 100
+      },
+      {
+       "at_ms": 2200,
+       "ms": 520
+      },
+      {
+       "at_ms": 3270,
+       "ms": 70
+      },
+      {
+       "at_ms": 4200,
+       "ms": 120
+      },
+      {
+       "at_ms": 6120,
+       "ms": 430
+      },
+      {
+       "at_ms": 7430,
+       "ms": 60
+      },
+      {
+       "at_ms": 7510,
+       "ms": 390
+      },
+      {
+       "at_ms": 10020,
+       "ms": 110
+      },
+      {
+       "at_ms": 10850,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "End-to-end pipe test (the actual bug): pushed messages through the named pipe exactly like the MCP server does.",
+   "synth_s": 0.379,
+   "ms": 7280.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "End-to-end pipe test (the actual bug): pushed messages through the named pipe exactly like the MCP server does.",
+     "phonemes": "ˈɛndtʊˈɛnd pˈIp tˈɛst (ði ˈækʧəwəl bˈʌɡ: pˈʊʃt mˈɛsɪʤᵻz θɹu ðə nˈAmd pˈIp ɪɡzˈæktli lˈIk ði ˌɛmsˌipˈi sˈɜɹvəɹ dˈʌz.",
+     "silent_words": [],
+     "samples": 190800,
+     "ms": 7950.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1590,
+       "ms": 290
+      },
+      {
+       "at_ms": 2670,
+       "ms": 550
+      },
+      {
+       "at_ms": 4720,
+       "ms": 60
+      },
+      {
+       "at_ms": 4990,
+       "ms": 60
+      },
+      {
+       "at_ms": 5060,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The D1 fix is proven live.",
+   "synth_s": 0.152,
+   "ms": 2385.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The D1 fix is proven live.",
+     "phonemes": "ðə dˈi wˈʌn fˈɪks ɪz pɹˈuvən lˈIv.",
+     "silent_words": [],
+     "samples": 58200,
+     "ms": 2425.0,
+     "lead_ms": 320.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1210,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Table. Test, Header, Received, Result.",
+   "synth_s": 0.171,
+   "ms": 3370.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Table. Test, Header, Received, Result.",
+     "phonemes": "tˈAbᵊl. tˈɛst, hˈɛdəɹ, ɹəsˈivd, ɹəzˈʌlt.",
+     "silent_words": [],
+     "samples": 71400,
+     "ms": 2975.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 710,
+       "ms": 160
+      },
+      {
+       "at_ms": 2420,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 1. 420-byte ASCII, 420, 420, full payload, 0 dropped.",
+   "synth_s": 0.344,
+   "ms": 6445.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 1. 420-byte ASCII, 420, 420, full payload, 0 dropped.",
+     "phonemes": "ɹˈO wˈʌn fˈɔɹ hˈʌndɹəd twˈɛnti bˈIt ˈæski, fˈɔɹ hˈʌndɹəd twˈɛnti, fˈɔɹ hˈʌndɹəd twˈɛnti, fˈʊl pˈAlˌOd, zˈɪɹO dɹˈɑpt.",
+     "silent_words": [],
+     "samples": 167400,
+     "ms": 6975.0,
+     "lead_ms": 330.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 2250,
+       "ms": 380
+      },
+      {
+       "at_ms": 3460,
+       "ms": 190
+      },
+      {
+       "at_ms": 4480,
+       "ms": 320
+      },
+      {
+       "at_ms": 5570,
+       "ms": 110
+      },
+      {
+       "at_ms": 6350,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 2. 112-byte multibyte (em dash, curly quotes, ellipsis), 112, 112, decoded to 104 chars, played \"First sentence — with an em dash…\"",
+   "synth_s": 0.563,
+   "ms": 12050.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 2. 112-byte multibyte (em dash, curly quotes, ellipsis), 112, 112, decoded to 104 chars, played \"First sentence — with an em dash…\"",
+     "phonemes": "ɹˈO tˈu wˈʌn hˈʌndɹəd twˈɛlv bˈIt mˌʌltɪbˈIt (ˈɛm dˈæʃ, kˈɜɹli kwˈOts, əlˈɪpsɪs), wˈʌn hˈʌndɹəd twˈɛlv, wˈʌn hˈʌndɹəd twˈɛlv, dˌikˈOdᵻd tə wˈʌn hˈʌndɹəd fˈɔɹ ʧˈɑɹz, plˈAd “fˈɜɹst sˈɛntᵊns — wɪð ɐn ˈɛm dˈæʃ…”",
+     "silent_words": [],
+     "samples": 296400,
+     "ms": 12350.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1660,
+       "ms": 70
+      },
+      {
+       "at_ms": 2520,
+       "ms": 130
+      },
+      {
+       "at_ms": 3340,
+       "ms": 290
+      },
+      {
+       "at_ms": 4150,
+       "ms": 60
+      },
+      {
+       "at_ms": 4340,
+       "ms": 200
+      },
+      {
+       "at_ms": 5170,
+       "ms": 480
+      },
+      {
+       "at_ms": 7420,
+       "ms": 330
+      },
+      {
+       "at_ms": 9530,
+       "ms": 260
+      },
+      {
+       "at_ms": 10110,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "header equals received on both, and the multibyte message decoded and spoke cleanly — the exact case (— \" …) that used to truncate or throw.",
+   "synth_s": 0.418,
+   "ms": 8370.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "header equals received on both, and the multibyte message decoded and spoke cleanly — the exact case (— \" …) that used to truncate or throw.",
+     "phonemes": "hˈɛdəɹ ˈikwᵊlz ɹəsˈivd ˌɔn bˈOθ, ænd ðə mˌʌltɪbˈIt mˈɛsɪʤ dˌikˈOdᵻd ænd spˈOk klˈinli — ði ɪɡzˈækt kˈAs (— “ …) ðæt jˈust tə tɹˈʌŋkˌAt ɔɹ θɹˈO.",
+     "silent_words": [],
+     "samples": 223200,
+     "ms": 9300.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1930,
+       "ms": 430
+      },
+      {
+       "at_ms": 3520,
+       "ms": 70
+      },
+      {
+       "at_ms": 4520,
+       "ms": 120
+      },
+      {
+       "at_ms": 5130,
+       "ms": 280
+      },
+      {
+       "at_ms": 5850,
+       "ms": 80
+      },
+      {
+       "at_ms": 6390,
+       "ms": 440
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "STOP also worked both times.",
+   "synth_s": 0.137,
+   "ms": 2335.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "STOP also worked both times.",
+     "phonemes": "stˈɑp ˈɔlsO wˈɜɹkt bˈOθ tˈImz.",
+     "silent_words": [],
+     "samples": 54600,
+     "ms": 2275.0,
+     "lead_ms": 290.0,
+     "trail_ms": 445.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Test exe was shut down; no NaturalVoiceTTS process is running now.",
+   "synth_s": 0.266,
+   "ms": 4490.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Test exe was shut down; no NaturalVoiceTTS process is running now.",
+     "phonemes": "tˈɛst ˌiˌɛksˈi wʌz ʃˈʌt dˌWn; nˈO nˈæʧəɹᵊlvˌYstˌitˌiˈɛs pɹˈɑsˌɛs ɪz ɹˈʌnɪŋ nˈW.",
+     "silent_words": [],
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 310.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 1520,
+       "ms": 90
+      },
+      {
+       "at_ms": 1940,
+       "ms": 410
+      },
+      {
+       "at_ms": 3710,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -27,8 +27,17 @@ INLINE_CASES = [
     ('Copy it to %APPDATA%\\Claude\\skills\\ first.', 'Copy it to App Data, Claude, skills first.'),
     ('On 2026-10-17 and 10/24/2026 and Oct 3, 2026.',
      'On October 17th, 2026 and October 24th, 2026 and October 3rd, 2026.'),
-    ('At 14:30, then 17:06:27, then 9:00 a.m. Then 14:00.',
-     'At fourteen thirty, then seventeen oh six twenty seven, then nine A M. Then fourteen hundred.'),
+    ('At 11:30, then 17:06:27, then 9:00 a.m. Then 2:30 PM.',
+     'At eleven thirty, then seventeen oh six twenty seven, then nine A M. Then two thirty P M.'),
+    # Phase 4 #27 (Paul's rule): two numbers with a colon read "by" when the first is over 12
+    # or the second over 59; three-part times and a.m./p.m. stay clock times.
+    ('The screen is 16:9, also 21:9 and 1:100.', 'The screen is 16 by 9, also 21 by 9 and 1 by 100.'),
+    ('At 12:30 and 14:30, not 4:3.', 'At twelve thirty and 14 by 30, not 4:3.'),
+    ('At 14:30 p.m. today.', 'At fourteen thirty P M today.'),
+    # Phase 4 #31: a lone A next to an operator is the letter, via misaki's phoneme markup.
+    ('Use A & B, not A + B, and A/B or A = 5.',
+     'Use [A](/ˈA/) & B, not [A](/ˈA/) + B, and [A](/ˈA/)/B or [A](/ˈA/) equals 5.'),
+    ('A cat sat in Plan A.', 'A cat sat in Plan A.'),
     ('Upgrade v1.2.0 and Python 3.11 and torch 2.6.0+cu124.',
      'Upgrade version 1 point 2 point 0 and Python 3 point 11 and torch 2 point 6 point 0 plus c u 124.'),
     ('Commit bba2200, range e3f15ec..bba2200.', 'Commit b b a 2 2 0 0, range e 3 f 1 5 e c to b b a 2 2 0 0.'),

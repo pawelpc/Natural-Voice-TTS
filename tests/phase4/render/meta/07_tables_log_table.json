@@ -1,0 +1,790 @@
+{
+ "id": "07_tables_log_table",
+ "category": "tables",
+ "origin": "real",
+ "chunks": 13,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 13,
+ "duration_s": 79.75,
+ "synth_s": 4.41,
+ "wav_sha256": "34d4962c791f1574ddd24ab6a97873e3c32c951ab01ba9f83e9405211d0b1dfc",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 1315.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 3275.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 7470.0,
+   "chunk": 1
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 8650.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 9265.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 9925.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10645.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 11570.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 12310.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 15165.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 16230.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 17295.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 17815.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 19525.0,
+   "chunk": 3
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 20535.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 22310.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 23140.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 24005.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 24610.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 25370.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 27740.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 28585.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 29465.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 30065.0,
+   "chunk": 5
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 30795.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 33600.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 34770.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 35925.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 36530.0,
+   "chunk": 6
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 38260.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 41090.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 42450.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 43790.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 44450.0,
+   "chunk": 7
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 46260.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 49245.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 50605.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 52005.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 52565.0,
+   "chunk": 8
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 54305.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 57140.0,
+   "chunk": 9
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 58260.0,
+   "chunk": 9
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 59380.0,
+   "chunk": 9
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 60010.0,
+   "chunk": 9
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 61945.0,
+   "chunk": 9
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 64765.0,
+   "chunk": 10
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 72430.0,
+   "chunk": 10
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 77360.0,
+   "chunk": 11
+  }
+ ],
+ "sentences": [
+  {
+   "text": "The log is conclusive — and it's a clean bill of health for the code.",
+   "synth_s": 0.249,
+   "ms": 3725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The log is conclusive — and it's a clean bill of health for the code.",
+     "phonemes": "ðə lˈɔɡ ɪz kənklˈusɪv — ænd ɪts ɐ klˈin bˈɪl ʌv hˈɛlθ fɔɹ ðə kˈOd.",
+     "silent_words": [],
+     "samples": 102600,
+     "ms": 4275.0,
+     "lead_ms": 320.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 350
+      },
+      {
+       "at_ms": 2230,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Every message that reached the pipe came through 100% intact:",
+   "synth_s": 0.263,
+   "ms": 4545.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Every message that reached the pipe came through 100% intact:",
+     "phonemes": "ˈɛvəɹi mˈɛsɪʤ ðæt ɹˈiʧt ðə pˈIp kˈAm θɹu wˈʌn hˈʌndɹəd pəɹsˈɛnt ɪntˈækt:",
+     "silent_words": [],
+     "samples": 108600,
+     "ms": 4525.0,
+     "lead_ms": 310.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1780,
+       "ms": 70
+      },
+      {
+       "at_ms": 1860,
+       "ms": 330
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Table. Time, Header bytes, Received, Sentences, All played?",
+   "synth_s": 0.229,
+   "ms": 4490.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Table. Time, Header bytes, Received, Sentences, All played?",
+     "phonemes": "tˈAbᵊl. tˈIm, hˈɛdəɹ bˈIts, ɹəsˈivd, sˈɛntᵊnsᵻz, ˈɔl plˈAd?",
+     "silent_words": [],
+     "samples": 97800,
+     "ms": 4075.0,
+     "lead_ms": 300.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 680,
+       "ms": 200
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 1. seventeen eighteen fifty six, 111, 111, 3, check mark 1 to 3 of 3.",
+   "synth_s": 0.422,
+   "ms": 7215.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 1. seventeen eighteen fifty six, 111, 111, 3, check mark 1 to 3 of 3.",
+     "phonemes": "ɹˈO wˈʌn sˌɛvəntˈin ˌAtˈin fˈɪfti sˈɪks, wˈʌn hˈʌndɹəd əlˈɛvᵊn, wˈʌn hˈʌndɹəd əlˈɛvᵊn, θɹˈi, ʧˈɛk mˈɑɹk wˈʌn tə θɹˈi ʌv θɹˈi.",
+     "silent_words": [],
+     "samples": 191400,
+     "ms": 7975.0,
+     "lead_ms": 330.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1690,
+       "ms": 60
+      },
+      {
+       "at_ms": 2500,
+       "ms": 90
+      },
+      {
+       "at_ms": 2740,
+       "ms": 380
+      },
+      {
+       "at_ms": 3980,
+       "ms": 200
+      },
+      {
+       "at_ms": 5050,
+       "ms": 180
+      },
+      {
+       "at_ms": 5550,
+       "ms": 380
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 2. seventeen nineteen fifty five, 57, 57, 1, check mark.",
+   "synth_s": 0.308,
+   "ms": 5845.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 2. seventeen nineteen fifty five, 57, 57, 1, check mark.",
+     "phonemes": "ɹˈO tˈu. sˌɛvəntˈin nˌIntˈin fˈɪfti fˈIv, fˈɪfti sˈɛvən, fˈɪfti sˈɛvən, wˈʌn, ʧˈɛk mˈɑɹk.",
+     "silent_words": [],
+     "samples": 143400,
+     "ms": 5975.0,
+     "lead_ms": 320.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 880,
+       "ms": 370
+      },
+      {
+       "at_ms": 2710,
+       "ms": 60
+      },
+      {
+       "at_ms": 3410,
+       "ms": 80
+      },
+      {
+       "at_ms": 4160,
+       "ms": 230
+      },
+      {
+       "at_ms": 4800,
+       "ms": 120
+      },
+      {
+       "at_ms": 5380,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 3. seventeen twenty one fifteen, 36, 36, 1, check mark.",
+   "synth_s": 0.295,
+   "ms": 5425.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 3. seventeen twenty one fifteen, 36, 36, 1, check mark.",
+     "phonemes": "ɹˈO θɹˈi sˌɛvəntˈin twˈɛnti wˈʌn fˌɪftˈin, θˈɜɹTi sˈɪks, θˈɜɹTi sˈɪks, wˈʌn, ʧˈɛk mˈɑɹk.",
+     "silent_words": [],
+     "samples": 135000,
+     "ms": 5625.0,
+     "lead_ms": 340.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 2260,
+       "ms": 340
+      },
+      {
+       "at_ms": 3250,
+       "ms": 100
+      },
+      {
+       "at_ms": 3820,
+       "ms": 80
+      },
+      {
+       "at_ms": 4030,
+       "ms": 100
+      },
+      {
+       "at_ms": 4530,
+       "ms": 90
+      },
+      {
+       "at_ms": 5070,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 4. seventeen twenty two nineteen, 113, 113, 5, check mark 1 to 5 of 5.",
+   "synth_s": 0.416,
+   "ms": 7465.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 4. seventeen twenty two nineteen, 113, 113, 5, check mark 1 to 5 of 5.",
+     "phonemes": "ɹˈO fˈɔɹ sˌɛvəntˈin twˈɛnti tˈu nˌIntˈin, wˈʌn hˈʌndɹəd θˌɜɹtˈin, wˈʌn hˈʌndɹəd θˌɜɹtˈin, fˈIv, ʧˈɛk mˈɑɹk wˈʌn tə fˈIv ʌv fˈIv.",
+     "silent_words": [],
+     "samples": 199200,
+     "ms": 8300.0,
+     "lead_ms": 320.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 2670,
+       "ms": 420
+      },
+      {
+       "at_ms": 3450,
+       "ms": 90
+      },
+      {
+       "at_ms": 4070,
+       "ms": 270
+      },
+      {
+       "at_ms": 4710,
+       "ms": 70
+      },
+      {
+       "at_ms": 5300,
+       "ms": 250
+      },
+      {
+       "at_ms": 5920,
+       "ms": 360
+      },
+      {
+       "at_ms": 6720,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 5. seventeen twenty three nineteen, 392, 392, 6, check mark 1 to 6 of 6.",
+   "synth_s": 0.428,
+   "ms": 8000.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 5. seventeen twenty three nineteen, 392, 392, 6, check mark 1 to 6 of 6.",
+     "phonemes": "ɹˈO fˈIv sˌɛvəntˈin twˈɛnti θɹˈi nˌIntˈin, θɹˈi hˈʌndɹəd nˈIndi tˈu, θɹˈi hˈʌndɹəd nˈIndi tˈu, sˈɪks, ʧˈɛk mˈɑɹk wˈʌn tə sˈɪks ʌv sˈɪks.",
+     "silent_words": [],
+     "samples": 211800,
+     "ms": 8825.0,
+     "lead_ms": 330.0,
+     "trail_ms": 455.0,
+     "pauses": [
+      {
+       "at_ms": 2710,
+       "ms": 400
+      },
+      {
+       "at_ms": 4280,
+       "ms": 280
+      },
+      {
+       "at_ms": 5700,
+       "ms": 250
+      },
+      {
+       "at_ms": 6200,
+       "ms": 70
+      },
+      {
+       "at_ms": 6410,
+       "ms": 340
+      },
+      {
+       "at_ms": 7190,
+       "ms": 60
+      },
+      {
+       "at_ms": 8130,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 6. seventeen twenty four forty five, 376, 376, 4, check mark 1 to 4 of 4.",
+   "synth_s": 0.434,
+   "ms": 8045.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 6. seventeen twenty four forty five, 376, 376, 4, check mark 1 to 4 of 4.",
+     "phonemes": "ɹˈO sˈɪks sˌɛvəntˈin twˈɛnti fˈɔɹ fˈɔɹTi fˈIv, θɹˈi hˈʌndɹəd sˈɛvənti sˈɪks, θɹˈi hˈʌndɹəd sˈɛvənti sˈɪks, fˈɔɹ, ʧˈɛk mˈɑɹk wˈʌn tə fˈɔɹ ʌv fˈɔɹ.",
+     "silent_words": [],
+     "samples": 215400,
+     "ms": 8975.0,
+     "lead_ms": 320.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 2840,
+       "ms": 350
+      },
+      {
+       "at_ms": 4160,
+       "ms": 60
+      },
+      {
+       "at_ms": 4350,
+       "ms": 290
+      },
+      {
+       "at_ms": 5620,
+       "ms": 70
+      },
+      {
+       "at_ms": 5840,
+       "ms": 440
+      },
+      {
+       "at_ms": 6640,
+       "ms": 290
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Row 7. seventeen twenty six fifty two, 3091, 3091, 20, check mark 1 to 20 of 20.",
+   "synth_s": 0.423,
+   "ms": 7990.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Row 7. seventeen twenty six fifty two, 3091, 3091, 20, check mark 1 to 20 of 20.",
+     "phonemes": "ɹˈO sˈɛvən sˌɛvəntˈin twˈɛnti sˈɪks fˈɪfti tˈu, θˈɜɹTi nˈIndi wˈʌn, θˈɜɹTi nˈIndi wˈʌn, twˈɛnti, ʧˈɛk mˈɑɹk wˈʌn tə twˈɛnti ʌv twˈɛnti.",
+     "silent_words": [],
+     "samples": 205800,
+     "ms": 8575.0,
+     "lead_ms": 330.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 2200,
+       "ms": 70
+      },
+      {
+       "at_ms": 2720,
+       "ms": 430
+      },
+      {
+       "at_ms": 4080,
+       "ms": 280
+      },
+      {
+       "at_ms": 5280,
+       "ms": 210
+      },
+      {
+       "at_ms": 5930,
+       "ms": 370
+      },
+      {
+       "at_ms": 6760,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "header equals received on all seven, including the 3091-byte / 20-sentence em-dash-heavy essay that played completely 1 of 20…20 of 20.",
+   "synth_s": 0.521,
+   "ms": 10135.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "header equals received on all seven, including the 3091-byte / 20-sentence em-dash-heavy essay that played completely 1 of 20…20 of 20.",
+     "phonemes": "hˈɛdəɹ ˈikwᵊlz ɹəsˈivd ˌɔn ˈɔl sˈɛvən, ɪnklˈudɪŋ ðə θˈɜɹTi nˈIndi wˈʌn bˈIt slˈæʃ twˈɛnti sˈɛntᵊns ˌɛmdˈæʃhˈɛvi ˈɛsA ðæt plˈAd kəmplˈitli wˈʌn ʌv twˈɛnti twˈɛnti ʌv twˈɛnti.",
+     "silent_words": [],
+     "samples": 259800,
+     "ms": 10825.0,
+     "lead_ms": 310.0,
+     "trail_ms": 575.0,
+     "pauses": [
+      {
+       "at_ms": 2330,
+       "ms": 450
+      },
+      {
+       "at_ms": 3360,
+       "ms": 120
+      },
+      {
+       "at_ms": 5260,
+       "ms": 70
+      },
+      {
+       "at_ms": 6180,
+       "ms": 90
+      },
+      {
+       "at_ms": 7440,
+       "ms": 430
+      },
+      {
+       "at_ms": 7950,
+       "ms": 60
+      },
+      {
+       "at_ms": 8490,
+       "ms": 60
+      },
+      {
+       "at_ms": 9100,
+       "ms": 70
+      },
+      {
+       "at_ms": 9840,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "That's exactly the size and content profile that used to drop tail sentences.",
+   "synth_s": 0.267,
+   "ms": 4930.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's exactly the size and content profile that used to drop tail sentences.",
+     "phonemes": "ðˈæts ɪɡzˈæktli ðə sˈIz ænd kˈɑntɛnt pɹˈOfˌIl ðæt jˈust tə dɹˈɑp tˈAl sˈɛntᵊnsᵻz.",
+     "silent_words": [],
+     "samples": 126600,
+     "ms": 5275.0,
+     "lead_ms": 320.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 880,
+       "ms": 60
+      },
+      {
+       "at_ms": 2790,
+       "ms": 360
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The D1 fix holds under real load.",
+   "synth_s": 0.159,
+   "ms": 1940.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The D1 fix holds under real load.",
+     "phonemes": "ðə dˈi wˈʌn fˈɪks hˈOldz ˈʌndəɹ ɹˈiᵊl lˈOd.",
+     "silent_words": [],
+     "samples": 66000,
+     "ms": 2750.0,
+     "lead_ms": 330.0,
+     "trail_ms": 480.0,
+     "pauses": []
+    }
+   ]
+  }
+ ]
+}

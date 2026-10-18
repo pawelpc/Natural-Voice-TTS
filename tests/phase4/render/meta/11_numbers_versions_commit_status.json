@@ -1,0 +1,441 @@
+{
+ "id": "11_numbers_versions_commit_status",
+ "category": "numbers_versions",
+ "origin": "real",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 53.78,
+ "synth_s": 2.91,
+ "wav_sha256": "2fc59240c775b430a8ec2bfc70b0d693c189d6a5ff1d35fe529d9bbebce1b926",
+ "pauses": [
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 5450.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8760.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 11515.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 13225.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 15620.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 16225.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 22460.0,
+   "chunk": 3
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 24340.0,
+   "chunk": 3
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 27740.0,
+   "chunk": 4
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 30480.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 32865.0,
+   "chunk": 6
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 35010.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 41710.0,
+   "chunk": 7
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 47915.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 50505.0,
+   "chunk": 8
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 52200.0,
+   "chunk": 8
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Committed and pushed to master (e 3 f 1 5 e c to b b a 2 2 0 0).",
+   "synth_s": 0.308,
+   "ms": 5900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Committed and pushed to master (e 3 f 1 5 e c to b b a 2 2 0 0).",
+     "phonemes": "kəmˈɪTᵻd ænd pˈʊʃt tə mˈæstəɹ (ˈi θɹˈi ˈɛf wˈʌn fˈIv ˈi sˈi tə bˈi bˈi ɐ tˈu tˈu zˈɪɹO zˈɪɹO).",
+     "silent_words": [],
+     "samples": 150600,
+     "ms": 6275.0,
+     "lead_ms": 290.0,
+     "trail_ms": 535.0,
+     "pauses": [
+      {
+       "at_ms": 1710,
+       "ms": 390
+      },
+      {
+       "at_ms": 2250,
+       "ms": 60
+      },
+      {
+       "at_ms": 2710,
+       "ms": 70
+      },
+      {
+       "at_ms": 3790,
+       "ms": 310
+      },
+      {
+       "at_ms": 4570,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.",
+   "synth_s": 0.34,
+   "ms": 6415.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "GitHub now has the D1/D2/D3 fix, so any future build from a clean clone includes it.",
+     "phonemes": "ɡˌɪthˈʌb nˈW hæz ðə dˈi wˈʌn dˈi tˈu dˈi θɹˈi fˈɪks, sˌO ˈɛni fjˈuʧəɹ bˈɪld fɹʌm ɐ klˈin klˈOn ɪnklˈudz ɪt.",
+     "silent_words": [],
+     "samples": 160200,
+     "ms": 6675.0,
+     "lead_ms": 320.0,
+     "trail_ms": 575.0,
+     "pauses": [
+      {
+       "at_ms": 2500,
+       "ms": 60
+      },
+      {
+       "at_ms": 2950,
+       "ms": 90
+      },
+      {
+       "at_ms": 3180,
+       "ms": 360
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Status so far:",
+   "synth_s": 0.113,
+   "ms": 1710.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Status so far:",
+     "phonemes": "stˈATəs sˌO fˈɑɹ:",
+     "silent_words": [],
+     "samples": 42000,
+     "ms": 1750.0,
+     "lead_ms": 350.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "check mark Installer rebuilt: dist, NaturalVoiceTTS Setup 1 dot 1 dot 0 dot exe (1798 megabytes, four forty six P M today).",
+   "synth_s": 0.532,
+   "ms": 10865.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "check mark Installer rebuilt: dist, NaturalVoiceTTS Setup 1 dot 1 dot 0 dot exe (1798 megabytes, four forty six P M today).",
+     "phonemes": "ʧˈɛk mˈɑɹk ɪnstˈɔləɹ ɹibˈɪlt: dˈɪst, nˈæʧəɹᵊlvˌYstˌitˌiˈɛs sˈɛTˌʌp wˈʌn dˈɑt wˈʌn dˈɑt zˈɪɹO dˈɑt ˌiˌɛksˈi (sˌɛvəntˈin nˈIndi ˈAt mˈɛɡəbˌIts, fˈɔɹ fˈɔɹTi sˈɪks pˈi ˈɛm tədˈA).",
+     "silent_words": [],
+     "samples": 277200,
+     "ms": 11550.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1800,
+       "ms": 70
+      },
+      {
+       "at_ms": 1910,
+       "ms": 450
+      },
+      {
+       "at_ms": 2770,
+       "ms": 220
+      },
+      {
+       "at_ms": 4500,
+       "ms": 60
+      },
+      {
+       "at_ms": 6200,
+       "ms": 70
+      },
+      {
+       "at_ms": 6850,
+       "ms": 440
+      },
+      {
+       "at_ms": 9030,
+       "ms": 340
+      },
+      {
+       "at_ms": 10210,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "check mark Fix verified present in bundled files.",
+   "synth_s": 0.21,
+   "ms": 3400.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "check mark Fix verified present in bundled files.",
+     "phonemes": "ʧˈɛk mˈɑɹk fˈɪks vˈɛɹᵻfˌId pɹˈɛzᵊnt ɪn bˈʌndᵊld fˈIlz.",
+     "silent_words": [],
+     "samples": 86400,
+     "ms": 3600.0,
+     "lead_ms": 300.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 450,
+       "ms": 80
+      },
+      {
+       "at_ms": 1600,
+       "ms": 70
+      },
+      {
+       "at_ms": 2020,
+       "ms": 130
+      },
+      {
+       "at_ms": 2680,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "check mark Source fixes committed + pushed.",
+   "synth_s": 0.185,
+   "ms": 2740.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "check mark Source fixes committed + pushed.",
+     "phonemes": "ʧˈɛk mˈɑɹk sˈɔɹs fˈɪksᵻz kəmˈɪTᵻd plˈʌs pˈʊʃt.",
+     "silent_words": [],
+     "samples": 70800,
+     "ms": 2950.0,
+     "lead_ms": 310.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1050,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "hourglass Runtime smoke test — the last gate before your manual retest.",
+   "synth_s": 0.257,
+   "ms": 4780.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "hourglass Runtime smoke test — the last gate before your manual retest.",
+     "phonemes": "ˈWəɹɡlˌæs ɹˈʌntIm smˈOk tˈɛst — ðə lˈæst ɡˈAt bəfˈɔɹ jʊɹ mˈænjəwəl ɹˈitɛst.",
+     "silent_words": [],
+     "samples": 119400,
+     "ms": 4975.0,
+     "lead_ms": 350.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 1700,
+       "ms": 90
+      },
+      {
+       "at_ms": 2190,
+       "ms": 400
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass).",
+   "synth_s": 0.605,
+   "ms": 12555.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The smoke test needs your currently-running app (pid 14652) stopped, because its single-instance mutex will make my freshly-built exe exit instantly (a false pass).",
+     "phonemes": "ðə smˈOk tˈɛst nˈidz jʊɹ kˈɜɹəntliɹˌʌnɪŋ ˈæp (pˈɪd fˌɔɹtˈin θˈWzᵊnd sˈɪks hˈʌndɹəd fˈɪfti tˈu) stˈɑpt, bəkˈʌz ɪts sˌɪŋɡᵊlˈɪnstᵊns mjˈuTɛks wɪl mˌAk mI fɹˈɛʃlibˌɪlt ˌiˌɛksˈi ˈɛɡzət ˈɪnstəntli (ɐ fˈɔls pˈæs).",
+     "silent_words": [],
+     "samples": 315000,
+     "ms": 13125.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1680,
+       "ms": 60
+      },
+      {
+       "at_ms": 2660,
+       "ms": 90
+      },
+      {
+       "at_ms": 2760,
+       "ms": 430
+      },
+      {
+       "at_ms": 4840,
+       "ms": 60
+      },
+      {
+       "at_ms": 5370,
+       "ms": 350
+      },
+      {
+       "at_ms": 6200,
+       "ms": 430
+      },
+      {
+       "at_ms": 9520,
+       "ms": 80
+      },
+      {
+       "at_ms": 10550,
+       "ms": 70
+      },
+      {
+       "at_ms": 11210,
+       "ms": 500
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Since your next step is to uninstall it anyway, stopping it now is harmless.",
+   "synth_s": 0.24,
+   "ms": 4285.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Since your next step is to uninstall it anyway, stopping it now is harmless.",
+     "phonemes": "sˈɪns jʊɹ nˈɛkst stˈɛp ɪz tʊ ˌʌnənstˈɔl ɪt ˈɛniwˌA, stˈɑpɪŋ ɪt nˈW ɪz hˈɑɹmləs.",
+     "silent_words": [],
+     "samples": 114000,
+     "ms": 4750.0,
+     "lead_ms": 290.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1070,
+       "ms": 60
+      },
+      {
+       "at_ms": 2430,
+       "ms": 350
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "How do you want to handle it?",
+   "synth_s": 0.12,
+   "ms": 1130.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "How do you want to handle it?",
+     "phonemes": "hˌW dˈu ju wˈɑnt tə hˈændəl ɪt?",
+     "silent_words": [],
+     "samples": 44400,
+     "ms": 1850.0,
+     "lead_ms": 310.0,
+     "trail_ms": 410.0,
+     "pauses": [
+      {
+       "at_ms": 1300,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

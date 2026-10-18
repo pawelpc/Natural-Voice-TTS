@@ -1,0 +1,336 @@
+{
+ "id": "29_lists_bullets_no_punct",
+ "category": "lists",
+ "origin": "synthetic",
+ "chunks": 10,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 10,
+ "duration_s": 23.48,
+ "synth_s": 1.48,
+ "wav_sha256": "4a0ea85ed4327eb52eaf1f6f2bcfcb073e6c8238910b97cebe0385506927b4ae",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 680.0,
+   "chunk": 0
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 1545.0,
+   "chunk": 0
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 4320.0,
+   "chunk": 1
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 6630.0,
+   "chunk": 2
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 8905.0,
+   "chunk": 3
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 11020.0,
+   "chunk": 4
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 13545.0,
+   "chunk": 5
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 15470.0,
+   "chunk": 6
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 16600.0,
+   "chunk": 7
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 17675.0,
+   "chunk": 7
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 18505.0,
+   "chunk": 8
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 21590.0,
+   "chunk": 8
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 22505.0,
+   "chunk": 9
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Before you start, check these:",
+   "synth_s": 0.136,
+   "ms": 2345.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Before you start, check these:",
+     "phonemes": "bəfˈɔɹ ju stˈɑɹt, ʧˈɛk ðˈiz:",
+     "silent_words": [],
+     "samples": 51600,
+     "ms": 2150.0,
+     "lead_ms": 310.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 980,
+       "ms": 70
+      },
+      {
+       "at_ms": 1280,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Python 3 point 11 installed.",
+   "synth_s": 0.157,
+   "ms": 2525.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Python 3 point 11 installed.",
+     "phonemes": "pˈIθˌɑn θɹˈi pˈYnt əlˈɛvᵊn ɪnstˈɔld.",
+     "silent_words": [],
+     "samples": 66000,
+     "ms": 2750.0,
+     "lead_ms": 300.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1600,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "espeak-ng in Program Files.",
+   "synth_s": 0.147,
+   "ms": 2310.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "espeak-ng in Program Files.",
+     "phonemes": "ˈispikˌɛnʤˈi ɪn pɹˈOɡɹˌæm fˈIlz.",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1630,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "CUDA drivers up to date.",
+   "synth_s": 0.145,
+   "ms": 2275.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "CUDA drivers up to date.",
+     "phonemes": "sˌijˌudˌiˈA dɹˈIvəɹz ˌʌp tə dˈAt.",
+     "silent_words": [],
+     "samples": 60000,
+     "ms": 2500.0,
+     "lead_ms": 310.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1930,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "at least 4 gigabytes of VRAM.",
+   "synth_s": 0.145,
+   "ms": 2115.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "at least 4 gigabytes of VRAM.",
+     "phonemes": "æt lˈist fˈɔɹ ɡˈɪɡəbˌIts ʌv vˈiɹˌæm.",
+     "silent_words": [],
+     "samples": 56400,
+     "ms": 2350.0,
+     "lead_ms": 300.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 660,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "driver 550 or newer.",
+   "synth_s": 0.167,
+   "ms": 2775.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "driver 550 or newer.",
+     "phonemes": "dɹˈIvəɹ fˈIv hˈʌndɹəd fˈɪfti ɔɹ nˈuəɹ.",
+     "silent_words": [],
+     "samples": 67200,
+     "ms": 2800.0,
+     "lead_ms": 320.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 1670,
+       "ms": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then follow the steps:",
+   "synth_s": 0.118,
+   "ms": 1925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Then follow the steps:",
+     "phonemes": "ðˈɛn fˈɑlO ðə stˈɛps:",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 310.0,
+     "trail_ms": 435.0,
+     "pauses": [
+      {
+       "at_ms": 1230,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One. Clone the repo.",
+   "synth_s": 0.129,
+   "ms": 1955.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "One. Clone the repo.",
+     "phonemes": "wˈʌn. klˈOn ðə ɹˈipˌO.",
+     "silent_words": [],
+     "samples": 48000,
+     "ms": 2000.0,
+     "lead_ms": 330.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 660,
+       "ms": 60
+      },
+      {
+       "at_ms": 1170,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two. Run pip install dash r requirements dot txt.",
+   "synth_s": 0.218,
+   "ms": 3915.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two. Run pip install dash r requirements dot txt.",
+     "phonemes": "tˈu. ɹˈʌn pˈɪp ɪnstˈɔl dˈæʃ ˈɑɹ ɹəkwˈIəɹmᵊnts dˈɑt tˌiˌɛkstˈi.",
+     "silent_words": [],
+     "samples": 98400,
+     "ms": 4100.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 580,
+       "ms": 230
+      },
+      {
+       "at_ms": 2890,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Three. Start the app.",
+   "synth_s": 0.118,
+   "ms": 1340.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Three. Start the app.",
+     "phonemes": "θɹˈi. stˈɑɹt ði ˈæp.",
+     "silent_words": [],
+     "samples": 45000,
+     "ms": 1875.0,
+     "lead_ms": 370.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 1320,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 """Build the Phase 4 listening page (tests/phase4/listening.html) from the repo's own artifacts.
 
-Before = tests/baseline (the v1.1.0 code), After = tests/phase3 (final code). The page
+Before = tests/baseline (the v1.1.0 code), After = AFTER_DIR (final code). The page
 expects the audio as audio/before/<id>.mp3 and audio/after/<id>.mp3 next to it; make
 them with --audio-out (WAVs are gitignored, so the MP3s are not committed either).
 
@@ -21,9 +21,12 @@ import harness  # noqa: E402
 MP3_COMPRESSION = 0.6  # libsndfile MP3 quality; about 64 kbit/s for 24 kHz mono
 
 
+AFTER_DIR = REPO / 'tests/phase4/render'  # final code; Phase 4 ratings were made against tests/phase3
+
+
 def passage_data() -> list[dict]:
     before = {p['id']: p for p in json.loads((REPO / 'tests/baseline/render_summary.json').read_text('utf-8'))['passages']}
-    after = {p['id']: p for p in json.loads((REPO / 'tests/phase3/render_summary.json').read_text('utf-8'))['passages']}
+    after = {p['id']: p for p in json.loads((AFTER_DIR / 'render_summary.json').read_text('utf-8'))['passages']}
     out = []
     for n, entry in enumerate(harness.load_manifest(), 1):
         pid = entry['id']
@@ -41,7 +44,7 @@ def passage_data() -> list[dict]:
 
 def encode_audio(out_dir: Path) -> None:
     import soundfile as sf
-    for side, src in (('before', REPO / 'tests/baseline/wav'), ('after', REPO / 'tests/phase3/wav')):
+    for side, src in (('before', REPO / 'tests/baseline/wav'), ('after', AFTER_DIR / 'wav')):
         (out_dir / side).mkdir(parents=True, exist_ok=True)
         for wav in sorted(src.glob('*.wav')):
             audio, sr = sf.read(str(wav), dtype='float32')

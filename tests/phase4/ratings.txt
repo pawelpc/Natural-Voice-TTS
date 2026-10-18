@@ -1,0 +1,37 @@
+# Phase 4 listening check: Paul's ratings, 2026-10-17
+# Pasted by Paul from the local listening page ("Copy results as text"), verbatim.
+# Before = tests/baseline (v1.1.0), After = tests/phase3 (commit 2478f8f).
+#1 markdown: better
+#2 tables: better
+#3 paths_urls: better
+#4 rhythm: better
+#5 times_dates: better
+#6 units: better
+#7 tables: better | should add a small pause between the row number and what is in the first cell of the row.
+#8 code_blocks: better | Better.  A note for latter: Is there a way to add a custom pronunciation library for proper names and brands?  This example had the name "Cowork" in it which should be pronounced "Co work", but it was pronounced " Cow ork".  Don't need to fix this session, but will want to note to add in a future session.
+#9 lists: better
+#10 splitting: better
+#11 numbers_versions: better
+#12 symbols: better
+#13 rhythm: better | Note for future session: see if pitch, loudness, and duration can be modified for emphasis of text that is bold, bound by asterisks, or all caps (when not an abbreviation)
+#14 abbreviations: better
+#15 markdown: better
+#16 rhythm: same
+#17 splitting: better
+#18 abbreviations: better
+#19 abbreviations: better
+#20 splitting: better
+#21 numbers_versions: better
+#22 splitting: better
+#23 paths_urls: better
+#24 paths_urls: better
+#25 units: better
+#26 times_dates: better
+#27 numbers_versions: better | Want to change a colon between two numbers when obviously not a time to be read as "by".  Ex 16:9 is sixteen by nine while 12:30 is still twelve thirty.  So, it is obviously not a time reference if either the number before the colon is more than 12, or the number after the colon is more than 59 AND there are only two numbers with a colon in between them (ex. 15:25:12 could be a run tine so should not be read as 15 by 25 by 12).
+#28 markdown: better
+#29 lists: better
+#30 code_blocks: better
+#31 symbols: better | Is there a way to force the A when by symbols to be a hard A?  The A in "Use A & B" was spoken as a hard A.  the A in "not A + B" was spoken as a soft A.
+#32 rhythm: better
+#33 splitting: better
+Overall: pass

@@ -19,12 +19,16 @@ SAMPLE_RATE = 24000
 
 # --- Pause targets (ms) ---
 COMMA_PAUSE_MS = 200        # , ; : — … inside a sentence
+INNER_STOP_PAUSE_MS = 300   # . ! ? inside one chunk: "Row 1. …", "One. Clone the repo." (Paul, Phase 4 #7)
 SENTENCE_PAUSE_MS = 450     # between sentences of one paragraph
 ITEM_PAUSE_MS = 550         # between list items, or between table rows
 PARAGRAPH_PAUSE_MS = 800    # between paragraphs and other blocks
 HEADING_PAUSE_MS = 800      # after a heading
+# Paul's Phase 4 ratings (2026-10-17): 32 better, 1 same, 0 worse with these values.
 
 CLAUSE_PUNCT = frozenset(',;:—…')
+# misaki gives these their own token only at a real stop; "Mr.", "U.S.", "etc." keep the dot in the word.
+STOP_PUNCT = frozenset('.!?')
 SENTENCE_END = '.!?…'
 WORD_RE = re.compile(r'[^\W_]')
 
@@ -118,7 +122,8 @@ def _longest_silent_run(db: np.ndarray, lo: int, hi: int) -> tuple[int, int] | N
 
 
 def set_clause_pauses(audio: np.ndarray, tokens: list | None) -> tuple[np.ndarray, list[PauseMark]]:
-    """Resize the pause at each , ; : — … inside a clip to COMMA_PAUSE_MS.
+    """Resize the pause at each , ; : — … inside a clip to COMMA_PAUSE_MS, and at each
+    . ! ? inside it ("Row 1. …") to INNER_STOP_PAUSE_MS.
 
     Uses Kokoro's token timestamps to find each pause. Where Kokoro left no
     silence, the pause is inserted at the quietest point between the words.
@@ -129,9 +134,15 @@ def set_clause_pauses(audio: np.ndarray, tokens: list | None) -> tuple[np.ndarra
     slack = int(SEARCH_SLACK_MS / FRAME_MS)
     min_run = int(MIN_SILENT_RUN_MS / FRAME_MS)
     db = _frames_db(audio)
-    spots = []  # (start_sample, end_sample) of the region to replace with the target pause
+    spots = []  # (start_sample, end_sample, kind, ms): region to replace with that pause
     for k, tok in enumerate(tokens):
-        if tok.phonemes not in CLAUSE_PUNCT or k == 0 or k == len(tokens) - 1:
+        if k == 0 or k == len(tokens) - 1:
+            continue
+        if tok.phonemes in CLAUSE_PUNCT:
+            kind, ms = 'comma', COMMA_PAUSE_MS
+        elif tok.phonemes in STOP_PUNCT:
+            kind, ms = 'inner_stop', INNER_STOP_PAUSE_MS
+        else:
             continue
         # The pause sits between two spoken words; a closing quote after "…" is not one.
         before = next((t for t in reversed(tokens[:k]) if t.phonemes and t.end_ts is not None
@@ -145,17 +156,17 @@ def set_clause_pauses(audio: np.ndarray, tokens: list | None) -> tuple[np.ndarra
             hi_s = lo_s + n
         run = _longest_silent_run(db, lo_s // n - slack, hi_s // n + slack)
         if run and run[1] - run[0] >= min_run:
-            spots.append((run[0] * n, run[1] * n))
+            spots.append((run[0] * n, run[1] * n, kind, ms))
         else:
             # No pause from Kokoro: cut at the quietest frame between the words.
             lo_f, hi_f = max(lo_s // n, 0), min(max(hi_s // n, lo_s // n + 1), len(db))
             quiet = lo_f + int(np.argmin(db[lo_f:hi_f])) if hi_f > lo_f else lo_f
-            spots.append((quiet * n, quiet * n))
+            spots.append((quiet * n, quiet * n, kind, ms))
     if not spots:
         return audio, []
     pieces, marks, pos = [], [], 0
     out_len = 0
-    for start, end in sorted(set(spots)):
+    for start, end, kind, ms in sorted(set(spots)):
         if start < pos:
             continue
         piece = audio[pos:start]
@@ -163,8 +174,8 @@ def set_clause_pauses(audio: np.ndarray, tokens: list | None) -> tuple[np.ndarra
             piece = _fade(piece, at_start=False)
         pieces.append(piece)
         out_len += len(piece)
-        marks.append(PauseMark('comma', COMMA_PAUSE_MS, out_len / SAMPLE_RATE * 1000))
-        pause = _silence(COMMA_PAUSE_MS)
+        marks.append(PauseMark(kind, ms, out_len / SAMPLE_RATE * 1000))
+        pause = _silence(ms)
         pieces.append(pause)
         out_len += len(pause)
         pos = end

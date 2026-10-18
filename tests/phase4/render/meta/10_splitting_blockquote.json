@@ -1,0 +1,438 @@
+{
+ "id": "10_splitting_blockquote",
+ "category": "splitting",
+ "origin": "real",
+ "chunks": 6,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 53.49,
+ "synth_s": 2.7,
+ "wav_sha256": "4e6d7692c8cdc46ffdd532fed8de623dce905546225e3719685d04cca439b7f9",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 360.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 2435.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8540.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 10075.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 12010.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 14725.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 15630.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 17000.0,
+   "chunk": 2
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 18800.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 22180.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 27405.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 30390.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 31390.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 34435.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 35585.0,
+   "chunk": 4
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 37285.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 42560.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 44670.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 45765.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 46895.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 47960.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 49030.0,
+   "chunk": 5
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Read it — and I can already see the likely culprit.",
+   "synth_s": 0.189,
+   "ms": 2885.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Read it — and I can already see the likely culprit.",
+     "phonemes": "ɹˈid ɪt — ænd ˌI kæn ˌɔlɹˈɛdi sˈi ðə lˈIkli kˈʌlpɹət.",
+     "silent_words": [],
+     "samples": 78000,
+     "ms": 3250.0,
+     "lead_ms": 310.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 680,
+       "ms": 240
+      },
+      {
+       "at_ms": 2680,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The skill's ongoing-mode instructions do say \"full response text\" (lines 22, 33 to 36), but line 42 undercuts them:",
+   "synth_s": 0.478,
+   "ms": 9925.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The skill's ongoing-mode instructions do say \"full response text\" (lines 22, 33 to 36), but line 42 undercuts them:",
+     "phonemes": "ðə skˈɪlz ˈɔnɡˌOɪŋmˌOd ɪnstɹˈʌkʃənz dˈu sˈA “fˈʊl ɹəspˈɑns tˈɛkst” (lˈInz twˈɛnti tˈu, θˈɜɹTi θɹˈi tə θˈɜɹTi sˈɪks), bˌʌt lˈIn fˈɔɹTi tˈu ˈʌndəɹkˌʌts ðˌɛm:",
+     "silent_words": [],
+     "samples": 244800,
+     "ms": 10200.0,
+     "lead_ms": 300.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 2930,
+       "ms": 270
+      },
+      {
+       "at_ms": 4120,
+       "ms": 70
+      },
+      {
+       "at_ms": 4360,
+       "ms": 510
+      },
+      {
+       "at_ms": 5950,
+       "ms": 200
+      },
+      {
+       "at_ms": 6760,
+       "ms": 60
+      },
+      {
+       "at_ms": 7270,
+       "ms": 80
+      },
+      {
+       "at_ms": 7480,
+       "ms": 470
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "\"Don't call speak with markdown formatting, code blocks, or special characters — send clean readable text.\"",
+   "synth_s": 0.34,
+   "ms": 6790.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "\"Don't call speak with markdown formatting, code blocks, or special characters — send clean readable text.\"",
+     "phonemes": "“dˈOnt kˈɔl spˈik wɪð mˈɑɹkdˌWn fˈɔɹmˌæTɪŋ, kˈOd blˈɑks, ɔɹ spˈɛʃᵊl kˈɛɹəktəɹz — sˈɛnd klˈin ɹˈidəbᵊl tˈɛkst.”",
+     "silent_words": [],
+     "samples": 163200,
+     "ms": 6800.0,
+     "lead_ms": 310.0,
+     "trail_ms": 440.0,
+     "pauses": [
+      {
+       "at_ms": 1360,
+       "ms": 70
+      },
+      {
+       "at_ms": 2230,
+       "ms": 260
+      },
+      {
+       "at_ms": 4000,
+       "ms": 80
+      },
+      {
+       "at_ms": 4360,
+       "ms": 400
+      },
+      {
+       "at_ms": 5070,
+       "ms": 60
+      },
+      {
+       "at_ms": 6100,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "That's vague enough to license exactly what you saw: a model can read \"send clean readable text\" as \"send a trimmed/cleaned subset,\" and there's no explicit rule forbidding partial sends.",
+   "synth_s": 0.582,
+   "ms": 11240.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's vague enough to license exactly what you saw: a model can read \"send clean readable text\" as \"send a trimmed/cleaned subset,\" and there's no explicit rule forbidding partial sends.",
+     "phonemes": "ðˈæts vˈAɡ ɪnˈʌf tə lˈIsᵊns ɪɡzˈæktli wˌʌt ju sˈɔ: ɐ mˈɑdᵊl kæn ɹˈid “sˈɛnd klˈin ɹˈidəbᵊl tˈɛkst” æz “sˈɛnd ɐ tɹˈɪmd klˈind sˈʌbsˌɛt,” ænd ðɛɹz nˈO ɪksplˈɪsət ɹˈul fəɹbˈɪdɪŋ pˈɑɹʃᵊl sˈɛndz.",
+     "silent_words": [],
+     "samples": 294600,
+     "ms": 12275.0,
+     "lead_ms": 320.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 2080,
+       "ms": 60
+      },
+      {
+       "at_ms": 2900,
+       "ms": 520
+      },
+      {
+       "at_ms": 4450,
+       "ms": 210
+      },
+      {
+       "at_ms": 4960,
+       "ms": 70
+      },
+      {
+       "at_ms": 6030,
+       "ms": 60
+      },
+      {
+       "at_ms": 6260,
+       "ms": 340
+      },
+      {
+       "at_ms": 7610,
+       "ms": 60
+      },
+      {
+       "at_ms": 8450,
+       "ms": 550
+      },
+      {
+       "at_ms": 9780,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Combined, it invites the divergence R1 was meant to prevent — full text to chat, a reduced version to speak.",
+   "synth_s": 0.362,
+   "ms": 7245.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Combined, it invites the divergence R1 was meant to prevent — full text to chat, a reduced version to speak.",
+     "phonemes": "kəmbˈInd, ɪt ɪnvˈIts ðə dəvˈɜɹʤəns ˈɑɹ wˈʌn wʌz mˈɛnt tə pɹivˈɛnt — fˈʊl tˈɛkst tə ʧˈæt, ɐ ɹədˈust vˈɜɹʒən tə spˈik.",
+     "silent_words": [],
+     "samples": 184200,
+     "ms": 7675.0,
+     "lead_ms": 290.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 840,
+       "ms": 300
+      },
+      {
+       "at_ms": 2380,
+       "ms": 60
+      },
+      {
+       "at_ms": 2990,
+       "ms": 110
+      },
+      {
+       "at_ms": 3990,
+       "ms": 210
+      },
+      {
+       "at_ms": 5150,
+       "ms": 530
+      },
+      {
+       "at_ms": 7070,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "So the durable fix is a SKILL dot md revision that makes it unambiguous: send the entire response verbatim — every sentence, no summarizing, no excerpting, no omissions — and reframe the formatting note so it can't be read as permission to change the words.",
+   "synth_s": 0.752,
+   "ms": 15410.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "So the durable fix is a SKILL dot md revision that makes it unambiguous: send the entire response verbatim — every sentence, no summarizing, no excerpting, no omissions — and reframe the formatting note so it can't be read as permission to change the words.",
+     "phonemes": "sˌO ðə dˈʊɹəbᵊl fˈɪks ɪz ɐ skˈɪl dˈɑt ˌɛmdˈi ɹəvˈɪʒᵊn ðæt mˌAks ɪt ˌʌnˌæmbˈɪɡjəwəs: sˈɛnd ði əntˈIəɹ ɹəspˈɑns vəɹbˈATəm — ˈɛvəɹi sˈɛntᵊns, nˈO sˈʌməɹˌIzɪŋ, nˈO ɛksˈɜɹptɪŋ, nˈO Omˈɪʃənz — ænd ɹifɹˈAm ðə fˈɔɹmˌæTɪŋ nˈOt sˌO ɪt kˈænt bi ɹˈɛd æz pəɹmˈɪʃən tə ʧˈAnʤ ðə wˈɜɹdz.",
+     "silent_words": [],
+     "samples": 415800,
+     "ms": 17325.0,
+     "lead_ms": 290.0,
+     "trail_ms": 475.0,
+     "pauses": [
+      {
+       "at_ms": 1200,
+       "ms": 60
+      },
+      {
+       "at_ms": 2270,
+       "ms": 100
+      },
+      {
+       "at_ms": 3760,
+       "ms": 120
+      },
+      {
+       "at_ms": 4760,
+       "ms": 580
+      },
+      {
+       "at_ms": 6720,
+       "ms": 60
+      },
+      {
+       "at_ms": 7250,
+       "ms": 500
+      },
+      {
+       "at_ms": 8650,
+       "ms": 270
+      },
+      {
+       "at_ms": 9850,
+       "ms": 320
+      },
+      {
+       "at_ms": 10690,
+       "ms": 60
+      },
+      {
+       "at_ms": 11040,
+       "ms": 220
+      },
+      {
+       "at_ms": 12130,
+       "ms": 450
+      },
+      {
+       "at_ms": 14090,
+       "ms": 60
+      },
+      {
+       "at_ms": 14160,
+       "ms": 110
+      },
+      {
+       "at_ms": 14460,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

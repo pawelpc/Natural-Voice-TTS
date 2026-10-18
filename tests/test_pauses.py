@@ -89,6 +89,16 @@ def test_comma_pause_wider_than_timestamps() -> None:
     assert silent_runs_ms(out) == [pytest.approx(pauses.COMMA_PAUSE_MS, abs=pauses.FRAME_MS)]
 
 
+def test_inner_stop_pause_after_row_label() -> None:
+    """Phase 4 #7: "Row 1. first cell" gets INNER_STOP_PAUSE_MS after the label."""
+    audio = np.concatenate([tone(400), silence(70), tone(400)])
+    toks = [Tok('Row', 'ɹˈO', 0.0, 0.2), Tok('1', 'wˈʌn', 0.2, 0.4), Tok('.', '.', 0.4, 0.47),
+            Tok('src', 'ˌɛsˌɑɹsˈi', 0.47, 0.87), Tok('.', '.', 0.87, 0.9)]
+    out, marks = pauses.set_clause_pauses(audio, toks)
+    assert [m.kind for m in marks] == ['inner_stop']
+    assert silent_runs_ms(out) == [pytest.approx(pauses.INNER_STOP_PAUSE_MS, abs=pauses.FRAME_MS)]
+
+
 def test_no_clause_pause_before_closing_quote() -> None:
     """'…' followed only by a closing quote ends the clip; no comma pause goes there."""
     audio = np.concatenate([tone(400), silence(300)])

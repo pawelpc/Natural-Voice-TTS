@@ -1,0 +1,145 @@
+{
+ "id": "24_paths_urls_identifiers",
+ "category": "paths_urls",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 17.93,
+ "synth_s": 0.95,
+ "wav_sha256": "219a57205b3d2bece3a2e15fa58f46e19a2efe7eb635bd54ccc158bc1178a138",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 2770.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 6520.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8790.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 11495.0,
+   "chunk": 1
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Call split sentences in text processor dot py, then set SPLIT PATTERN and HF HUB OFFLINE equals 1.",
+   "synth_s": 0.35,
+   "ms": 6970.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Call split sentences in text processor dot py, then set SPLIT PATTERN and HF HUB OFFLINE equals 1.",
+     "phonemes": "kˈɔl splˈɪt sˈɛntᵊnsᵻz ɪn tˈɛkst pɹˈɑsˌɛsəɹ dˈɑt pˈI, ðˈɛn sˈɛt splˈɪt pˈæTəɹn ænd ˌAʧˈɛf hˈʌb ˌɔflˈIn ˈikwᵊlz wˈʌn.",
+     "silent_words": [],
+     "samples": 183600,
+     "ms": 7650.0,
+     "lead_ms": 310.0,
+     "trail_ms": 510.0,
+     "pauses": [
+      {
+       "at_ms": 2710,
+       "ms": 70
+      },
+      {
+       "at_ms": 3080,
+       "ms": 510
+      },
+      {
+       "at_ms": 4150,
+       "ms": 60
+      },
+      {
+       "at_ms": 4330,
+       "ms": 70
+      },
+      {
+       "at_ms": 4830,
+       "ms": 230
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The KPipeline class wraps KModel, so use tts engine dot init once.",
+   "synth_s": 0.268,
+   "ms": 4975.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The KPipeline class wraps KModel, so use tts engine dot init once.",
+     "phonemes": "ðə kˈApˌIplIn klˈæs ɹˈæps kˈAmˌɑdᵊl, sˌO jˈuz tˌitˌiˈɛs ˈɛnʤən dˈɑt ɪnˈɪt wˈʌns.",
+     "silent_words": [],
+     "samples": 130200,
+     "ms": 5425.0,
+     "lead_ms": 300.0,
+     "trail_ms": 465.0,
+     "pauses": [
+      {
+       "at_ms": 2120,
+       "ms": 340
+      },
+      {
+       "at_ms": 4180,
+       "ms": 140
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Check config dot get('voice') and the dash dash noconfirm flag in naturalvoicetts dot spec.",
+   "synth_s": 0.331,
+   "ms": 5990.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Check config dot get(voice') and the dash dash noconfirm flag in naturalvoicetts dot spec.",
+     "phonemes": "ʧˈɛk kənfˈɪɡ dˈɑt ɡˈɛt(vˈYs”) ænd ðə dˈæʃ dˈæʃ nˈɑkənfˌɜɹm flˈæɡ ɪn nˈæʧəɹɹˌælvYsəts dˈɑt spˈɛk.",
+     "silent_words": [],
+     "samples": 162600,
+     "ms": 6775.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 460,
+       "ms": 90
+      },
+      {
+       "at_ms": 1440,
+       "ms": 210
+      },
+      {
+       "at_ms": 2120,
+       "ms": 490
+      },
+      {
+       "at_ms": 5850,
+       "ms": 60
+      },
+      {
+       "at_ms": 6170,
+       "ms": 110
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

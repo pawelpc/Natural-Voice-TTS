@@ -1,0 +1,177 @@
+{
+ "id": "19_abbreviations_academic",
+ "category": "abbreviations",
+ "origin": "synthetic",
+ "chunks": 3,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 3,
+ "duration_s": 15.91,
+ "synth_s": 0.89,
+ "wav_sha256": "ce6f35b510335666cbf2323f290a3c3e5195f21b27c2c70018cd8ca14805fa85",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 770.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 1675.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 4755.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 7705.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 8795.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 9785.0,
+   "chunk": 1
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 11480.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 12535.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 13690.0,
+   "chunk": 2
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 14400.0,
+   "chunk": 2
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Professor Lee, Ph.D., works at Saint Mary's Hospital versus Johns Hopkins.",
+   "synth_s": 0.297,
+   "ms": 5205.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Professor Lee, Ph.D., works at Saint Mary's Hospital versus Johns Hopkins.",
+     "phonemes": "pɹəfˈɛsəɹ lˈi, pˌiˌAʧdˈi, wˈɜɹks æt sˈAnt mˈɛɹiz hˈɑspˌɪTᵊl vˈɜɹsəs ʤˈɑnz hˈɑpkɪnz.",
+     "silent_words": [],
+     "samples": 137400,
+     "ms": 5725.0,
+     "lead_ms": 300.0,
+     "trail_ms": 485.0,
+     "pauses": [
+      {
+       "at_ms": 1070,
+       "ms": 180
+      },
+      {
+       "at_ms": 1960,
+       "ms": 390
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Figure 3 shows approximately 40 samples; see number 7, volume 2, pages 14 to 18.",
+   "synth_s": 0.36,
+   "ms": 6725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Figure 3 shows approximately 40 samples; see number 7, volume 2, pages 14 to 18.",
+     "phonemes": "fˈɪɡjəɹ θɹˈi ʃˈOz əpɹˈɑksəmətli fˈɔɹTi sˈæmpᵊlz; sˈi nˈʌmbəɹ sˈɛvən, vˈɑljˌum tˈu, pˈAʤᵻz fˌɔɹtˈin tʊ ˌAtˈin.",
+     "silent_words": [],
+     "samples": 178200,
+     "ms": 7425.0,
+     "lead_ms": 330.0,
+     "trail_ms": 505.0,
+     "pauses": [
+      {
+       "at_ms": 580,
+       "ms": 60
+      },
+      {
+       "at_ms": 1260,
+       "ms": 60
+      },
+      {
+       "at_ms": 2830,
+       "ms": 450
+      },
+      {
+       "at_ms": 4160,
+       "ms": 170
+      },
+      {
+       "at_ms": 5130,
+       "ms": 290
+      },
+      {
+       "at_ms": 5750,
+       "ms": 70
+      },
+      {
+       "at_ms": 5950,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The results, compare Table 2, were sig. at the 5% level.",
+   "synth_s": 0.235,
+   "ms": 3980.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The results, compare Table 2, were sig. at the 5% level.",
+     "phonemes": "ðə ɹəzˈʌlts, kəmpˈɛɹ tˈAbᵊl tˈu, wɜɹ sˈɪɡ. æt ðə fˈIv pəɹsˈɛnt lˈɛvᵊl.",
+     "silent_words": [],
+     "samples": 109200,
+     "ms": 4550.0,
+     "lead_ms": 320.0,
+     "trail_ms": 490.0,
+     "pauses": [
+      {
+       "at_ms": 2430,
+       "ms": 420
+      },
+      {
+       "at_ms": 3360,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
