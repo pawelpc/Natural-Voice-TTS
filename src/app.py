@@ -84,10 +84,13 @@ def render_chunk(tts_engine, chunks: list, i: int, voice: str, speed: float):
     Returns (audio, pause_marks); audio is None when nothing could be produced.
     """
     text = chunks[i].text
+    # Emphasized words (emphasis.py, off by default) take a separate synthesis path.
+    spans = chunks[i].emphasis
+    extra = {'emphasis_spans': spans} if spans else {}
     try:
         with _synth_lock:
             segments = [(audio, tokens, graphemes) for graphemes, audio, tokens
-                        in tts_engine.synthesize_segments(text, voice=voice, speed=speed)]
+                        in tts_engine.synthesize_segments(text, voice=voice, speed=speed, **extra)]
     except Exception:
         logger.exception("Failed to synthesize: %.60s...", text)
         return None, []

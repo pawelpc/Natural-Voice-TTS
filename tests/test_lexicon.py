@@ -40,6 +40,15 @@ def test_heading_and_table_cells() -> None:
     assert spoken == [f'{COWORK}.', 'Table. App, Use.', f'Row 1. {COWORK}, skills.']
 
 
+def test_with_emphasis(monkeypatch) -> None:
+    """Emphasis markers around a listed word: the markup is written and the span covers it."""
+    import emphasis
+    monkeypatch.setattr(emphasis, 'EMPHASIS_ENABLED', True)
+    [s] = prepare_speech('The **Cowork** skills work.')
+    assert s.text == f'The {COWORK} skills work.'
+    assert [s.text[a:b] for a, b in s.emphasis] == ['Cowork](/kˈO wˈɜɹk']
+
+
 def test_screen_text_unchanged() -> None:
     """R5: the markup is only in the spoken copy."""
     text = 'Cowork reads skills.'

@@ -1,0 +1,503 @@
+{
+ "id": "04_rhythm_solid_confirmation",
+ "category": "rhythm",
+ "origin": "real",
+ "chunks": 13,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 76.47,
+ "synth_s": 4.35,
+ "wav_sha256": "307d1f91c31ad72216593eb3aa07301f120e8c07312a68940e30549edeb4018a",
+ "pauses": [
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 1465.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 3805.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 5555.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 6855.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 9300.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 14355.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 14975.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 18170.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 18645.0,
+   "chunk": 2
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 20445.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 24260.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 27365.0,
+   "chunk": 3
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 31000.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 33795.0,
+   "chunk": 4
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 34815.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 36375.0,
+   "chunk": 5
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 37075.0,
+   "chunk": 5
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 38195.0,
+   "chunk": 6
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 39710.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 41405.0,
+   "chunk": 7
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 51095.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 53895.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 54855.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 55790.0,
+   "chunk": 8
+  },
+  {
+   "kind": "item",
+   "target_ms": 550,
+   "at_ms": 59070.0,
+   "chunk": 8
+  },
+  {
+   "kind": "inner_stop",
+   "target_ms": 300,
+   "at_ms": 59925.0,
+   "chunk": 9
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 61550.0,
+   "chunk": 9
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 64060.0,
+   "chunk": 10
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 67715.0,
+   "chunk": 11
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 74040.0,
+   "chunk": 11
+  }
+ ],
+ "sentences": [
+  {
+   "text": "That's a solid confirmation — the fix survived a full reinstall, a Claude Desktop restart, and a brand-new session, and the pipe delivered correctly once it settled.",
+   "synth_s": 0.53,
+   "ms": 9750.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's a solid confirmation — the fix survived a full reinstall, a Claude Desktop restart, and a brand-new session, and the pipe delivered correctly once it settled.",
+     "phonemes": "ðˈæts ɐ sˈɑləd kˌɑnfəɹmˈAʃən — ðə fˈɪks səɹvˈIvd ɐ fˈʊl ɹˌiənstˈɔl, ɐ klˈɔd dˈɛsktˌɑp ɹˈistˌɑɹt, ænd ɐ bɹˈændnˌu sˈɛʃən, ænd ðə pˈIp dəlˈɪvəɹd kəɹˈɛktli wˈʌns ɪt sˈɛTᵊld.",
+     "silent_words": [],
+     "samples": 260400,
+     "ms": 10850.0,
+     "lead_ms": 320.0,
+     "trail_ms": 500.0,
+     "pauses": [
+      {
+       "at_ms": 1790,
+       "ms": 470
+      },
+      {
+       "at_ms": 3350,
+       "ms": 80
+      },
+      {
+       "at_ms": 4400,
+       "ms": 300
+      },
+      {
+       "at_ms": 4750,
+       "ms": 60
+      },
+      {
+       "at_ms": 5470,
+       "ms": 70
+      },
+      {
+       "at_ms": 5700,
+       "ms": 60
+      },
+      {
+       "at_ms": 6250,
+       "ms": 330
+      },
+      {
+       "at_ms": 7690,
+       "ms": 420
+      },
+      {
+       "at_ms": 9300,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "That also definitively answers your earlier \"will it persist after restart\" question: yes.",
+   "synth_s": 0.325,
+   "ms": 6025.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That also definitively answers your earlier \"will it persist after restart\" question: yes.",
+     "phonemes": "ðˈæt ˈɔlsO dəfˈɪnətˌɪvli ˈænsəɹz jʊɹ ˈɜɹliəɹ “wɪl ɪt pəɹsˈɪst ˈæftəɹ ɹˈistˌɑɹt” kwˈɛsʧᵊn: jˈɛs.",
+     "silent_words": [],
+     "samples": 148800,
+     "ms": 6200.0,
+     "lead_ms": 330.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 960,
+       "ms": 60
+      },
+      {
+       "at_ms": 2610,
+       "ms": 370
+      },
+      {
+       "at_ms": 4380,
+       "ms": 90
+      },
+      {
+       "at_ms": 4940,
+       "ms": 390
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The two initial failures are worth pinning down, though, because the signature matters.",
+   "synth_s": 0.3,
+   "ms": 5120.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "The dropped-sentence bug we fixed was silent partial loss — you'd hear most of a response with a few sentences missing.",
+   "synth_s": 0.39,
+   "ms": 6920.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "Two attempts failing outright and then working is a different shape, and almost certainly a startup/timing issue, not a regression.",
+   "synth_s": 0.425,
+   "ms": 7450.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "The most likely causes, in order:",
+   "synth_s": 0.161,
+   "ms": 2610.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The most likely causes, in order:",
+     "phonemes": "ðə mˈOst lˈIkli kˈɔzᵻz, ɪn ˈɔɹdəɹ:",
+     "silent_words": [],
+     "samples": 60600,
+     "ms": 2525.0,
+     "lead_ms": 300.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 1410,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "One. App still warming up.",
+   "synth_s": 0.164,
+   "ms": 2285.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "After install/reboot, the tray app takes about 6 to 9 seconds to load the Kokoro model (your log showed seventeen oh six twenty seven to seventeen oh six thirty six).",
+   "synth_s": 0.579,
+   "ms": 11385.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "After install/reboot, the tray app takes about 6 to 9 seconds to load the Kokoro model (your log showed seventeen oh six twenty seven to seventeen oh six thirty six).",
+     "phonemes": "ˈæftəɹ ɪnstˈɔl ɹˈibˌut, ðə tɹˈA ˈæp tˈAks əbˈWt sˈɪks tə nˈIn sˈɛkəndz tə lˈOd ðə kəkˈɔɹO mˈɑdᵊl (jʊɹ lˈɔɡ ʃˈOd sˌɛvəntˈin ˈO sˈɪks twˈɛnti sˈɛvən tə sˌɛvəntˈin ˈO sˈɪks θˈɜɹTi sˈɪks).",
+     "silent_words": [],
+     "samples": 287400,
+     "ms": 11975.0,
+     "lead_ms": 310.0,
+     "trail_ms": 495.0,
+     "pauses": [
+      {
+       "at_ms": 1560,
+       "ms": 430
+      },
+      {
+       "at_ms": 2610,
+       "ms": 60
+      },
+      {
+       "at_ms": 4500,
+       "ms": 120
+      },
+      {
+       "at_ms": 5820,
+       "ms": 440
+      },
+      {
+       "at_ms": 7140,
+       "ms": 310
+      },
+      {
+       "at_ms": 9330,
+       "ms": 60
+      },
+      {
+       "at_ms": 11250,
+       "ms": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Any speak before it finishes returns Error: Named pipe … not found — because the pipe listener starts only after the engine is ready.",
+   "synth_s": 0.458,
+   "ms": 8075.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "Two. Pipe reconnect race.",
+   "synth_s": 0.15,
+   "ms": 2380.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "The listener holds a single pipe instance.",
+   "synth_s": 0.177,
+   "ms": 2510.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "Between one client disconnecting and the loop recreating the pipe, there's a millisecond gap where a fast follow-up speak can get \"pipe not found\" / \"all instances busy.\"",
+   "synth_s": 0.521,
+   "ms": 9980.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Between one client disconnecting and the loop recreating the pipe, there's a millisecond gap where a fast follow-up speak can get \"pipe not found\" / \"all instances busy.\"",
+     "phonemes": "bətwˈin wˈʌn klˈIənt dɪskənˈɛktɪŋ ænd ðə lˈup ɹˌikɹiˈATɪŋ ðə pˈIp, ðɛɹz ɐ mˈɪləsˌɛkənd ɡˈæp wˌɛɹ ɐ fˈæst fˈɑlOˌʌp spˈik kæn ɡɛt “pˈIp nˌɑt fˈWnd”  “ˈɔl ˈɪnstᵊnsᵻz bˈɪzi.”",
+     "silent_words": [],
+     "samples": 255000,
+     "ms": 10625.0,
+     "lead_ms": 300.0,
+     "trail_ms": 525.0,
+     "pauses": [
+      {
+       "at_ms": 1640,
+       "ms": 90
+      },
+      {
+       "at_ms": 2440,
+       "ms": 60
+      },
+      {
+       "at_ms": 3430,
+       "ms": 70
+      },
+      {
+       "at_ms": 3510,
+       "ms": 460
+      },
+      {
+       "at_ms": 5050,
+       "ms": 290
+      },
+      {
+       "at_ms": 5960,
+       "ms": 90
+      },
+      {
+       "at_ms": 6610,
+       "ms": 60
+      },
+      {
+       "at_ms": 6810,
+       "ms": 60
+      },
+      {
+       "at_ms": 6880,
+       "ms": 60
+      },
+      {
+       "at_ms": 7190,
+       "ms": 110
+      },
+      {
+       "at_ms": 7520,
+       "ms": 60
+      },
+      {
+       "at_ms": 7800,
+       "ms": 70
+      },
+      {
+       "at_ms": 8290,
+       "ms": 540
+      },
+      {
+       "at_ms": 9740,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Two rapid early calls could hit this.",
+   "synth_s": 0.169,
+   "ms": 1980.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Two rapid early calls could hit this.",
+     "phonemes": "tˈu ɹˈæpəd ˈɜɹli kˈɔlz kʊd hˈɪt ðˈɪs.",
+     "silent_words": [],
+     "samples": 66000,
+     "ms": 2750.0,
+     "lead_ms": 320.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 1950,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

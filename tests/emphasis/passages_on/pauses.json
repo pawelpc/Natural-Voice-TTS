@@ -1,0 +1,49 @@
+{
+ "tolerance_ms": 50,
+ "summary": {
+  "comma": {
+   "n": 63,
+   "found": 63,
+   "median_error_ms": 0,
+   "max_abs_error_ms": 10,
+   "within_tolerance": 63
+  },
+  "heading": {
+   "n": 3,
+   "found": 3,
+   "median_error_ms": 0,
+   "max_abs_error_ms": 0,
+   "within_tolerance": 3
+  },
+  "inner_stop": {
+   "n": 4,
+   "found": 4,
+   "median_error_ms": 0.0,
+   "max_abs_error_ms": 0,
+   "within_tolerance": 4
+  },
+  "item": {
+   "n": 6,
+   "found": 6,
+   "median_error_ms": 0.0,
+   "max_abs_error_ms": 0,
+   "within_tolerance": 6
+  },
+  "paragraph": {
+   "n": 7,
+   "found": 7,
+   "median_error_ms": 0,
+   "max_abs_error_ms": 0,
+   "within_tolerance": 7
+  },
+  "sentence": {
+   "n": 21,
+   "found": 21,
+   "median_error_ms": 0,
+   "max_abs_error_ms": 0,
+   "within_tolerance": 21
+  }
+ },
+ "failures": [],
+ "pass": true
+}

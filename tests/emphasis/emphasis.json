@@ -1,0 +1,2229 @@
+{
+ "env": {
+  "python": "3.10.11",
+  "torch": "2.6.0+cu124",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "kokoro": "0.9.4",
+  "misaki": "0.9.4",
+  "force_cpu": ""
+ },
+ "summary": {
+  "base": {
+   "span_duration_pct": 0.0,
+   "span_f0_pct": 0.0,
+   "span_rms_db": 0.0,
+   "rest_f0_pct": 0.0,
+   "rest_rms_db": 0.0,
+   "span_aperiodicity_delta": 0.0,
+   "f0_jump_in_st": 0.86,
+   "f0_jump_out_st": 0.95
+  },
+  "repeat": {
+   "span_duration_pct": 0.0,
+   "span_f0_pct": 0.3,
+   "span_rms_db": 0.04,
+   "rest_f0_pct": 0.36,
+   "rest_rms_db": 0.06,
+   "span_aperiodicity_delta": -0.0,
+   "f0_jump_in_st": 0.59,
+   "f0_jump_out_st": 1.04
+  },
+  "stress": {
+   "span_duration_pct": 0.0,
+   "span_f0_pct": 1.18,
+   "span_rms_db": 0.12,
+   "rest_f0_pct": -0.74,
+   "rest_rms_db": 0.05,
+   "span_aperiodicity_delta": 0.0,
+   "f0_jump_in_st": 0.88,
+   "f0_jump_out_st": 1.08
+  },
+  "split": {
+   "span_duration_pct": 84.0,
+   "span_f0_pct": 6.77,
+   "span_rms_db": 0.53,
+   "rest_f0_pct": 7.7,
+   "rest_rms_db": 0.6,
+   "span_aperiodicity_delta": 0.0,
+   "f0_jump_in_st": 4.02,
+   "f0_jump_out_st": 2.15
+  },
+  "gain": {
+   "span_duration_pct": 0.0,
+   "span_f0_pct": 0.07,
+   "span_rms_db": 3.69,
+   "rest_f0_pct": 0.26,
+   "rest_rms_db": 0.09,
+   "span_aperiodicity_delta": 0.0,
+   "f0_jump_in_st": 0.77,
+   "f0_jump_out_st": 0.74
+  },
+  "dur": {
+   "span_duration_pct": 27.04,
+   "span_f0_pct": 0.88,
+   "span_rms_db": -0.04,
+   "rest_f0_pct": -0.87,
+   "rest_rms_db": 0.03,
+   "span_aperiodicity_delta": -0.01,
+   "f0_jump_in_st": 2.52,
+   "f0_jump_out_st": 1.49
+  },
+  "pitch": {
+   "span_duration_pct": 0.0,
+   "span_f0_pct": 10.4,
+   "span_rms_db": 0.24,
+   "rest_f0_pct": 0.1,
+   "rest_rms_db": 0.03,
+   "span_aperiodicity_delta": 0.01,
+   "f0_jump_in_st": 0.39,
+   "f0_jump_out_st": 2.29
+  },
+  "combo": {
+   "span_duration_pct": 20.0,
+   "span_f0_pct": 7.86,
+   "span_rms_db": 1.78,
+   "rest_f0_pct": -1.35,
+   "rest_rms_db": 0.02,
+   "span_aperiodicity_delta": -0.0,
+   "f0_jump_in_st": 0.45,
+   "f0_jump_out_st": 1.72
+  },
+  "strong": {
+   "span_duration_pct": 27.04,
+   "span_f0_pct": 13.55,
+   "span_rms_db": 2.58,
+   "rest_f0_pct": -0.82,
+   "rest_rms_db": 0.03,
+   "span_aperiodicity_delta": -0.01,
+   "f0_jump_in_st": 1.29,
+   "f0_jump_out_st": 2.92
+  },
+  "pitchgain": {
+   "span_duration_pct": 0.0,
+   "span_f0_pct": 9.47,
+   "span_rms_db": 2.93,
+   "rest_f0_pct": 0.52,
+   "rest_rms_db": 0.03,
+   "span_aperiodicity_delta": -0.0,
+   "f0_jump_in_st": 1.31,
+   "f0_jump_out_st": 2.62
+  }
+ },
+ "results": [
+  {
+   "sentence": "red",
+   "variant": "base",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.65,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 204.2,
+    "f0_p90_hz": 239.9,
+    "rms_db": -22.75,
+    "aperiodicity": 0.101,
+    "voiced_hops": 7
+   },
+   "rest": {
+    "f0_median_hz": 197.0,
+    "f0_p90_hz": 252.8,
+    "rms_db": -24.31,
+    "aperiodicity": 0.069,
+    "voiced_hops": 64
+   },
+   "f0_jump_in_st": 0.14,
+   "f0_jump_out_st": 2.28
+  },
+  {
+   "sentence": "red",
+   "variant": "repeat",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.65,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 213.1,
+    "f0_p90_hz": 234.8,
+    "rms_db": -22.34,
+    "aperiodicity": 0.102,
+    "voiced_hops": 10
+   },
+   "rest": {
+    "f0_median_hz": 197.5,
+    "f0_p90_hz": 263.9,
+    "rms_db": -24.19,
+    "aperiodicity": 0.07,
+    "voiced_hops": 64
+   },
+   "f0_jump_in_st": 0.19,
+   "f0_jump_out_st": 2.02
+  },
+  {
+   "sentence": "red",
+   "variant": "stress",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.65,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 211.8,
+    "f0_p90_hz": 240.7,
+    "rms_db": -22.83,
+    "aperiodicity": 0.104,
+    "voiced_hops": 9
+   },
+   "rest": {
+    "f0_median_hz": 199.1,
+    "f0_p90_hz": 252.6,
+    "rms_db": -24.19,
+    "aperiodicity": 0.072,
+    "voiced_hops": 73
+   },
+   "f0_jump_in_st": 0.13,
+   "f0_jump_out_st": 1.03
+  },
+  {
+   "sentence": "red",
+   "variant": "split",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "I said the | red | one, not the blue one.",
+   "total_s": 2.245,
+   "span_s": 0.43,
+   "span": {
+    "f0_median_hz": 232.4,
+    "f0_p90_hz": 246.9,
+    "rms_db": -22.14,
+    "aperiodicity": 0.085,
+    "voiced_hops": 21
+   },
+   "rest": {
+    "f0_median_hz": 223.7,
+    "f0_p90_hz": 272.9,
+    "rms_db": -23.71,
+    "aperiodicity": 0.067,
+    "voiced_hops": 82
+   },
+   "f0_jump_in_st": 5.04,
+   "f0_jump_out_st": 1.35
+  },
+  {
+   "sentence": "red",
+   "variant": "gain",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.65,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 212.7,
+    "f0_p90_hz": 240.6,
+    "rms_db": -19.11,
+    "aperiodicity": 0.088,
+    "voiced_hops": 9
+   },
+   "rest": {
+    "f0_median_hz": 204.6,
+    "f0_p90_hz": 252.1,
+    "rms_db": -24.22,
+    "aperiodicity": 0.068,
+    "voiced_hops": 65
+   },
+   "f0_jump_in_st": 0.09,
+   "f0_jump_out_st": 2.18
+  },
+  {
+   "sentence": "red",
+   "variant": "dur",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.7,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 203.3,
+    "f0_p90_hz": 231.1,
+    "rms_db": -22.8,
+    "aperiodicity": 0.073,
+    "voiced_hops": 14
+   },
+   "rest": {
+    "f0_median_hz": 198.3,
+    "f0_p90_hz": 258.4,
+    "rms_db": -24.28,
+    "aperiodicity": 0.066,
+    "voiced_hops": 63
+   },
+   "f0_jump_in_st": 0.09,
+   "f0_jump_out_st": 1.15
+  },
+  {
+   "sentence": "red",
+   "variant": "pitch",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.65,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 275.7,
+    "f0_p90_hz": 282.6,
+    "rms_db": -23.02,
+    "aperiodicity": 0.118,
+    "voiced_hops": 5
+   },
+   "rest": {
+    "f0_median_hz": 198.7,
+    "f0_p90_hz": 247.1,
+    "rms_db": -24.21,
+    "aperiodicity": 0.059,
+    "voiced_hops": 61
+   },
+   "f0_jump_in_st": 0.32,
+   "f0_jump_out_st": 9.72
+  },
+  {
+   "sentence": "red",
+   "variant": "combo",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.7,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 213.1,
+    "f0_p90_hz": 273.4,
+    "rms_db": -21.37,
+    "aperiodicity": 0.077,
+    "voiced_hops": 11
+   },
+   "rest": {
+    "f0_median_hz": 193.6,
+    "f0_p90_hz": 242.6,
+    "rms_db": -24.37,
+    "aperiodicity": 0.067,
+    "voiced_hops": 70
+   },
+   "f0_jump_in_st": 0.16,
+   "f0_jump_out_st": 1.86
+  },
+  {
+   "sentence": "red",
+   "variant": "strong",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.7,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 216.6,
+    "f0_p90_hz": 282.3,
+    "rms_db": -20.36,
+    "aperiodicity": 0.086,
+    "voiced_hops": 12
+   },
+   "rest": {
+    "f0_median_hz": 200.6,
+    "f0_p90_hz": 264.1,
+    "rms_db": -24.3,
+    "aperiodicity": 0.072,
+    "voiced_hops": 62
+   },
+   "f0_jump_in_st": 0.2,
+   "f0_jump_out_st": 2.48
+  },
+  {
+   "sentence": "red",
+   "variant": "pitchgain",
+   "text": "I said the red one, not the blue one.",
+   "span_text": "red",
+   "phonemes": "ˌI sˈɛd ðə ɹˈɛd wˈʌn, nˌɑt ðə blˈu wˈʌn.",
+   "total_s": 2.65,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 239.7,
+    "f0_p90_hz": 260.9,
+    "rms_db": -19.96,
+    "aperiodicity": 0.096,
+    "voiced_hops": 8
+   },
+   "rest": {
+    "f0_median_hz": 196.1,
+    "f0_p90_hz": 254.7,
+    "rms_db": -24.27,
+    "aperiodicity": 0.071,
+    "voiced_hops": 74
+   },
+   "f0_jump_in_st": 0.07,
+   "f0_jump_out_st": 8.79
+  },
+  {
+   "sentence": "backup",
+   "variant": "base",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.075,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 166.0,
+    "f0_p90_hz": 183.0,
+    "rms_db": -25.75,
+    "aperiodicity": 0.062,
+    "voiced_hops": 30
+   },
+   "rest": {
+    "f0_median_hz": 222.3,
+    "f0_p90_hz": 258.3,
+    "rms_db": -23.05,
+    "aperiodicity": 0.044,
+    "voiced_hops": 45
+   },
+   "f0_jump_in_st": 3.64,
+   "f0_jump_out_st": 0.09
+  },
+  {
+   "sentence": "backup",
+   "variant": "repeat",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.075,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 166.8,
+    "f0_p90_hz": 182.4,
+    "rms_db": -25.81,
+    "aperiodicity": 0.051,
+    "voiced_hops": 31
+   },
+   "rest": {
+    "f0_median_hz": 222.8,
+    "f0_p90_hz": 246.7,
+    "rms_db": -23.05,
+    "aperiodicity": 0.053,
+    "voiced_hops": 43
+   },
+   "f0_jump_in_st": 7.89,
+   "f0_jump_out_st": 0.14
+  },
+  {
+   "sentence": "backup",
+   "variant": "stress",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˈʌp jˈʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.075,
+   "span_s": 0.975,
+   "span": {
+    "f0_median_hz": 176.4,
+    "f0_p90_hz": 191.4,
+    "rms_db": -25.63,
+    "aperiodicity": 0.051,
+    "voiced_hops": 38
+   },
+   "rest": {
+    "f0_median_hz": 210.0,
+    "f0_p90_hz": 248.8,
+    "rms_db": -22.99,
+    "aperiodicity": 0.042,
+    "voiced_hops": 39
+   },
+   "f0_jump_in_st": 3.15,
+   "f0_jump_out_st": 1.14
+  },
+  {
+   "sentence": "backup",
+   "variant": "split",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "You must | back up your files | before you upgrade.",
+   "total_s": 2.625,
+   "span_s": 1.11,
+   "span": {
+    "f0_median_hz": 198.2,
+    "f0_p90_hz": 237.7,
+    "rms_db": -24.43,
+    "aperiodicity": 0.084,
+    "voiced_hops": 29
+   },
+   "rest": {
+    "f0_median_hz": 242.4,
+    "f0_p90_hz": 288.5,
+    "rms_db": -22.45,
+    "aperiodicity": 0.065,
+    "voiced_hops": 55
+   },
+   "f0_jump_in_st": 3.52,
+   "f0_jump_out_st": 1.66
+  },
+  {
+   "sentence": "backup",
+   "variant": "gain",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.075,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 167.9,
+    "f0_p90_hz": 179.2,
+    "rms_db": -22.25,
+    "aperiodicity": 0.068,
+    "voiced_hops": 31
+   },
+   "rest": {
+    "f0_median_hz": 223.7,
+    "f0_p90_hz": 245.1,
+    "rms_db": -23.06,
+    "aperiodicity": 0.06,
+    "voiced_hops": 43
+   },
+   "f0_jump_in_st": 6.42,
+   "f0_jump_out_st": 0.12
+  },
+  {
+   "sentence": "backup",
+   "variant": "dur",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.3,
+   "span_s": 1.1,
+   "span": {
+    "f0_median_hz": 173.5,
+    "f0_p90_hz": 185.8,
+    "rms_db": -26.24,
+    "aperiodicity": 0.066,
+    "voiced_hops": 40
+   },
+   "rest": {
+    "f0_median_hz": 215.8,
+    "f0_p90_hz": 253.2,
+    "rms_db": -23.02,
+    "aperiodicity": 0.052,
+    "voiced_hops": 45
+   },
+   "f0_jump_in_st": 8.75,
+   "f0_jump_out_st": 1.2
+  },
+  {
+   "sentence": "backup",
+   "variant": "pitch",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.075,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 185.7,
+    "f0_p90_hz": 206.8,
+    "rms_db": -25.41,
+    "aperiodicity": 0.051,
+    "voiced_hops": 33
+   },
+   "rest": {
+    "f0_median_hz": 222.4,
+    "f0_p90_hz": 230.2,
+    "rms_db": -23.22,
+    "aperiodicity": 0.05,
+    "voiced_hops": 43
+   },
+   "f0_jump_in_st": 2.44,
+   "f0_jump_out_st": 1.71
+  },
+  {
+   "sentence": "backup",
+   "variant": "combo",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.25,
+   "span_s": 1.05,
+   "span": {
+    "f0_median_hz": 188.3,
+    "f0_p90_hz": 205.3,
+    "rms_db": -24.0,
+    "aperiodicity": 0.065,
+    "voiced_hops": 42
+   },
+   "rest": {
+    "f0_median_hz": 218.6,
+    "f0_p90_hz": 256.1,
+    "rms_db": -23.19,
+    "aperiodicity": 0.05,
+    "voiced_hops": 45
+   },
+   "f0_jump_in_st": 6.26,
+   "f0_jump_out_st": 2.2
+  },
+  {
+   "sentence": "backup",
+   "variant": "strong",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.3,
+   "span_s": 1.1,
+   "span": {
+    "f0_median_hz": 202.6,
+    "f0_p90_hz": 214.5,
+    "rms_db": -22.99,
+    "aperiodicity": 0.043,
+    "voiced_hops": 47
+   },
+   "rest": {
+    "f0_median_hz": 223.7,
+    "f0_p90_hz": 253.4,
+    "rms_db": -22.98,
+    "aperiodicity": 0.054,
+    "voiced_hops": 45
+   },
+   "f0_jump_in_st": 4.99,
+   "f0_jump_out_st": 3.35
+  },
+  {
+   "sentence": "backup",
+   "variant": "pitchgain",
+   "text": "You must back up your files before you upgrade.",
+   "span_text": "back up your files",
+   "phonemes": "jˌu mˈʌst bˈæk ˌʌp jʊɹ fˈIlz bəfˈɔɹ ju ˈʌpɡɹˌAd.",
+   "total_s": 3.075,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 190.2,
+    "f0_p90_hz": 210.8,
+    "rms_db": -22.79,
+    "aperiodicity": 0.055,
+    "voiced_hops": 33
+   },
+   "rest": {
+    "f0_median_hz": 227.2,
+    "f0_p90_hz": 258.4,
+    "rms_db": -23.11,
+    "aperiodicity": 0.069,
+    "voiced_hops": 44
+   },
+   "f0_jump_in_st": 5.47,
+   "f0_jump_out_st": 1.71
+  },
+  {
+   "sentence": "really",
+   "variant": "base",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.875,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 219.1,
+    "f0_p90_hz": 238.0,
+    "rms_db": -22.04,
+    "aperiodicity": 0.051,
+    "voiced_hops": 24
+   },
+   "rest": {
+    "f0_median_hz": 186.0,
+    "f0_p90_hz": 261.4,
+    "rms_db": -25.02,
+    "aperiodicity": 0.074,
+    "voiced_hops": 61
+   },
+   "f0_jump_in_st": 0.86,
+   "f0_jump_out_st": 1.54
+  },
+  {
+   "sentence": "really",
+   "variant": "repeat",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.875,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 214.8,
+    "f0_p90_hz": 235.9,
+    "rms_db": -21.8,
+    "aperiodicity": 0.046,
+    "voiced_hops": 24
+   },
+   "rest": {
+    "f0_median_hz": 188.5,
+    "f0_p90_hz": 261.8,
+    "rms_db": -25.07,
+    "aperiodicity": 0.074,
+    "voiced_hops": 61
+   },
+   "f0_jump_in_st": 0.59,
+   "f0_jump_out_st": 1.92
+  },
+  {
+   "sentence": "really",
+   "variant": "stress",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.875,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 218.7,
+    "f0_p90_hz": 236.2,
+    "rms_db": -21.92,
+    "aperiodicity": 0.061,
+    "voiced_hops": 25
+   },
+   "rest": {
+    "f0_median_hz": 185.8,
+    "f0_p90_hz": 261.6,
+    "rms_db": -24.98,
+    "aperiodicity": 0.075,
+    "voiced_hops": 58
+   },
+   "f0_jump_in_st": 0.88,
+   "f0_jump_out_st": 1.12
+  },
+  {
+   "sentence": "really",
+   "variant": "split",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "This step is | really | important for the build.",
+   "total_s": 2.5,
+   "span_s": 0.54,
+   "span": {
+    "f0_median_hz": 205.1,
+    "f0_p90_hz": 263.1,
+    "rms_db": -22.87,
+    "aperiodicity": 0.087,
+    "voiced_hops": 35
+   },
+   "rest": {
+    "f0_median_hz": 226.4,
+    "f0_p90_hz": 279.2,
+    "rms_db": -23.83,
+    "aperiodicity": 0.074,
+    "voiced_hops": 66
+   },
+   "f0_jump_in_st": 5.31,
+   "f0_jump_out_st": 2.64
+  },
+  {
+   "sentence": "really",
+   "variant": "gain",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.875,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 216.5,
+    "f0_p90_hz": 235.3,
+    "rms_db": -18.04,
+    "aperiodicity": 0.049,
+    "voiced_hops": 25
+   },
+   "rest": {
+    "f0_median_hz": 186.3,
+    "f0_p90_hz": 259.1,
+    "rms_db": -24.89,
+    "aperiodicity": 0.075,
+    "voiced_hops": 58
+   },
+   "f0_jump_in_st": 0.77,
+   "f0_jump_out_st": 1.14
+  },
+  {
+   "sentence": "really",
+   "variant": "dur",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.95,
+   "span_s": 0.325,
+   "span": {
+    "f0_median_hz": 223.9,
+    "f0_p90_hz": 227.4,
+    "rms_db": -22.69,
+    "aperiodicity": 0.032,
+    "voiced_hops": 26
+   },
+   "rest": {
+    "f0_median_hz": 186.7,
+    "f0_p90_hz": 255.3,
+    "rms_db": -25.08,
+    "aperiodicity": 0.078,
+    "voiced_hops": 57
+   },
+   "f0_jump_in_st": 0.57,
+   "f0_jump_out_st": 3.83
+  },
+  {
+   "sentence": "really",
+   "variant": "pitch",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.875,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 241.5,
+    "f0_p90_hz": 264.5,
+    "rms_db": -21.89,
+    "aperiodicity": 0.065,
+    "voiced_hops": 23
+   },
+   "rest": {
+    "f0_median_hz": 191.0,
+    "f0_p90_hz": 262.1,
+    "rms_db": -24.99,
+    "aperiodicity": 0.074,
+    "voiced_hops": 60
+   },
+   "f0_jump_in_st": 1.16,
+   "f0_jump_out_st": 2.83
+  },
+  {
+   "sentence": "really",
+   "variant": "combo",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.925,
+   "span_s": 0.3,
+   "span": {
+    "f0_median_hz": 245.1,
+    "f0_p90_hz": 250.8,
+    "rms_db": -20.52,
+    "aperiodicity": 0.047,
+    "voiced_hops": 25
+   },
+   "rest": {
+    "f0_median_hz": 184.6,
+    "f0_p90_hz": 261.9,
+    "rms_db": -24.96,
+    "aperiodicity": 0.079,
+    "voiced_hops": 56
+   },
+   "f0_jump_in_st": 0.92,
+   "f0_jump_out_st": 3.69
+  },
+  {
+   "sentence": "really",
+   "variant": "strong",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.95,
+   "span_s": 0.325,
+   "span": {
+    "f0_median_hz": 255.5,
+    "f0_p90_hz": 261.8,
+    "rms_db": -19.92,
+    "aperiodicity": 0.055,
+    "voiced_hops": 26
+   },
+   "rest": {
+    "f0_median_hz": 186.4,
+    "f0_p90_hz": 254.1,
+    "rms_db": -24.97,
+    "aperiodicity": 0.083,
+    "voiced_hops": 58
+   },
+   "f0_jump_in_st": 1.13,
+   "f0_jump_out_st": 4.78
+  },
+  {
+   "sentence": "really",
+   "variant": "pitchgain",
+   "text": "This step is really important for the build.",
+   "span_text": "really",
+   "phonemes": "ðˌɪs stˈɛp ɪz ɹˈiᵊli ɪmpˈɔɹtᵊnt fɔɹ ðə bˈɪld.",
+   "total_s": 2.875,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 245.8,
+    "f0_p90_hz": 269.4,
+    "rms_db": -19.31,
+    "aperiodicity": 0.055,
+    "voiced_hops": 21
+   },
+   "rest": {
+    "f0_median_hz": 188.7,
+    "f0_p90_hz": 258.0,
+    "rms_db": -24.9,
+    "aperiodicity": 0.075,
+    "voiced_hops": 58
+   },
+   "f0_jump_in_st": 1.31,
+   "f0_jump_out_st": 4.88
+  },
+  {
+   "sentence": "not",
+   "variant": "base",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.4,
+   "span_s": 0.2,
+   "span": {
+    "f0_median_hz": 230.4,
+    "f0_p90_hz": 231.5,
+    "rms_db": -20.37,
+    "aperiodicity": 0.057,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 201.3,
+    "f0_p90_hz": 228.9,
+    "rms_db": -24.57,
+    "aperiodicity": 0.042,
+    "voiced_hops": 59
+   },
+   "f0_jump_in_st": 0.13,
+   "f0_jump_out_st": 1.25
+  },
+  {
+   "sentence": "not",
+   "variant": "repeat",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.4,
+   "span_s": 0.2,
+   "span": {
+    "f0_median_hz": 240.9,
+    "f0_p90_hz": 242.2,
+    "rms_db": -20.07,
+    "aperiodicity": 0.061,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 204.8,
+    "f0_p90_hz": 229.7,
+    "rms_db": -24.52,
+    "aperiodicity": 0.042,
+    "voiced_hops": 61
+   },
+   "f0_jump_in_st": 0.26,
+   "f0_jump_out_st": 2.22
+  },
+  {
+   "sentence": "not",
+   "variant": "stress",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.4,
+   "span_s": 0.2,
+   "span": {
+    "f0_median_hz": 228.8,
+    "f0_p90_hz": 229.7,
+    "rms_db": -20.05,
+    "aperiodicity": 0.047,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 202.3,
+    "f0_p90_hz": 228.1,
+    "rms_db": -24.65,
+    "aperiodicity": 0.045,
+    "voiced_hops": 60
+   },
+   "f0_jump_in_st": 0.06,
+   "f0_jump_out_st": 1.63
+  },
+  {
+   "sentence": "not",
+   "variant": "split",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "Do | NOT | delete the config folder.",
+   "total_s": 2.185,
+   "span_s": 0.565,
+   "span": {
+    "f0_median_hz": 229.4,
+    "f0_p90_hz": 245.7,
+    "rms_db": -22.15,
+    "aperiodicity": 0.041,
+    "voiced_hops": 23
+   },
+   "rest": {
+    "f0_median_hz": 214.1,
+    "f0_p90_hz": 265.7,
+    "rms_db": -23.67,
+    "aperiodicity": 0.073,
+    "voiced_hops": 71
+   },
+   "f0_jump_in_st": 0.64,
+   "f0_jump_out_st": 1.55
+  },
+  {
+   "sentence": "not",
+   "variant": "gain",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.4,
+   "span_s": 0.2,
+   "span": {
+    "f0_median_hz": 235.3,
+    "f0_p90_hz": 236.8,
+    "rms_db": -17.07,
+    "aperiodicity": 0.084,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 198.4,
+    "f0_p90_hz": 229.2,
+    "rms_db": -24.53,
+    "aperiodicity": 0.04,
+    "voiced_hops": 60
+   },
+   "f0_jump_in_st": 0.31,
+   "f0_jump_out_st": 1.67
+  },
+  {
+   "sentence": "not",
+   "variant": "dur",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.45,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 229.3,
+    "f0_p90_hz": 230.2,
+    "rms_db": -19.9,
+    "aperiodicity": 0.045,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 199.3,
+    "f0_p90_hz": 228.2,
+    "rms_db": -24.64,
+    "aperiodicity": 0.041,
+    "voiced_hops": 63
+   },
+   "f0_jump_in_st": 0.09,
+   "f0_jump_out_st": 2.23
+  },
+  {
+   "sentence": "not",
+   "variant": "pitch",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.4,
+   "span_s": 0.2,
+   "span": {
+    "f0_median_hz": 248.2,
+    "f0_p90_hz": 249.3,
+    "rms_db": -20.53,
+    "aperiodicity": 0.099,
+    "voiced_hops": 2
+   },
+   "rest": {
+    "f0_median_hz": 198.1,
+    "f0_p90_hz": 230.2,
+    "rms_db": -24.53,
+    "aperiodicity": 0.042,
+    "voiced_hops": 61
+   },
+   "f0_jump_in_st": 0.39,
+   "f0_jump_out_st": 3.75
+  },
+  {
+   "sentence": "not",
+   "variant": "combo",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.425,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 241.6,
+    "f0_p90_hz": 243.2,
+    "rms_db": -18.57,
+    "aperiodicity": 0.067,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 199.2,
+    "f0_p90_hz": 235.8,
+    "rms_db": -24.59,
+    "aperiodicity": 0.035,
+    "voiced_hops": 59
+   },
+   "f0_jump_in_st": 0.27,
+   "f0_jump_out_st": 2.62
+  },
+  {
+   "sentence": "not",
+   "variant": "strong",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.45,
+   "span_s": 0.25,
+   "span": {
+    "f0_median_hz": 253.3,
+    "f0_p90_hz": 255.2,
+    "rms_db": -18.38,
+    "aperiodicity": 0.087,
+    "voiced_hops": 3
+   },
+   "rest": {
+    "f0_median_hz": 197.0,
+    "f0_p90_hz": 231.2,
+    "rms_db": -24.57,
+    "aperiodicity": 0.048,
+    "voiced_hops": 62
+   },
+   "f0_jump_in_st": 0.55,
+   "f0_jump_out_st": 3.77
+  },
+  {
+   "sentence": "not",
+   "variant": "pitchgain",
+   "text": "Do NOT delete the config folder.",
+   "span_text": "NOT",
+   "phonemes": "dˈu nˈɑt dəlˈit ðə kənfˈɪɡ fˈOldəɹ.",
+   "total_s": 2.4,
+   "span_s": 0.2,
+   "span": {
+    "f0_median_hz": 251.7,
+    "f0_p90_hz": 251.7,
+    "rms_db": -17.99,
+    "aperiodicity": 0.098,
+    "voiced_hops": 1
+   },
+   "rest": {
+    "f0_median_hz": 201.5,
+    "f0_p90_hz": 233.7,
+    "rms_db": -24.43,
+    "aperiodicity": 0.051,
+    "voiced_hops": 61
+   },
+   "f0_jump_in_st": 1.99,
+   "f0_jump_out_st": 2.51
+  },
+  {
+   "sentence": "whole",
+   "variant": "base",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.075,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 191.7,
+    "f0_p90_hz": 195.3,
+    "rms_db": -22.34,
+    "aperiodicity": 0.02,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 216.5,
+    "f0_p90_hz": 269.0,
+    "rms_db": -25.15,
+    "aperiodicity": 0.067,
+    "voiced_hops": 78
+   },
+   "f0_jump_in_st": 1.04,
+   "f0_jump_out_st": 0.64
+  },
+  {
+   "sentence": "whole",
+   "variant": "repeat",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.075,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 191.9,
+    "f0_p90_hz": 196.4,
+    "rms_db": -22.41,
+    "aperiodicity": 0.02,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 203.2,
+    "f0_p90_hz": 260.1,
+    "rms_db": -25.13,
+    "aperiodicity": 0.063,
+    "voiced_hops": 80
+   },
+   "f0_jump_in_st": 0.18,
+   "f0_jump_out_st": 0.7
+  },
+  {
+   "sentence": "whole",
+   "variant": "stress",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.075,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 188.4,
+    "f0_p90_hz": 190.8,
+    "rms_db": -22.63,
+    "aperiodicity": 0.021,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 213.2,
+    "f0_p90_hz": 266.5,
+    "rms_db": -25.01,
+    "aperiodicity": 0.066,
+    "voiced_hops": 79
+   },
+   "f0_jump_in_st": 1.18,
+   "f0_jump_out_st": 0.45
+  },
+  {
+   "sentence": "whole",
+   "variant": "split",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "Please read the | whole | message before you reply.",
+   "total_s": 2.65,
+   "span_s": 0.47,
+   "span": {
+    "f0_median_hz": 191.2,
+    "f0_p90_hz": 255.4,
+    "rms_db": -22.41,
+    "aperiodicity": 0.041,
+    "voiced_hops": 28
+   },
+   "rest": {
+    "f0_median_hz": 202.4,
+    "f0_p90_hz": 263.3,
+    "rms_db": -24.06,
+    "aperiodicity": 0.053,
+    "voiced_hops": 95
+   },
+   "f0_jump_in_st": 4.02,
+   "f0_jump_out_st": 0.53
+  },
+  {
+   "sentence": "whole",
+   "variant": "gain",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.075,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 187.3,
+    "f0_p90_hz": 191.2,
+    "rms_db": -18.86,
+    "aperiodicity": 0.019,
+    "voiced_hops": 16
+   },
+   "rest": {
+    "f0_median_hz": 211.2,
+    "f0_p90_hz": 268.4,
+    "rms_db": -24.99,
+    "aperiodicity": 0.053,
+    "voiced_hops": 76
+   },
+   "f0_jump_in_st": 1.64,
+   "f0_jump_out_st": 0.35
+  },
+  {
+   "sentence": "whole",
+   "variant": "dur",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.125,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 197.7,
+    "f0_p90_hz": 208.3,
+    "rms_db": -21.87,
+    "aperiodicity": 0.022,
+    "voiced_hops": 21
+   },
+   "rest": {
+    "f0_median_hz": 214.9,
+    "f0_p90_hz": 269.0,
+    "rms_db": -25.29,
+    "aperiodicity": 0.062,
+    "voiced_hops": 74
+   },
+   "f0_jump_in_st": 3.77,
+   "f0_jump_out_st": 2.4
+  },
+  {
+   "sentence": "whole",
+   "variant": "pitch",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.075,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 212.6,
+    "f0_p90_hz": 214.5,
+    "rms_db": -21.6,
+    "aperiodicity": 0.016,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 214.4,
+    "f0_p90_hz": 269.2,
+    "rms_db": -25.12,
+    "aperiodicity": 0.06,
+    "voiced_hops": 75
+   },
+   "f0_jump_in_st": 0.02,
+   "f0_jump_out_st": 3.49
+  },
+  {
+   "sentence": "whole",
+   "variant": "combo",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.125,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 210.9,
+    "f0_p90_hz": 223.2,
+    "rms_db": -19.81,
+    "aperiodicity": 0.025,
+    "voiced_hops": 21
+   },
+   "rest": {
+    "f0_median_hz": 208.6,
+    "f0_p90_hz": 269.2,
+    "rms_db": -25.28,
+    "aperiodicity": 0.062,
+    "voiced_hops": 77
+   },
+   "f0_jump_in_st": 0.09,
+   "f0_jump_out_st": 1.58
+  },
+  {
+   "sentence": "whole",
+   "variant": "strong",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.125,
+   "span_s": 0.225,
+   "span": {
+    "f0_median_hz": 222.0,
+    "f0_p90_hz": 229.5,
+    "rms_db": -18.75,
+    "aperiodicity": 0.013,
+    "voiced_hops": 21
+   },
+   "rest": {
+    "f0_median_hz": 211.8,
+    "f0_p90_hz": 271.6,
+    "rms_db": -25.31,
+    "aperiodicity": 0.063,
+    "voiced_hops": 74
+   },
+   "f0_jump_in_st": 1.29,
+   "f0_jump_out_st": 3.63
+  },
+  {
+   "sentence": "whole",
+   "variant": "pitchgain",
+   "text": "Please read the whole message before you reply.",
+   "span_text": "whole",
+   "phonemes": "plˈiz ɹˈid ðə hˈOl mˈɛsɪʤ bəfˈɔɹ ju ɹəplˈI.",
+   "total_s": 3.075,
+   "span_s": 0.175,
+   "span": {
+    "f0_median_hz": 210.3,
+    "f0_p90_hz": 214.1,
+    "rms_db": -18.69,
+    "aperiodicity": 0.018,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 214.2,
+    "f0_p90_hz": 270.1,
+    "rms_db": -25.22,
+    "aperiodicity": 0.056,
+    "voiced_hops": 77
+   },
+   "f0_jump_in_st": 0.21,
+   "f0_jump_out_st": 3.3
+  },
+  {
+   "sentence": "faster",
+   "variant": "base",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.2,
+   "span_s": 0.625,
+   "span": {
+    "f0_median_hz": 180.7,
+    "f0_p90_hz": 184.2,
+    "rms_db": -24.64,
+    "aperiodicity": 0.083,
+    "voiced_hops": 15
+   },
+   "rest": {
+    "f0_median_hz": 207.7,
+    "f0_p90_hz": 254.4,
+    "rms_db": -23.69,
+    "aperiodicity": 0.06,
+    "voiced_hops": 70
+   },
+   "f0_jump_in_st": 2.43,
+   "f0_jump_out_st": 0.17
+  },
+  {
+   "sentence": "faster",
+   "variant": "repeat",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.2,
+   "span_s": 0.625,
+   "span": {
+    "f0_median_hz": 182.6,
+    "f0_p90_hz": 184.9,
+    "rms_db": -24.54,
+    "aperiodicity": 0.067,
+    "voiced_hops": 13
+   },
+   "rest": {
+    "f0_median_hz": 201.8,
+    "f0_p90_hz": 256.1,
+    "rms_db": -23.59,
+    "aperiodicity": 0.051,
+    "voiced_hops": 72
+   },
+   "f0_jump_in_st": 1.96,
+   "f0_jump_out_st": 0.12
+  },
+  {
+   "sentence": "faster",
+   "variant": "stress",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.2,
+   "span_s": 0.625,
+   "span": {
+    "f0_median_hz": 181.5,
+    "f0_p90_hz": 185.0,
+    "rms_db": -24.43,
+    "aperiodicity": 0.064,
+    "voiced_hops": 14
+   },
+   "rest": {
+    "f0_median_hz": 199.9,
+    "f0_p90_hz": 251.7,
+    "rms_db": -23.67,
+    "aperiodicity": 0.052,
+    "voiced_hops": 70
+   },
+   "f0_jump_in_st": 1.88,
+   "f0_jump_out_st": 0.13
+  },
+  {
+   "sentence": "faster",
+   "variant": "split",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "The new splitter is | much faster | than the old one.",
+   "total_s": 2.74,
+   "span_s": 0.95,
+   "span": {
+    "f0_median_hz": 220.2,
+    "f0_p90_hz": 270.4,
+    "rms_db": -22.57,
+    "aperiodicity": 0.066,
+    "voiced_hops": 22
+   },
+   "rest": {
+    "f0_median_hz": 235.6,
+    "f0_p90_hz": 257.1,
+    "rms_db": -23.32,
+    "aperiodicity": 0.048,
+    "voiced_hops": 65
+   },
+   "f0_jump_in_st": 4.52,
+   "f0_jump_out_st": 3.36
+  },
+  {
+   "sentence": "faster",
+   "variant": "gain",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.2,
+   "span_s": 0.625,
+   "span": {
+    "f0_median_hz": 179.9,
+    "f0_p90_hz": 183.5,
+    "rms_db": -20.91,
+    "aperiodicity": 0.072,
+    "voiced_hops": 16
+   },
+   "rest": {
+    "f0_median_hz": 202.9,
+    "f0_p90_hz": 253.7,
+    "rms_db": -23.59,
+    "aperiodicity": 0.057,
+    "voiced_hops": 73
+   },
+   "f0_jump_in_st": 2.22,
+   "f0_jump_out_st": 0.04
+  },
+  {
+   "sentence": "faster",
+   "variant": "dur",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.375,
+   "span_s": 0.8,
+   "span": {
+    "f0_median_hz": 174.8,
+    "f0_p90_hz": 180.6,
+    "rms_db": -24.67,
+    "aperiodicity": 0.067,
+    "voiced_hops": 19
+   },
+   "rest": {
+    "f0_median_hz": 202.0,
+    "f0_p90_hz": 253.9,
+    "rms_db": -23.59,
+    "aperiodicity": 0.051,
+    "voiced_hops": 76
+   },
+   "f0_jump_in_st": 2.52,
+   "f0_jump_out_st": 0.74
+  },
+  {
+   "sentence": "faster",
+   "variant": "pitch",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.2,
+   "span_s": 0.625,
+   "span": {
+    "f0_median_hz": 199.8,
+    "f0_p90_hz": 206.1,
+    "rms_db": -24.17,
+    "aperiodicity": 0.107,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 202.9,
+    "f0_p90_hz": 253.5,
+    "rms_db": -23.77,
+    "aperiodicity": 0.062,
+    "voiced_hops": 71
+   },
+   "f0_jump_in_st": 0.05,
+   "f0_jump_out_st": 0.35
+  },
+  {
+   "sentence": "faster",
+   "variant": "combo",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.325,
+   "span_s": 0.75,
+   "span": {
+    "f0_median_hz": 191.0,
+    "f0_p90_hz": 195.8,
+    "rms_db": -22.65,
+    "aperiodicity": 0.054,
+    "voiced_hops": 15
+   },
+   "rest": {
+    "f0_median_hz": 201.9,
+    "f0_p90_hz": 250.3,
+    "rms_db": -23.6,
+    "aperiodicity": 0.055,
+    "voiced_hops": 78
+   },
+   "f0_jump_in_st": 0.45,
+   "f0_jump_out_st": 0.07
+  },
+  {
+   "sentence": "faster",
+   "variant": "strong",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.375,
+   "span_s": 0.8,
+   "span": {
+    "f0_median_hz": 201.1,
+    "f0_p90_hz": 314.2,
+    "rms_db": -21.35,
+    "aperiodicity": 0.047,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 201.5,
+    "f0_p90_hz": 255.4,
+    "rms_db": -23.73,
+    "aperiodicity": 0.061,
+    "voiced_hops": 75
+   },
+   "f0_jump_in_st": 8.29,
+   "f0_jump_out_st": 0.46
+  },
+  {
+   "sentence": "faster",
+   "variant": "pitchgain",
+   "text": "The new splitter is much faster than the old one.",
+   "span_text": "much faster",
+   "phonemes": "ðə nˈu splˈɪTəɹ ɪz mˈʌʧ fˈæstəɹ ðən ði ˈOld wˈʌn.",
+   "total_s": 3.2,
+   "span_s": 0.625,
+   "span": {
+    "f0_median_hz": 196.6,
+    "f0_p90_hz": 206.1,
+    "rms_db": -21.58,
+    "aperiodicity": 0.083,
+    "voiced_hops": 17
+   },
+   "rest": {
+    "f0_median_hz": 204.5,
+    "f0_p90_hz": 249.6,
+    "rms_db": -23.67,
+    "aperiodicity": 0.055,
+    "voiced_hops": 74
+   },
+   "f0_jump_in_st": 0.58,
+   "f0_jump_out_st": 0.14
+  },
+  {
+   "sentence": "label",
+   "variant": "base",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 3.85,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 242.9,
+    "f0_p90_hz": 302.0,
+    "rms_db": -24.37,
+    "aperiodicity": 0.042,
+    "voiced_hops": 37
+   },
+   "rest": {
+    "f0_median_hz": 192.6,
+    "f0_p90_hz": 229.7,
+    "rms_db": -24.66,
+    "aperiodicity": 0.045,
+    "voiced_hops": 76
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.4
+  },
+  {
+   "sentence": "label",
+   "variant": "repeat",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 3.85,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 243.2,
+    "f0_p90_hz": 301.4,
+    "rms_db": -24.4,
+    "aperiodicity": 0.043,
+    "voiced_hops": 34
+   },
+   "rest": {
+    "f0_median_hz": 193.5,
+    "f0_p90_hz": 246.7,
+    "rms_db": -24.57,
+    "aperiodicity": 0.041,
+    "voiced_hops": 80
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.39
+  },
+  {
+   "sentence": "label",
+   "variant": "stress",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 3.85,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 250.9,
+    "f0_p90_hz": 299.9,
+    "rms_db": -24.25,
+    "aperiodicity": 0.05,
+    "voiced_hops": 34
+   },
+   "rest": {
+    "f0_median_hz": 192.1,
+    "f0_p90_hz": 239.8,
+    "rms_db": -24.69,
+    "aperiodicity": 0.043,
+    "voiced_hops": 81
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.38
+  },
+  {
+   "sentence": "label",
+   "variant": "split",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "Bottom line | : the installed app still runs the old code.",
+   "total_s": 2.88,
+   "span_s": 0.88,
+   "span": {
+    "f0_median_hz": 194.7,
+    "f0_p90_hz": 241.3,
+    "rms_db": -23.93,
+    "aperiodicity": 0.049,
+    "voiced_hops": 38
+   },
+   "rest": {
+    "f0_median_hz": 199.8,
+    "f0_p90_hz": 253.4,
+    "rms_db": -24.39,
+    "aperiodicity": 0.042,
+    "voiced_hops": 85
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 4.17
+  },
+  {
+   "sentence": "label",
+   "variant": "gain",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 3.85,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 244.3,
+    "f0_p90_hz": 297.9,
+    "rms_db": -20.6,
+    "aperiodicity": 0.048,
+    "voiced_hops": 34
+   },
+   "rest": {
+    "f0_median_hz": 193.3,
+    "f0_p90_hz": 243.2,
+    "rms_db": -24.58,
+    "aperiodicity": 0.046,
+    "voiced_hops": 76
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.12
+  },
+  {
+   "sentence": "label",
+   "variant": "dur",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 4.05,
+   "span_s": 1.075,
+   "span": {
+    "f0_median_hz": 230.3,
+    "f0_p90_hz": 295.6,
+    "rms_db": -24.77,
+    "aperiodicity": 0.048,
+    "voiced_hops": 35
+   },
+   "rest": {
+    "f0_median_hz": 188.1,
+    "f0_p90_hz": 247.9,
+    "rms_db": -24.54,
+    "aperiodicity": 0.04,
+    "voiced_hops": 78
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.78
+  },
+  {
+   "sentence": "label",
+   "variant": "pitch",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 3.85,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 267.5,
+    "f0_p90_hz": 344.4,
+    "rms_db": -24.58,
+    "aperiodicity": 0.045,
+    "voiced_hops": 37
+   },
+   "rest": {
+    "f0_median_hz": 194.1,
+    "f0_p90_hz": 241.3,
+    "rms_db": -24.59,
+    "aperiodicity": 0.04,
+    "voiced_hops": 79
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.1
+  },
+  {
+   "sentence": "label",
+   "variant": "combo",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 4.0,
+   "span_s": 1.025,
+   "span": {
+    "f0_median_hz": 245.0,
+    "f0_p90_hz": 325.4,
+    "rms_db": -22.85,
+    "aperiodicity": 0.048,
+    "voiced_hops": 33
+   },
+   "rest": {
+    "f0_median_hz": 196.1,
+    "f0_p90_hz": 244.4,
+    "rms_db": -24.57,
+    "aperiodicity": 0.04,
+    "voiced_hops": 78
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 0.38
+  },
+  {
+   "sentence": "label",
+   "variant": "strong",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 4.05,
+   "span_s": 1.075,
+   "span": {
+    "f0_median_hz": 247.2,
+    "f0_p90_hz": 346.1,
+    "rms_db": -22.11,
+    "aperiodicity": 0.053,
+    "voiced_hops": 35
+   },
+   "rest": {
+    "f0_median_hz": 189.8,
+    "f0_p90_hz": 240.4,
+    "rms_db": -24.43,
+    "aperiodicity": 0.036,
+    "voiced_hops": 81
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 0.53
+  },
+  {
+   "sentence": "label",
+   "variant": "pitchgain",
+   "text": "Bottom line: the installed app still runs the old code.",
+   "span_text": "Bottom line",
+   "phonemes": "bˈɑTəm lˈIn: ði ɪnstˈɔld ˈæp stˈɪl ɹˈʌnz ði ˈOld kˈOd.",
+   "total_s": 3.85,
+   "span_s": 0.875,
+   "span": {
+    "f0_median_hz": 238.5,
+    "f0_p90_hz": 334.6,
+    "rms_db": -21.48,
+    "aperiodicity": 0.038,
+    "voiced_hops": 37
+   },
+   "rest": {
+    "f0_median_hz": 194.4,
+    "f0_p90_hz": 248.1,
+    "rms_db": -24.64,
+    "aperiodicity": 0.047,
+    "voiced_hops": 80
+   },
+   "f0_jump_in_st": null,
+   "f0_jump_out_st": 1.02
+  },
+  {
+   "sentence": "stale",
+   "variant": "base",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.875,
+   "span_s": 0.575,
+   "span": {
+    "f0_median_hz": 166.9,
+    "f0_p90_hz": 211.6,
+    "rms_db": -29.32,
+    "aperiodicity": 0.101,
+    "voiced_hops": 11
+   },
+   "rest": {
+    "f0_median_hz": 205.0,
+    "f0_p90_hz": 264.4,
+    "rms_db": -24.44,
+    "aperiodicity": 0.057,
+    "voiced_hops": 115
+   },
+   "f0_jump_in_st": 0.11,
+   "f0_jump_out_st": 0.46
+  },
+  {
+   "sentence": "stale",
+   "variant": "repeat",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.875,
+   "span_s": 0.575,
+   "span": {
+    "f0_median_hz": 162.0,
+    "f0_p90_hz": 207.2,
+    "rms_db": -29.44,
+    "aperiodicity": 0.096,
+    "voiced_hops": 9
+   },
+   "rest": {
+    "f0_median_hz": 207.9,
+    "f0_p90_hz": 265.0,
+    "rms_db": -24.38,
+    "aperiodicity": 0.059,
+    "voiced_hops": 115
+   },
+   "f0_jump_in_st": 0.79,
+   "f0_jump_out_st": 0.07
+  },
+  {
+   "sentence": "stale",
+   "variant": "stress",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.875,
+   "span_s": 0.575,
+   "span": {
+    "f0_median_hz": 170.1,
+    "f0_p90_hz": 209.6,
+    "rms_db": -29.47,
+    "aperiodicity": 0.112,
+    "voiced_hops": 10
+   },
+   "rest": {
+    "f0_median_hz": 202.5,
+    "f0_p90_hz": 262.6,
+    "rms_db": -24.37,
+    "aperiodicity": 0.057,
+    "voiced_hops": 116
+   },
+   "f0_jump_in_st": 0.06,
+   "f0_jump_out_st": 0.85
+  },
+  {
+   "sentence": "stale",
+   "variant": "split",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "The frozen build is | stale | , so rebuild it before you test.",
+   "total_s": 3.355,
+   "span_s": 0.55,
+   "span": {
+    "f0_median_hz": 197.4,
+    "f0_p90_hz": 247.8,
+    "rms_db": -23.24,
+    "aperiodicity": 0.098,
+    "voiced_hops": 22
+   },
+   "rest": {
+    "f0_median_hz": 212.3,
+    "f0_p90_hz": 272.9,
+    "rms_db": -24.61,
+    "aperiodicity": 0.057,
+    "voiced_hops": 127
+   },
+   "f0_jump_in_st": 3.78,
+   "f0_jump_out_st": 5.83
+  },
+  {
+   "sentence": "stale",
+   "variant": "gain",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.875,
+   "span_s": 0.575,
+   "span": {
+    "f0_median_hz": 162.0,
+    "f0_p90_hz": 203.8,
+    "rms_db": -25.46,
+    "aperiodicity": 0.104,
+    "voiced_hops": 9
+   },
+   "rest": {
+    "f0_median_hz": 208.1,
+    "f0_p90_hz": 264.0,
+    "rms_db": -24.4,
+    "aperiodicity": 0.06,
+    "voiced_hops": 117
+   },
+   "f0_jump_in_st": 0.32,
+   "f0_jump_out_st": 0.12
+  },
+  {
+   "sentence": "stale",
+   "variant": "dur",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 4.025,
+   "span_s": 0.725,
+   "span": {
+    "f0_median_hz": 199.9,
+    "f0_p90_hz": 201.9,
+    "rms_db": -28.05,
+    "aperiodicity": 0.054,
+    "voiced_hops": 13
+   },
+   "rest": {
+    "f0_median_hz": 206.4,
+    "f0_p90_hz": 265.5,
+    "rms_db": -24.28,
+    "aperiodicity": 0.056,
+    "voiced_hops": 116
+   },
+   "f0_jump_in_st": 3.11,
+   "f0_jump_out_st": 1.01
+  },
+  {
+   "sentence": "stale",
+   "variant": "pitch",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.875,
+   "span_s": 0.575,
+   "span": {
+    "f0_median_hz": 179.6,
+    "f0_p90_hz": 224.9,
+    "rms_db": -28.41,
+    "aperiodicity": 0.066,
+    "voiced_hops": 13
+   },
+   "rest": {
+    "f0_median_hz": 205.3,
+    "f0_p90_hz": 267.0,
+    "rms_db": -24.48,
+    "aperiodicity": 0.062,
+    "voiced_hops": 116
+   },
+   "f0_jump_in_st": 1.41,
+   "f0_jump_out_st": 1.75
+  },
+  {
+   "sentence": "stale",
+   "variant": "combo",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.975,
+   "span_s": 0.675,
+   "span": {
+    "f0_median_hz": 186.7,
+    "f0_p90_hz": 210.1,
+    "rms_db": -26.05,
+    "aperiodicity": 0.064,
+    "voiced_hops": 16
+   },
+   "rest": {
+    "f0_median_hz": 208.3,
+    "f0_p90_hz": 265.3,
+    "rms_db": -24.38,
+    "aperiodicity": 0.054,
+    "voiced_hops": 115
+   },
+   "f0_jump_in_st": 1.95,
+   "f0_jump_out_st": 0.29
+  },
+  {
+   "sentence": "stale",
+   "variant": "strong",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 4.025,
+   "span_s": 0.725,
+   "span": {
+    "f0_median_hz": 227.5,
+    "f0_p90_hz": 231.1,
+    "rms_db": -24.84,
+    "aperiodicity": 0.065,
+    "voiced_hops": 15
+   },
+   "rest": {
+    "f0_median_hz": 204.6,
+    "f0_p90_hz": 263.1,
+    "rms_db": -24.39,
+    "aperiodicity": 0.053,
+    "voiced_hops": 113
+   },
+   "f0_jump_in_st": 5.24,
+   "f0_jump_out_st": 1.99
+  },
+  {
+   "sentence": "stale",
+   "variant": "pitchgain",
+   "text": "The frozen build is stale, so rebuild it before you test.",
+   "span_text": "stale",
+   "phonemes": "ðə fɹˈOzən bˈɪld ɪz stˈAl, sˌO ɹibˈɪld ɪt bəfˈɔɹ ju tˈɛst.",
+   "total_s": 3.875,
+   "span_s": 0.575,
+   "span": {
+    "f0_median_hz": 179.5,
+    "f0_p90_hz": 240.6,
+    "rms_db": -25.87,
+    "aperiodicity": 0.085,
+    "voiced_hops": 15
+   },
+   "rest": {
+    "f0_median_hz": 209.4,
+    "f0_p90_hz": 262.4,
+    "rms_db": -24.33,
+    "aperiodicity": 0.053,
+    "voiced_hops": 112
+   },
+   "f0_jump_in_st": 1.47,
+   "f0_jump_out_st": 2.73
+  }
+ ],
+ "app": [
+  {
+   "sentence": "red",
+   "markdown": "I said the **red** one, not the blue one.",
+   "off": {
+    "seconds": 1.85,
+    "spans": []
+   },
+   "on": {
+    "seconds": 1.87,
+    "spans": [
+     "red"
+    ]
+   }
+  },
+  {
+   "sentence": "backup",
+   "markdown": "You must **back up your files** before you upgrade.",
+   "off": {
+    "seconds": 2.23,
+    "spans": []
+   },
+   "on": {
+    "seconds": 2.415,
+    "spans": [
+     "back up your files"
+    ]
+   }
+  },
+  {
+   "sentence": "really",
+   "markdown": "This step is *really* important for the build.",
+   "off": {
+    "seconds": 2.07,
+    "spans": []
+   },
+   "on": {
+    "seconds": 2.12,
+    "spans": [
+     "really"
+    ]
+   }
+  },
+  {
+   "sentence": "not",
+   "markdown": "Do NOT delete the config folder.",
+   "off": {
+    "seconds": 1.59,
+    "spans": []
+   },
+   "on": {
+    "seconds": 1.61,
+    "spans": [
+     "NOT"
+    ]
+   }
+  },
+  {
+   "sentence": "whole",
+   "markdown": "Please read the *whole* message before you reply.",
+   "off": {
+    "seconds": 2.25,
+    "spans": []
+   },
+   "on": {
+    "seconds": 2.295,
+    "spans": [
+     "whole"
+    ]
+   }
+  },
+  {
+   "sentence": "faster",
+   "markdown": "The new splitter is **much faster** than the old one.",
+   "off": {
+    "seconds": 2.38,
+    "spans": []
+   },
+   "on": {
+    "seconds": 2.51,
+    "spans": [
+     "much faster"
+    ]
+   }
+  },
+  {
+   "sentence": "label",
+   "markdown": "**Bottom line:** the installed app still runs the old code.",
+   "off": {
+    "seconds": 2.875,
+    "spans": []
+   },
+   "on": {
+    "seconds": 3.005,
+    "spans": [
+     "Bottom line"
+    ]
+   }
+  },
+  {
+   "sentence": "stale",
+   "markdown": "The frozen build is *stale*, so rebuild it before you test.",
+   "off": {
+    "seconds": 3.03,
+    "spans": []
+   },
+   "on": {
+    "seconds": 3.085,
+    "spans": [
+     "stale"
+    ]
+   }
+  }
+ ]
+}
