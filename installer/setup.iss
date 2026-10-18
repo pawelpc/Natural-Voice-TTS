@@ -5,7 +5,7 @@
 ; Expects PyInstaller output in dist\NaturalVoiceTTS\
 
 #define MyAppName "Natural Voice TTS"
-#define MyAppVersion "1.1.0"
+#define MyAppVersion "1.2.0"
 #define MyAppPublisher "Paul Pawelski"
 #define MyAppExeName "NaturalVoiceTTS.exe"
 
