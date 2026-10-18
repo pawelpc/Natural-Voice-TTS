@@ -280,6 +280,12 @@ def _win32_hotkey_listener(
             ctypes.wintypes.LPARAM,  # lpParam
         ]
 
+        user32.UnregisterClassW.restype = ctypes.wintypes.BOOL
+        user32.UnregisterClassW.argtypes = [
+            ctypes.wintypes.LPCWSTR,
+            ctypes.wintypes.HINSTANCE,
+        ]
+
         user32.RegisterHotKey.restype = ctypes.wintypes.BOOL
         user32.RegisterHotKey.argtypes = [ctypes.wintypes.HWND, ctypes.c_int, ctypes.wintypes.UINT, ctypes.wintypes.UINT]
 
