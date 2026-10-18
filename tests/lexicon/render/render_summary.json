@@ -1,0 +1,39 @@
+{
+ "env": {
+  "python": "3.10.11",
+  "torch": "2.6.0+cu124",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "kokoro": "0.9.4",
+  "misaki": "0.9.4",
+  "force_cpu": ""
+ },
+ "voice": "af_heart",
+ "speed": 1.0,
+ "passages": [
+  {
+   "id": "08_code_blocks_skill_dirs",
+   "category": "code_blocks",
+   "origin": "real",
+   "chunks": 7,
+   "skipped": 0,
+   "silent_words": [],
+   "kokoro_segments": 7,
+   "duration_s": 39.73,
+   "synth_s": 2.36,
+   "wav_sha256": "3d16b002d780dcaf7f0cf0a7904c4922a7a081da7cbcd2193b4627f1e82d986f"
+  },
+  {
+   "id": "14_abbreviations_plugin_plan",
+   "category": "abbreviations",
+   "origin": "real",
+   "chunks": 5,
+   "skipped": 0,
+   "silent_words": [],
+   "kokoro_segments": 5,
+   "duration_s": 65.42,
+   "synth_s": 8.25,
+   "wav_sha256": "ef3a80ff6ab7f051cac53906fa56bd42dade858bb82af74d89b1cad4a5ad7066"
+  }
+ ]
+}

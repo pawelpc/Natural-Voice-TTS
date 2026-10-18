@@ -20,6 +20,8 @@ SRC_DIR = REPO_ROOT / 'src'
 PASSAGES_DIR = REPO_ROOT / 'tests' / 'passages'
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
+# Only the built-in pronunciation list, so results don't depend on the user's own list.
+os.environ.setdefault('NVTTS_USER_LEXICON', '')
 
 logger = logging.getLogger(__name__)
 

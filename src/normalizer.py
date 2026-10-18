@@ -17,6 +17,7 @@ from dataclasses import dataclass
 
 from num2words import num2words
 
+import lexicon
 from text_processor import Chunk, split_chunks
 
 logger = logging.getLogger(__name__)
@@ -486,6 +487,7 @@ def normalize_inline(text: str) -> str:
         text = text.replace(literal, spoken)
     text = re.sub(r'(?<=[\w)])\s*=\s*(?=[\w\[])', ' equals ', text)  # ")" / "[": after LETTER_A_SPOKEN
     text = text.replace('\\', ' ')
+    text = lexicon.apply(text)  # names and brands from the pronunciation list (lexicon.py)
 
     # Tidy spacing left by the substitutions.
     text = re.sub(r'\s+', ' ', text)

@@ -1,0 +1,371 @@
+{
+ "id": "08_code_blocks_skill_dirs",
+ "category": "code_blocks",
+ "origin": "real",
+ "chunks": 7,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 7,
+ "duration_s": 39.73,
+ "synth_s": 2.36,
+ "wav_sha256": "3d16b002d780dcaf7f0cf0a7904c4922a7a081da7cbcd2193b4627f1e82d986f",
+ "pauses": [
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 1205.0,
+   "chunk": 0
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 3630.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 4340.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 5525.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 6570.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 7255.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 10500.0,
+   "chunk": 1
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 12285.0,
+   "chunk": 2
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 17000.0,
+   "chunk": 3
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 18790.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 22245.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 25180.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 25770.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 26555.0,
+   "chunk": 5
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 30550.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 32500.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 35665.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 38025.0,
+   "chunk": 6
+  }
+ ],
+ "sentences": [
+  {
+   "text": "This is very revealing.",
+   "synth_s": 0.152,
+   "ms": 1655.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "This is very revealing.",
+     "phonemes": "ðˌɪs ɪz vˈɛɹi ɹəvˈilɪŋ.",
+     "silent_words": [],
+     "samples": 48600,
+     "ms": 2025.0,
+     "lead_ms": 330.0,
+     "trail_ms": 485.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The working [Cowork](/kˈO wˈɜɹk/) skills (docx, pdf, xlsx, pptx, schedule, etc.) all live under one managed directory:",
+   "synth_s": 0.483,
+   "ms": 9645.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The working Cowork skills (docx, pdf, xlsx, pptx, schedule, etc.) all live under one managed directory:",
+     "phonemes": "ðə wˈɜɹkɪŋ kˈO wˈɜɹk skˈɪlz (dˈɑkɛks, pˌidˌiˈɛf, ˌɛksˌɛlˌɛsˈɛks, pˌipˌitˌiˈɛks, skˈɛʤˌul, ɛtsˈɛTəɹə) ˈɔl lˈɪv ˈʌndəɹ wˈʌn mˈænɪʤd dəɹˈɛktəɹi:",
+     "silent_words": [],
+     "samples": 222000,
+     "ms": 9250.0,
+     "lead_ms": 300.0,
+     "trail_ms": 530.0,
+     "pauses": [
+      {
+       "at_ms": 1640,
+       "ms": 80
+      },
+      {
+       "at_ms": 2080,
+       "ms": 60
+      },
+      {
+       "at_ms": 2280,
+       "ms": 220
+      },
+      {
+       "at_ms": 3010,
+       "ms": 120
+      },
+      {
+       "at_ms": 3140,
+       "ms": 90
+      },
+      {
+       "at_ms": 3930,
+       "ms": 60
+      },
+      {
+       "at_ms": 4120,
+       "ms": 130
+      },
+      {
+       "at_ms": 4910,
+       "ms": 60
+      },
+      {
+       "at_ms": 5090,
+       "ms": 90
+      },
+      {
+       "at_ms": 6290,
+       "ms": 510
+      },
+      {
+       "at_ms": 8390,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Code block skipped.",
+   "synth_s": 0.133,
+   "ms": 1785.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Code block skipped.",
+     "phonemes": "kˈOd blˈɑk skˈɪpt.",
+     "silent_words": [],
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 350.0,
+     "trail_ms": 470.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "But natural-voice-tts was installed to a completely different place:",
+   "synth_s": 0.264,
+   "ms": 4715.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "But natural-voice-tts was installed to a completely different place:",
+     "phonemes": "bˌʌt nˈæʧəɹɹᵊlvˈYstˌitˌiˈɛs wʌz ɪnstˈɔld tə ɐ kəmplˈitli dˈɪfəɹənt plˈAs:",
+     "silent_words": [],
+     "samples": 112800,
+     "ms": 4700.0,
+     "lead_ms": 310.0,
+     "trail_ms": 470.0,
+     "pauses": [
+      {
+       "at_ms": 1810,
+       "ms": 270
+      },
+      {
+       "at_ms": 3150,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Code block skipped.",
+   "synth_s": 0.127,
+   "ms": 1790.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Code block skipped.",
+     "phonemes": "kˈOd blˈɑk skˈɪpt.",
+     "silent_words": [],
+     "samples": 43200,
+     "ms": 1800.0,
+     "lead_ms": 350.0,
+     "trail_ms": 460.0,
+     "pauses": [
+      {
+       "at_ms": 1160,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "That's almost certainly why [Cowork](/kˈO wˈɜɹk/) never sees it — install config dot py drops it in App Data, Claude, skills, which isn't the directory [Cowork](/kˈO wˈɜɹk/) (local-agent-mode) indexes.",
+   "synth_s": 0.617,
+   "ms": 11410.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "That's almost certainly why Cowork never sees it — install config dot py drops it in App Data, Claude, skills, which isn't the directory Cowork (local-agent-mode) indexes.",
+     "phonemes": "ðˈæts ˈɔlmOst sˈɜɹtnli wˌI kˈO wˈɜɹk nˈɛvəɹ sˈiz ɪt — ɪnstˈɔl kənfˈɪɡ dˈɑt pˈI dɹˈɑps ɪt ɪn ˈæp dˈATə, klˈɔd, skˈɪlz, wˌɪʧ ˈɪzᵊnt ðə dəɹˈɛktəɹi kˈO wˈɜɹk (lˈOkəlˈAʤᵊntmˌOd) ˈɪndˌɛksᵻz.",
+     "silent_words": [],
+     "samples": 291600,
+     "ms": 12150.0,
+     "lead_ms": 330.0,
+     "trail_ms": 480.0,
+     "pauses": [
+      {
+       "at_ms": 2980,
+       "ms": 500
+      },
+      {
+       "at_ms": 4660,
+       "ms": 70
+      },
+      {
+       "at_ms": 5770,
+       "ms": 60
+      },
+      {
+       "at_ms": 6210,
+       "ms": 230
+      },
+      {
+       "at_ms": 7410,
+       "ms": 460
+      },
+      {
+       "at_ms": 8620,
+       "ms": 80
+      },
+      {
+       "at_ms": 9370,
+       "ms": 70
+      },
+      {
+       "at_ms": 9460,
+       "ms": 310
+      },
+      {
+       "at_ms": 10690,
+       "ms": 260
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Let me confirm the mechanism — whether that managed dir has a manifest/registry, and how custom skills are meant to register — before I prescribe a fix.",
+   "synth_s": 0.581,
+   "ms": 8725.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Let me confirm the mechanism — whether that managed dir has a manifest/registry, and how custom skills are meant to register — before I prescribe a fix.",
+     "phonemes": "lˈɛt mˌi kənfˈɜɹm ðə mˈɛkənˌɪzəm — wˈɛðəɹ ðˈæt mˈænɪʤd dˈIəɹ hæz ɐ mˈænəfˌɛst ɹˈɛʤəstɹi, ænd hˌW kˈʌstəm skˈɪlz ɑɹ mˈɛnt tə ɹˈɛʤəstəɹ — bəfˈɔɹ ˌI pɹiskɹˈIb ɐ fˈɪks.",
+     "silent_words": [],
+     "samples": 243000,
+     "ms": 10125.0,
+     "lead_ms": 320.0,
+     "trail_ms": 445.0,
+     "pauses": [
+      {
+       "at_ms": 1820,
+       "ms": 460
+      },
+      {
+       "at_ms": 3240,
+       "ms": 120
+      },
+      {
+       "at_ms": 5240,
+       "ms": 390
+      },
+      {
+       "at_ms": 7790,
+       "ms": 390
+      },
+      {
+       "at_ms": 9260,
+       "ms": 70
+      },
+      {
+       "at_ms": 9430,
+       "ms": 90
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

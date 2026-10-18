@@ -65,6 +65,22 @@ The app starts in the system tray. Right-click the tray icon to:
 
 Settings are saved to `%APPDATA%\NaturalVoiceTTS\config.json` and persist between sessions.
 
+### Pronunciation list
+
+Names and brands the voice gets wrong can be given exact phonemes (misaki's phoneme set, the one
+Kokoro uses). The app ships a built-in list in `assets\pronunciations.json`; your own entries go in
+`%APPDATA%\NaturalVoiceTTS\pronunciations.json` and win over the built-in ones:
+
+```json
+{
+  "Cowork": "kˈO wˈɜɹk"
+}
+```
+
+A word matches whole, in any capitalization, unless the entry has a capital inside a word
+(`"iOS"`, `"SQL"`): then only that spelling matches. `'s` is handled for you. Only the spoken
+copy changes; the text on screen doesn't. Edits apply from the next message, no restart.
+
 ### Terminal Mode (fallback)
 
 ```bash
@@ -130,12 +146,15 @@ src/
   main.py           — Terminal-mode entry point (fallback)
   tts_engine.py     — Kokoro TTS wrapper (model loading, synthesis)
   text_processor.py — Sentence splitting and text cleanup
+  normalizer.py     — What is spoken: markdown, paths, numbers, units read aloud
+  lexicon.py        — Pronunciation list applied to the spoken copy
   audio_player.py   — Audio playback with stop/pause/resume
   hotkeys.py        — Global hotkey listener and clipboard grab
   config.py         — Persistent JSON settings
   dialogs.py        — Help and About tkinter dialogs
 assets/
   icon.ico          — System tray icon
+  pronunciations.json — Built-in pronunciation list
 installer/
   setup.iss         — Inno Setup installer script
 ```

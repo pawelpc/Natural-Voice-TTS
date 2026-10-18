@@ -44,6 +44,7 @@ _tv_datas, _tv_binaries, _tv_hiddenimports = collect_all('torchvision')
 datas = [
     # Application assets
     ('assets/icon.ico', 'assets'),
+    ('assets/pronunciations.json', 'assets'),
     # License files
     ('LICENSE', '.'),
     ('NOTICE', '.'),

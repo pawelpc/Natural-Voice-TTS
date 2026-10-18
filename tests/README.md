@@ -2,7 +2,9 @@
 
 Scripts that render and measure how the app speaks. They import the app's own
 modules from `src/`, pin the voice to `af_heart` at speed 1.0, and load the
-Kokoro model from `dist/NaturalVoiceTTS/kokoro_model` (or `NVTTS_MODEL_DIR`).
+Kokoro model from `dist/NaturalVoiceTTS/kokoro_model` (or `NVTTS_MODEL_DIR`). They use only
+the built-in pronunciation list, never the one in `%APPDATA%` (`harness.py` sets `NVTTS_USER_LEXICON`
+empty), so results don't depend on the user's own entries.
 
 | Script | What it does | Output |
 |---|---|---|

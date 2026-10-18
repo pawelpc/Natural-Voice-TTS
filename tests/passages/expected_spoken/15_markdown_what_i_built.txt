@@ -4,6 +4,6 @@ What I built (committed locally as 0 0 1 8 b a 1).
 Plugin package at mcp tts server slash plugin — dot claude plugin slash plugin dot json + skills slash natural voice tts slash SKILL dot md.
 This is now the single source of truth; the old mcp tts server slash skill folder is removed.
 Finalized SKILL dot md with your court-reporter rule spelled out explicitly: speak the written words verbatim; numerals-as-numbers ("Louis the Sixteenth" to "the sixteenth") is fine; nothing added, dropped, reworded, or summarized; one response to both channels; speak every turn until voice off; brevity preference never causes divergence.
-install config dot py fixed — points at the plugin skill, overwrites on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints Cowork import instructions.
+install config dot py fixed — points at the plugin skill, overwrites on reinstall (it previously skipped when a copy existed, which is why stale skill text lingered), and now prints [Cowork](/kˈO wˈɜɹk/) import instructions.
 Closeout doc voice skill registration findings dot md — written to the manager agent, covering what we found (the two-skill-systems discovery, the /-list verification, the corrected understanding versus the old PHASE6 claim) and the recommended registration plan.
 Also refreshed the installed loose copy at App Data, Claude, skills... so it's current for any surface that does read it.
