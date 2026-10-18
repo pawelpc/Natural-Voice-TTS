@@ -17,6 +17,7 @@ from dataclasses import dataclass
 
 from num2words import num2words
 
+import emphasis
 from text_processor import Chunk, split_chunks
 
 logger = logging.getLogger(__name__)
@@ -179,6 +180,7 @@ class Spoken:
     source: str        # the screen text of this chunk
     block: str
     last_in_block: bool
+    emphasis: tuple = ()   # (start, end) spans of `text` to emphasize (only with emphasis.EMPHASIS_ENABLED)
 
 
 # --- Small helpers ---
@@ -423,17 +425,24 @@ def _say_emoji(m: re.Match) -> str:
 
 # --- Inline normalization ---
 
-def normalize_inline(text: str) -> str:
-    """Normalize one chunk of prose for speech (markdown, symbols, numbers, paths)."""
+def normalize_inline(text: str, keep_emphasis: bool = False) -> str:
+    """Normalize one chunk of prose for speech (markdown, symbols, numbers, paths).
+
+    keep_emphasis: leave emphasis.OPEN/CLOSE markers around emphasized words.
+    """
     # Markdown structure that wraps words. Code spans are protected while emphasis
     # is removed, so "`**`" or "_read_exactly" inside code isn't mistaken for markup.
+    # With emphasis on, the emphasized words are kept between markers instead
+    # (emphasis.OPEN/CLOSE); prepare_speech turns them into spans.
     text = LINK_RE.sub(lambda m: m.group(1), text)
     spans: list[str] = []
     text = CODE_SPAN_RE.sub(lambda m: spans.append(m.group(1)) or f'\x00{len(spans) - 1}\x00', text)
     text = STRIKE_RE.sub(lambda m: f'{STRIKE_OPEN} {m.group(1)} {STRIKE_CLOSE}', text)
     for _ in range(2):  # nested emphasis: ***x*** or **_x_**
         for pattern in EMPHASIS_RES:
-            text = pattern.sub(r'\1', text)
+            text = pattern.sub(rf'{emphasis.OPEN}\1{emphasis.CLOSE}' if keep_emphasis else r'\1', text)
+    if keep_emphasis:
+        text = emphasis.mark_caps(text)
     text = re.sub(r'\x00(\d+)\x00', lambda m: spans[int(m.group(1))], text)
 
     text = EMOJI_RE.sub(_say_emoji, text)
@@ -499,11 +508,22 @@ def normalize_inline(text: str) -> str:
 def _with_end(text: str) -> str:
     """Make sure a heading or list item ends like a sentence, so Kokoro uses final intonation."""
     text = text.rstrip()
+    core = text.rstrip(emphasis.MARKERS)   # an emphasis marker at the end isn't the last character
+    closing, text = text[len(core):], core.rstrip()
     if text.endswith(':'):
-        return text[:-1] + '.'
+        return text[:-1] + '.' + closing
     if text and text[-1] not in END_PUNCT and not re.search(r'[.!?…]["\'”’)]+$', text):
-        return text + '.'
-    return text
+        return text + '.' + closing
+    return text + closing
+
+
+def _spoken(text: str, source: str, block: str, last_in_block: bool) -> Spoken:
+    """A Spoken chunk, with any emphasis markers turned into spans of its text.
+
+    A heading is bold as formatting, not emphasis, so it gets no spans.
+    """
+    plain, spans = emphasis.extract(text)
+    return Spoken(plain, source, block, last_in_block, () if block == 'heading' else spans)
 
 
 def _list_item(text: str, first: bool) -> str:
@@ -525,21 +545,21 @@ def _heading(text: str) -> str:
     return _list_item(text, True) if re.match(r'\d{1,3}\.\s', text) else text
 
 
-def _table(rows: list[Chunk]) -> list[Spoken]:
+def _table(rows: list[Chunk], keep: bool) -> list[Spoken]:
     """Read a markdown table as Paul asked (R6): "Table.", header, then rows or a row count."""
     def cells(row: str) -> str:
-        parts = [normalize_inline(c.strip()) for c in row.strip().strip('|').split('|')]
+        parts = [normalize_inline(c.strip(), keep) for c in row.strip().strip('|').split('|')]
         return ', '.join(p for p in parts if p)
 
     header, data = rows[0], rows[1:]
-    out = [Spoken(f'{TABLE_INTRO} {_with_end(cells(header.text))}', header.text, 'table_row', not data)]
+    out = [_spoken(f'{TABLE_INTRO} {_with_end(cells(header.text))}', header.text, 'table_row', not data)]
     if len(data) > TABLE_MAX_READ_ROWS:
         out[0].last_in_block = False
         out.append(Spoken(TABLE_ROWS_NOTE.format(n=len(data)), '\n'.join(r.text for r in data), 'table_row', True))
         return out
     for i, row in enumerate(data, 1):
-        out.append(Spoken(f'{TABLE_ROW_LABEL.format(n=i)} {_with_end(cells(row.text))}', row.text, 'table_row',
-                          i == len(data)))
+        out.append(_spoken(f'{TABLE_ROW_LABEL.format(n=i)} {_with_end(cells(row.text))}', row.text, 'table_row',
+                           i == len(data)))
     return out
 
 
@@ -547,7 +567,21 @@ def prepare_speech(text: str) -> list[Spoken]:
     """Split screen text into chunks and normalize each one for speech.
 
     The input string is not modified. Chunks that end up with no words are dropped.
+    With emphasis.EMPHASIS_ENABLED, chunks also carry emphasis spans; a chunk keeps
+    them only if its words are exactly what it says with emphasis off (a marker
+    must never change a reading, e.g. "Louis **XVI**").
     """
+    out = _prepare(text, keep=False)
+    if not emphasis.EMPHASIS_ENABLED:
+        return out
+    marked = _prepare(text, keep=True)
+    if len(marked) != len(out):
+        logger.debug("Emphasis dropped: chunking changed for %.60s", text)
+        return out
+    return [m if m.text == o.text else o for m, o in zip(marked, out)]
+
+
+def _prepare(text: str, keep: bool) -> list[Spoken]:
     chunks = split_chunks(text)
     out: list[Spoken] = []
     i = 0
@@ -557,23 +591,23 @@ def prepare_speech(text: str) -> list[Spoken]:
             j = i
             while j < len(chunks) and chunks[j].block == 'table_row':
                 j += 1
-            out.extend(_table(chunks[i:j]))
+            out.extend(_table(chunks[i:j], keep))
             i = j
             continue
         if chunk.block == 'code':
             spoken = CODE_BLOCK_NOTE
         elif chunk.block == 'heading':
-            spoken = _with_end(normalize_inline(_heading(chunk.text)))
+            spoken = _with_end(normalize_inline(_heading(chunk.text), keep))
         elif chunk.block == 'list_item':
             first = i == 0 or chunks[i - 1].last_in_block
-            spoken = normalize_inline(_list_item(chunk.text, first))
+            spoken = normalize_inline(_list_item(chunk.text, first), keep)
             spoken = _with_end(spoken) if chunk.last_in_block else spoken
         elif chunk.block == 'quote':
-            spoken = normalize_inline(re.sub(r'^\s*>\s?', '', chunk.text))
+            spoken = normalize_inline(re.sub(r'^\s*>\s?', '', chunk.text), keep)
         else:
-            spoken = normalize_inline(chunk.text)
+            spoken = normalize_inline(chunk.text, keep)
         if re.search(r'[^\W_]', spoken):
-            out.append(Spoken(spoken, chunk.text, chunk.block, chunk.last_in_block))
+            out.append(_spoken(spoken, chunk.text, chunk.block, chunk.last_in_block))
         else:
             logger.debug("Dropped chunk with nothing to say: %.60s", chunk.text)
         i += 1

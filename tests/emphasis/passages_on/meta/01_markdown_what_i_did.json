@@ -1,0 +1,365 @@
+{
+ "id": "01_markdown_what_i_did",
+ "category": "markdown",
+ "origin": "real",
+ "chunks": 9,
+ "skipped": 0,
+ "silent_words": [],
+ "kokoro_segments": 6,
+ "duration_s": 65.76,
+ "synth_s": 8.38,
+ "wav_sha256": "0b0d61c4131d4e1d6af93fe92b9bb05e776ad2f2435d7deac059b4182ae1b7b1",
+ "pauses": [
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 635.0,
+   "chunk": 0
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 4005.0,
+   "chunk": 1
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 9100.0,
+   "chunk": 2
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 12665.0,
+   "chunk": 2
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 15335.0,
+   "chunk": 2
+  },
+  {
+   "kind": "heading",
+   "target_ms": 800,
+   "at_ms": 16865.0,
+   "chunk": 3
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 21115.0,
+   "chunk": 4
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 25965.0,
+   "chunk": 5
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 26470.0,
+   "chunk": 5
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 32155.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 35470.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 40355.0,
+   "chunk": 6
+  },
+  {
+   "kind": "sentence",
+   "target_ms": 450,
+   "at_ms": 46275.0,
+   "chunk": 6
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 48800.0,
+   "chunk": 7
+  },
+  {
+   "kind": "paragraph",
+   "target_ms": 800,
+   "at_ms": 51230.0,
+   "chunk": 7
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 56265.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 59320.0,
+   "chunk": 8
+  },
+  {
+   "kind": "comma",
+   "target_ms": 200,
+   "at_ms": 62285.0,
+   "chunk": 8
+  }
+ ],
+ "sentences": [
+  {
+   "text": "What I did.",
+   "synth_s": 0.822,
+   "ms": 1435.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "What I did.",
+     "phonemes": "wˌʌt ˌI dˈɪd.",
+     "silent_words": [],
+     "samples": 36000,
+     "ms": 1500.0,
+     "lead_ms": 370.0,
+     "trail_ms": 490.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "Followed the diagnose-then-fix workflow from the brief.",
+   "synth_s": 0.268,
+   "ms": 3020.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Followed the diagnose-then-fix workflow from the brief.",
+     "phonemes": "fˈɑlOd ðə dˌIəɡnˈOsðˌɛnfˈɪks wˈɜɹkflˌO fɹʌm ðə bɹˈif.",
+     "silent_words": [],
+     "samples": 82200,
+     "ms": 3425.0,
+     "lead_ms": 340.0,
+     "trail_ms": 515.0,
+     "pauses": [
+      {
+       "at_ms": 2020,
+       "ms": 60
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Root cause confirmed as D1 (short-read on the byte-mode named pipe) — via code analysis plus a deterministic simulation, since I can't run the live pipe from the sandbox.",
+   "synth_s": 1.148,
+   "ms": 11680.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "Root cause.",
+   "synth_s": 0.215,
+   "ms": 1530.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "Root cause.",
+     "phonemes": "ɹˈut kˈɔz.",
+     "silent_words": [],
+     "samples": 39000,
+     "ms": 1625.0,
+     "lead_ms": 390.0,
+     "trail_ms": 505.0,
+     "pauses": []
+    }
+   ]
+  },
+  {
+   "text": "The pipe path is the only one that reassembles text from bytes.",
+   "synth_s": 0.37,
+   "ms": 3900.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The pipe path is the only one that reassembles text from bytes.",
+     "phonemes": "ðə pˈIp pˈæθ ɪz ði ˈOnli wˈʌn ðæt ɹˌiəsˈɛmbᵊlz tˈɛkst fɹʌm bˈIts.",
+     "silent_words": [],
+     "samples": 100800,
+     "ms": 4200.0,
+     "lead_ms": 300.0,
+     "trail_ms": 450.0,
+     "pauses": [
+      {
+       "at_ms": 580,
+       "ms": 90
+      },
+      {
+       "at_ms": 920,
+       "ms": 200
+      },
+      {
+       "at_ms": 1330,
+       "ms": 60
+      },
+      {
+       "at_ms": 1970,
+       "ms": 130
+      },
+      {
+       "at_ms": 3570,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "In pipe listener dot py the payload was read with a single ReadFile(pipe, length).",
+   "synth_s": 0.731,
+   "ms": 5355.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "Windows PIPE TYPE BYTE pipes don't guarantee one ReadFile returns all requested bytes — for longer agent responses the payload arrives fragmented, so the single read returned a truncated prefix (tail sentences vanish), or a cut mid-UTF-8-sequence made decode raise and the broad except dropped the whole message.",
+   "synth_s": 2.584,
+   "ms": 19805.0,
+   "skipped": false,
+   "kokoro_segments": []
+  },
+  {
+   "text": "The hotkey path never touches the pipe, which is exactly why it never dropped anything.",
+   "synth_s": 1.493,
+   "ms": 5305.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "The hotkey path never touches the pipe, which is exactly why it never dropped anything.",
+     "phonemes": "ðə hˈɑtki pˈæθ nˈɛvəɹ tˈʌʧᵻz ðə pˈIp, wˌɪʧ ɪz ɪɡzˈæktli wˌI ɪt nˈɛvəɹ dɹˈɑpt ˈɛniθˌɪŋ.",
+     "silent_words": [],
+     "samples": 133200,
+     "ms": 5550.0,
+     "lead_ms": 300.0,
+     "trail_ms": 520.0,
+     "pauses": [
+      {
+       "at_ms": 590,
+       "ms": 60
+      },
+      {
+       "at_ms": 1070,
+       "ms": 130
+      },
+      {
+       "at_ms": 2300,
+       "ms": 490
+      },
+      {
+       "at_ms": 3450,
+       "ms": 60
+      },
+      {
+       "at_ms": 4480,
+       "ms": 70
+      },
+      {
+       "at_ms": 4800,
+       "ms": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "My simulation with a less than or equal to 5-byte-per-call fake ReadFile: old single read returned 5 of 102 bytes; new read exactly returns all 102, and mid-stream EOF raises a clean IOError.",
+   "synth_s": 0.75,
+   "ms": 13730.0,
+   "skipped": false,
+   "kokoro_segments": [
+    {
+     "graphemes": "My simulation with a less than or equal to 5-byte-per-call fake ReadFile: old single read returned 5 of 102 bytes; new read exactly returns all 102, and mid-stream EOF raises a clean IOError.",
+     "phonemes": "mˌI sˌɪmjəlˈAʃən wɪð ɐ lˈɛs ðən ɔɹ ˈikwᵊl tə fˈIv bˈIt pɜɹ kˈɔl fˈAk ɹˌidfˈIl: ˈOld sˈɪŋɡᵊl ɹˈid ɹətˈɜɹnd fˈIv ʌv wˈʌn hˈʌndɹəd tˈu bˈIts; nˈu ɹˈɛd ɪɡzˈæktli ɹətˈɜɹnz ˈɔl wˈʌn hˈʌndɹəd tˈu, ænd mˌɪdstɹˈim ˌiˌOˈɛf ɹˈAzᵻz ɐ klˈin ˌIˈO ˈɛɹəɹ.",
+     "silent_words": [],
+     "samples": 373800,
+     "ms": 15575.0,
+     "lead_ms": 320.0,
+     "trail_ms": 555.0,
+     "pauses": [
+      {
+       "at_ms": 1760,
+       "ms": 60
+      },
+      {
+       "at_ms": 2560,
+       "ms": 60
+      },
+      {
+       "at_ms": 2840,
+       "ms": 80
+      },
+      {
+       "at_ms": 3080,
+       "ms": 160
+      },
+      {
+       "at_ms": 3340,
+       "ms": 70
+      },
+      {
+       "at_ms": 3970,
+       "ms": 60
+      },
+      {
+       "at_ms": 4560,
+       "ms": 600
+      },
+      {
+       "at_ms": 7800,
+       "ms": 90
+      },
+      {
+       "at_ms": 8010,
+       "ms": 540
+      },
+      {
+       "at_ms": 10170,
+       "ms": 60
+      },
+      {
+       "at_ms": 11320,
+       "ms": 420
+      },
+      {
+       "at_ms": 12430,
+       "ms": 70
+      },
+      {
+       "at_ms": 13140,
+       "ms": 90
+      },
+      {
+       "at_ms": 13740,
+       "ms": 80
+      },
+      {
+       "at_ms": 13880,
+       "ms": 80
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -241,11 +241,14 @@ def synthesize_segments(
     text: str,
     voice: str = DEFAULT_VOICE,
     speed: float = DEFAULT_SPEED,
+    emphasis_spans: tuple = (),
 ) -> 'Generator[tuple[str, np.ndarray, list], None, None]':
     """Synthesize text, also yielding Kokoro's tokens (with start_ts/end_ts in seconds).
 
     Yields (graphemes, audio, tokens). The token timestamps let the caller find
     the pause at each comma (pauses.set_clause_pauses).
+    emphasis_spans: (start, end) character ranges of text to emphasize
+    (emphasis.py); empty means Kokoro's own pipeline, unchanged.
     Logs timing information to detect CPU fallback or performance issues.
     """
     pipeline = get_pipeline()
@@ -257,17 +260,21 @@ def synthesize_segments(
         chunk_count = 0
         total_samples = 0
 
-        for result in pipeline(
-            text,
-            voice=voice,
-            speed=speed,
-            split_pattern=SPLIT_PATTERN,
-        ):
-            audio = result.audio
+        if emphasis_spans:
+            import emphasis
+            results = emphasis.synthesize(pipeline, text, emphasis_spans, voice, speed, SPLIT_PATTERN)
+        else:
+            results = ((r.graphemes, r.audio, r.tokens) for r in pipeline(
+                text,
+                voice=voice,
+                speed=speed,
+                split_pattern=SPLIT_PATTERN,
+            ))
+        for graphemes, audio, tokens in results:
             if audio is not None and len(audio) > 0:
                 chunk_count += 1
                 total_samples += len(audio)
-                yield result.graphemes, audio, result.tokens or []
+                yield graphemes, audio, tokens or []
 
         elapsed = time.time() - start_time
         audio_duration = total_samples / SAMPLE_RATE if chunk_count > 0 else 0

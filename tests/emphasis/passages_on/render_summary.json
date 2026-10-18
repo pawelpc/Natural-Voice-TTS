@@ -1,0 +1,63 @@
+{
+ "env": {
+  "python": "3.10.11",
+  "torch": "2.6.0+cu124",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "kokoro": "0.9.4",
+  "misaki": "0.9.4",
+  "force_cpu": ""
+ },
+ "voice": "af_heart",
+ "speed": 1.0,
+ "passages": [
+  {
+   "id": "01_markdown_what_i_did",
+   "category": "markdown",
+   "origin": "real",
+   "chunks": 9,
+   "skipped": 0,
+   "silent_words": [],
+   "kokoro_segments": 6,
+   "duration_s": 65.76,
+   "synth_s": 8.38,
+   "wav_sha256": "0b0d61c4131d4e1d6af93fe92b9bb05e776ad2f2435d7deac059b4182ae1b7b1"
+  },
+  {
+   "id": "03_paths_urls_source_vs_frozen",
+   "category": "paths_urls",
+   "origin": "real",
+   "chunks": 10,
+   "skipped": 0,
+   "silent_words": [],
+   "kokoro_segments": 7,
+   "duration_s": 73.14,
+   "synth_s": 4.08,
+   "wav_sha256": "4a331a8bdbb623461eb78686b2560f0135b74858a320c9b0039c9bf0b0c286a2"
+  },
+  {
+   "id": "04_rhythm_solid_confirmation",
+   "category": "rhythm",
+   "origin": "real",
+   "chunks": 13,
+   "skipped": 0,
+   "silent_words": [],
+   "kokoro_segments": 6,
+   "duration_s": 76.47,
+   "synth_s": 4.35,
+   "wav_sha256": "307d1f91c31ad72216593eb3aa07301f120e8c07312a68940e30549edeb4018a"
+  },
+  {
+   "id": "15_markdown_what_i_built",
+   "category": "markdown",
+   "origin": "real",
+   "chunks": 9,
+   "skipped": 0,
+   "silent_words": [],
+   "kokoro_segments": 5,
+   "duration_s": 82.57,
+   "synth_s": 4.48,
+   "wav_sha256": "215345ce6699b3da2d38f29fd02e936e597f8b115bd5e37c63b297e257a396db"
+  }
+ ]
+}

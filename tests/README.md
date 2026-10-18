@@ -12,7 +12,11 @@ Kokoro model from `dist/NaturalVoiceTTS/kokoro_model` (or `NVTTS_MODEL_DIR`).
 | `probe_hypotheses.py` | Phase 0 evidence for H1–H4 | `<out>/hypotheses.json`, `<out>/probe/*.wav` |
 | `compare_ttfa.py` | R3 check: TTFA of two checkouts in alternating (ABBA) rounds, with a 95% CI | `--out` JSON with pass/fail |
 | `measure_pauses.py` | Phase 3 gate: each deliberate pause's silent run in the WAV vs its target (±50 ms) | `--out` JSON with pass/fail |
+| `probe_emphasis.py` | Emphasis research (Paul's note #13): renders each option, measures span length, pitch and loudness, and renders the prototype through the app path | `<out>/emphasis.json`, `<out>/wav/*.wav` |
+| `emphasis_page.py` | Writes `emphasis/listen.html`, a local page to listen to those renders (see `emphasis/FINDINGS.md`) | `tests/emphasis/listen.html` |
 | `test_*.py` | Unit tests: `python -m pytest tests -q` | |
+
+`render_passages.py --emphasis` renders with the emphasis prototype on (`src/emphasis.py`, off by default).
 
 Passages live in `passages/` (one category each, provenance in `manifest.json`).
 
