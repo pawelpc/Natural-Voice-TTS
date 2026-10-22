@@ -84,7 +84,7 @@ def render_chunk(tts_engine, chunks: list, i: int, voice: str, speed: float):
     Returns (audio, pause_marks); audio is None when nothing could be produced.
     """
     text = chunks[i].text
-    # Emphasized words (emphasis.py, off by default) take a separate synthesis path.
+    # Emphasized words (emphasis.py) take a separate synthesis path.
     spans = chunks[i].emphasis
     extra = {'emphasis_spans': spans} if spans else {}
     try:

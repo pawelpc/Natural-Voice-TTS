@@ -1,4 +1,4 @@
-"""Emphasis prototype (src/emphasis.py, Paul's Phase 4 note #13), off by default.
+"""Spoken emphasis (src/emphasis.py, Paul's Phase 4 note #13), on by default.
 
 Normalizer and helper tests need no model. The Kokoro tests load the local
 model (NVTTS_MODEL_DIR, this repo's dist/, or the main checkout's dist/) and
@@ -28,8 +28,15 @@ def spans_of(markdown: str) -> list[tuple[str, list[str]]]:
     return [(c.text, [c.text[a:b] for a, b in c.emphasis]) for c in prepare_speech(markdown)]
 
 
-def test_off_by_default() -> None:
-    assert emphasis.EMPHASIS_ENABLED is False
+def test_on_by_default() -> None:
+    """Paul approved the prototype as it is (2026-10-22)."""
+    assert emphasis.EMPHASIS_ENABLED is True
+    assert spans_of('I said the **red** one, and Do NOT go.') == [
+        ('I said the red one, and Do NOT go.', ['red', 'NOT'])]
+
+
+def test_switched_off(monkeypatch) -> None:
+    monkeypatch.setattr(emphasis, 'EMPHASIS_ENABLED', False)
     assert spans_of('I said the **red** one, and Do NOT go.') == [('I said the red one, and Do NOT go.', [])]
 
 

@@ -1,6 +1,7 @@
 """Spoken emphasis for **bold**, *italic* and ALL-CAPS words (Paul, Phase 4 note #13).
 
-Off by default (EMPHASIS_ENABLED). Kokoro has no emphasis input, so the span is
+On by default since Paul approved the prototype (EMPHASIS_ENABLED; set it False to
+read emphasized words plain). Kokoro has no emphasis input, so the span is
 changed inside Kokoro's own single forward pass, with the same weights:
   - duration: the span's phonemes get a lower speed (Kokoro divides each
     phoneme's predicted duration by `speed`, which may be a per-phoneme tensor);
@@ -21,7 +22,7 @@ import numpy as np
 
 logger = logging.getLogger(__name__)
 
-EMPHASIS_ENABLED = False     # prototype: off until Paul has listened (tests/emphasis/listen.html)
+EMPHASIS_ENABLED = True      # Paul listened (tests/emphasis/listen.html) and kept it as prototyped, 2026-10-22
 
 # --- Strength (moderate; "strong" in the findings was 0.80 / 1.15 / 3.0) ---
 EMPHASIS_DURATION = 0.85     # speed on the span's phonemes: about 12% longer

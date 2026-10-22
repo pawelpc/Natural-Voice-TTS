@@ -1,5 +1,7 @@
 # Emphasis for bold, *italic* and ALL-CAPS words: findings
 
+**Status (2026-10-22):** Paul listened and kept it as prototyped; `EMPHASIS_ENABLED` is now `True`.
+
 Paul's Phase 4 note #13. Research, then a prototype that is **off by default** (`src/emphasis.py`,
 `EMPHASIS_ENABLED = False`). Date: 2026-10-17. Same model file, voice `af_heart`, default speed 1.0 (R1).
 

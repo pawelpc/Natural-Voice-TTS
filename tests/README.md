@@ -18,7 +18,7 @@ empty), so results don't depend on the user's own entries.
 | `emphasis_page.py` | Writes `emphasis/listen.html`, a local page to listen to those renders (see `emphasis/FINDINGS.md`) | `tests/emphasis/listen.html` |
 | `test_*.py` | Unit tests: `python -m pytest tests -q` | |
 
-`render_passages.py --emphasis` renders with the emphasis prototype on (`src/emphasis.py`, off by default).
+`render_passages.py --no-emphasis` renders with spoken emphasis off (`src/emphasis.py`, on by default).
 
 Passages live in `passages/` (one category each, provenance in `manifest.json`).
 

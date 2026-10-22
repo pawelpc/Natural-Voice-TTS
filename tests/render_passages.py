@@ -90,12 +90,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--out', type=Path, default=harness.REPO_ROOT / 'tests' / 'baseline')
     parser.add_argument('--only', nargs='*', help='passage ids to render (default: all)')
-    parser.add_argument('--emphasis', action='store_true',
-                        help='turn on emphasis.EMPHASIS_ENABLED (emphasized chunks bypass the recorder)')
+    parser.add_argument('--no-emphasis', action='store_true',
+                        help='turn emphasis.EMPHASIS_ENABLED off (when on, emphasized chunks bypass the recorder)')
     args = parser.parse_args()
-    if args.emphasis:
+    if args.no_emphasis:
         import emphasis
-        emphasis.EMPHASIS_ENABLED = True
+        emphasis.EMPHASIS_ENABLED = False
     summary = render(args.out, args.only)
     total = sum(p['duration_s'] for p in summary['passages'])
     print(f"Rendered {len(summary['passages'])} passages, {total:.1f} s of audio -> {args.out}")
