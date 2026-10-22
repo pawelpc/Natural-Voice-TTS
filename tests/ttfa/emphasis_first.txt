@@ -1,0 +1,1 @@
+**Important:** do NOT delete the dist folder before the build finishes. It holds the only local copy of the model, and the build copies it back from the cache.

@@ -38,12 +38,15 @@ def bootstrap_change_ci(before: list[float], after: list[float]) -> tuple[float,
     return changes[int(0.025 * len(changes))], changes[int(0.975 * len(changes))]
 
 
-def run_once(root: Path, repeats: int, out: Path, passages: list[str] | None) -> dict:
+def run_once(root: Path, repeats: int, out: Path, passages: list[str] | None,
+             extra: list[Path] | None = None) -> dict:
     env = dict(os.environ, NVTTS_MODEL_DIR=str(harness.REPO_ROOT / 'dist' / 'NaturalVoiceTTS' / 'kokoro_model'),
                PYTHONIOENCODING='utf-8')
     cmd = [sys.executable, str(root / 'tests' / 'measure_ttfa.py'), '--repeats', str(repeats), '--out', str(out)]
     if passages:
         cmd += ['--passages', *passages]
+    if extra:
+        cmd += ['--extra-passage', *[str(f.resolve()) for f in extra]]
     subprocess.run(cmd, cwd=root, env=env, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     return json.loads(out.read_text(encoding='utf-8'))
 
@@ -55,6 +58,8 @@ def main() -> None:
     parser.add_argument('--rounds', type=int, default=3)
     parser.add_argument('--repeats', type=int, default=5)
     parser.add_argument('--passages', nargs='*', help='passage ids (default: measure_ttfa.py defaults)')
+    parser.add_argument('--extra-passage', type=Path, nargs='*', default=[],
+                        help='text files also measured (first), on both sides; needs a measure_ttfa.py that knows --extra-passage')
     parser.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
 
@@ -64,7 +69,8 @@ def main() -> None:
         for rnd in range(args.rounds):
             # ABBA order: which side runs first alternates, so a first/second-in-round bias cancels out.
             for side, root in (sides if rnd % 2 == 0 else sides[::-1]):
-                result = run_once(root.resolve(), args.repeats, Path(tmp) / f'{side}{rnd}.json', args.passages)
+                result = run_once(root.resolve(), args.repeats, Path(tmp) / f'{side}{rnd}.json', args.passages,
+                                  args.extra_passage)
                 for pid, p in result['passages'].items():
                     samples[side].setdefault(pid, []).extend(r['ttfa_s'] for r in p['runs'])
                 print(f'round {rnd + 1} {side} done', flush=True)

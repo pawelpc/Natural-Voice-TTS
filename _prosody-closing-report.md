@@ -477,3 +477,50 @@ Edge cases of the #27 rule, as written: "4:3" stays as is (neither number is ove
   48 "Hidden import not found" PyInstaller messages (`munch`, `torch.distributed._shard.checkpoint.*`)
   caused no error at startup or on that read. The test instance was then closed; no app process left running.
 - `src/main.py` (terminal fallback) still runs with the new splitter but not the normalizer or pauses.
+---
+
+## After the release: review of the merged follow-up sessions (2026-10-22)
+
+The pronunciation list (`b18f35a`, Paul's note #8) and spoken emphasis (`868153a`, note #13; switched on by
+default in `8061bf8`) were merged onto master after v1.2.0 was published. **They are not in the 1.2.0 installer**
+(the `v1.2.0` tag is at `b57abfc`; the GitHub asset is the 1,885,275,055-byte build tested above).
+
+Review findings:
+- **Sound:** 345 tests passed as merged. R2 holds (no change to `mcp_tts_server/` or `pipe_listener.py`).
+  `emphasis.forward()` matches kokoro 0.9.4's `forward_with_tokens` line for line apart from the two intended
+  changes (per-phoneme speed with span-aware rounding, scaled F0). Pause gate with emphasis on: 104/104
+  (`tests/emphasis/passages_on/pauses.json`). An emphasized sentence costs ~7% more to synthesize
+  (`tests/emphasis/synth_cost.json`).
+- **Regression found and fixed:** with emphasis on, the first text after startup containing an ALL-CAPS word
+  took **2,726 ms** to prepare instead of 3.7 ms. `emphasis._golds()` built a second copy of misaki's
+  178,646-entry dictionary (2.69 s). Neither R3 run had seen it: the emphasis R3 (`tests/emphasis/r3.json`)
+  ran while emphasis was still off, and R3 takes medians of warm runs. **Fix:** `_golds()` now reuses the
+  running pipeline's own US dictionary (`pipeline.g2p.lexicon.golds`), and loads a copy once only when there
+  is no pipeline. After the fix, with Kokoro loaded, the first `prepare_speech()` took **8.4 ms**, and the dictionary
+  is the pipeline's own object. Tests: `test_golds_reuses_the_pipeline_dictionary`,
+  `test_golds_ignores_a_british_pipeline`.
+- **R3 with emphasis on** (`tests/emphasis/r3_emphasis_on.json`; released 1.2.0 `b57abfc` vs master with the
+  fix; ABBA, 6 rounds × 5 runs; both sides timed with the current `measure_ttfa.py`):
+
+  | Passage | 1.2.0 | Now | Change (95% CI) |
+  |---|---|---|---|
+  | `ttfa/emphasis_first.txt` (emphasized first chunk: "Important", "NOT") | 0.469 s | 0.499 s | +6.4% (−20.0% to +11.3%) |
+  | 17 July regression | 0.135 s | 0.134 s | −1.0% (−5.5% to +4.6%) |
+  | 16 `speak` call | 0.282 s | 0.284 s | +0.6% (−11.6% to +21.2%) |
+  | 01 markdown | 0.117 s | 0.122 s | +4.3% (−1.4% to +9.3%) |
+
+  **Pass** by the median rule (worst +6.4%, in line with the 7% synthesis cost). It is not fully resolved,
+  because some confidence intervals reach past +10%. First read after startup (run 1 of each process, emphasized
+  passage): 0.238–0.264 s before, 0.254–0.296 s now, so the 2.7 s delay is gone. That passage's later runs are
+  slower than its first on both sides, which points to the harness, not the code.
+- **Corrected:** `emphasis.py` comments claimed "about 12% longer" and "+1.6 semitones". The measured effect
+  (FINDINGS.md) is about +20% span length, +8% pitch and +1.8 dB; README and comments now give the measured values.
+- **README:** a "Coming in the next release" section; the pronunciation list and spoken emphasis are marked as
+  not in the 1.2.0 installer. Spoken emphasis is now documented, including how to turn it off.
+- **Minor:** `emphasis` added to the spec's source-module list (it was bundled anyway through the normalizer's
+  import). The render harness doesn't record emphasized chunks' Kokoro segments. R4 for their words is still
+  covered by `test_every_word_gets_phonemes`, which runs the same misaki G2P.
+- **Paul's uncommitted MCP edits** (`install_config.py`, plugin `SKILL.md`) are no longer on disk. The working
+  tree matches the July commit, and no commit or stash holds them. Who reverted them is not known. A byte-exact
+  copy from before the Phase 5 build is in this session's scratchpad (`paul_mcp_edits_backup/`).
+- Not verified by me: that Paul approved emphasis on by default (it is stated in `8061bf8`'s message).

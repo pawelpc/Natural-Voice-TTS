@@ -26,7 +26,7 @@ DEFAULT_REPEATS = 5
 MAX_CHUNKS = 4  # plays per run before stopping; TTFA and early gaps are what matter
 
 
-def measure(passage_ids: list[str], repeats: int) -> dict:
+def measure(passage_ids: list[str], repeats: int, extra: dict[str, str] | None = None) -> dict:
     """Run each passage through app._worker `repeats` times and collect timings."""
     harness.setup_logging()
     tts_engine = harness.load_engine()
@@ -61,6 +61,7 @@ def measure(passage_ids: list[str], repeats: int) -> dict:
     worker.start()
 
     texts = {e['id']: e['text'] for e in harness.load_manifest()}
+    texts.update(extra or {})  # --extra-passage texts, outside the passage set
     result = {'env': harness.env_info(), 'repeats': repeats, 'max_chunks': MAX_CHUNKS, 'passages': {}}
     for pid in passage_ids:
         runs = []
@@ -95,8 +96,11 @@ def main() -> None:
     parser.add_argument('--out', type=Path, default=harness.REPO_ROOT / 'tests' / 'baseline' / 'ttfa.json')
     parser.add_argument('--passages', nargs='*', default=DEFAULT_PASSAGES)
     parser.add_argument('--repeats', type=int, default=DEFAULT_REPEATS)
+    parser.add_argument('--extra-passage', type=Path, nargs='*', default=[],
+                        help='text files measured first, named by file stem (not in tests/passages)')
     args = parser.parse_args()
-    result = measure(args.passages, args.repeats)
+    extra = {f.stem: f.read_text(encoding='utf-8') for f in args.extra_passage}
+    result = measure(list(extra) + args.passages, args.repeats, extra)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, indent=1) + '\n', encoding='utf-8')
     print(f'Saved {args.out}')

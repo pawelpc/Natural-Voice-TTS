@@ -14,9 +14,10 @@ The normalizer marks spans with OPEN/CLOSE sentinels while it rewrites the
 text; extract() removes them and returns character spans for synthesis.
 """
 
-import functools
 import logging
 import re
+import sys
+import threading
 
 import numpy as np
 
@@ -25,8 +26,8 @@ logger = logging.getLogger(__name__)
 EMPHASIS_ENABLED = True      # Paul listened (tests/emphasis/listen.html) and kept it as prototyped, 2026-10-22
 
 # --- Strength (moderate; "strong" in the findings was 0.80 / 1.15 / 3.0) ---
-EMPHASIS_DURATION = 0.85     # speed on the span's phonemes: about 12% longer
-EMPHASIS_PITCH = 1.10        # F0 scale on the span: about +1.6 semitones
+EMPHASIS_DURATION = 0.85     # speed on the span's phonemes (measured: span about 20% longer, FINDINGS.md)
+EMPHASIS_PITCH = 1.10        # F0 scale on the span (measured: about +8% pitch, about 1.3 semitones)
 EMPHASIS_GAIN_DB = 2.0       # loudness on the span
 EMPHASIS_MAX_WORDS = 5       # a longer bold/italic span (a whole bold sentence) is read plain
 
@@ -44,11 +45,31 @@ ROMAN_NUMERAL_RE = re.compile(r'[IVXLCDM]+')
 LOWER_WORD_RE = re.compile(r'\b[a-z]{2,}\b')
 
 
-@functools.lru_cache(maxsize=1)
+_golds_cache: dict | None = None
+_golds_lock = threading.Lock()
+
+
 def _golds() -> dict:
-    """misaki's main US English dictionary (the one Kokoro reads words from)."""
-    from misaki import en
-    return en.Lexicon(british=False).golds
+    """misaki's main US English dictionary (the one Kokoro reads words from).
+
+    Reuses the dictionary the running Kokoro pipeline already holds. Building a
+    second copy takes about 2.7 s (178,646 entries), and that used to land on
+    the first read with an ALL-CAPS word after the app started. Only without a
+    pipeline (unit tests, no model) is a copy loaded, once.
+    """
+    global _golds_cache
+    with _golds_lock:
+        if _golds_cache is None:
+            engine = sys.modules.get('tts_engine')
+            pipeline = getattr(engine, '_pipeline', None)
+            lexicon = getattr(getattr(pipeline, 'g2p', None), 'lexicon', None)
+            if lexicon is not None and getattr(lexicon, 'british', True) is False:
+                _golds_cache = lexicon.golds
+            else:
+                from misaki import en
+                logger.info("Loading misaki's dictionary for emphasis (no Kokoro pipeline yet)")
+                _golds_cache = en.Lexicon(british=False).golds
+        return _golds_cache
 
 
 def is_emphatic_caps(word: str) -> bool:

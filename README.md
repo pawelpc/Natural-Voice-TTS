@@ -35,6 +35,13 @@ Smoother, more natural reading:
 
 What you see on screen is never changed; only the spoken copy is.
 
+## Coming in the next release
+
+These are on `master` but **not in the 1.2.0 installer**. They work now when you run from source:
+
+- **Pronunciation list.** Names and brands can be given exact pronunciations, for example "Cowork" as "Co work" (see [Pronunciation list](#pronunciation-list)).
+- **Spoken emphasis.** Words in **bold** or *italics*, and words in ALL CAPS like "NOT" (but not acronyms like "API"), are said a little slower, higher and louder (see [Spoken emphasis](#spoken-emphasis)).
+
 ---
 
 *The sections below are for developers who want to run from source or build the installer themselves.*
@@ -87,6 +94,8 @@ Settings are saved to `%APPDATA%\NaturalVoiceTTS\config.json` and persist betwee
 
 ### Pronunciation list
 
+*Not in the 1.2.0 installer; coming in the next release.*
+
 Names and brands the voice gets wrong can be given exact phonemes (misaki's phoneme set, the one
 Kokoro uses). The app ships a built-in list in `assets\pronunciations.json`; your own entries go in
 `%APPDATA%\NaturalVoiceTTS\pronunciations.json` and win over the built-in ones:
@@ -100,6 +109,19 @@ Kokoro uses). The app ships a built-in list in `assets\pronunciations.json`; you
 A word matches whole, in any capitalization, unless the entry has a capital inside a word
 (`"iOS"`, `"SQL"`): then only that spelling matches. `'s` is handled for you. Only the spoken
 copy changes; the text on screen doesn't. Edits apply from the next message, no restart.
+
+### Spoken emphasis
+
+*Not in the 1.2.0 installer; coming in the next release.*
+
+Words in `**bold**`, `*italics*` or `_italics_`, and ALL-CAPS words that are shouted rather than
+acronyms ("NOT", "NEVER", but not "API" or "GPU"), are said a little slower, higher and louder:
+measured on a test sentence, the word took about 20% longer and was about 8% higher in pitch (about
+1.3 semitones) and 1.8 dB louder. This happens in Kokoro's single pass over the sentence, so there's no seam
+and the rest of the sentence keeps its rhythm. Headings, spans longer than five words, and lines
+written entirely in capitals are read plain. It's on by default; to turn it off, set
+`EMPHASIS_ENABLED = False` in `src/emphasis.py`. The strengths are the constants beside it. How it was
+chosen, with measurements: `tests/emphasis/FINDINGS.md`.
 
 ### Terminal Mode (fallback)
 
@@ -170,6 +192,7 @@ src/
   text_processor.py — Sentence splitting and text cleanup
   normalizer.py     — Spoken copy of the text (markdown, numbers, paths, symbols)
   lexicon.py        — Pronunciation list applied to the spoken copy
+  emphasis.py       — Spoken emphasis for bold, italic and ALL-CAPS words
   pauses.py         — Pause lengths between and inside sentences
   audio_player.py   — Audio playback with stop/pause/resume
   hotkeys.py        — Global hotkey listener and clipboard grab

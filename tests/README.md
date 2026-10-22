@@ -20,6 +20,11 @@ empty), so results don't depend on the user's own entries.
 
 `render_passages.py --no-emphasis` renders with spoken emphasis off (`src/emphasis.py`, on by default).
 
+`measure_ttfa.py` and `compare_ttfa.py` take `--extra-passage FILE` for a text outside the passage set,
+measured first in each run (so its first sample is the first read after startup). `ttfa/emphasis_first.txt`
+has an emphasized first sentence, for R3 with emphasis on; give the "before" checkout the current
+`measure_ttfa.py` (it's the instrument, not the code under test).
+
 Passages live in `passages/` (one category each, provenance in `manifest.json`).
 
 Phase 0 baseline, from the repo root:

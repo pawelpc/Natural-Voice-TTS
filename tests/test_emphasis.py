@@ -35,6 +35,29 @@ def test_on_by_default() -> None:
         ('I said the red one, and Do NOT go.', ['red', 'NOT'])]
 
 
+def test_golds_reuses_the_pipeline_dictionary(monkeypatch) -> None:
+    """With Kokoro loaded, the ALL-CAPS check uses the pipeline's own dictionary (no 2.7 s second copy)."""
+    import types
+    marker = {'never': 'nˈɛvəɹ'}
+    lexicon = types.SimpleNamespace(british=False, golds=marker)
+    engine = types.SimpleNamespace(_pipeline=types.SimpleNamespace(g2p=types.SimpleNamespace(lexicon=lexicon)))
+    monkeypatch.setitem(__import__('sys').modules, 'tts_engine', engine)
+    monkeypatch.setattr(emphasis, '_golds_cache', None)
+    assert emphasis._golds() is marker
+    assert emphasis.is_emphatic_caps('NEVER') is True     # only the lower-case word is listed
+    monkeypatch.setattr(emphasis, '_golds_cache', None)    # don't leave the fake dictionary behind
+
+
+def test_golds_ignores_a_british_pipeline(monkeypatch) -> None:
+    """A British pipeline's dictionary is the wrong one for the US ALL-CAPS check."""
+    import types
+    lexicon = types.SimpleNamespace(british=True, golds={'x': 'y'})
+    engine = types.SimpleNamespace(_pipeline=types.SimpleNamespace(g2p=types.SimpleNamespace(lexicon=lexicon)))
+    monkeypatch.setitem(__import__('sys').modules, 'tts_engine', engine)
+    monkeypatch.setattr(emphasis, '_golds_cache', None)
+    assert emphasis._golds() is not lexicon.golds and len(emphasis._golds()) > 100000
+
+
 def test_switched_off(monkeypatch) -> None:
     monkeypatch.setattr(emphasis, 'EMPHASIS_ENABLED', False)
     assert spans_of('I said the **red** one, and Do NOT go.') == [('I said the red one, and Do NOT go.', [])]

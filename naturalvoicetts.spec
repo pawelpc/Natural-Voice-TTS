@@ -93,6 +93,7 @@ a = Analysis(
         'text_processor',
         'normalizer',
         'lexicon',
+        'emphasis',
         'pauses',
         'num2words',
         'hotkeys',
