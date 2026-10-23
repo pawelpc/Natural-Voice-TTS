@@ -6,10 +6,10 @@ System-wide text-to-speech for Windows using [Kokoro TTS](https://github.com/hex
 
 **No programming required.** Just download and run the installer:
 
-**[Download Natural Voice TTS v1.2.0](https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.2.0.exe)** (~1.8 GB)
+**[Download Natural Voice TTS v1.3.0](https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.3.0.exe)** (~1.8 GB)
 
 1. Click the link above to download the installer
-2. Run `NaturalVoiceTTS_Setup_1.2.0.exe` — if Windows SmartScreen appears, click **More info** → **Run anyway** (the app is unsigned open-source software)
+2. Run `NaturalVoiceTTS_Setup_1.3.0.exe` — if Windows SmartScreen appears, click **More info** → **Run anyway** (the app is unsigned open-source software)
 3. Follow the installer prompts (defaults are fine)
 4. Launch **Natural Voice TTS** from the Start Menu
 
@@ -23,6 +23,13 @@ The app runs in your system tray (bottom-right of the taskbar). To use it: selec
 
 **Requirements:** Windows 10 or 11. An NVIDIA GPU (GTX 1650 or better) is recommended for fast synthesis; CPU mode works but is slower.
 
+## What's new in 1.3.0
+
+- **Pronunciation list.** Names and brands can be given exact pronunciations, for example "Cowork" as "Co work" (see [Pronunciation list](#pronunciation-list)).
+- **Spoken emphasis.** Words in **bold** or *italics*, and words in ALL CAPS like "NOT" (but not acronyms like "API"), are said a little slower, higher and louder (see [Spoken emphasis](#spoken-emphasis)).
+
+What you see on screen is never changed; only the spoken copy is.
+
 ## What's new in 1.2.0
 
 Smoother, more natural reading:
@@ -32,15 +39,6 @@ Smoother, more natural reading:
 - **Faster start.** The next sentence is prepared while the current one plays, so speech starts sooner (time to first audio is 60–77% shorter in testing) and there's no wait between sentences.
 - **Reads markdown, code and symbols sensibly.** It says "Table" and "Row 1"; strikethrough as "begin strike … end strike"; emoji by name ("check mark"). Code blocks become "Code block skipped." Paths and URLs read naturally ("src slash app dot py"), and so do dates ("October 17th, 2026"), versions ("version 1 point 2 point 0"), units ("25 millimeters"), "16:9" ("16 by 9"), and symbols like ≥ and →.
 - **No dropped words.** Some numbers and words that were silently skipped before are now spoken.
-
-What you see on screen is never changed; only the spoken copy is.
-
-## Coming in the next release
-
-These are on `master` but **not in the 1.2.0 installer**. They work now when you run from source:
-
-- **Pronunciation list.** Names and brands can be given exact pronunciations, for example "Cowork" as "Co work" (see [Pronunciation list](#pronunciation-list)).
-- **Spoken emphasis.** Words in **bold** or *italics*, and words in ALL CAPS like "NOT" (but not acronyms like "API"), are said a little slower, higher and louder (see [Spoken emphasis](#spoken-emphasis)).
 
 ---
 
@@ -94,8 +92,6 @@ Settings are saved to `%APPDATA%\NaturalVoiceTTS\config.json` and persist betwee
 
 ### Pronunciation list
 
-*Not in the 1.2.0 installer; coming in the next release.*
-
 Names and brands the voice gets wrong can be given exact phonemes (misaki's phoneme set, the one
 Kokoro uses). The app ships a built-in list in `assets\pronunciations.json`; your own entries go in
 `%APPDATA%\NaturalVoiceTTS\pronunciations.json` and win over the built-in ones:
@@ -111,8 +107,6 @@ A word matches whole, in any capitalization, unless the entry has a capital insi
 copy changes; the text on screen doesn't. Edits apply from the next message, no restart.
 
 ### Spoken emphasis
-
-*Not in the 1.2.0 installer; coming in the next release.*
 
 Words in `**bold**`, `*italics*` or `_italics_`, and ALL-CAPS words that are shouted rather than
 acronyms ("NOT", "NEVER", but not "API" or "GPU"), are said a little slower, higher and louder:
@@ -174,7 +168,7 @@ This will:
 1. Run PyInstaller to create `dist\NaturalVoiceTTS\` with the bundled app
 2. Copy espeak-ng binaries into the dist folder
 3. Copy Kokoro model files from the HuggingFace cache
-4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.2.0.exe` (if Inno Setup is installed)
+4. Run Inno Setup to produce `dist\NaturalVoiceTTS_Setup_1.3.0.exe` (if Inno Setup is installed)
 
 PyInstaller replaces `dist\NaturalVoiceTTS\` on every build, including its `kokoro_model` folder, and the model is then copied back from the HuggingFace cache. Make sure the cache has the model before building.
 

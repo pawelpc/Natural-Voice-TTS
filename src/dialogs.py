@@ -6,7 +6,7 @@ import threading
 import tkinter as tk
 from tkinter import ttk, scrolledtext
 
-APP_VERSION = '1.2.0'
+APP_VERSION = '1.3.0'
 APP_NAME = 'Natural Voice TTS'
 
 HELP_TEXT = """\
