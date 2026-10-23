@@ -1,7 +1,88 @@
-# Closing Report (DRAFT): Natural Voice TTS — Speaking Flow and Text Handling
+# Closing Report: Natural Voice TTS — Speaking Flow and Text Handling
 
-**Model:** Opus 5.5 (`claude-opus-5-5`) · **Started:** 2026-10-17
-**Status:** All phases done. Installer `NaturalVoiceTTS_Setup_1.2.0.exe` built and checked; Paul publishes the release.
+**Team lead:** Opus 5.5 (`claude-opus-5-5`) · **Work:** 2026-10-17 to 2026-10-22 · **For:** the manager
+**Brief:** `_prosody-brief.md`, `_prosody-instructions.md` · **Last commit:** see `git log` on `master` (not pushed)
+
+## Summary for the manager
+
+- **Outcome:** all five phases done. Paul's listening check (Phase 4): **32 better, 1 same, 0 worse; overall
+  pass** (`tests/phase4/ratings.txt`, his own words). **v1.2.0 is published** on GitHub by Paul: tag `v1.2.0` at
+  `b57abfc`. The asset `NaturalVoiceTTS_Setup_1.2.0.exe` (1,885,275,055 bytes) is the build I made and launch-tested.
+- **Hypotheses:** H1, H3, H4 confirmed; H2 confirmed for splitting and stripping, but its claim of flat
+  endings was **not** shown by measurement (§Phase 0). The biggest cause of choppiness was not a hypothesis
+  in the brief: every boundary got about 0.8 s of Kokoro padding, plus a synthesis wait before each sentence.
+- **After the release, on `master` but not in any installer:** the pronunciation list (Paul's note #8) and
+  spoken emphasis, on by default (note #13), from two follow-up sessions. I reviewed them and fixed one regression
+  in them (§After the release). They are the content of the **next** release.
+- **The next session builds and pushes that release.** Follow the handoff checklist below. Two traps
+  nearly broke the 1.2.0 build (§Phase 5).
+
+### Measured results
+
+| What | Before (v1.1.0 code) | After | Evidence |
+|---|---|---|---|
+| Time to first audio, passage 17 (July string) | 0.533 s | **0.130 s** (−76%) | `tests/phase4/render/r3.json` |
+| Time to first audio, passage 16 (real `speak` call) | 0.680 s | **0.270 s** (−60%) | same |
+| Time to first audio, passage 01 (markdown) | 0.516 s | **0.118 s** (−77%) | same |
+| Same with emphasis on (current master vs released 1.2.0) | — | worst **+6.4%** (emphasized first chunk) | `tests/emphasis/r3_emphasis_on.json` |
+| Pauses on target (±50 ms) | not controlled (~0.8 s at every boundary) | **539/539** | `tests/phase4/render/pauses.json` |
+| Wrong sentence splits, 33 passages | 6 of 7 probe cases wrong | **0** (hand-reviewed) | `tests/passages/expected_splits.json` |
+| Words silently dropped (Kokoro level) | at least 3 ("zero", "12", "Don't") | **0** | `tests/phase4/render/meta`, `test_every_word_gets_phonemes` |
+| Automated tests | none | **347 pass** | `python -m pytest tests -q` |
+
+All A/B timings use ABBA order with 30 samples a side and a bootstrap 95% CI (`tests/compare_ttfa.py`).
+
+### How to re-check (manager)
+
+- Tests (about 15 s; a few emphasis tests need the local model and skip without it): `python -m pytest tests -q`
+- Re-render and re-measure the pauses (GPU, about 12 min): `python tests/render_passages.py --out <dir>`,
+  then `python tests/measure_pauses.py --render <dir> --out <dir>/pauses.json`
+- R3 (about 30 min; needs a checkout of the "before" commit, e.g. `git worktree add <dir> ce7177d`):
+  `python tests/compare_ttfa.py --before <dir> --after . --rounds 6 --out <file>`
+- **Listen:** the before/after WAVs (33 each) are local and gitignored: `tests/baseline/wav` (v1.1.0) and
+  `tests/phase4/render/wav` (final = 1.2.0). The A/B page: https://claude.ai/artifact/YavTFrd8ndpBu7MPSeKkTZ
+  (private to Paul), or locally `tests/phase4/listening.html` (MP3s in `tests/phase4/audio`).
+  Emphasis comparisons: `tests/emphasis/listen.html`. Its WAVs exist only in the side worktree
+  `.claude/worktrees/angry-engelbart-71f331/tests/emphasis/`; regenerate them with `tests/probe_emphasis.py` if
+  that worktree is gone.
+
+## Handoff: building and pushing the next release
+
+Master is **ahead of `origin/master`** by the follow-up work (`b18f35a` onward). The next session should:
+
+1. **Pick the version** with Paul. I suggest **1.3.0**, since both changes are new features. Bump it in
+   `installer/setup.iss` (`MyAppVersion`), `src/dialogs.py` (`APP_VERSION`), `build.bat` (title line and the
+   "Installer:" echo), `version_info.txt` (four places, `x.y.0.0`), and the README download link and filename.
+2. **README and release notes:** turn the README's "Coming in the next release" section into "What's new in
+   1.3.0" and remove the two "*Not in the 1.2.0 installer…*" lines. Write `release_notes/1.3.0.md` in the
+   style of `release_notes/1.2.0.md`.
+3. **Model (trap 1):** PyInstaller deletes `dist\NaturalVoiceTTS\`, including `kokoro_model\`, the folder
+   source mode loads from. `build.bat` then copies the model back from the HuggingFace cache. The cache now
+   holds a complete copy in `%USERPROFILE%\.cache\huggingface\hub\models--hexgrad--Kokoro-82M\snapshots\local-from-dist\`
+   (config, `kokoro-v1_0.pth`, 27 voices). **Don't delete it.** Check that the build log says
+   `Found model at: …local-from-dist`.
+4. **MCP files (trap 2):** `build.bat` copies the working-tree `mcp_tts_server\` into the installer. Run
+   `git status -- mcp_tts_server` first; it is clean today. If Paul has uncommitted edits there, ask him
+   whether they ship. For 1.2.0 he said no.
+5. **Run the build by full path** from PowerShell (a bare `cmd /c build.bat` failed with "not recognized"):
+   `cmd /c "C:\Users\paulp\Documents\Claude_Projects\Natural_Voice_TTS\build.bat"`. It takes about 30 min.
+   Expect about 48 harmless PyInstaller "Hidden import not found" errors (`munch`,
+   `torch.distributed._shard…`); 1.2.0 ran fine with them.
+6. **Check the build:** the installer exists and is under 2 GiB;
+   `dist\NaturalVoiceTTS\_internal\assets\pronunciations.json` exists (the frozen app reads it there); the
+   model in `dist` matches the cache copy; and the bundled `mcp_server` files equal HEAD.
+7. **Launch test:** Paul must quit the installed tray app first (single-instance lock). Start
+   `dist\NaturalVoiceTTS\NaturalVoiceTTS.exe`, wait for `Ready!` in `%APPDATA%\NaturalVoiceTTS\app.log`, then
+   run `python test_pipe.py "**Important:** Cowork is NOT down."`. The log should show
+   `Pronunciation list: 1 entries`, one `Playing [1/1]` line and `Finished reading` with no `Skipped`. Stop the
+   test instance afterwards.
+8. **Push and release** (with Paul's go-ahead; he published 1.2.0 himself): `git push origin master`,
+   `git tag -a v1.3.0 -m "Natural Voice TTS 1.3.0"`, `git push origin v1.3.0`, then
+   `gh release create v1.3.0 "dist\NaturalVoiceTTS_Setup_1.3.0.exe" --title "Natural Voice TTS 1.3.0" --notes-file "release_notes\1.3.0.md"`.
+9. Optional cleanup after the push: the merged branches `claude/jovial-hypatia-0d6e6d` and
+   `claude/angry-engelbart-71f331`, and their worktrees (save any WAVs you want first).
+
+## Phase status
 
 | Phase | Gate | Status | Evidence |
 |---|---|---|---|
@@ -10,7 +91,11 @@
 | 2 Normalization | expected-output files match; R4, R5 hold | **Passed**; R3 open | §Phase 2 below |
 | 3 Pauses | measured gaps within ±50 ms of targets | **Passed**: 516/516; R3 passes | §Phase 3 below |
 | 4 Paul's listening check | Paul passes it | **Passed**: 32 better, 1 same, 0 worse | §Phase 4 below |
-| 5 Release | only after Phase 4 | **Built**: installer ready, Paul publishes | §Phase 5 below |
+| 5 Release | only after Phase 4 | **Done**: v1.2.0 built and launch-tested; published by Paul | §Phase 5 below |
+| After | review of the follow-up sessions | **Done**; one regression fixed | §After the release |
+
+The sections below are the working record, phase by phase, written as the work happened. Where a later
+finding corrected an earlier claim, the correction is marked in place (Phase 1 R3).
 
 ---
 
@@ -417,32 +502,49 @@ Edge cases of the #27 rule, as written: "4:3" stays as is (neither number is ove
 
 ---
 
-## Rules compliance (R1–R8)
-- **R1** Model, voice, speed unchanged: same `kokoro-v1_0.pth`, `DEFAULT_VOICE = 'af_heart'`,
-  `DEFAULT_SPEED = 1.0` (`src/tts_engine.py`); source mode only gained a local path to the same file (Phase 0).
-- **R2** `pipe_listener.py` and `mcp_tts_server/` untouched: `git log 0018ba1..HEAD -- src/pipe_listener.py mcp_tts_server` is empty.
-  The worker's D2 skip/notify behaviour is kept (`tests/test_worker.py`).
-- **R3** TTFA not worse: final A/B −76%, −60%, −77% (`tests/phase4/render/r3.json`). It was +12% on one
-  passage at the Phase 1–2 checkpoints, found with the stronger A/B and resolved in Phase 3 (§Phase 2, §Phase 3).
-- **R4** No dropped words: split step keeps every word (`test_no_words_lost`); misaki gives every spoken
-  word phonemes (`test_every_word_gets_phonemes`); renders show 0 silent words (Phase 1 found 2 that were
-  already lost in v1.1.0, now fixed). Deliberately not spoken: code-block contents and the rows of tables with
-  10 or more data rows (brief and Paul's rule).
-- **R5** Screen text never changed: `test_screen_text_unchanged`; normalization only builds the spoken copy.
+## Rules compliance (R1–R8), final
+- **R1** Model, voice, speed unchanged: same `kokoro-v1_0.pth`, `DEFAULT_VOICE = 'af_heart'`, `DEFAULT_SPEED = 1.0`
+  (`src/tts_engine.py`). Source mode only gained a local path to the same file (Phase 0). Emphasis slows only the
+  emphasized words, inside the same model pass; the default speed is unchanged.
+- **R2** `pipe_listener.py` and `mcp_tts_server/` untouched by every commit, the follow-up sessions' included:
+  `git log 0018ba1..HEAD -- src/pipe_listener.py mcp_tts_server` is empty. The worker's July D2 skip/notify
+  behaviour is kept (`tests/test_worker.py`).
+- **R3** Time to first audio not worse: v1.1.0 vs final −76%, −60%, −77% (`tests/phase4/render/r3.json`). With
+  emphasis on, released 1.2.0 vs master: worst +6.4% (`tests/emphasis/r3_emphasis_on.json`), after fixing a 2.7 s
+  first-read regression in the emphasis code. Measured +12% on one passage at the Phase 1–2 checkpoints; found
+  with the stronger A/B and resolved in Phase 3.
+- **R4** No dropped words: the split step keeps every word (`test_no_words_lost`); misaki gives every spoken word
+  phonemes (`test_every_word_gets_phonemes`); renders show 0 silent words. Phase 1 found 2 words that v1.1.0
+  already lost, plus the lost "zero" of H2; all fixed. Deliberately not spoken: code-block contents and the rows
+  of tables with 10 or more data rows (brief and Paul's rule).
+- **R5** Screen text never changed: `test_screen_text_unchanged`. Normalization, the pronunciation list and
+  emphasis only build the spoken copy.
 - **R6** Every two-way reading was asked: 11 questions on 2026-10-17 (§Phase 2 R6 decisions, §Phase 4 #27).
   Standard readings I chose without asking are listed under Phase 2.
-- **R7** No installer build or release before Paul passed Phase 4: the first build ran in Phase 5, after his pass. No GitHub release made (Paul publishes).
-- **R8** A commit at each gate: `ce7177d` (0), `499fc3b` (1), `62d5cab` (2), `2478f8f` (3), `b2c866d`/`4f44430`
-  (4 page), plus the post-pass notes commit. Nothing pushed.
+- **R7** No installer build before Paul passed Phase 4. The 1.2.0 build ran in Phase 5, after his pass, and Paul
+  published it himself. No installer exists yet for the post-release work on master.
+- **R8** A commit at each gate: `ce7177d` (0), `499fc3b` (1), `62d5cab` (2), `2478f8f` (3), `b2c866d`/`4f44430`/`0fa1c5d`
+  (4), `711490e`/`58d1251`/`77e6432` (5), `33fe4cd` (review fix). I pushed nothing; Paul pushed through `b57abfc`.
 
 ## Open issues
-1. Device-mode harness hang (Phase 0), not reproduced outside the harness and not diagnosed.
-2. Live playback adds ~0.11 s per chunk on Paul's Bluetooth headset (separate `sd.play()` per chunk).
-3. Paul's PC plays through the headset's hands-free profile (narrowband).
-4. Future-session notes from Paul: pronunciation list (#8), emphasis (#13).
-5. Starting a new read while one plays waits for the old chunk's synthesis to finish (likely cause
-   of passage 16's higher TTFA; not verified).
-6. Python is 3.10.11 on this machine; the brief's style rule says 3.11 (code avoids 3.11-only features).
+1. **Paul's uncommitted MCP edits are gone from disk** (`mcp_tts_server/install_config.py`, plugin `SKILL.md`).
+   They were reverted after the 1.2.0 build by someone other than me, and no commit or stash holds them. Paul
+   chose not to restore them ("just commit the current fixed version"). A byte-exact copy is in this session's
+   scratchpad (`paul_mcp_edits_backup/`), which is temporary.
+2. **R3 with emphasis on is not fully resolved.** Every median is within +10%, but some 95% intervals reach past it
+   (up to +21% on passage 16, which is noisy on this machine). More rounds would narrow them.
+3. **Emphasis approval:** commit `8061bf8` states that Paul approved emphasis on by default after listening. I did
+   not verify that in the follow-up session.
+4. Device-mode harness hang (Phase 0): not reproduced outside the harness, not diagnosed.
+5. Live playback adds about 0.11 s per chunk on Paul's Bluetooth headset (a separate `sd.play()` per chunk). The fix
+   would be a continuous output stream in `audio_player.py`.
+6. Paul's PC plays through the headset's hands-free profile (narrowband audio).
+7. Starting a new read while one plays waits for the old chunk's synthesis to finish (likely cause of passage 16's
+   higher TTFA; not verified).
+8. `src/main.py` (terminal fallback) gets the new splitter but not the normalizer, pauses or emphasis.
+9. Python is 3.10.11 on this machine; the brief's style rule says 3.11 (the code avoids 3.11-only features).
+10. The emphasis and lexicon listening WAVs exist only in the side worktrees (`.claude/worktrees/…`), which the app
+    may clean up.
 ---
 
 ## Phase 5 — Release build (2026-10-17)
