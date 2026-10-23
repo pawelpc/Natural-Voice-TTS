@@ -74,7 +74,7 @@ Master is **ahead of `origin/master`** by the follow-up work (`b18f35a` onward).
 7. **Launch test:** Paul must quit the installed tray app first (single-instance lock). Start
    `dist\NaturalVoiceTTS\NaturalVoiceTTS.exe`, wait for `Ready!` in `%APPDATA%\NaturalVoiceTTS\app.log`, then
    run `python test_pipe.py "**Important:** Cowork is NOT down."`. The log should show
-   `Pronunciation list: 1 entries`, one `Playing [1/1]` line and `Finished reading` with no `Skipped`. Stop the
+   `Pronunciation list: 1 entries` (more if Paul has his own `%APPDATA%\NaturalVoiceTTS\pronunciations.json`), one `Playing [1/1]` line and `Finished reading` with no `Skipped`. Stop the
    test instance afterwards.
 8. **Push and release** (with Paul's go-ahead; he published 1.2.0 himself): `git push origin master`,
    `git tag -a v1.3.0 -m "Natural Voice TTS 1.3.0"`, `git push origin v1.3.0`, then
