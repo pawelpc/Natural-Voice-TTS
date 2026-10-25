@@ -29,3 +29,9 @@ _team-lead-brief*.md
 _team-lead-instructions*.md
 _context/
 _project-briefs-staging/
+/_*.md
+/_context/
+/CANONICAL_SKILL.md
+/PHASE6_COMPLETION_REPORT.md
+build.log
+.claude/settings.local.json
