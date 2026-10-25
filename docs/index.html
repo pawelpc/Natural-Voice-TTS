@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natural Voice TTS — natural-sounding text-to-speech for Windows</title>
+<meta name="description" content="A free, open-source Windows app that reads any text aloud in a natural voice, powered by Kokoro. Smooth pauses, correct phrasing, a pronunciation list, and spoken emphasis. Apache 2.0.">
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1a2230; --muted: #5b6572;
+    --border: #e3e6ea; --accent: #0e7490; --code-bg: #eef1f4;
+    --wave: #0e7490; --wave-soft: #67c6dc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151c; --card: #171e27; --text: #e8ecf1; --muted: #98a2ae;
+      --border: #263040; --accent: #38bdf8; --code-bg: #0d1117;
+      --wave: #38bdf8; --wave-soft: #0e7490;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 16px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 0 20px 80px; }
+  a { color: var(--accent); }
+  h1 { font-size: 2.1rem; line-height: 1.2; }
+  h2 { font-size: 1.4rem; margin: 56px 0 16px; }
+  h3 { font-size: 1.05rem; }
+  p  { margin: 12px 0; }
+  .muted { color: var(--muted); }
+
+  header.hero {
+    display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
+    padding: 64px 0 24px;
+  }
+  .hero-text { flex: 1 1 380px; }
+  .tagline { font-size: 1.12rem; color: var(--muted); margin-top: 14px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; align-items: center; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 8px;
+    text-decoration: none; font-weight: 600; border: 1px solid var(--border);
+  }
+  .btn.primary { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn.ghost { color: var(--text); background: var(--card); }
+  .dl-note { font-size: .86rem; color: var(--muted); margin-top: 10px; }
+
+  .demo { flex: 0 0 auto; text-align: center; }
+  .demo svg { border-radius: 10px; box-shadow: 0 12px 34px rgba(0,0,0,.25); display: block; background: var(--card); }
+  .demo-hint { font-size: .8rem; color: var(--muted); margin-top: 12px; }
+
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px;
+  }
+  .card h3 { margin-bottom: 6px; }
+  .card p { font-size: .92rem; color: var(--muted); margin: 0; }
+
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); font-size: .95rem; }
+  th { color: var(--muted); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px; overflow-x: auto; font-size: .88rem; line-height: 1.5; margin: 14px 0;
+  }
+  code { font-family: Consolas, "Cascadia Code", monospace; }
+  ol li, ul li { margin: 6px 0; }
+  .callout {
+    background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 8px; padding: 12px 16px; font-size: .92rem; margin: 16px 0;
+  }
+
+  footer {
+    margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--border);
+    font-size: .88rem; color: var(--muted);
+  }
+  @media (max-width: 700px) { header.hero { padding-top: 36px; } h1 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <div class="hero-text">
+    <h1>Natural Voice TTS</h1>
+    <p class="tagline">A free Windows app that reads any text aloud in a
+    <strong>natural-sounding voice</strong> — powered by the Kokoro neural model.
+    Smooth pauses, sentences phrased where they really end, and a voice that
+    doesn't sound robotic.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.3.0.exe">Download for Windows</a>
+      <a class="btn ghost" href="https://github.com/pawelpc/Natural-Voice-TTS">View on GitHub</a>
+    </div>
+    <p class="dl-note">Latest release: <strong>v1.3.0</strong> · ~1.8&nbsp;GB installer ·
+    <a href="https://github.com/pawelpc/Natural-Voice-TTS/releases/latest">all releases &amp; notes</a></p>
+  </div>
+
+  <div class="demo">
+    <svg width="240" height="200" viewBox="0 0 240 200" role="img" aria-label="Sound wave">
+      <rect width="240" height="200" rx="10" fill="var(--card)"/>
+      <g fill="var(--wave)">
+        <rect x="18"  y="86"  width="10" height="28"  rx="5"/>
+        <rect x="38"  y="66"  width="10" height="68"  rx="5"/>
+        <rect x="58"  y="40"  width="10" height="120" rx="5"/>
+        <rect x="78"  y="72"  width="10" height="56"  rx="5"/>
+        <rect x="98"  y="30"  width="10" height="140" rx="5"/>
+        <rect x="118" y="58"  width="10" height="84"  rx="5"/>
+      </g>
+      <g fill="var(--wave-soft)">
+        <rect x="138" y="44"  width="10" height="112" rx="5"/>
+        <rect x="158" y="76"  width="10" height="48"  rx="5"/>
+        <rect x="178" y="52"  width="10" height="96"  rx="5"/>
+        <rect x="198" y="80"  width="10" height="40"  rx="5"/>
+        <rect x="218" y="88"  width="4"  height="24"  rx="2"/>
+      </g>
+    </svg>
+    <p class="demo-hint">30+ natural voices · GPU-accelerated · runs in the system tray</p>
+  </div>
+</header>
+
+<section class="grid" aria-label="Highlights">
+  <div class="card"><h3>Reads like a person</h3>
+    <p>Sentences split where they really end — "Dr. Smith", "e.g.", "U.S. Army",
+    "3.14" and "v1.3.0" stay whole — with short, medium and long pauses instead
+    of one flat gap at every boundary.</p></div>
+  <div class="card"><h3>Pronunciation list</h3>
+    <p>Teach it exact pronunciations for names and brands it gets wrong — your
+    own entries live in a simple JSON file and take effect from the next
+    message, no restart.</p></div>
+  <div class="card"><h3>Spoken emphasis</h3>
+    <p>Words in <strong>bold</strong>, <em>italics</em>, or shouted ALL-CAPS
+    ("NOT", "NEVER" — but not acronyms like "API") are said a little slower,
+    higher and louder.</p></div>
+  <div class="card"><h3>Handles real text</h3>
+    <p>Markdown, code blocks, paths, URLs, dates, versions, units and symbols
+    are all read sensibly. What's on screen is never changed — only the spoken
+    copy.</p></div>
+</section>
+
+<h2 id="whatsnew">What's new in 1.3.0</h2>
+<ul>
+  <li><strong>Pronunciation list</strong> — give names and brands exact
+  pronunciations (for example "Cowork" said as "Co&nbsp;work"). A built-in list
+  ships with the app; your own entries in
+  <code>%APPDATA%\NaturalVoiceTTS\pronunciations.json</code> win over it.</li>
+  <li><strong>Spoken emphasis</strong>, on by default — bold, italics and
+  shouted ALL-CAPS words get a gentle lift in pace, pitch and volume.</li>
+</ul>
+<p class="muted">Earlier 1.2.0 work — correct sentence splitting, natural pauses,
+a faster start, and sensible reading of markdown, code and symbols — is included
+too. See the <a href="https://github.com/pawelpc/Natural-Voice-TTS/releases">release notes</a>
+for the full history.</p>
+
+<h2 id="download">Download &amp; install</h2>
+<p><strong>No programming required.</strong> Download the installer and run it:</p>
+<ol>
+  <li><a href="https://github.com/pawelpc/Natural-Voice-TTS/releases/latest/download/NaturalVoiceTTS_Setup_1.3.0.exe">Download Natural Voice TTS v1.3.0</a> (~1.8&nbsp;GB).</li>
+  <li>Run <code>NaturalVoiceTTS_Setup_1.3.0.exe</code>. If Windows SmartScreen
+  appears, click <strong>More info → Run anyway</strong> (the app is unsigned
+  open-source software).</li>
+  <li>The app starts in the system tray. Select text anywhere and press
+  <code>Ctrl+Win+T</code> to have it read aloud.</li>
+</ol>
+<div class="callout">Upgrading from an earlier version? Uninstall it first, then
+run the new installer.</div>
+
+<h2 id="requirements">Requirements</h2>
+<table>
+  <tbody>
+    <tr><th>Operating system</th><td>Windows 10 or 11</td></tr>
+    <tr><th>Graphics</th><td>An NVIDIA GPU (GTX&nbsp;1650 or better) is recommended for fast synthesis; a CPU-only fallback works but is slower</td></tr>
+    <tr><th>Model</th><td>Kokoro neural TTS, bundled with the installer — no download or account needed</td></tr>
+  </tbody>
+</table>
+
+<h2 id="how">How it works</h2>
+<p>Natural Voice TTS runs quietly in the system tray. Global hotkeys read your
+current selection (<code>Ctrl+Win+T</code>), stop playback (<code>Ctrl+Win+X</code>)
+or pause and resume (<code>Ctrl+Win+Z</code>). You can pick from 30+ American and
+British voices and set the speed. It also ships an optional MCP server, so tools
+like Claude Desktop can speak their responses aloud.</p>
+<p>Prefer to run from source or build the installer yourself? Full developer
+instructions are in the
+<a href="https://github.com/pawelpc/Natural-Voice-TTS#readme">README</a>.</p>
+
+<footer>
+  <p>Apache 2.0 licensed · <a href="https://github.com/pawelpc/Natural-Voice-TTS">Source on GitHub</a></p>
+  <p>Includes <a href="https://github.com/hexgrad/kokoro">Kokoro TTS</a> by Hexgrad,
+  licensed under the Apache License 2.0.</p>
+  <p>An independent open-source project. Not affiliated with or endorsed by
+  Anthropic; "Claude" is a trademark of Anthropic, PBC.</p>
+</footer>
+
+</main>
+</body>
+</html>
